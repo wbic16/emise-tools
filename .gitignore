@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+state.json
+spool.jsonl
+heartbeat
+watch.log
+inaccessible.json

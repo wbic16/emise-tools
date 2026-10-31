@@ -1,0 +1,21 @@
+[Unit]
+Description=Emise Discord presence watcher (fast poll + spool)
+After=network-online.target
+
+[Service]
+Type=simple
+Environment=HOME=/home/hatch
+Environment=http_proxy=http://hatch-egress-proxy:3128
+Environment=https_proxy=http://hatch-egress-proxy:3128
+Environment=HTTP_PROXY=http://hatch-egress-proxy:3128
+Environment=HTTPS_PROXY=http://hatch-egress-proxy:3128
+Environment=no_proxy=localhost,127.0.0.1,::1
+WorkingDirectory=/home/hatch/workspace/discord
+ExecStart=/usr/bin/python3 /home/hatch/workspace/custom-connectors/custom.discord/bin/discord_watch.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/hatch/workspace/discord/watch.log
+StandardError=append:/home/hatch/workspace/discord/watch.log
+
+[Install]
+WantedBy=multi-user.target
