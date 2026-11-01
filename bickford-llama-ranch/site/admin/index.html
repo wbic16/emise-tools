@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranch Admin — Bickford Llama Ranch</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <h1>Bickford Llama Ranch — Admin</h1>
+  <p>Libby Bickford and Will Bickford</p>
+</header>
+<div id="save-status">Loading from SQ…</div>
+<main>
+  <section>
+    <h2>Due &amp; upcoming</h2>
+    <ul id="due-list"><li>Loading…</li></ul>
+  </section>
+
+  <section>
+    <h2>Herd</h2>
+    <div id="herd"></div>
+    <h3>Add an animal</h3>
+    <form id="add-animal">
+      <div class="grid">
+        <div class="field"><label>Name <input name="name" required></label></div>
+        <div class="field"><label>Sex
+          <select name="sex"><option>female</option><option>male</option><option>gelding</option></select></label></div>
+        <div class="field"><label>Birth date <input name="birth" type="date"></label></div>
+        <div class="field"><label>Sire <input name="sire"></label></div>
+        <div class="field"><label>Dam <input name="dam"></label></div>
+        <div class="field"><label>Color / markings <input name="color"></label></div>
+      </div>
+      <p><button type="submit">Add animal</button></p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Add a breeding</h2>
+    <form id="add-breeding">
+      <div class="grid">
+        <div class="field"><label>Animal
+          <select name="animal" class="animal-picker" required></select></label></div>
+        <div class="field"><label>Breeding date <input name="date" type="date" required></label></div>
+        <div class="field"><label>Sire (name / id) <input name="sire"></label></div>
+        <div class="field"><label>Outcome
+          <select name="outcome"><option>unknown</option><option>pregnant</option><option>open</option></select></label></div>
+      </div>
+      <p><button type="submit">Add breeding</button></p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Add a vaccination</h2>
+    <form id="add-vaccination">
+      <div class="grid">
+        <div class="field"><label>Animal
+          <select name="animal" class="animal-picker" required></select></label></div>
+        <div class="field"><label>Date given <input name="date" type="date" required></label></div>
+        <div class="field"><label>Vaccine
+          <input name="vaccine" list="vaccines" placeholder="CD/T"><datalist id="vaccines">
+          <option value="CD/T"></option><option value="Rabies"></option></datalist></label></div>
+        <div class="field"><label>Interval days until next due
+          <input name="interval" type="number" value="365" min="1"></label></div>
+        <div class="field"><label>Notes <input name="notes"></label></div>
+      </div>
+      <p><button type="submit">Add vaccination</button></p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Homepage (public site content)</h2>
+    <div id="cms" class="grid"></div>
+  </section>
+
+  <section>
+    <h2>Settings</h2>
+    <div id="settings" class="grid"></div>
+  </section>
+</main>
+<footer>Bickford Llama Ranch · Data lives in ranch.phext, one scroll per field, served by SQ.</footer>
+<script src="app.js"></script>
+</body>
+</html>
