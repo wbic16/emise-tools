@@ -40,7 +40,11 @@ if __name__ == "__main__":
             status, blob = call("POST", f"{REPO}/git/blobs",
                                 {"content": base64.b64encode(content).decode(), "encoding": "base64"})
             blob_sha = must(status, blob, f"create blob {rel}")["sha"]
-            entries.append({"path": rel, "mode": "100644", "type": "blob", "sha": blob_sha})
+            # Git stores executability as the tree mode, not in the blob:
+            # carry the local exec bit through or scripts arrive as 100644
+            # and cannot be run after a clone. (Will, 2026-11-01.)
+            mode = "100755" if (os.stat(full).st_mode & 0o111) else "100644"
+            entries.append({"path": rel, "mode": mode, "type": "blob", "sha": blob_sha})
     print(f"{len(entries)} blobs created", file=sys.stderr)
 
     status, tree = call("POST", f"{REPO}/git/trees",
