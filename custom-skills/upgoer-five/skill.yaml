@@ -1,0 +1,5 @@
+name: "upgoer_five"
+title: "Up Goer Five Translation"
+description: "Translate or check English text so it uses only the ten hundred most used words of Up Goer Five, verified with a word list checker."
+category: "Work and knowledge"
+include_in_prompt: true

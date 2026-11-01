@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Up Goer Five - Phext Word Atlas Editor</title>
+<style>
+  :root { --bad:#c0392b; --badbg:#fdecea; --ink:#1c2430; --dim:#5b6b7f;
+          --line:#d7dee8; --accent:#0b5fa5; --panel:#f6f8fb; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         color:var(--ink); background:#fff; }
+  header { padding:18px 22px 6px; }
+  h1 { margin:0 0 4px; font-size:24px; }
+  header p { margin:2px 0; color:var(--dim); max-width:70ch; }
+  .coord { font-family: ui-monospace, "SF Mono", Consolas, monospace; }
+  main { display:grid; grid-template-columns: minmax(340px, 1.2fr) minmax(300px, 1fr);
+         gap:16px; padding:12px 22px 22px; align-items:start; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  .card { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:#fff; }
+  .card h2 { margin:0 0 8px; font-size:15px; text-transform:uppercase; letter-spacing:.05em; color:var(--dim); }
+  .editorwrap { position:relative; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .editorwrap textarea, .backdrop {
+    font: 16px/1.55 ui-monospace, "SF Mono", Consolas, monospace;
+    padding:12px; margin:0; border:0; width:100%; height:300px;
+    white-space:pre-wrap; word-wrap:break-word; overflow-wrap:break-word; }
+  .backdrop { position:absolute; inset:0; color:transparent; pointer-events:none; overflow:hidden; }
+  .backdrop .bad { background:var(--badbg); color:transparent; border-bottom:2px solid var(--bad);
+                   border-radius:2px; }
+  .editorwrap textarea { position:relative; background:transparent; resize:vertical; outline:none; }
+  #stats { color:var(--dim); font-size:13px; margin-top:8px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .chip { border:1px solid var(--bad); color:var(--bad); background:var(--badbg);
+          border-radius:20px; padding:2px 10px; font-size:13px; cursor:pointer; }
+  .chip:hover { background:#fbd9d4; }
+  #bigcoord { font-size:26px; margin:6px 0; word-break:break-all; }
+  #bigcoord .sep { color:var(--accent); font-weight:700; }
+  .nb { display:flex; justify-content:space-between; gap:8px; padding:6px 8px;
+        border:1px solid var(--line); border-radius:8px; margin:5px 0; cursor:pointer; background:var(--panel); }
+  .nb:hover { border-color:var(--accent); }
+  .nb .w { font-weight:600; }
+  .nb .c { color:var(--dim); font-size:12px; }
+  .nb .d { color:var(--accent); font-size:12px; white-space:nowrap; }
+  input[type=text] { width:100%; padding:8px 10px; border:1px solid var(--line);
+                     border-radius:8px; font-size:15px; }
+  #indexlist { max-height:330px; overflow:auto; margin-top:8px; border-top:1px solid var(--line); }
+  .irow { display:flex; justify-content:space-between; gap:8px; padding:4px 6px; cursor:pointer;
+          border-bottom:1px solid #eef2f7; font-size:14px; }
+  .irow:hover { background:var(--panel); }
+  .irow .c { color:var(--dim); font-size:12px; }
+  .hint { color:var(--dim); font-size:13px; }
+  #inspword { font-size:19px; font-weight:700; }
+  .status { font-size:13px; color:var(--dim); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Up Goer Five, addressed in phext</h1>
+  <p>Write with only the ten hundred most used words. Every word also lives at a
+     natural 9-part phext coordinate <span class="coord">a.b.c/d.e.f/g.h.i</span>,
+     read off where its meaning sits. Words outside the ten hundred are marked,
+     and their nearest in-list neighbors by coordinate distance are one click away.</p>
+</header>
+<main>
+  <section class="card">
+    <h2>Editor</h2>
+    <div class="editorwrap">
+      <div class="backdrop" id="backdrop"></div>
+      <textarea id="editor" spellcheck="false">The rocket uses enormous engines to go up.</textarea>
+    </div>
+    <div id="stats"></div>
+    <div class="chips" id="chips"></div>
+    <p class="hint">Click any word in the text to inspect it. Click a neighbor in the
+       inspector to put it in the word's place.</p>
+  </section>
+  <div>
+    <section class="card">
+      <h2>Word inspector</h2>
+      <div id="inspword">Pick a word</div>
+      <div class="status" id="inspstatus">Its coordinate and neighbors will show here.</div>
+      <div id="bigcoord" class="coord"></div>
+      <div id="neighbors"></div>
+    </section>
+    <section class="card" style="margin-top:16px">
+      <h2>Word lookup</h2>
+      <input type="text" id="lookup" placeholder="Type a word, such as fire or rocket">
+      <div id="lookupout" style="margin-top:8px"></div>
+    </section>
+    <section class="card" style="margin-top:16px">
+      <h2>Index of the ten hundred</h2>
+      <input type="text" id="indexsearch" placeholder="Search the index">
+      <div id="indexlist"></div>
+    </section>
+  </div>
+</main>
+
+<script>var UG5DATA = %%DATA_JSON%%;</script>
+<script id="ug5-core">
+"use strict";
+/* Pure atlas logic. UG5DATA = {ug5: {word: [9 ints]}, extra: {word: [9 ints]}}.
+   No DOM access in this block, so it can be tested headlessly. */
+var UG5SET = {};
+Object.keys(UG5DATA.ug5).forEach(function (w) { UG5SET[normalize(w)] = w; });
+var UG5KEYS = Object.keys(UG5DATA.ug5);
+
+function normalize(w) { return w.toLowerCase().replace(/[^a-z]/g, ""); }
+
+function stems(word) {
+  var out = [];
+  if (word.endsWith("'s")) out.push(word.slice(0, -2));
+  if (word.endsWith("ies") && word.length > 3) out.push(word.slice(0, -3) + "y");
+  if (word.endsWith("ing") && word.length > 4) { out.push(word.slice(0, -3)); out.push(word.slice(0, -3) + "e"); }
+  if (word.endsWith("ed") && word.length > 3) { out.push(word.slice(0, -2)); out.push(word.slice(0, -1)); }
+  if (word.endsWith("es") && word.length > 2) { out.push(word.slice(0, -2)); out.push(word.slice(0, -1)); }
+  if (word.endsWith("s") && word.length > 1) out.push(word.slice(0, -1));
+  if (word.endsWith("er") && word.length > 3) { out.push(word.slice(0, -2)); out.push(word.slice(0, -2) + "e"); }
+  if (word.endsWith("est") && word.length > 4) { out.push(word.slice(0, -3)); out.push(word.slice(0, -3) + "e"); }
+  return out;
+}
+
+function isUG5Form(word) {
+  var w = word.toLowerCase();
+  if (UG5SET[normalize(w)]) return true;
+  return stems(w).some(function (s) { return !!UG5SET[normalize(s)]; });
+}
+
+var WORD_RE = /[A-Za-z]+(?:'[A-Za-z]+)?/g;
+function tokenize(text) {
+  var out = [], m;
+  WORD_RE.lastIndex = 0;
+  while ((m = WORD_RE.exec(text)) !== null) {
+    out.push({ word: m[0], start: m.index, end: m.index + m[0].length });
+  }
+  return out;
+}
+
+function flagWords(text) {
+  var seen = {}, out = [];
+  tokenize(text).forEach(function (t) {
+    var key = t.word.toLowerCase();
+    if (!isUG5Form(t.word) && !seen[key]) { seen[key] = true; out.push(t.word); }
+  });
+  return out;
+}
+
+function dist(a, b) {
+  var s = 0;
+  for (var i = 0; i < 9; i++) { var d = a[i] - b[i]; s += d * d; }
+  return Math.sqrt(s);
+}
+
+function fmtCoord(c) {
+  return c[0] + "." + c[1] + "." + c[2] + "/" + c[3] + "." + c[4] + "." + c[5] +
+         "/" + c[6] + "." + c[7] + "." + c[8];
+}
+
+function nearestUG5(coord, k, excludeWord) {
+  var scored = [];
+  for (var i = 0; i < UG5KEYS.length; i++) {
+    var w = UG5KEYS[i];
+    if (w === excludeWord) continue;
+    scored.push({ word: w, coord: UG5DATA.ug5[w], d: dist(coord, UG5DATA.ug5[w]) });
+  }
+  scored.sort(function (x, y) { return x.d - y.d; });
+  return scored.slice(0, k);
+}
+
+function levenshtein(a, b) {
+  var row = [], i, j;
+  for (j = 0; j <= b.length; j++) row[j] = j;
+  for (i = 1; i <= a.length; i++) {
+    var prev = row[0]; row[0] = i;
+    for (j = 1; j <= b.length; j++) {
+      var cur = row[j];
+      row[j] = Math.min(row[j] + 1, row[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur;
+    }
+  }
+  return row[b.length];
+}
+
+function spellingNeighbors(word, k) {
+  var w = normalize(word), scored = [];
+  UG5KEYS.forEach(function (u) {
+    var d = levenshtein(w, normalize(u));
+    if (d <= 2) scored.push({ word: u, coord: UG5DATA.ug5[u], d: d, spelling: true });
+  });
+  scored.sort(function (x, y) { return x.d - y.d; });
+  return scored.slice(0, k);
+}
+
+function coordOf(word) {
+  var w = word.toLowerCase();
+  if (UG5DATA.ug5[w]) return { coord: UG5DATA.ug5[w], kind: "ug5" };
+  var canon = UG5SET[normalize(w)];
+  if (canon) return { coord: UG5DATA.ug5[canon], kind: "ug5" };
+  if (UG5DATA.extra[w]) return { coord: UG5DATA.extra[w], kind: "known" };
+  return null;
+}
+
+function inspectWord(word, k) {
+  k = k || 5;
+  var found = coordOf(word);
+  if (!found) {
+    return { status: "unknown", coord: null, neighbors: spellingNeighbors(word, k) };
+  }
+  var isUG5 = found.kind === "ug5" || isUG5Form(word);
+  return { status: isUG5 ? "ug5" : "known", coord: found.coord,
+           neighbors: nearestUG5(found.coord, k, isUG5 ? word.toLowerCase() : null) };
+}
+</script>
+<script>
+"use strict";
+var editor = document.getElementById("editor");
+var backdrop = document.getElementById("backdrop");
+var chipsEl = document.getElementById("chips");
+var statsEl = document.getElementById("stats");
+var inspWord = document.getElementById("inspword");
+var inspStatus = document.getElementById("inspstatus");
+var bigCoord = document.getElementById("bigcoord");
+var neighborsEl = document.getElementById("neighbors");
+var target = null; /* {start, end, word} occurrence to replace, or {word, all:true} */
+
+function esc(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function renderEditor() {
+  var text = editor.value, html = "", last = 0;
+  tokenize(text).forEach(function (t) {
+    html += esc(text.slice(last, t.start));
+    html += isUG5Form(t.word) ? esc(t.word)
+                              : '<span class="bad">' + esc(t.word) + "</span>";
+    last = t.end;
+  });
+  html += esc(text.slice(last)) + "\n";
+  backdrop.innerHTML = html;
+  backdrop.scrollTop = editor.scrollTop;
+  backdrop.scrollLeft = editor.scrollLeft;
+  var toks = tokenize(text), flagged = flagWords(text);
+  statsEl.textContent = toks.length + " words, " + flagged.length + " outside the ten hundred";
+  chipsEl.innerHTML = "";
+  flagged.forEach(function (w) {
+    var c = document.createElement("button");
+    c.className = "chip"; c.textContent = w;
+    c.addEventListener("click", function () { showWord(w, { word: w, all: true }); });
+    chipsEl.appendChild(c);
+  });
+}
+
+function matchCase(orig, repl) {
+  if (orig.toUpperCase() === orig && orig.length > 1) return repl.toUpperCase();
+  if (orig[0].toUpperCase() === orig[0]) return repl[0].toUpperCase() + repl.slice(1);
+  return repl;
+}
+
+function showWord(word, tgt) {
+  target = tgt || null;
+  var info = inspectWord(word, 5);
+  inspWord.textContent = word;
+  if (info.status === "ug5") {
+    inspStatus.textContent = "In the ten hundred. This is its home coordinate.";
+  } else if (info.status === "known") {
+    inspStatus.textContent = "Outside the ten hundred. Its own coordinate is shown; " +
+      "the words below are its nearest in-list neighbors by coordinate distance.";
+  } else {
+    inspStatus.textContent = "Outside the ten hundred and not in the atlas sample, " +
+      "so it has no coordinate here. The words below are spelling guesses.";
+  }
+  bigCoord.innerHTML = info.coord
+    ? esc(fmtCoord(info.coord)).replace(/\//g, '<span class="sep">/</span>') : "";
+  neighborsEl.innerHTML = "";
+  info.neighbors.forEach(function (n) {
+    var row = document.createElement("div");
+    row.className = "nb";
+    row.innerHTML = '<span class="w"></span><span class="c coord"></span><span class="d"></span>';
+    row.querySelector(".w").textContent = n.word;
+    row.querySelector(".c").textContent = fmtCoord(n.coord);
+    row.querySelector(".d").textContent = n.spelling
+      ? "edit distance " + n.d : "distance " + n.d.toFixed(1);
+    row.title = "Put " + n.word + " in place of " + word;
+    row.addEventListener("click", function () { replaceTarget(n.word); });
+    neighborsEl.appendChild(row);
+  });
+}
+
+function replaceTarget(repl) {
+  if (!target) return;
+  var text = editor.value;
+  if (target.all) {
+    var re = new RegExp(target.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+    editor.value = text.replace(re, function (m) { return matchCase(m, repl); });
+  } else {
+    var orig = text.slice(target.start, target.end);
+    editor.value = text.slice(0, target.start) + matchCase(orig, repl) +
+                   text.slice(target.end);
+  }
+  target = null;
+  renderEditor();
+  editor.focus();
+}
+
+function wordAtCaret() {
+  var pos = editor.selectionStart, text = editor.value, found = null;
+  tokenize(text).forEach(function (t) {
+    if (pos >= t.start && pos <= t.end) found = t;
+  });
+  return found;
+}
+
+editor.addEventListener("input", renderEditor);
+editor.addEventListener("scroll", function () {
+  backdrop.scrollTop = editor.scrollTop;
+  backdrop.scrollLeft = editor.scrollLeft;
+});
+editor.addEventListener("click", function () {
+  var t = wordAtCaret();
+  if (t) showWord(t.word, { start: t.start, end: t.end, word: t.word });
+});
+editor.addEventListener("keyup", function () {
+  var t = wordAtCaret();
+  if (t) showWord(t.word, { start: t.start, end: t.end, word: t.word });
+});
+
+document.getElementById("lookup").addEventListener("input", function (e) {
+  var w = e.target.value.trim();
+  document.getElementById("lookupout").textContent = "";
+  if (w) showWord(w.split(/\s+/)[0], null);
+});
+
+var indexList = document.getElementById("indexlist");
+function renderIndex(filter) {
+  indexList.innerHTML = "";
+  var f = (filter || "").toLowerCase(), shown = 0;
+  UG5KEYS.forEach(function (w) {
+    if (f && w.indexOf(f) === -1) return;
+    var row = document.createElement("div");
+    row.className = "irow";
+    row.innerHTML = '<span class="w"></span><span class="c coord"></span>';
+    row.querySelector(".w").textContent = w;
+    row.querySelector(".c").textContent = fmtCoord(UG5DATA.ug5[w]);
+    row.addEventListener("click", function () { showWord(w, null); });
+    indexList.appendChild(row);
+    shown++;
+  });
+  if (!shown) indexList.innerHTML = '<div class="hint">No words match.</div>';
+}
+document.getElementById("indexsearch").addEventListener("input", function (e) {
+  renderIndex(e.target.value);
+});
+renderIndex("");
+renderEditor();
+</script>
+</body>
+</html>

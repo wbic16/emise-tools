@@ -1,0 +1,5 @@
+name: "upgoer_five_phext"
+title: "Up Goer Five Phext Word Atlas"
+description: "Give any English word a phext address in a 9D atlas where the ten hundred Up Goer Five words anchor a 10x10x10 grid and distance from an anchor encodes semantic distance, or decode an address back to its anchor word and approximate semantic distance."
+category: "Work and knowledge"
+include_in_prompt: true

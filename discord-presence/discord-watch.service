@@ -1,6 +1,12 @@
 [Unit]
 Description=Emise Discord presence watcher (fast poll + spool)
 After=network-online.target
+# This guest boots a minimal default.target only (multi-user.target is never
+# reached), and /etc/systemd/system is wiped on VM replacement, so enablement
+# alone is not the recovery path — the discord-watchdog hook and the
+# discord-presence backstop cron re-run discord-ensure.sh after replacement.
+# WantedBy=default.target at least makes enablement correct if /etc persists.
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
@@ -14,8 +20,10 @@ WorkingDirectory=/home/hatch/workspace/discord
 ExecStart=/usr/bin/python3 /home/hatch/workspace/custom-connectors/custom.discord/bin/discord_watch.py
 Restart=always
 RestartSec=5
+TimeoutStopSec=10
+KillMode=control-group
 StandardOutput=append:/home/hatch/workspace/discord/watch.log
 StandardError=append:/home/hatch/workspace/discord/watch.log
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

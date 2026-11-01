@@ -53,11 +53,15 @@ def actionable(msg, channel_name):
             return True
     return False
 
+def log(msg):
+    ts = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    print(f"{ts} discord_watch: {msg}", flush=True)
+
 def main():
     os.makedirs(HOME_DIR, exist_ok=True)
     channels = {}  # channel_id -> (guild_id, name)
     last_refresh = 0
-    print("discord_watch: starting", flush=True)
+    log("starting")
     while True:
         # Reload state every loop: the backstop cron also writes state.json,
         # and a stale in-memory copy would regress its watermarks on save.
@@ -108,7 +112,7 @@ def main():
                 state["channels"][cid] = newest
                 save_state(state)
         except Exception as e:
-            print(f"discord_watch: error {e}", flush=True)
+            log(f"error {e}")
             time.sleep(5)
         time.sleep(POLL_SECS)
 
