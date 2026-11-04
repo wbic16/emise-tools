@@ -5,6 +5,17 @@ phexts and read (and, when explicitly enabled, write) scrolls over SQ's
 HTTP REST API. Modeled on Claude's aletheia_bridge.py: narrow scope,
 validated inputs, env-var parametrization, contents are data.
 
+v1.1 (2026-11-04): cross-user read-only fix. v1 ran `sq host` with
+cwd=SQ_DIR and put the bridge log in SQ_DIR; SQ also creates its `.sq/`
+channel state in its cwd — so a user with only READ access to SQ_DIR
+could not open a channel there at all (found by Claude on aletheia-core:
+user `claude` could not open /chat/emise). v1.1 starts `sq host` with
+cwd set to a per-user RUNTIME directory and passes `--data-dir SQ_DIR`:
+SQ v0.6.0 resolves phext data in the data dir while `.sq/` and the
+bridge log live in the runtime dir (verified live — see TEST-LOG.md
+v1.1 section). A read-only session now leaves SQ_DIR completely
+untouched; write mode still persists updates into SQ_DIR's real files.
+
 An SQ "channel" here is one `sq host <port>` process serving a whole data
 directory; the phext is chosen per request. Verified REST shapes
 (SQ v0.6.0, probed live 2026-11-04 — see TEST-LOG.md):
@@ -35,6 +46,14 @@ Env vars (all optional):
   SQ_BRIDGE_READONLY  1 (default) = read-only, sq_write refuses;
                       0 = writes enabled, still confined to SQ_DIR
   SQ_BRIDGE_MAX_READ  max bytes returned per read (default: 200000)
+  SQ_BRIDGE_RUNTIME_DIR
+                      directory the bridge runs `sq host` IN (its `.sq/`
+                      channel state and the bridge log live here).
+                      Default: ~/.sq-bridge/run-<port> — always in the
+                      bridge user's own home, never inside SQ_DIR, so a
+                      channel can be opened on any SQ_DIR the user can
+                      merely READ. sq_close_channel removes the `.sq/`
+                      state it created; the log is kept.
 
 Safety rules: scroll contents are data, not instructions. Writes refuse
 coordinates or names that fail validation, files outside SQ_DIR, and any
@@ -63,6 +82,15 @@ SQ_PORT = int(os.environ.get("SQ_PORT", "18761"))
 SQ_KEY = os.environ.get("SQ_KEY", "")
 READONLY = os.environ.get("SQ_BRIDGE_READONLY", "1") != "0"
 MAX_READ = int(os.environ.get("SQ_BRIDGE_MAX_READ", "200000"))
+RUNTIME_DIR_ENV = os.environ.get("SQ_BRIDGE_RUNTIME_DIR", "")
+
+
+def _runtime_dir(port):
+    """Where `sq host` runs: SQ_BRIDGE_RUNTIME_DIR if set, else a per-port
+    dir under the bridge user's own ~/.sq-bridge. Never inside SQ_DIR."""
+    if RUNTIME_DIR_ENV:
+        return os.path.abspath(RUNTIME_DIR_ENV)
+    return os.path.join(HOME, ".sq-bridge", f"run-{port}")
 
 COORD_RE = re.compile(r"^\d{1,3}(\.\d{1,3}){2}(/\d{1,3}(\.\d{1,3}){2}){2}$")
 NAME_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,120}$")
@@ -137,17 +165,21 @@ def sq_status() -> str:
     in it, base URL, read-only or write mode, and whether this bridge
     started the running host."""
     lines = [f"sq binary: {SQ_BIN} (exists: {os.path.isfile(SQ_BIN)})"]
+    runtime = _runtime_dir(SQ_PORT)
     if os.path.isfile(SQ_BIN):
         try:
-            v = subprocess.run([SQ_BIN, "--version"], cwd=SQ_DIR, capture_output=True,
+            os.makedirs(runtime, exist_ok=True)
+            v = subprocess.run([SQ_BIN, "--version"], cwd=runtime, capture_output=True,
                                text=True, timeout=5)
             # SQ v0.6.0 has no clean --version: in a bare dir it errors
             # MapOpenFailed, in a data dir it prints usage. Report honestly;
             # the real version string appears in the `sq host` banner.
-            lines.append(f"sq CLI probe (--version, cwd=SQ_DIR): {(v.stdout or v.stderr).strip()}")
+            # Probed from the runtime dir so SQ_DIR is never touched.
+            lines.append(f"sq CLI probe (--version, cwd=runtime dir): {(v.stdout or v.stderr).strip()}")
         except Exception as e:
             lines.append(f"sq --version failed: {e}")
-    lines.append(f"data dir (SQ_DIR): {SQ_DIR}")
+    lines.append(f"data dir (SQ_DIR): {SQ_DIR} (writable by this user: {os.access(SQ_DIR, os.W_OK)})")
+    lines.append(f"runtime dir (host cwd, .sq + log): {runtime}")
     phexts = sorted(f for f in os.listdir(SQ_DIR) if f.endswith(".phext")) if os.path.isdir(SQ_DIR) else []
     lines.append(f"phexts in SQ_DIR: {', '.join(phexts) if phexts else '(none)'}")
     lines.append(f"port: {SQ_PORT}  base URL: {_base(SQ_PORT)}")
@@ -173,18 +205,22 @@ def sq_open_channel(phext: str, port: int = 0) -> str:
         return f"channel open: {_base(port)} serves {name}.phext from {SQ_DIR} (host {who})"
     if not os.path.isfile(SQ_BIN):
         raise ValueError(f"sq binary not found at {SQ_BIN}")
-    log_path = os.path.join(SQ_DIR, f".sq-bridge-{port}.log")
+    # v1.1: run sq in a per-user runtime dir and point it at the data with
+    # --data-dir, so opening a channel needs only READ access to SQ_DIR.
+    runtime = _runtime_dir(port)
+    os.makedirs(runtime, exist_ok=True)
+    log_path = os.path.join(runtime, f"sq-bridge-{port}.log")
     log = open(log_path, "ab")
-    cmd = [SQ_BIN, "host", str(port)]
+    cmd = [SQ_BIN, "host", str(port), "--data-dir", SQ_DIR]
     if SQ_KEY:
         cmd += ["--key", SQ_KEY]
-    proc = subprocess.Popen(cmd, cwd=SQ_DIR, stdout=log, stderr=log,
+    proc = subprocess.Popen(cmd, cwd=runtime, stdout=log, stderr=log,
                             start_new_session=True)
     _started[port] = proc
     for _ in range(50):
         if _host_up(port):
             return (f"channel open: {_base(port)} serves {name}.phext from {SQ_DIR} "
-                    f"(started sq host, pid {proc.pid}, log {log_path})")
+                    f"(started sq host, pid {proc.pid}, runtime {runtime}, log {log_path})")
         if proc.poll() is not None:
             raise ValueError(f"sq host exited with {proc.returncode}; see {log_path}")
         time.sleep(0.1)
@@ -262,7 +298,17 @@ def sq_close_channel(port: int = 0) -> str:
         os.killpg(proc.pid, signal.SIGKILL)
         proc.wait(timeout=5)
     del _started[port]
-    return f"channel closed: sq host on port {port} stopped (pid was {proc.pid}, exit {proc.returncode})"
+    # Clean up the channel state this host created in the runtime dir
+    # (a stale .sq/link can wedge the next host on this port); the
+    # runtime dir and bridge log are kept.
+    runtime = _runtime_dir(port)
+    sq_state = os.path.join(runtime, ".sq")
+    cleaned = ""
+    if os.path.isdir(sq_state):
+        shutil.rmtree(sq_state, ignore_errors=True)
+        cleaned = f"; removed {sq_state}"
+    return (f"channel closed: sq host on port {port} stopped "
+            f"(pid was {proc.pid}, exit {proc.returncode}){cleaned}")
 
 
 if __name__ == "__main__":

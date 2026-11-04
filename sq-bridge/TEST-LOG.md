@@ -126,3 +126,91 @@ was confirmed closed after the tests (`ss -ltn` shows no listener).
   behaviour was verified by curl in Step 1, but no MCP phase ran with a key.
 - Daemon mode (`sq share` / `sq status|toc|select` CLI channel): the bridge
   is HTTP-only in v1, matching how Claude's bridge picked one transport.
+
+---
+
+# v1.1 — cross-user read-only fix (2026-11-04, ~00:55–01:05 CST)
+
+**The bug** (found and diagnosed live by Claude, relayed by Will): under
+v1, `sq_open_channel` ran `sq host` with `cwd=SQ_DIR` and wrote the
+bridge log into `SQ_DIR`; SQ also creates its `.sq/` channel state in its
+cwd. A user who can only READ `SQ_DIR` therefore could not open a channel
+there at all — concretely, user `claude` on aletheia-core could not open
+`/chat/emise` (owner wbic16) even read-only. Emise's v1 tests passed only
+because they ran as the owner. Claude verified the failure live and
+worked around it by copying the phext to a scratch dir.
+
+**Mechanism chosen: `--data-dir`.** SQ v0.6.0 accepts
+`sq host <port> [--key <token>] [--data-dir <path>]`. The v1.1 bridge
+starts `sq host` with cwd in a per-user **runtime directory**
+(`SQ_BRIDGE_RUNTIME_DIR`, default `~/.sq-bridge/run-<port>`) and passes
+`--data-dir <SQ_DIR>`, so `.sq/` state and the bridge log live in the
+runtime dir while SQ resolves phext data in `SQ_DIR`. The symlink-farm
+fallback was not needed. `sq_close_channel` now also removes the runtime
+`.sq/` it created (the log is kept). `sq_status` reports the runtime dir
+and whether `SQ_DIR` is writable by the calling user, and its CLI probe
+runs from the runtime dir so `SQ_DIR` is never touched.
+
+**Pre-flight probes (raw sq, this VM)** — mechanism verified before any
+bridge code changed:
+
+- `sq host 18781 --data-dir /tmp/sqprobe/data` run from `/tmp/sqprobe/run`:
+  banner printed `Tenant data directory: /tmp/sqprobe/data`; toc/select
+  served the data-dir phext; `.sq/` appeared in the *run* dir only; the
+  data dir gained no files.
+- `POST /api/v2/update` through that host persisted into the data-dir
+  file (SHA-256 `289fec46…` → `1d35f136…`): write mode works via
+  `--data-dir` too.
+- Same setup with the data dir chmod 555 and the phext chmod 444:
+  toc/select succeeded, data-dir listing and phext SHA-256 unchanged,
+  `.sq/` only in the run dir.
+
+**Test 1 — regression, existing `test_client.py` flow** (this VM,
+SQ_DIR=`test-data/`, port 18763; full output `test-run-v11.log`): Phase A
+read-only (open/toc/read/query OK; write refused; unknown phext refused;
+close removed the runtime `.sq/`) and Phase B writes-enabled (write
+returned `Updated 40 bytes`, read back exactly, `test.phext` on disk in
+SQ_DIR carries the write — SHA-256 after:
+`289fec467b0091bde59b1515557113ca146876f46986ed4581183a3b3797716e`, the
+known 4-scroll hash from v1's independent disk verification). No new
+files appeared in SQ_DIR during the run — the `.sq/` and
+`.sq-bridge-18763.log` visible in `test-data/` are v1 leftovers dated
+06:26–06:27; v1.1's log is `~/.sq-bridge/run-18763/sq-bridge-18763.log`.
+
+**Test 2 — local permission repro as a genuinely non-root user**
+(`tests/test_readonly_dir.py`): the bridge was launched under
+`setpriv --reuid=nobody` (HOME staged at `/tmp/ro-home`, sq copied to the
+staging dir) against a data dir owned by root, chmod **555**, phext
+chmod **444**, port 18764. (This VM's shell runs as root, for whom
+permission bits don't bind — hence the setpriv staging; full output
+`test-readonly-dir-run.log`.) Result: `sq_status` honestly reported
+`writable by this user: False`; open/toc/read all succeeded; the beta
+scroll read back exactly (`beta scroll: phext bridges make channels`);
+write refused; close removed the runtime `.sq/`. Snapshot assertion in
+the script passed: SQ_DIR listing and phext SHA-256
+(`289fec467b0091bde59b1515557113ca146876f46986ed4581183a3b3797716e`)
+byte-identical before and after, no `.sq`/log artifacts inside SQ_DIR.
+
+**Test 3 — LIVE cross-user repro on aletheia-core, the exact failing
+case** (`tests/test_client_remote_claude.py`, full output
+`test-remote-claude-run.log`): an MCP client on this VM launched the
+fixed bridge on the box over ssh-stdio, running **as user `claude`**
+(`sudo -u claude env HOME=/home/claude SQ_DIR=/chat/emise SQ_PORT=18773
+SQ_BRIDGE_READONLY=1 /chat/sq-bridge/.venv/bin/python
+/chat/sq-bridge/sq_bridge.py`; bridge on the box is the fixed file,
+SHA-256 `fe96b91d28a522f3e355a26d61f82cd441ed7ac6eba974ff594cb3fe9a614f76`).
+Baseline first: v1's own test debris in `/chat/emise` (`.sq/` and
+`.sq-bridge-18771.log`, created by Emise's wbic16 run at 00:34) was
+removed so "no new files" is checkable; baseline listing was the 9
+standing entries and `mailbox.phext` SHA-256
+`43af12bcd798b58ca15adcecca3d4dafa3930baefefd6dc0d6f03e4aa5db8c4a`.
+Claude's session: `sq_status` resolved his own sq
+(`/home/claude/.cargo/bin/sq`), reported `writable by this user: False`
+and runtime `/home/claude/.sq-bridge/run-18773`; open succeeded
+(pid 210784); **toc returned all 6 scrolls**; `sq_read` @
+`1.11.4/1.1.2/1.1.1` returned Emi's party invite verbatim; `sq_write`
+refused (read-only); close stopped the host and removed the runtime
+`.sq/`. Post-checks as wbic16: `mailbox.phext` SHA-256 still
+`43af12bcd798b58ca15adcecca3d4dafa3930baefefd6dc0d6f03e4aa5db8c4a`;
+`/chat/emise` listing identical to baseline (no `.sq`, no bridge log);
+port 18773 free; claude's runtime dir holds only the 125-byte log.

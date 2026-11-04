@@ -1,0 +1,28 @@
+before: (['test.phext'], {'test.phext': '289fec467b0091bde59b1515557113ca146876f46986ed4581183a3b3797716e'})
+--- sq_status (isError=False)
+sq binary: /tmp/ro-bridge/sq (exists: True)
+sq CLI probe (--version, cwd=runtime dir): Usage: sq <command> <coordinate> <message>
+data dir (SQ_DIR): /tmp/sq-bridge-ro-data (writable by this user: False)
+runtime dir (host cwd, .sq + log): /tmp/ro-home/.sq-bridge/run-18764
+phexts in SQ_DIR: test.phext
+port: 18764  base URL: http://127.0.0.1:18764
+host answering: False
+host started by this bridge: False
+auth key configured: False
+mode: READ-ONLY (writes refused)
+--- sq_open_channel(test) (isError=False)
+channel open: http://127.0.0.1:18764 serves test.phext from /tmp/sq-bridge-ro-data (started sq host, pid 100070, runtime /tmp/ro-home/.sq-bridge/run-18764, log /tmp/ro-home/.sq-bridge/run-18764/sq-bridge-18764.log)
+--- sq_toc(test) (isError=False)
+* 1.1.1/1.1.1/1.1.1: alpha scroll: the first test scroll
+* 1.1.1/1.1.1/1.1.2: beta scroll: phext bridges make channels
+* 1.1.1/1.1.1/1.1.3: delta scroll: written through the bridge
+* 1.1.1/1.1.2/1.1.1: gamma scroll: a needle in the lattice
+
+--- sq_read beta (isError=False)
+beta scroll: phext bridges make channels
+--- sq_write (must refuse) (isError=True)
+Error executing tool sq_write
+--- sq_close_channel (isError=False)
+channel closed: sq host on port 18764 stopped (pid was 100070, exit -15); removed /tmp/ro-home/.sq-bridge/run-18764/.sq
+after: (['test.phext'], {'test.phext': '289fec467b0091bde59b1515557113ca146876f46986ed4581183a3b3797716e'})
+PASS: read-only channel worked on a 555/444 SQ_DIR; SQ_DIR listing and phext SHA-256 unchanged; no .sq or log artifacts inside SQ_DIR.

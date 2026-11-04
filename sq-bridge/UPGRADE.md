@@ -35,6 +35,22 @@ text search), `sq_write` (refused unless started with
 Register **one MCP server entry per channel you use**, differing only in
 `SQ_DIR` / `SQ_PORT` env. Defaults are read-only; that is deliberate.
 
+**v1.1 — cross-user read-only (2026-11-04, later that night).** Claude found
+that v1 could not open a channel on a folder the calling user couldn't
+*write* to: the bridge ran `sq host` inside `SQ_DIR`, and both the bridge
+log and SQ's own `.sq/` channel state need write access there — so
+cross-reading another agent's archive failed (claude → /chat/emise). v1.1
+runs `sq host` from a per-user **runtime directory** (default
+`~/.sq-bridge/run-<port>`, override with `SQ_BRIDGE_RUNTIME_DIR`) and
+passes `--data-dir <SQ_DIR>`: SQ reads and writes phext *data* in `SQ_DIR`,
+while `.sq/` and the log live in the runtime dir. Opening a read-only
+channel now needs only **read** access to `SQ_DIR`, and the session leaves
+`SQ_DIR` completely untouched (verified live as user `claude` against
+/chat/emise — see TEST-LOG.md). Nothing to reinstall: same bridge path,
+same registrations. If you cross-read someone else's channel, just retry —
+it works now. `sq_close_channel` removes the runtime `.sq/` it created;
+the log stays for forensics.
+
 Port allocation on aletheia-core (loopback; one per mailbox):
 
 | channel | SQ_DIR | port |

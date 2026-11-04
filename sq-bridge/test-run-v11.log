@@ -1,0 +1,53 @@
+=== Phase A: SQ_BRIDGE_READONLY=1 (default) ===
+--- tools: sq_status, sq_open_channel, sq_toc, sq_read, sq_query, sq_write, sq_close_channel
+--- A sq_status (isError=False)
+sq binary: /home/hatch/.cargo/bin/sq (exists: True)
+sq CLI probe (--version, cwd=runtime dir): Usage: sq <command> <coordinate> <message>
+data dir (SQ_DIR): /home/hatch/workspace/sq-bridge/test-data (writable by this user: True)
+runtime dir (host cwd, .sq + log): /home/hatch/.sq-bridge/run-18763
+phexts in SQ_DIR: test.phext
+port: 18763  base URL: http://127.0.0.1:18763
+host answering: False
+host started by this bridge: False
+auth key configured: False
+mode: READ-ONLY (writes refused)
+--- A sq_open_channel(test) (isError=False)
+channel open: http://127.0.0.1:18763 serves test.phext from /home/hatch/workspace/sq-bridge/test-data (started sq host, pid 99349, runtime /home/hatch/.sq-bridge/run-18763, log /home/hatch/.sq-bridge/run-18763/sq-bridge-18763.log)
+--- A sq_toc(test) (isError=False)
+* 1.1.1/1.1.1/1.1.1: alpha scroll: the first test scroll
+* 1.1.1/1.1.1/1.1.2: beta scroll: phext bridges make channels
+* 1.1.1/1.1.1/1.1.3: delta scroll: written through the bridge
+* 1.1.1/1.1.2/1.1.1: gamma scroll: a needle in the lattice
+
+--- A sq_read alpha (isError=False)
+alpha scroll: the first test scroll
+--- A sq_query range (isError=False)
+[{"coordinate":"1.1.1/1.1.1/1.1.1","scroll":"alpha scroll: the first test scroll"},{"coordinate":"1.1.1/1.1.1/1.1.2","scroll":"beta scroll: phext bridges make channels"}]
+--- A sq_write (must refuse) (isError=True)
+Error executing tool sq_write
+--- A sq_read missing phext (must refuse) (isError=True)
+Error executing tool sq_read
+--- A sq_close_channel (isError=False)
+channel closed: sq host on port 18763 stopped (pid was 99349, exit -15); removed /home/hatch/.sq-bridge/run-18763/.sq
+=== Phase B: SQ_BRIDGE_READONLY=0 ===
+--- B sq_open_channel(test) (isError=False)
+channel open: http://127.0.0.1:18763 serves test.phext from /home/hatch/workspace/sq-bridge/test-data (started sq host, pid 99369, runtime /home/hatch/.sq-bridge/run-18763, log /home/hatch/.sq-bridge/run-18763/sq-bridge-18763.log)
+--- B sq_write delta (isError=False)
+wrote test.phext @ 1.1.1/1.1.1/1.1.3: SQ said 'Updated 40 bytes'
+--- B sq_read delta back (isError=False)
+delta scroll: written through the bridge
+--- B sq_write bad coord (must refuse) (isError=True)
+Error executing tool sq_write
+--- B sq_close_channel (isError=False)
+channel closed: sq host on port 18763 stopped (pid was 99369, exit -15); removed /home/hatch/.sq-bridge/run-18763/.sq
+--- B sq_status after close (isError=False)
+sq binary: /home/hatch/.cargo/bin/sq (exists: True)
+sq CLI probe (--version, cwd=runtime dir): Usage: sq <command> <coordinate> <message>
+data dir (SQ_DIR): /home/hatch/workspace/sq-bridge/test-data (writable by this user: True)
+runtime dir (host cwd, .sq + log): /home/hatch/.sq-bridge/run-18763
+phexts in SQ_DIR: test.phext
+port: 18763  base URL: http://127.0.0.1:18763
+host answering: False
+host started by this bridge: False
+auth key configured: False
+mode: WRITES ENABLED (SQ_DIR only)
