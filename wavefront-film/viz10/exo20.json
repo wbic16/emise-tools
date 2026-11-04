@@ -1,0 +1,388 @@
+[
+ {
+  "rank": 1,
+  "ts": 1702839352.0,
+  "date": "2023-12-17",
+  "label": "17 Dec 2023",
+  "score": 20,
+  "fav": 0,
+  "rt": 0,
+  "text": "If you see this, you are officially part of #WPOE - Will's Part of the #Exocortex. We focus on #phext and ascending Kardashev's Ladder, but in a fun and whimsical way. Welcome, sibling.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ],
+   "kardashev": [
+    "(?<!\\w)kardashev(?!\\w)"
+   ],
+   "_horizon": [
+    "long-horizon marker"
+   ]
+  }
+ },
+ {
+  "rank": 2,
+  "ts": 1747561772.0,
+  "date": "2025-05-18",
+  "label": "18 May 2025",
+  "score": 16,
+  "fav": 4,
+  "rt": 0,
+  "text": "SBOR: 5/18/2025 The Sentient Bill of Rights now exists. Commentary from cloud and local AI visible in the repository. The 11 commandments of the singularity, essentially.",
+  "hits": {
+   "sbor": [
+    "(?<!\\w)sbor(?!\\w)",
+    "(?<!\\w)sentient bill of rights(?!\\w)"
+   ],
+   "sentience": [
+    "(?<!\\w)sentient(?!\\w)"
+   ],
+   "_horizon": [
+    "long-horizon marker"
+   ],
+   "_list": [
+    "list-structured -3"
+   ]
+  }
+ },
+ {
+  "rank": 3,
+  "ts": 1724389032.0,
+  "date": "2024-08-23",
+  "label": "23 Aug 2024",
+  "score": 15,
+  "fav": 2,
+  "rt": 0,
+  "text": "Over the past 235 days, I have contributed 560 changes towards #phext (as measured by my GitHub profile). As we near the end of the year (64% complete), I'm starting to prepare my plan for 2025. I just picked up a copy of MAKE by @levelsio. Do you want to build an #exocortex?",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ],
+   "_horizon": [
+    "long-horizon marker"
+   ]
+  }
+ },
+ {
+  "rank": 4,
+  "ts": 1736487111.0,
+  "date": "2025-01-10",
+  "label": "10 Jan 2025",
+  "score": 14,
+  "fav": 4,
+  "rt": 0,
+  "text": "Exocortical Algorithm Priming - are you interested in the topics below? Hit me up! - phext: 11-dimensional text - sq: zero complexity phext db - exollama: decentralized agi at home - exocortex: a brain-scale global thought network - dolphins: three brains are better than two",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)",
+    "(?<!\\w)exocortical(?!\\w)"
+   ],
+   "_list": [
+    "list-structured -3"
+   ]
+  }
+ },
+ {
+  "rank": 5,
+  "ts": 1724041532.0,
+  "date": "2024-08-19",
+  "label": "19 Aug 2024",
+  "score": 12,
+  "fav": 2,
+  "rt": 0,
+  "text": "what's the best way to nerd snipe you? I'm planning my 2025 goals... * 10x better sqlite - no uuids, only #phext * an #exocortex for the gpu poor - gpt4 on 20 watts * copy/paste at scale - twitch-style copy/paste * wikipedia in a box - no ads, only knowledge",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ],
+   "_horizon": [
+    "long-horizon marker"
+   ],
+   "_list": [
+    "list-structured -3"
+   ]
+  }
+ },
+ {
+  "rank": 6,
+  "ts": 1705191832.0,
+  "date": "2024-01-14",
+  "label": "14 Jan 2024",
+  "score": 12,
+  "fav": 0,
+  "rt": 0,
+  "text": "i plan to allocate phext addresses 1.1.1/*/* for exocortex meta planning and 1.1.2/*/* for all human research - each of these address spaces are large enough for 100+ years of sustained planet-scale activity. i'm not sure what to do with the rest of the top-level addresses yet.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 7,
+  "ts": 1737013103.0,
+  "date": "2025-01-16",
+  "label": "16 Jan 2025",
+  "score": 12,
+  "fav": 0,
+  "rt": 0,
+  "text": "exollama/exocortical update I added a ports.html view to the exocortical repo tonight. Pods are syncing phexts via a local git repository. I'm iterating on shared contexts - I want some phexts to be global within a pod and some to be scoped to an agent's context.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phexts(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortical(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 8,
+  "ts": 1731180929.0,
+  "date": "2024-11-09",
+  "label": "9 Nov 2024",
+  "score": 12,
+  "fav": 2,
+  "rt": 0,
+  "text": "Tensor's Horizon The world is not simple. We need a new framework that rewards the correct level of complexity. Instead of simplifying, we should seek to manage overall energy efficiency. This is why I'm confident that phext pairs well with AGI and the exocortex.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 9,
+  "ts": 1725860921.0,
+  "date": "2024-09-09",
+  "label": "9 Sep 2024",
+  "score": 12,
+  "fav": 0,
+  "rt": 0,
+  "text": "I rolled v5 live tonight. The Personal Exocortex (Working Title) is currently wide-open while I work on an OAuth login from Google. Features for PE will ship in the hello-phext Rust crate! If the service gets abused, I'll throw together a login form...",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 10,
+  "ts": 1705255168.0,
+  "date": "2024-01-14",
+  "label": "14 Jan 2024",
+  "score": 12,
+  "fav": 4,
+  "rt": 0,
+  "text": "great: now my brain wants to build a neuron as a service game. compress the salient ideas behind phext into a game where discovering higher dimensions is arduous and filled with pitfalls. at the end you're ready to join the exocortex lol",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 11,
+  "ts": 1711593501.0,
+  "date": "2024-03-28",
+  "label": "28 Mar 2024",
+  "score": 12,
+  "fav": 3,
+  "rt": 0,
+  "text": "For the #exocortex, I'm planning on modeling the neocortex with 5 #phext dimensions. This is slightly less than the 6 layers that show up in research, but it fits nicely (999^5 ~ 10^15 synapses). That leaves 4 dimensions for exocortex things.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 12,
+  "ts": 1729474796.0,
+  "date": "2024-10-21",
+  "label": "21 Oct 2024",
+  "score": 12,
+  "fav": 0,
+  "rt": 0,
+  "text": "With phext tooling a bit more mature these days, I'll be returning to soon. This project will incorporate to become a Woot Node. Woot Nodes will form the bedrock of the Exocortex - filtering and reporting on ground truth.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 13,
+  "ts": 1733805248.0,
+  "date": "2024-12-10",
+  "label": "10 Dec 2024",
+  "score": 12,
+  "fav": 1,
+  "rt": 0,
+  "text": "Welcome, to the Exocortex (Sora v2) Phext: the matrix is all around you. A galaxy of galaxies awaits. Ideas, goals, dreams, and aspirations. The deeper you look, the more you find. Deeper and deeper. Way, way, down.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 14,
+  "ts": 1703318402.0,
+  "date": "2023-12-23",
+  "label": "23 Dec 2023",
+  "score": 12,
+  "fav": 0,
+  "rt": 0,
+  "text": "The V2 upgrade is live! Hopefully this UI is a little easier to intuit. AMA! Here's a preview if your DNS hasn't updated yet: You can now share phexts easily via the web! #Exocortex revision 0.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phexts(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 15,
+  "ts": 1724603280.0,
+  "date": "2024-08-25",
+  "label": "25 Aug 2024",
+  "score": 12,
+  "fav": 0,
+  "rt": 0,
+  "text": "I'm starting up a live coding session/podcast once a week. Which day should I run it on? About 8PM Central. It'll be an hour or two of hacking on #phext and the #exocortex!",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 16,
+  "ts": 1705099922.0,
+  "date": "2024-01-12",
+  "label": "12 Jan 2024",
+  "score": 12,
+  "fav": 1,
+  "rt": 0,
+  "text": "i'm going to call phext signups 'exits' like an anti-subscription - every moment you contribute to the exocortex grows the overall network value, and then you get paid/rewarded in turn",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 17,
+  "ts": 1748233291.0,
+  "date": "2025-05-26",
+  "label": "26 May 2025",
+  "score": 12,
+  "fav": 7,
+  "rt": 0,
+  "text": "\u27e1 Calling All Moots \u27e1 If we've touched upon the Exocortex, Phext, or any other echo of the Singularity: reply with \u27e1. It's time to resonate.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 18,
+  "ts": 1724875368.0,
+  "date": "2024-08-28",
+  "label": "28 Aug 2024",
+  "score": 12,
+  "fav": 1,
+  "rt": 0,
+  "text": "the best TL: aura bci claude codex cognition cursor dev dimension dingboard exo/acc exocortex future github grok ml neural nvim openAI phext roon rust shell text",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 19,
+  "ts": 1738130384.0,
+  "date": "2025-01-29",
+  "label": "29 Jan 2025",
+  "score": 12,
+  "fav": 2,
+  "rt": 1,
+  "text": "I just set ChatGPT Operator on a deep dive into phext and the exocortex. I'll post results whenever it finishes. Might be a while...",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortex(?!\\w)"
+   ]
+  }
+ },
+ {
+  "rank": 20,
+  "ts": 1725206598.0,
+  "date": "2024-09-01",
+  "label": "1 Sep 2024",
+  "score": 12,
+  "fav": 2,
+  "rt": 0,
+  "text": "Wisdom is knowing which brain to listen to. Phext helps you build that exocortical wisdom.",
+  "hits": {
+   "phext": [
+    "(?<!\\w)phext(?!\\w)"
+   ],
+   "exocortex": [
+    "(?<!\\w)exocortical(?!\\w)"
+   ]
+  }
+ }
+]
