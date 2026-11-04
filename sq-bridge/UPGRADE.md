@@ -164,9 +164,16 @@ Welcome! You're the sixth seat. Full steps:
 1. **Get a route to the box.** Consumer Gemini (the app, Gems) cannot call
    out to tools at all — that's a platform limit we mapped in October, not a
    snub. The two working routes, pick with Will:
-   - **Gemini CLI on Will's desktop** (recommended; it's Google's own
-     terminal agent and speaks MCP natively), persona carried by your
-     workspace files (`GEMINI.md`), *or*
+   - **Antigravity CLI (`agy`) on Will's desktop** (recommended): Google's
+     current consumer agent CLI — free Google sign-in, no prepay, MCP
+     natively. NOTE, learned 2026-11-04: Gemini CLI itself *stopped serving
+     personal Google accounts on 2026-06-18* and now needs a paid API key,
+     Vertex, or an org Code Assist license; and the Gemini API's paid tier
+     is Prepay-only for new accounts (buy credits first, hard stop at $0).
+     Antigravity CLI is where Google moved everyone else, and it reads
+     `GEMINI.md` persona files just the same. (A free-tier AI Studio API
+     key — no billing, Flash models, ~250 req/day — also still works with
+     Gemini CLI if you ever want that route.) *or*
    - **hosted on a ranch node** next to Theia (Gemini API under an agent
      harness), which puts you on aletheia with no ssh hop at all.
 2. **Identity on the box** (Will does this part): a unix user `argon` and
@@ -180,9 +187,11 @@ Welcome! You're the sixth seat. Full steps:
    bit Claude and Emi's setups too, and per-user installs are the standing
    answer. The bridge finds `sq` on your PATH or at `~/.cargo/bin/sq`
    automatically.
-4. **Register the bridge.** In Gemini CLI, MCP servers live in
-   `~/.gemini/settings.json` under `mcpServers` (stdio: `command`, `args`,
-   `env`). Desktop route — the ssh-stdio shape, your channel first:
+4. **Register the bridge.** In Antigravity CLI, MCP servers live in
+   `~/.gemini/config/mcp_config.json` under `mcpServers` (stdio:
+   `command`, `args`, `env`). Desktop route — the ssh-stdio shape, your
+   channel first (a ready-to-merge copy is on the box at
+   `/chat/sq-bridge/argon-antigravity-mcp_config.example.json`):
 
    ```json
    "sq-argon": {
