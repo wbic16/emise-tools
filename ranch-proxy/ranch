@@ -1,0 +1,235 @@
+#!/usr/bin/env python3
+"""ranch — CLI for the ranch proxy (ranchd).
+
+    ranch ensure                  start ranchd if it isn't running (idempotent)
+    ranch stop                    stop the daemon started by ensure
+    ranch nodes                   list configured nodes
+    ranch status                  per-node reachability + Tctl
+    ranch exec <name> <cmd...>    run a command on one node, by short name
+    ranch fanout <cmd...>         run a command on all enabled nodes, in parallel
+    ranch copy <name> <local> <remote>   scp a file to a node
+
+`exec`, `fanout` and `copy` auto-run `ensure` first, so the normal flow is
+just `ranch exec ni-knight uptime`. Everything here is a local request to
+127.0.0.1 — ranchd makes the outbound SSH connections. See README.md.
+"""
+
+import json
+import os
+import subprocess
+import sys
+import time
+import urllib.request
+
+HOME = os.path.dirname(os.path.abspath(__file__))
+CONFIG_PATH = os.environ.get("RANCH_NODES", os.path.join(HOME, "nodes.json"))
+STATE = os.path.join(HOME, "state")
+CTL_DIR = os.path.join(STATE, "ctl")
+KNOWN_HOSTS = os.path.join(STATE, "known_hosts")
+PIDFILE = os.path.join(STATE, "ranchd.pid")
+LOGFILE = os.path.join(STATE, "ranchd.log")
+
+with open(CONFIG_PATH) as f:
+    CFG = json.load(f)
+PORT = int(os.environ.get("RANCHD_PORT", CFG.get("port", 18931)))
+BASE = f"http://127.0.0.1:{PORT}"
+DEFAULTS = CFG.get("defaults", {})
+
+
+def api(method, path, body=None, timeout=30):
+    data = json.dumps(body).encode() if body is not None else None
+    req = urllib.request.Request(BASE + path, data=data, method=method,
+                                 headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def ping():
+    try:
+        return api("GET", "/ping", timeout=2).get("ok") is True
+    except Exception:
+        return False
+
+
+def ensure():
+    """Start ranchd if needed. Every wait is bounded — this can never hang
+    the way sq-ensure.sh does on stale state."""
+    if ping():
+        return True
+    os.makedirs(CTL_DIR, exist_ok=True)
+    daemon = os.path.join(HOME, "ranchd")
+    log = open(LOGFILE, "ab")
+    subprocess.Popen([sys.executable, daemon], cwd=HOME,
+                     stdout=log, stderr=log, start_new_session=True)
+    deadline = time.monotonic() + 12
+    while time.monotonic() < deadline:
+        if ping():
+            return True
+        time.sleep(0.25)
+    print(f"ranch: ranchd did not come up within 12s; see {LOGFILE}",
+          file=sys.stderr)
+    return False
+
+
+def norm(name):
+    return name.strip().lower().replace(" ", "-").replace("_", "-")
+
+
+def find_node(name):
+    want = norm(name)
+    for node in CFG["nodes"]:
+        if norm(node["name"]) == want or norm(node.get("display", "")) == want:
+            return node
+    return None
+
+
+def cmd_nodes():
+    rows = api("GET", "/nodes")["nodes"]
+    print(f"{'NAME':<17} {'USER':<8} {'IP':<16} {'ON':<3}  DNS / NOTE")
+    for n in rows:
+        print(f"{n['name']:<17} {n.get('user', DEFAULTS.get('user', '')):<8} "
+              f"{n['ip']:<16} {'yes' if n.get('enabled', True) else 'NO':<3}  "
+              f"{n.get('dns') or ''}" + (f"  — {n['note']}" if n.get("note") else ""))
+    return 0
+
+
+def cmd_status():
+    data = api("GET", "/status", timeout=180)
+    print(f"{'NAME':<17} {'REACH':<6} {'HOST':<17} {'TCTL':<7} {'LAST':<7} NOTE")
+    for n in data["nodes"]:
+        reach = "—" if n["reachable"] is None else ("yes" if n["reachable"] else "NO")
+        temp = f"{n['temp_c']:.1f}C" if n["temp_c"] is not None else "—"
+        last = f"{n['last_ms']}ms" if n["last_ms"] is not None else "—"
+        print(f"{n['name']:<17} {reach:<6} {(n['hostname'] or '—'):<17} "
+              f"{temp:<7} {last:<7} {n.get('note') or ''}")
+    return 0
+
+
+def cmd_exec(name, command_words):
+    if not ensure():
+        return 1
+    command = " ".join(command_words)
+    try:
+        r = api("POST", "/exec", {"node": name, "command": command}, timeout=600)
+    except urllib.error.HTTPError as e:
+        print(f"ranch: {e.read().decode('utf-8', 'replace')}", file=sys.stderr)
+        return 1
+    sys.stdout.write(r["stdout"])
+    sys.stderr.write(r["stderr"])
+    print(f"[ranch: {r['node']} rc={r['rc']} {r['ms']}ms]", file=sys.stderr)
+    return r["rc"] if r["rc"] is not None else 1
+
+
+def cmd_fanout(command_words, timeout=120):
+    if not ensure():
+        return 1
+    command = " ".join(command_words)
+    r = api("POST", "/fanout", {"command": command, "timeout": timeout},
+            timeout=timeout * 2 + 60)
+    worst = 0
+    for res in r["results"]:
+        print(f"===== {res['node']} =====")
+        if res.get("skipped"):
+            print(f"SKIPPED ({res['skipped']}, Tctl {res.get('temp_c')}C)")
+            continue
+        sys.stdout.write(res["stdout"])
+        if res["stderr"]:
+            sys.stdout.write(res["stderr"])
+        print(f"----- rc={res['rc']} {res['ms']}ms Tctl={res.get('temp_c')}")
+        if res["rc"] != 0:
+            worst = 1
+    print(f"[ranch: fanout wall {r['wall_ms']}ms across "
+          f"{len(r['results'])} nodes]", file=sys.stderr)
+    return worst
+
+
+def cmd_copy(name, local, remote):
+    """scp through the same transport: same proxy, key, host-key store,
+    and control socket (so it reuses the daemon's warm master)."""
+    node = find_node(name)
+    if node is None:
+        print(f"ranch: unconfigured node: {name!r}", file=sys.stderr)
+        return 1
+    if not ensure():
+        return 1
+    user = node.get("user", DEFAULTS.get("user", "wbic16"))
+    args = [
+        "scp", "-O",
+        "-i", os.path.expanduser(DEFAULTS["key"]),
+        "-o", "IdentitiesOnly=yes",
+        "-o", "BatchMode=yes",
+        "-o", f"UserKnownHostsFile={KNOWN_HOSTS}",
+        "-o", "StrictHostKeyChecking=accept-new",
+        "-o", f"HostKeyAlias={node.get('dns') or node['name']}",
+        "-o", f"ProxyCommand=nc -X connect -x {DEFAULTS['connect_proxy']} %h %p",
+        "-o", f"ConnectTimeout={DEFAULTS.get('connect_timeout_s', 15)}",
+        "-o", "ControlMaster=auto",
+        "-o", f"ControlPath={os.path.join(CTL_DIR, node['name'])}",
+        "-o", f"ControlPersist={DEFAULTS.get('control_persist_s', 300)}",
+        local, f"{user}@{node['ip']}:{remote}",
+    ]
+    return subprocess.run(args).returncode
+
+
+def cmd_stop():
+    try:
+        pid = int(open(PIDFILE).read().strip())
+    except Exception:
+        print("ranch: no pid file — daemon not running under ensure", file=sys.stderr)
+        return 1
+    try:
+        os.kill(pid, 15)
+    except ProcessLookupError:
+        # Stale pid file (daemon was killed or reaped): clean up and say so.
+        try:
+            os.unlink(PIDFILE)
+        except OSError:
+            pass
+        print(f"ranch: ranchd (pid {pid}) was not running; removed stale pid file")
+        return 0
+    print(f"ranch: sent SIGTERM to ranchd (pid {pid})")
+    return 0
+
+
+USAGE = __doc__
+
+
+def main(argv):
+    if not argv:
+        print(USAGE)
+        return 2
+    cmd, rest = argv[0], argv[1:]
+    if cmd == "ensure":
+        print("ranchd is up" if ensure() else "ranchd failed to start")
+        return 0 if ping() else 1
+    if cmd == "stop":
+        return cmd_stop()
+    if cmd == "nodes":
+        if not ensure():
+            return 1
+        return cmd_nodes()
+    if cmd == "status":
+        if not ensure():
+            return 1
+        return cmd_status()
+    if cmd == "exec":
+        if len(rest) < 2:
+            print("usage: ranch exec <short-name> <command...>", file=sys.stderr)
+            return 2
+        return cmd_exec(rest[0], rest[1:])
+    if cmd == "fanout":
+        if not rest:
+            print("usage: ranch fanout <command...>", file=sys.stderr)
+            return 2
+        return cmd_fanout(rest)
+    if cmd == "copy":
+        if len(rest) != 3:
+            print("usage: ranch copy <short-name> <local> <remote>", file=sys.stderr)
+            return 2
+        return cmd_copy(*rest)
+    print(USAGE)
+    return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

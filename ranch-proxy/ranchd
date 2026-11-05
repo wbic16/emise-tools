@@ -1,0 +1,342 @@
+#!/usr/bin/env python3
+"""ranchd — local proxy daemon for the Bickford ranch fleet.
+
+Emise's tooling talks to this daemon on 127.0.0.1 and addresses nodes by
+short name (`rock-mountain`, `ni-knight`, ...). The daemon maps each name
+to a pre-configured ranch node from nodes.json and makes the outbound SSH
+connection itself, through the tailnet egress CONNECT proxy
+(hatch-egress-proxy:3130).
+
+Measured constraint (2026-11-04): the egress proxy does not resolve
+tailnet DNS names — SSH to *.pizzly-halfmoon.ts.net timed out at banner
+exchange 4 times out of 4, while the same recipe against Tailscale IPs
+connects immediately. So the daemon dials the node's Tailscale IP on the
+wire and carries the node's name as HostKeyAlias: names are the address
+everywhere in the interface and config; the IP is only the raw dial.
+See README.md.
+
+Safety shape:
+  * binds 127.0.0.1 only — hardcoded, no config path changes it;
+  * targets are restricted to nodes configured in nodes.json — there is
+    no way to ask this daemon to connect to an arbitrary host;
+  * it authenticates with the existing key (~/.ssh/id_ed25519) as the
+    configured per-node user. No new credentials exist here.
+  * host keys live in state/known_hosts inside this workspace directory,
+    which persists across Muse VM replacements (the VM's own
+    /root/.ssh/known_hosts does not, and its loss impersonates a broken
+    key grant). First use of a node accept-news its key into that file;
+    later connections verify against it.
+
+State (pid, log, control sockets, known_hosts) lives under ./state/ so
+everything survives VM replacement. Python 3 stdlib only.
+"""
+
+import json
+import os
+import shlex
+import subprocess
+import sys
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+
+HOME = os.path.dirname(os.path.abspath(__file__))
+CONFIG_PATH = os.environ.get("RANCH_NODES", os.path.join(HOME, "nodes.json"))
+STATE = os.path.join(HOME, "state")
+CTL_DIR = os.path.join(STATE, "ctl")
+KNOWN_HOSTS = os.path.join(STATE, "known_hosts")
+PIDFILE = os.path.join(STATE, "ranchd.pid")
+BIND = "127.0.0.1"  # localhost only, by construction — not configurable
+
+with open(CONFIG_PATH) as f:
+    CFG = json.load(f)
+PORT = int(os.environ.get("RANCHD_PORT", CFG.get("port", 18931)))
+DEFAULTS = CFG.get("defaults", {})
+
+# Remote probe: short hostname + CPU Tctl in millidegrees (k10temp if
+# present, else the first hwmon temp). Output is parsed, never executed.
+TEMP_PROBE = (
+    'h=$(hostname); t=""; '
+    'for d in /sys/class/hwmon/hwmon*; do '
+    'if [ "$(cat $d/name 2>/dev/null)" = k10temp ]; then '
+    't=$(cat $d/temp1_input 2>/dev/null); break; fi; done; '
+    'if [ -z "$t" ]; then '
+    't=$(cat /sys/class/hwmon/hwmon*/temp1_input 2>/dev/null | head -1); fi; '
+    'echo "HOST=$h"; echo "TCTL_MILLI=$t"'
+)
+
+LAST = {}          # node name -> {"ms": int, "rc": int|None, "at": float}
+LAST_LOCK = threading.Lock()
+STATUS_CACHE = {"at": 0.0, "data": None}
+STATUS_LOCK = threading.Lock()
+
+
+def log(msg):
+    print(f"[ranchd {time.strftime('%H:%M:%S')}] {msg}", file=sys.stderr, flush=True)
+
+
+def norm(name):
+    return name.strip().lower().replace(" ", "-").replace("_", "-")
+
+
+def find_node(name):
+    want = norm(name)
+    for node in CFG["nodes"]:
+        if norm(node["name"]) == want or norm(node.get("display", "")) == want:
+            return node
+    return None
+
+
+def node_user(node):
+    return node.get("user", DEFAULTS.get("user", "wbic16"))
+
+
+def ssh_args(node, mux=True):
+    """The SSH recipe that works from this VM (TOOLS.md, verified)."""
+    args = [
+        "ssh",
+        "-i", os.path.expanduser(DEFAULTS["key"]),
+        "-o", "IdentitiesOnly=yes",
+        "-o", "BatchMode=yes",
+        "-o", f"UserKnownHostsFile={KNOWN_HOSTS}",
+        "-o", "StrictHostKeyChecking=accept-new",
+        # Keys are recorded under the node's DNS name even though we dial
+        # its IP (the egress proxy cannot resolve tailnet DNS).
+        "-o", f"HostKeyAlias={node.get('dns') or node['name']}",
+        "-o", f"ProxyCommand=nc -X connect -x {DEFAULTS['connect_proxy']} %h %p",
+        "-o", f"ConnectTimeout={DEFAULTS.get('connect_timeout_s', 15)}",
+    ]
+    if mux:
+        args += [
+            "-o", "ControlMaster=auto",
+            "-o", f"ControlPath={os.path.join(CTL_DIR, node['name'])}",
+            "-o", f"ControlPersist={DEFAULTS.get('control_persist_s', 300)}",
+        ]
+    return args
+
+
+def mux_alive(node):
+    cp = os.path.join(CTL_DIR, node["name"])
+    if not os.path.exists(cp):
+        return False
+    try:
+        r = subprocess.run(
+            ssh_args(node) + ["-O", "check", f"{node_user(node)}@{node['ip']}"],
+            capture_output=True, timeout=10)
+        return r.returncode == 0
+    except Exception:
+        return False
+
+
+def drop_dead_mux(node):
+    """If a control socket exists but its master is dead, remove the stale
+    socket so the next connection starts a fresh master instead of failing."""
+    cp = os.path.join(CTL_DIR, node["name"])
+    if os.path.exists(cp) and not mux_alive(node):
+        try:
+            os.unlink(cp)
+        except OSError:
+            pass
+        return True
+    return False
+
+
+def exec_node(node, command, timeout=60):
+    """Run one command on one node. Returns the /exec result dict."""
+    os.makedirs(CTL_DIR, exist_ok=True)
+    drop_dead_mux(node)
+    target = f"{node_user(node)}@{node['ip']}"
+    started = time.monotonic()
+    try:
+        r = subprocess.run(ssh_args(node) + [target, "--", command],
+                           capture_output=True, text=True, timeout=timeout)
+        rc, out, err = r.returncode, r.stdout, r.stderr
+    except subprocess.TimeoutExpired as e:
+        rc, out, err = None, (e.stdout or b"").decode("utf-8", "replace") \
+            if isinstance(e.stdout, bytes) else (e.stdout or ""), \
+            f"ranchd: timed out after {timeout}s"
+    ms = int((time.monotonic() - started) * 1000)
+    with LAST_LOCK:
+        LAST[node["name"]] = {"ms": ms, "rc": rc, "at": time.time()}
+    return {"node": node["name"], "rc": rc, "stdout": out, "stderr": err, "ms": ms}
+
+
+def probe_node(node, timeout=20):
+    """Hostname + Tctl for one node; used by /status and fanout pre-flight."""
+    r = exec_node(node, TEMP_PROBE, timeout=timeout)
+    host, temp_c = None, None
+    for line in r["stdout"].splitlines():
+        if line.startswith("HOST="):
+            host = line[5:].strip() or None
+        elif line.startswith("TCTL_MILLI="):
+            raw = line[len("TCTL_MILLI="):].strip()
+            if raw:
+                try:
+                    temp_c = round(int(raw) / 1000.0, 1)
+                except ValueError:
+                    temp_c = None
+    return {"hostname": host, "temp_c": temp_c, "rc": r["rc"], "ms": r["ms"]}
+
+
+def node_status(node, probe=True, timeout=20):
+    st = {
+        "name": node["name"],
+        "display": node.get("display", node["name"]),
+        "dns": node.get("dns"),
+        "ip": node["ip"],
+        "user": node_user(node),
+        "configured": True,
+        "enabled": bool(node.get("enabled", True)),
+        "note": node.get("note"),
+        "reachable": None,
+        "hostname": None,
+        "temp_c": None,
+        "last_ms": None,
+    }
+    with LAST_LOCK:
+        last = LAST.get(node["name"])
+    if last:
+        st["last_ms"] = last["ms"]
+    if probe and st["enabled"]:
+        try:
+            p = probe_node(node, timeout=timeout)
+            st["hostname"] = p["hostname"]
+            st["temp_c"] = p["temp_c"]
+            st["last_ms"] = p["ms"]
+            st["reachable"] = p["rc"] == 0
+        except Exception as e:  # probe machinery itself failed
+            st["reachable"] = False
+            st["note"] = (st["note"] + " " if st["note"] else "") + f"probe error: {e}"
+    elif not st["enabled"]:
+        st["reachable"] = False
+    return st
+
+
+def get_status():
+    with STATUS_LOCK:
+        if STATUS_CACHE["data"] is not None and time.time() - STATUS_CACHE["at"] < 20:
+            return STATUS_CACHE["data"]
+    nodes = CFG["nodes"]
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        rows = list(pool.map(lambda n: node_status(n), nodes))
+    data = {"at": time.time(), "nodes": rows}
+    with STATUS_LOCK:
+        STATUS_CACHE.update(at=data["at"], data=data)
+    return data
+
+
+def fanout(body):
+    command = body.get("command") or ""
+    if body.get("argv"):
+        command = " ".join(shlex.quote(a) for a in body["argv"])
+    timeout = int(body.get("timeout", 120))
+    max_parallel = int(body.get("max_parallel", 6))
+    skip_c = float(body.get("thermal_skip_c", DEFAULTS.get("thermal_skip_c", 75)))
+    names = body.get("nodes")
+    if names in (None, "all-enabled", "all"):
+        targets = [n for n in CFG["nodes"] if n.get("enabled", True)]
+    else:
+        targets, unknown = [], []
+        for name in names:
+            n = find_node(name)
+            (targets if n else unknown).append(n if n else name)
+        if unknown:
+            return 400, {"error": f"unconfigured node name(s): {unknown}"}
+    if not command:
+        return 400, {"error": "fanout needs a command"}
+
+    def run(node):
+        # Thermal pre-flight: a node already at/over the Tctl target does
+        # not take new fan-out work (Will's thermal policy, 2026-11-04).
+        p = probe_node(node, timeout=min(timeout, 25))
+        if p["temp_c"] is not None and p["temp_c"] >= skip_c:
+            return {"node": node["name"], "skipped": "thermal_hold",
+                    "temp_c": p["temp_c"], "rc": None, "stdout": "", "stderr": "",
+                    "ms": p["ms"]}
+        r = exec_node(node, command, timeout=timeout)
+        r["temp_c"] = p["temp_c"]
+        return r
+
+    started = time.monotonic()
+    with ThreadPoolExecutor(max_workers=max(1, max_parallel)) as pool:
+        results = list(pool.map(run, targets))
+    return 200, {"results": results,
+                 "wall_ms": int((time.monotonic() - started) * 1000)}
+
+
+class Handler(BaseHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
+
+    def log_message(self, fmt, *args):  # keep the daemon log readable
+        pass
+
+    def _reply(self, code, obj):
+        data = json.dumps(obj).encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
+    def _body(self):
+        n = int(self.headers.get("Content-Length") or 0)
+        if n == 0:
+            return {}
+        return json.loads(self.rfile.read(n).decode("utf-8"))
+
+    def do_GET(self):
+        if self.path == "/ping":
+            self._reply(200, {"ok": True, "service": "ranchd", "port": PORT})
+        elif self.path == "/nodes":
+            self._reply(200, {"nodes": CFG["nodes"], "defaults": DEFAULTS})
+        elif self.path == "/status":
+            self._reply(200, get_status())
+        else:
+            self._reply(404, {"error": f"no such endpoint: {self.path}"})
+
+    def do_POST(self):
+        try:
+            body = self._body()
+        except Exception as e:
+            self._reply(400, {"error": f"bad JSON body: {e}"})
+            return
+        if self.path == "/exec":
+            node = find_node(body.get("node", ""))
+            if node is None:
+                self._reply(404, {"error": f"unconfigured node: {body.get('node')!r} "
+                                            f"(targets are restricted to nodes.json)"})
+                return
+            command = body.get("command") or ""
+            if body.get("argv"):
+                command = " ".join(shlex.quote(a) for a in body["argv"])
+            if not command:
+                self._reply(400, {"error": "exec needs a command or argv"})
+                return
+            self._reply(200, exec_node(node, command,
+                                       timeout=int(body.get("timeout", 60))))
+        elif self.path == "/fanout":
+            code, obj = fanout(body)
+            self._reply(code, obj)
+        else:
+            self._reply(404, {"error": f"no such endpoint: {self.path}"})
+
+
+def main():
+    os.makedirs(CTL_DIR, exist_ok=True)
+    open(KNOWN_HOSTS, "a").close()
+    with open(PIDFILE, "w") as f:
+        f.write(str(os.getpid()))
+    server = ThreadingHTTPServer((BIND, PORT), Handler)
+    log(f"ranchd listening on {BIND}:{PORT}, {len(CFG['nodes'])} nodes configured")
+    try:
+        server.serve_forever()
+    finally:
+        try:
+            os.unlink(PIDFILE)
+        except OSError:
+            pass
+
+
+if __name__ == "__main__":
+    main()

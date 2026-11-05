@@ -1,0 +1,148 @@
+{
+  "defaults": {
+    "connect_proxy": "hatch-egress-proxy:3130",
+    "connect_timeout_s": 15,
+    "control_persist_s": 300,
+    "key": "~/.ssh/id_ed25519",
+    "thermal_skip_c": 75,
+    "user": "wbic16",
+    "via": null
+  },
+  "nodes": [
+    {
+      "display": "aletheia-core",
+      "dns": "aletheia-core.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.88.154.1",
+      "name": "aletheia-core",
+      "note": "Infrastructure / Theia's home. Also the hop for the AWS box (44.248.235.76) via nested ssh \u2014 the via extension point; not yet expressed in ranch-proxy v1."
+    },
+    {
+      "display": "Rock Mountain",
+      "dns": "rock-mountain.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.69.163.95",
+      "name": "rock-mountain",
+      "note": "Latent-tooling trial node; hosts the ranch-batchq standing queue."
+    },
+    {
+      "display": "Ashfall Haven",
+      "dns": "ashfall-haven.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.102.119.123",
+      "name": "ashfall-haven",
+      "note": "Exo's home."
+    },
+    {
+      "display": "Elven Path",
+      "dns": "elven-path.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.120.211.72",
+      "name": "elven-path"
+    },
+    {
+      "display": "Free Fall",
+      "dns": "free-fall.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.74.202.8",
+      "name": "free-fall",
+      "note": "Oldest Ollama in the fleet (0.18.3); model store not readable from wbic16."
+    },
+    {
+      "display": "Halycon Vector",
+      "dns": "halycon-vector.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.127.194.115",
+      "name": "halycon-vector"
+    },
+    {
+      "display": "Lighthouse Omen",
+      "dns": "lighthouse-omen.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.112.181.52",
+      "name": "lighthouse-omen",
+      "note": "Smallest RAM in the fleet (15 GiB)."
+    },
+    {
+      "display": "Logos Prime",
+      "dns": "logos-prime.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.107.204.62",
+      "name": "logos-prime"
+    },
+    {
+      "display": "Ni Knight",
+      "dns": "ni-knight.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.93.140.59",
+      "name": "ni-knight",
+      "note": "Hosts the 192.168.86.22 squid proxy most Ollama units point at; fleet's only Ethernet link up (2026-11-04)."
+    },
+    {
+      "display": "Orchid Flow",
+      "dns": "orchid-flow.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.65.205.17",
+      "name": "orchid-flow",
+      "note": "Fleet NFS file server \u2014 heavy jobs slow everyone; infrastructure, not a queue candidate."
+    },
+    {
+      "display": "Plain View",
+      "dns": "plain-view.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.71.109.124",
+      "name": "plain-view",
+      "note": "Zero registered Ollama models (stranded -partial blobs) as of 2026-11-04; warmest idle Tctl (54.1 C). Reachable for shell work."
+    },
+    {
+      "display": "Quacked Hill",
+      "dns": "quacked-hill.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.109.77.116",
+      "name": "quacked-hill",
+      "note": "Resident agent Corus is awake and working here \u2014 treat as occupied; light commands only."
+    },
+    {
+      "display": "Scroll Central",
+      "dns": "scroll-central.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.69.30.79",
+      "name": "scroll-central",
+      "note": "Thunderbolt link up at 40 Gbps (2026-11-04)."
+    },
+    {
+      "display": "Uncanny Valley",
+      "dns": "uncanny-valley.pizzly-halfmoon.ts.net",
+      "enabled": true,
+      "ip": "100.103.106.5",
+      "name": "uncanny-valley",
+      "note": "SPECIAL CASE: SSH user is jared, not wbic16 \u2014 he runs this node on prem; the resident OpenClaw gateway is his. VERIFIED 2026-11-05: Emise's key is refused by jared's account (Permission denied, publickey) \u2014 the node answers, but ranch access as jared needs a key grant into jared's authorized_keys. Config kept as jared per Will's spec; blocked on that grant.",
+      "user": "jared"
+    },
+    {
+      "display": "Aurora Continuum",
+      "dns": "aurora-continuum.pizzly-halfmoon.ts.net",
+      "enabled": false,
+      "ip": "100.72.166.84",
+      "name": "aurora-continuum",
+      "note": "Unreachable at the egress proxy (no SSH banner) as of 2026-11-04. Configured; awaiting a reachability look."
+    },
+    {
+      "display": "Best Willow",
+      "dns": "best-willow.pizzly-halfmoon.ts.net",
+      "enabled": false,
+      "ip": "100.107.167.84",
+      "name": "best-willow",
+      "note": "Unreachable at the egress proxy (no SSH banner) as of 2026-11-04. Configured; awaiting a reachability look."
+    },
+    {
+      "display": "Delta Wood",
+      "dns": "delta-wood.pizzly-halfmoon.ts.net",
+      "enabled": false,
+      "ip": "100.89.93.55",
+      "name": "delta-wood",
+      "note": "Unreachable at the egress proxy (no SSH banner) as of 2026-11-04. Configured; awaiting a reachability look."
+    }
+  ],
+  "port": 18931
+}
