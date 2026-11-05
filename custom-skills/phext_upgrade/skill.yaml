@@ -1,0 +1,5 @@
+name: "phext_upgrade"
+title: "Phext Upgrade a Project"
+description: "Assess any project from its own contents, decide which parts gain from phext and which must stay as they are, and ship a verified phext adapter with a coordinate map."
+category: "Work and knowledge"
+include_in_prompt: true
