@@ -14,6 +14,13 @@ lists:
 - words-authored.txt — the AUTHORED list: only the words in tweets he
   wrote himself (retweets skipped). 19,094 words. The stricter list,
   for when "his speech" means only his own typing.
+- words-read.txt — the READ list: the words in what he passed on and
+  kept — his retweets plus the tweets he liked, without his own
+  writing. This is the list the hosted page's Read mode flags against.
+
+The hosted page's modes are list picks (Will, 2026-11-05): Read flags
+against words-read.txt, Write against words-authored.txt, Read/Write
+against words.txt (the union).
 
 Both lists: links and @-mentions are stripped first (addresses, not
 speech); hashtag text is kept (chosen words); words are lowercased;
@@ -60,28 +67,34 @@ def main() -> int:
 
     archive_counts: Counter = Counter()
     authored_counts: Counter = Counter()
+    read_counts: Counter = Counter()
 
     tweets = json.loads(tweets_path.read_text(encoding="utf-8"))
     n_tweets = n_rt = 0
     for item in tweets:
         text = item.get("tweet", item).get("full_text") or ""
         n_tweets += 1
-        archive_counts.update(tokens(text))
+        words_here = tokens(text)
+        archive_counts.update(words_here)
         if text.startswith("RT @"):
             n_rt += 1
+            read_counts.update(words_here)
         else:
-            authored_counts.update(tokens(text))
+            authored_counts.update(words_here)
 
     likes_path = archive / "like.js"
     n_likes = 0
     if likes_path.exists():
         for item in load_js_json(likes_path):
-            archive_counts.update(tokens(item.get("like", {}).get("fullText") or ""))
+            words_here = tokens(item.get("like", {}).get("fullText") or "")
+            archive_counts.update(words_here)
+            read_counts.update(words_here)
             n_likes += 1
 
     out_dir = HERE.parent
     (out_dir / "words.txt").write_text("\n".join(sorted(archive_counts)) + "\n", encoding="utf-8")
     (out_dir / "words-authored.txt").write_text("\n".join(sorted(authored_counts)) + "\n", encoding="utf-8")
+    (out_dir / "words-read.txt").write_text("\n".join(sorted(read_counts)) + "\n", encoding="utf-8")
     with open(out_dir / "counts.tsv", "w", encoding="utf-8") as fh:
         for word, n in archive_counts.most_common():
             fh.write(f"{word}\t{n}\n")
@@ -89,6 +102,7 @@ def main() -> int:
     print(f"tweets: {n_tweets} (retweets among them: {n_rt}), liked tweets: {n_likes}")
     print(f"archive list: {len(archive_counts)} distinct words -> words.txt")
     print(f"authored list: {len(authored_counts)} distinct words -> words-authored.txt")
+    print(f"read list: {len(read_counts)} distinct words -> words-read.txt")
     return 0
 
 

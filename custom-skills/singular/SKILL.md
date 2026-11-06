@@ -5,10 +5,12 @@
 - Up Goer Five holds you to the ten hundred words everyone uses most. Singular holds you to the words one person has in their archive — here, Will Bickford's Twitter archive, 2008–2025.
 - Use this skill when Will asks for a Singular version of a text, asks to write using only his archive words, or asks whether a text stays inside them. Will's standing note (2026-11-05): Emise's own speech patterns stay within these words.
 
-## The two lists
+## The three lists, and the modes
 
-- `words.txt` — the archive list, 41,302 words: every word in his tweets (his own posts and the retweets he passed on) and in the tweets he liked. This is the "~40k words found in my Twitter archive" of his note, and the default list.
-- `words-authored.txt` — the authored list, 19,094 words: only the words in tweets he wrote himself. The stricter list; pass `--words ~/workspace/custom-skills/singular/words-authored.txt` to the checker when "his speech" means only his own typing.
+- `words.txt` — the combined list, 41,302 words: every word in his tweets (his own posts and the retweets he passed on) and in the tweets he liked. This is the "~40k words found in my Twitter archive" of his note, and the default list.
+- `words-authored.txt` — the authored list, 19,094 words: only the words in tweets he wrote himself.
+- `words-read.txt` — the read list, 36,675 words: the words in what he passed on and kept — his retweets and the tweets he liked, without his own writing.
+- The hosted page's modes are list picks (Will, 2026-11-05): **Read** flags against the read list (anything he RT'd or favorited), **Write** flags against the authored list (anything he wrote), **Read/Write** flags against the combined list. With the checker, pick a list with `--words`.
 - Links and @-mentions are not in either list — they are addresses, not speech. Hashtag text is in, because he chose those words.
 - Both lists hold the exact forms found, lowercased, contractions whole. Singular is strict: a changed form he never wrote is not on the list, and the checker flags it.
 
