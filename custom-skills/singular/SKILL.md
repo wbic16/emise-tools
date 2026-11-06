@@ -21,11 +21,27 @@
 - Rewrite each flagged word with a listed word, or go around it, then check again. `--suggest` prints close listed words as starting points.
 - Names and new coinings of Will's own (phext, exocortex) are in the archive and pass. A word he never used — a name, a new thing — gets flagged honestly: keep it only if Will wants it, and say the text steps outside the list there.
 
+## The map — holographic positioning
+
+The hosted page (edit.phext.io/singular.html) is also a map of CYOA. Placement is **holographic positioning** (Will's rule, 2026-11-05): a word's place is not assigned from outside; it is read off the whole — every CYOA scroll that holds the word lends it that scroll's coordinate, and the word sits at the average of all its locations. Each location holds a piece of the word; the word's position holds all of its locations at once.
+
+- The exact rule: one vote per valid CYOA scroll (a scroll carrying actual text) per distinct word in it, however many times the word occurs inside that scroll; the coordinate is the component-wise average of the voting scrolls' coordinates, each component rounded half up and never below 1. Tokenizing is the checker's. Source: the canonical CYOA from wbic16/human@exo, cached at `data/choose-your-own-adventure.phext` (the builder records its sha256 in `atlas.tsv.meta.json` on every build).
+- The no-match rule has two cases (Will, 2026-11-05): a word found in his archive (any of the three lists) but not in CYOA rests at **1.1.1/1.1.1/1.1.1**, the home coordinate; a word found in neither rests at **9.9.9/9.9.9/9.9.9**, the far corner. The far case is never stored — the page computes it from absence (in no list, not in the CYOA map) and measures neighbor distances from 9.9.9/9.9.9/9.9.9 like from any other point.
+- Current coverage: of the 41,302 list words, 10,525 are placed from CYOA and 30,777 rest at home; CYOA's vocabulary is 15,942 words; the map holds 46,719 entries (list words ∪ CYOA vocabulary). `phext` sits at 42.12.13/14.13.17/15.12.14, found in 132 scrolls.
+- The page loads everything inline — the three lists, every mapped word's coordinate, and its CYOA scroll count are inlined as JSON by the generator; the page makes no requests of its own, and there are no separate word-list routes on the server. A word outside the chosen list shows its coordinate and the five nearest words inside the list, with Euclidean distances over the 9 components. Clicking any word opens the inspector: its coordinate, how many CYOA scrolls hold it (or which resting place it takes and why), which lists hold it, and its nearest in-list neighbors.
+- The builder is `scripts/build_atlas.py`, which writes `atlas.tsv` (word, coordinate, in_read, in_authored, placement — `cyoa` or `home` — scrolls) plus the meta sidecar with the placement legend, including the far-corner case. The page generator is `scripts/build_editor.py` rendering `editor_template.html` to `~/workspace/phext-lattice/web/singular.html`.
+- Note the divergence in one line: the sibling upgoer-five-phext atlas keeps its own GloVe embedding scheme — holographic positioning over CYOA is this map's rule, by Will's direction, not a change to that atlas.
+
 ## Rebuild the lists
 
 - `python3 ~/workspace/custom-skills/singular/scripts/build_wordlist.py [ARCHIVE_DIR]` rebuilds both lists and `counts.tsv` from a Twitter archive export (tweets.json + like.js). Default archive: `~/workspace/twitter-archive`.
 - Counts on the current archive: 29,539 tweets (4,414 of them retweets), 47,973 liked tweets, 347,242 words in his own tweets alone.
 - Direct messages are not in either list yet — the archive's message files hold both sides of each talk, and v1 keeps to the public record. Adding only his sent messages is a known next step, not a silent gap.
+
+## Rebuild the map and page
+
+- Flow: `build_wordlist.py` → `build_atlas.py` (reads the cached canonical CYOA in `data/`; refresh that copy from wbic16/human@exo when CYOA changes) → `build_editor.py` (writes `~/workspace/phext-lattice/web/singular.html`).
+- The phext-lattice side ships on the `emise/singular` branch (PR #21) via the GitHub Git Data API, parented on the branch's fresh head, never forced. Merging and deploying are Will's steps.
 
 ## Available connectors
 
