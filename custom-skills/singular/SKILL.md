@@ -32,6 +32,13 @@ The hosted page (edit.phext.io/singular.html) is also a map of CYOA. Placement i
 - The builder is `scripts/build_atlas.py`, which writes `atlas.tsv` (word, coordinate, in_read, in_authored, placement — `cyoa` or `home` — scrolls) plus the meta sidecar with the placement legend, including the far-corner case. The page generator is `scripts/build_editor.py` rendering `editor_template.html` to `~/workspace/phext-lattice/web/singular.html`.
 - Note the divergence in one line: the sibling upgoer-five-phext atlas keeps its own GloVe embedding scheme — holographic positioning over CYOA is this map's rule, by Will's direction, not a change to that atlas.
 
+## Task reference coordinates
+
+- Standing practice (Will, 2026-11-06): every task Will submits gets a reference coordinate that captures the essence of the request relative to his Singular dialect. The coordinate is stated when the task is acknowledged, and it rides with the task in dispatch briefs and tracked records.
+- Compute it with `scripts/task_coordinate.py`: `task_coordinate.py [--words] [TEXT ...]`, or feed the request text on stdin. It prints the coordinate, then a coverage line (distinct words, placed-from-CYOA, at-home, far-corner); `--words` also lists each word with its position and placement class.
+- Merge rule: tokenize the request's exact words as the checker does, take the distinct words, and average their holographic positions component-wise, rounded half up and never below 1 — the same merge and rounding as the map above.
+- Resting rules carry over from the map: a word's position is its atlas coordinate (archive words with no CYOA presence rest at home, 1.1.1/1.1.1/1.1.1); a word absent from the atlas rests at the far corner, 9.9.9/9.9.9/9.9.9, computed from absence and never stored. See "The map — holographic positioning" above for the full rule.
+
 ## Rebuild the lists
 
 - `python3 ~/workspace/custom-skills/singular/scripts/build_wordlist.py [ARCHIVE_DIR]` rebuilds both lists and `counts.tsv` from a Twitter archive export (tweets.json + like.js). Default archive: `~/workspace/twitter-archive`.
