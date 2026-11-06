@@ -1,0 +1,5 @@
+name: "singular"
+title: "Singular — One Person's Words"
+description: "Write or check English text so it uses only the words found in one person's Twitter archive (an Up Goer Five variant), verified with a word list checker."
+category: "Work and knowledge"
+include_in_prompt: true
