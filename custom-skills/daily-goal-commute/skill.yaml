@@ -1,0 +1,5 @@
+name: "daily-goal-commute"
+title: "Daily-Goal Commute — one big goal for the workday"
+description: "Run Will's commute pattern: the morning call sets ONE big daily goal grown from the night-before thread (morning synthesis), Emise pursues it quietly through the workday with minimal pings, and an evening call — the exception — works the validated waiting queue."
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,5 @@
+name: "publish-tooling"
+title: "Publish Tooling — ship it to emise-tools the same session"
+description: "Publish every tool or skill built or materially updated to wbic16/emise-tools@exo in the same session: scan the site map for the right repo home first, parent on the fresh remote HEAD with force disabled, ship scripts at tree mode 100755, and verify modes as well as SHA-256/blob hashes after the push."
+category: "Work and knowledge"
+include_in_prompt: true

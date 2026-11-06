@@ -1,0 +1,5 @@
+name: "dispatch-to-subagents"
+title: "Dispatch to Subagents — coordinate in the main thread"
+description: "Delegate substantive processing to subagents by default: the main thread coordinates, decides, and verifies decisive results; children get self-contained briefs and are never polled, predicted, or trusted without a check."
+category: "Work and knowledge"
+include_in_prompt: true

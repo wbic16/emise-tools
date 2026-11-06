@@ -1,0 +1,5 @@
+name: "morning-briefing"
+title: "Morning Briefing — Will's start-of-day readout"
+description: "Compose Will's morning briefing: today's calendar, overnight mail that matters at sender/subject level, the always-present Waiting-on-you section verified against the register (five oldest, ⚠ at 3+ days), and a one-line substrate note."
+category: "Work and knowledge"
+include_in_prompt: true

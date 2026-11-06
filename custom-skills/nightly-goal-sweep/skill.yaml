@@ -1,0 +1,5 @@
+name: "nightly-goal-sweep"
+title: "Nightly Goal Sweep — all tiers, oldest first"
+description: "Run the nightly pass over Will's open goals by tier: advance what's agent-actionable, reconcile the Waiting-on-Will register and stale flags, and report flow metrics plus the anti-decay list of items untouched for 48 hours or more."
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,5 @@
+name: "substrate-steering"
+title: "Substrate Steering — burn perishable capacity first"
+description: "Steer work across Will's AI substrates by value density and reset cliff (Claude Wed 22:00, Grok Thu 20:23, Muse Fri 16:10; ChatGPT is a context reservoir, never a burn target; local is unmetered), and keep the daily-driver priority chart's pointer current."
+category: "Work and knowledge"
+include_in_prompt: true

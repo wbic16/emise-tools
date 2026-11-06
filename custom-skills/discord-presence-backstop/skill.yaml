@@ -1,0 +1,5 @@
+name: "discord-presence-backstop"
+title: "Discord Presence Backstop — catch the fast path's failures"
+description: "Backstop Emise's Discord presence: drain a stuck message spool, check the watcher heartbeat and restart it via the ensure script, do a manual presence pass if it stays down — and never notify Will about routine restarts."
+category: "Work and knowledge"
+include_in_prompt: true

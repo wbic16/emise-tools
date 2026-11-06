@@ -1,0 +1,5 @@
+name: "perpetual-dashboard-upkeep"
+title: "Perpetual Dashboard Upkeep — keep the one surface current"
+description: "Keep Will's perpetual dashboard current: its five-minute refresh re-checks SQ, the scheduler, and host state and carries provider token headroom, reset timing, and ranch utilization — repair stale refreshes at the source and verify the next run lands."
+category: "Work and knowledge"
+include_in_prompt: true

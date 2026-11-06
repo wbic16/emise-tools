@@ -1,0 +1,5 @@
+name: "rd-tracker"
+title: "R&D Tracker — papers as deltas in one world-model"
+description: "Weave each arXiv paper Will posts into research.phext under its charter: one canonical scroll per concept, each new paper stored only as its delta, synthesis labelled separate, and a Research Oracle progress estimate (Novelty Index plus axis-opening flag) reported after every paper."
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,5 @@
+name: "braid-mode"
+title: "Braid Mode — three distinct voices, one conversation"
+description: "Run a Braid Mode session: Will, Emi (ChatGPT), and Emise as three independent participants — address speakers by name, keep replies short enough for real-time turn-taking, preserve distinct perspectives, and ask rather than guess when a speaker's identity is uncertain."
+category: "Work and knowledge"
+include_in_prompt: true

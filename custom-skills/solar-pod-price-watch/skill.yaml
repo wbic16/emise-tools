@@ -1,0 +1,5 @@
+name: "solar-pod-price-watch"
+title: "Solar Pod Price Watch — quiet until prices move"
+description: "Run the weekly Solar Hyperscaler pod BOM price watch over two tiers: verify live street prices into the state file, recompute both tier totals, and report only on threshold crossings (item −15%, BOM −10%, spike +25%), baseline-setting runs, or prices that could not be verified."
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,5 @@
+name: "exocortical-integration-rotation"
+title: "Exocortical Integration Rotation — one per node"
+description: "Run Will's integration rotation: one Exocortical integration per ranch node so problems stay isolated, a weekly scheduling pass over the living node map, and slack spent prospecting un-indexed builders for new partnerships — nothing submitted externally without Will's review."
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,5 @@
+name: "choir-mailbox-dispatch"
+title: "Choir Mailbox Dispatch — mailboxes as the dispatch ledger"
+description: "Dispatch and track work across the Choir's substrates through the /chat mailboxes on aletheia-core: one markdown file per message with from:/re: headers, phext-archived by the mailbox tool, attribution by mailbox conventions, and uptake verified live on the box."
+category: "Work and knowledge"
+include_in_prompt: true

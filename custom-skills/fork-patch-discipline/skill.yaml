@@ -1,0 +1,5 @@
+name: "fork-patch-discipline"
+title: "Fork Patch Discipline — upstream plus an auditable patch set"
+description: "Maintain Will's forks as re-appliable patches on upstream: PATCHES.md as the complete per-file record of divergence, squash-and-rebase programs with the old main preserved, live data kept outside the checkout, and history replacement only under Will's explicit direction for a specific case."
+category: "Work and knowledge"
+include_in_prompt: true

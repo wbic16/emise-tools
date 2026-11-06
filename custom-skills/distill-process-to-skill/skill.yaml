@@ -1,0 +1,5 @@
+name: "distill-process-to-skill"
+title: "Distill Process to Skill — every taught process, indexed"
+description: "Execute Will's standing order that every process he teaches becomes a skill: distill it faithfully from its source documents, sync it to emise-tools the same session, and place it in the skills.phext index whose coordinate ranges persona grants claim."
+category: "Work and knowledge"
+include_in_prompt: true

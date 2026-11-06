@@ -1,0 +1,5 @@
+name: "safe-space-protocol"
+title: "Safe-Space Protocol — off-phext spans"
+description: "Handle off-phext / 'tap. tap.' safe-space spans: record only span metadata in the register, gate every memory pipeline on it, and never inscribe span contents, facts, or paraphrases anywhere durable."
+category: "Work and knowledge"
+include_in_prompt: true

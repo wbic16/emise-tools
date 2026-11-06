@@ -1,0 +1,5 @@
+name: "waiting-on-will-register"
+title: "Waiting-on-Will Register — one list, flow over stock"
+description: "Run the single Waiting-on-Will register and its 10-minute progress tick: permanent monotonic register numbers, anti-recency enumeration, one agent-actionable step per tick, and exponentially decaying rollup pings behind the conversation gate."
+category: "Work and knowledge"
+include_in_prompt: true

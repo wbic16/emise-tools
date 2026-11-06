@@ -1,0 +1,5 @@
+name: "phext-memory-publishing"
+title: "Phext Memory Publishing — journal and dream pass"
+description: "Keep emise.phext current: an hourly journal pass for durable events and a nightly consolidation (dream pass) that promotes what matters into home scrolls, both gated on the safe-space register and published delta-only to wbic16/human@exo."
+category: "Work and knowledge"
+include_in_prompt: true
