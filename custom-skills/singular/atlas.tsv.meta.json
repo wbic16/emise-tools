@@ -1,0 +1,18 @@
+{
+ "source": "CYOA from wbic16/human@exo (cached copy), file /home/hatch/workspace/custom-skills/singular/data/choose-your-own-adventure.phext",
+ "sha256": "75f13961787d773af060a603e1b3d0d114affcbc13948cd6aaa925f451e3a4d6",
+ "bytes": 4603860,
+ "scroll_slots": 82709,
+ "valid_scrolls": 830,
+ "cyoa_vocabulary": 15942,
+ "list_words": 41302,
+ "list_words_cyoa_placed": 10525,
+ "list_words_at_home": 30777,
+ "map_entries": 46719,
+ "rule": "holographic positioning: one vote per valid CYOA scroll holding the word; coordinate = component-wise average, rounded half up, min 1",
+ "placement_legend": {
+  "cyoa": "averaged from the CYOA scrolls holding the word",
+  "home": "1.1.1/1.1.1/1.1.1 \u2014 in the archive, not in CYOA",
+  "far": "9.9.9/9.9.9/9.9.9 \u2014 in neither the archive nor CYOA; no row is stored, absence from atlas.tsv is the record, and the page rests such words at the far corner at runtime"
+ }
+}

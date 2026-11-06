@@ -1,0 +1,23 @@
+name: verify_quantified_results
+title: Verify Quantified Results Before Sharing
+description: Reproduce a quantified result from its primary artifacts and test it with negative and mutation controls before it is reported or shared externally.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - d501ca3a
+  - assistant-msg-fcce72ef
+  - assistant-msg-72eb7ce6
+  - assistant-msg-48ff1b76
+  - assistant-msg-43edd666
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, quantified results reported to the user or shared externally carry a reproduction record with artifact hashes and negative and mutation controls, and no shared headline number is later withdrawn because it measured an empty, stale or wrong artifact.
+    window_days: 30
+  needs_review: false
+  rationale: Will challenged a headline compression figure with the observation that it sounded like an undetected failure (d501ca3a). The figure had already entered a draft external pitch from a builder run without independent reproduction (assistant-msg-fcce72ef), and the first retest measured a zero byte store and reported no changes while the underlying transfer had actually failed (assistant-msg-72eb7ce6). Only a later mutation suite with out of band changes and a byte exact no-change control settled the claim (assistant-msg-48ff1b76). A parallel episode showed hash only publish verification hiding lost execute bits (assistant-msg-43edd666). Skill and connector searches found no existing document that codifies reproducing a quantified result from primary artifacts with negative and mutation controls before external use, so this skill adds that missing procedure without restating the standing rules already recorded for hashing, pushing or phext handling.
+  review_after: 2026-12-01T23:44:32.398980+00:00
+  reviewed_at: 2026-11-01T23:44:32.398980+00:00
+  run_id: sirun_037845afd7494030a49c77222b270a79

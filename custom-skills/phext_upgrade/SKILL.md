@@ -72,6 +72,18 @@
 
 - Publish any reusable tooling you built in the same session under the standing publishing rules, and keep the upstream project untouched until the user directs an upstream contribution.
 
+## The long-form process (Will, 2026-11-05)
+
+A phext upgrade of a living project runs in four beats, in this order. Do not compress them.
+
+- **Iterate until we actually understand the problem.** Build in phases behind flags or dual paths, run the thing, let contact with the real system correct the design — wrong seams, wrong defaults, wrong invariants all surface here. This phase is supposed to be messy and many-committed; its output is understanding, not the final shape.
+
+- **Then squash.** Once the end state is understood and verified, collapse the whole divergence into ONE commit. Reviewability lives in the written record (below), not in the archaeology of the commit graph.
+
+- **Then rebase and update priors.** Rebase the single commit onto upstream's current HEAD. Upstream moved while we iterated: reconcile every divergent path against what upstream actually did, adopt their improvements, and fix any of our assumptions their movement falsified. Regenerate lockfiles rather than merging them.
+
+- **Then summarize everything in a project-helpful way.** The project's PATCHES.md (or its equivalent record) ends carrying the ENTIRE development history of the upgrade — how the final mechanism works, and details about each changed file: what changed in it and why that change is necessary. A future reader must be able to reconstruct the reasoning without the commit history, because the commit history is one commit.
+
 ## Available connectors
 
 - [Github](~/workspace/custom-connectors/custom.github/CONNECTOR.md) for reading a public or granted repository and for the API publish route when the user directs a contribution.

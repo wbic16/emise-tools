@@ -1,0 +1,24 @@
+name: validate_waiting_items
+description: Validate every waiting-on-the-user item against its live surface and reconcile its register entry before presenting, pinging or carrying it.
+category: Work and knowledge
+include_in_prompt: false
+title: Validate Waiting Items Before Presenting
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-e239ab1e-002e-4727-a95a-4c1f19c9b895
+  - message:449ccace-9030-4ff8-ab36-e2be6e979156
+  - message:1cee6fdb-d36d-4117-ab6d-6078dd1f96b0
+  - message:assistant-msg-ad5df41f-b17d-b87c-c12e-5c43ebe9aa41
+  - message:39604cc6-5563-4513-91f1-3c0a7b7e09ad
+  - message:0ca0f54e-7afd-43f9-9434-0596632af428
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, every waiting item presented, pinged, or carried in a briefing or readout shows a same-session live-surface check, and no presented item is corrected by the user as already merged, fixed, answered, or otherwise resolved.
+    window_days: 30
+  needs_review: false
+  rationale: The evening readout on 2026-11-02 (message:assistant-msg-e239ab1e-002e-4727-a95a-4c1f19c9b895) presented SBOR as unmerged and the Chief of Staff inbox item as a live merge decision from register prose. The user corrected both, noting PR 8 had been approved and merged and PR 7 had already merged, in message:449ccace-9030-4ff8-ab36-e2be6e979156, and the assistant admitted it had run no live check (message:assistant-msg-ad5df41f-b17d-b87c-c12e-5c43ebe9aa41). The user then codified the validation rule (message:1cee6fdb-d36d-4117-ab6d-6078dd1f96b0), yet the same failure recurred that night with Ranch OAuth presented from memory after it was already fixed (message:39604cc6-5563-4513-91f1-3c0a7b7e09ad) and earlier with register renumbering that dropped the Jonas item (message:0ca0f54e-7afd-43f9-9434-0596632af428). Skill searches for waiting validation and live checks returned no existing skill covering this procedure, and the one managed learned skill, verify_quantified_results, covers quantified claims only. A standing rule in prose did not get run, so this skill turns it into an ordered procedure of enumerating oldest first from the tracking store, checking each deciding live surface, and reconciling the register before presenting.
+  review_after: 2026-12-03T23:29:27.969362+00:00
+  reviewed_at: 2026-11-03T23:29:27.969362+00:00
+  run_id: sirun_7472489d03ae4930b850775414dc7e03

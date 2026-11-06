@@ -1,0 +1,28 @@
+name: verify_blocker_and_completion_claims
+title: Verify Blocker and Completion Claims
+description: Probe the live surface before telling the user work is blocked on access or permission, or that a deployed feature is working.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:2dfd6f06
+  - message:0dfecfed
+  - message:a9a997f5
+  - message:442291cc
+  - message:623f1b85
+  - message:42cbb419
+  - message:b223384e
+  - message:1f927717
+  - message:c14b122f
+  - message:e213bb98
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, every blocker claim that asks the user for access, a token change or another action, and every deployment or feature completion claim, carries a same session live probe record, and none is corrected by the user as already accessible, already published, already approved as a class, or still disabled in live configuration.
+    window_days: 30
+  needs_review: false
+  rationale: Two distinct claims in this window failed the same way, by asserting a premise without probing it. The agent claimed a 403 meant the GitHub token could not update refs and asked the user to edit the token as register item 25 (2dfd6f06). The user corrected that the agent definitely had access (0dfecfed), the agent admitted the claim was wrong (a9a997f5), and the sync then completed cleanly (442291cc). The same shape appeared when the user had to supply that libphext 0.4.0 was already published and only consumer pins lagged (623f1b85), and when per machine tailnet asks continued after a class approval for pizzly-halfmoon.ts.net (c14b122f, e213bb98). In the mirror direction, mutable was reported deployed while the user found Flint still writing JSON files (42cbb419), because the live configuration held phextVfs as a frozen false literal that the agent admitted it had never flagged as an enablement step (b223384e), and the flip only landed after the user chose it (1f927717). Searches found no existing skill for this procedure. validate_waiting_items covers waiting register items and verify_quantified_results covers numbers, so this skill covers the remaining gap, blocker and completion claims, with an ordered probe, a standing approval and current state check, and verification through the user path.
+  review_after: 2026-12-05T23:15:44.309330+00:00
+  reviewed_at: 2026-11-05T23:15:44.309330+00:00
+  run_id: sirun_338abd15b74c474ebaa26a078dc25871
