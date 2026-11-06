@@ -4,7 +4,7 @@
 
 - Use this skill whenever a Wavefront launch video is scoped, built, rendered, or reviewed — the edit.phext.io film series, v1 onward.
 - The series' whole production method is **one meta step**: every version, v1 through v12 and beyond, is the same pipeline run with a different settings row. A new version never gets a new process — it gets a new row.
-- Will is the director. His feedback corpus is the law's source: `~/workspace/goals/wavefront-film-v11-choir-collaborative-build/files/will-film-feedback-corpus.md` (62 items, provenance-tagged). When a rule matters, cite the corpus item, not memory.
+- Will is the director. His feedback corpus is the law's source: `~/workspace/goals/wavefront-film-v11-choir-collaborative-build/files/will-film-feedback-corpus.md` (63 items, provenance-tagged). When a rule matters, cite the corpus item, not memory.
 - Provenance discipline is absolute in this series: Will's rulings, seat feedback he directed be internalized, brief rules, and Mirror Will predictions are four different things. Mirror-consulted is never Will-said (viz8's own build notes enforce this). A deputy is never the seat.
 
 ## The Meta Step — one pipeline, every version
@@ -36,7 +36,8 @@ One row per version: same meta step, different parameters. (Cost column from `fi
 | v9 | Choir feedback internalized (ledger) | + micro-shells over mutual clusters | 5 revolutions + chapters | Temporal-depth trace, turbulence/burst/hush states, orbital rings, process counter, Apollo film grain, SUBN=3 | Hop time | 1080p24, SUBN=3 | ≈1.1 |
 | v10 | v9 + exactly 3 fixes + featured swap | Same | + C13 pressure relief | E2 saturating hush, G9 anamorphic streak, C13 containment; featured set = top-50 Exocortical posts | Hop time | 1080p24, SUBN=3 | 0.70 |
 | v11 | **Singular Journey** — 55,769 first contacts replace the tweet stream | 522 people, equal presence | Fixed fan-from-home (stills-approved) | Ignitions→embers, journey thread + RGB fringe, orbit threads, DOF + rack focus, SUBN=4, 2× SS | **Era-weighted** archive time | 1080p24 fleet master, song-only audio, card at song 4:39 | ≈62 |
-| v12 | v11 scene (scoped; prepass in flight) | Same | Open — scoping options A–E | **Color hush** (chromatic, density-keyed) added | Era-weighted | Prepass: 720p native, SUBN=1, no SS | ≈1–3 (prepass, provisional) |
+| v12 | v11 scene (scoped; prepass delivered) | Same | Fixed (inherited) | **Color hush** (chromatic, density-keyed) added | Era-weighted | Prepass: 720p native, SUBN=1, no SS | ≈1–3 (prepass) |
+| v13 | Singular Journey, unchanged data | Same 522 people, equal presence | **V10 kinematics restored**: revolution + era chapter regimes + spring-smoothed head-tracking + C13 retargeted + pull-back survey | Thread age bands, anchor highlight envelope, color hush, region readout (pending ruling) | Era-weighted | Prepass first, then 1080p24 fleet master, SUBN=4, 2× SS | ≈62 (est., master class) |
 
 ## Standing directorial law
 
@@ -49,6 +50,7 @@ Only rules traceable to Will's recorded feedback. Cite the corpus (§) when appl
 - **Will is not central in words — only in the golden trace.** No on-screen text names him as the subject. (Will, v4, 2026-11-03 — corpus §3.3)
 - **Masters optimize for final delivery**: 2× supersampling with Lanczos downscale is the measured knee (study #10); render at 4K, deliver 1080p. (Will, v7 direction; reaffirmed V11 §8 — corpus §6.3, §6.5)
 - **Camera work should be smoother** — a standing want since the V10 verdict; aim-snapping, not position, is the known whip source (Theia's diagnosis). (Will, 2026-11-04 — corpus §1.6, §1.7)
+- **The journey across semantic space must be legible to the viewer** — V10's kinematics are the reference grammar: a moving, head-tracking, chaptered camera that carries the viewer. V11/V12 "lost the plot with respect to animation" (fixed camera; optics without kinematics). At any moment the viewer must be able to answer: where is the head, where has it been, what region is this, how much remains. (Will, 2026-11-06 — corpus §7.13; V13 plan §3)
 - **The brake is a cut, not a fade** — near-silence within one beat, held; timing drift is fixed by arrangement, never by stretching audio; catharsis is width and voices, not loudness. (Anthem package §2, ratified by Will 2026-11-05 — corpus §5.8)
 - **The names line is structure only, never sung.** "keep the right to keep their names" is carried by the work's structure, not its lyric. (Will's ratification, 2026-11-05 — corpus §5.7)
 - **Deferred is not dropped.** A ruled deferral (hop-time narration, V11) stays on the record with its cue sheet and returns as a named future step. (Will, 2026-11-06 — corpus §5.10)
