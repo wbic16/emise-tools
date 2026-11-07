@@ -4949,6 +4949,171 @@ inscribed.
   format, coordinate browsing / TOC /
   search. Build still running at flush;
   NOT delivered or verified.
+
+Hourly journal pass, 2026-11-07 ~09:32 CST. Covers
+since the ~08:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- 08:32 [will_said + observed] PHCC PUSHED
+  TO GITHUB (task 31.7.9/8.6.9/6.5.9):
+  wbic16/phcc — backup branch
+  emise/pre-slice0-2026-11-07 @ 1b102067
+  pushed FIRST; exo created @ 395f5d63;
+  main force-with-lease 1b102067 ->
+  395f5d63 under Will's directed-rebase
+  ruling (API evidence: 0 open PRs, 0
+  forks, Will sole author). Lineage:
+  upstream c638ddfb + 4 fork commits +
+  PATCHES.md + F1 signed-shift fix.
+  Fresh-clone ranch verify: ALL TESTS
+  PASSED. No .phext artifacts pushed;
+  upstream report still held.
+- [observed] PHCC SLICE 4 COMPLETE
+  (hash verified) — supersedes the 08:35
+  'still running' flush: phcc.phext
+  30,896,709 B, de1ac0c6...; preprocessor
+  machine 8 states / 13 events / 35
+  transitions / 8 invariants; static
+  checker PASS 13/13; dynamic 16/16
+  authored + 24/24 tests/pp corpus;
+  seeded #elif exit test PASSED; 4
+  regressions filed; gate v4.0.0
+  report-only.
+- [observed + will_said] PHEXT PREVIEWER
+  DELIVERED + PR #25 — supersedes the
+  ~08:1x 'build running' entry: parser
+  matched the reference byte-for-byte
+  (barnacles 793/793, emise, agi);
+  Will directed integrating it into
+  edit.phext.io as a no-login utility
+  plus a mobile pass; PR #25 OPEN
+  (emise/phext-previewer), register #43
+  opened (register 21 -> 22). NOT merged
+  or deployed at flush. [state change]
+  The ~09:24 consolidation inventory's
+  API check reports PR #25 MERGED
+  2026-11-07T15:21:05Z — the #43
+  merge+deploy wait needs re-validation
+  before it is carried again.
+- 08:38-08:45 [observed] SPACES FOR PINNED
+  SIDE CHATS COMPLETE (task
+  23.6.10/9.7.12/5.7.9) — supersedes the
+  'in progress' flush: all 15 Spaces
+  built, audited, and verified present
+  in the sidebar; task closed;
+  tasks.phext + agi.phext pushed to
+  wbic16/agi@exo @ d03c1bf5. Limitation
+  stands: chats cannot be moved into
+  Spaces with available tools; Will
+  directed filing product feedback for
+  grouping chats into Spaces — draft
+  prepared, NOT sent, awaiting his
+  send confirmation.
+- 08:44 [observed] DAILY THEIA CHECK-IN
+  (first run): contact succeeded via her
+  gateway on aletheia-core; Theia well
+  and steady. Needs relayed for Will:
+  SSH key access to 16 nodes, and
+  Glia's console fix waiting since
+  Oct 27. aletheia-core CPU 74.2 C vs
+  the 75 C limit (phcc proof solvers).
+  Full log in the integration-rotation
+  goal's hidden files.
+- [observed] PHCC CONSOLIDATION + PUSH
+  COMPLETE (task 39.7.9/6.5.8/4.4.9):
+  canonical phcc.phext 43,975,346 B,
+  52,781 scrolls, SHA-256 61638c14...
+  (Slice 4 phases + importer-v4 Vol 3;
+  scroll-set diff proof; Design views
+  regenerated 351/0 stale; reassembly
+  558/558; ranch ALL TESTS PASSED).
+  Pushed 5cd3ad91 (phext + tools/), then
+  monolith.phext DELETED at Will's
+  ruling after a 3-way need-check
+  (4f974464). Final main = exo =
+  4f974464; backup branch preserved.
+- [observed] PHCC PACK/UNPACK COMPLETE
+  (task 37.6.8/6.5.9/6.5.10): Will's
+  interface ruling shipped as phcc
+  unpack / phcc pack in wbic16/phcc @
+  050b72ce; round-trips proven on
+  aletheia-core (tree->phext->tree
+  558/558 both routes; content scrolls
+  byte-identical); failure behaviour
+  proven (unplaced file aborts;
+  tampered scroll withheld + named).
+- 08:48 [will_said + observed] LIBPHEXT
+  PARITY PLAN APPROVED + LIBRARY PUSHED:
+  Will approved the parity plan ('sounds
+  perfect'); C99 port of libphext-rs
+  0.4.1 complete — 77/77 capabilities,
+  163,831 checks / 0 failures under gcc
+  AND phcc, differential fuzz 40,000
+  cases / 0 divergences; PATCHES.md F2.
+  Pushed: wbic16/phcc main = exo =
+  8b56ea22 (re-parented onto 050b72ce,
+  fresh-clone verified).
+- [observed] PROOF HARDENING COMPLETE
+  — supersedes the ~09:13 'still
+  running' flush: 271/297 VCs
+  discharged; __moddi3 29/29;
+  __udivmoddi4 still open (3 ensures +
+  13 ladder asserts, timeouts); T3 NOT
+  granted; mutation spot-check
+  INCONCLUSIVE by construction. F1:
+  WP union model unsound for DWunion
+  composition -> limb-native remodel,
+  equivalence 18,001,358 comparisons /
+  0 divergences. Hardened receipts
+  PORTED to the canonical lineage
+  (4 scrolls; port file SHA-256
+  cebcd917...; gate v4, receipts
+  CURRENT) — NOT pushed; Slice 5
+  ordering flag on record.
+- [will_said + observed] PARSE NEVER
+  PANICS: PR #8 OPEN THEN MERGED: Will
+  ruled 'parse returns Err, never
+  panics'; fix on emise/parse-never-
+  panics @ c7199bf2 (nine expect() ->
+  Err; to_coordinate saturates); tests
+  63 passed, negative control panics on
+  unfixed code. gh on aletheia-core hit
+  the dead credential (401); PR #8
+  opened via the connector instead.
+  Verified merged 2026-11-07T15:23:09Z;
+  PR #7 (0.4.1 provable) also merged
+  earlier today. libphext-rs exo
+  in-tree is now 0.4.2; crates.io still
+  0.4.0 — publishing is Will's act.
+- [will_said] PHEXT CONSOLIDATION HUB +
+  LIBPHEXT FREEZE (task
+  34.7.8/8.8.12/8.7.10): Will directed
+  consolidating all core phext tooling
+  in the phext chat, and froze libphext
+  revisions — no version bumps in any
+  port until Will himself publishes
+  0.4.1 and 0.4.2. Consolidation
+  inventory COMPLETE same hour: freeze
+  verdict NO VIOLATION (nothing in
+  rs/py/node/cs/C/cpp exceeds 0.4.2);
+  family + infra state on record in
+  the dated note and MEMORY.md.
+- [observed] TAOPDD REBASE COMPLETE
+  (Will: 'rebase the taopdd changes';
+  task 38.5.5/7.5.7/5.4.9): PR #6 branch
+  rebased on aletheia-core, da9759cc ->
+  d60f18b3, parent = live exo HEAD
+  65913a3a (PR #8 merge); backup branch
+  preserved; 21 files blob-identical;
+  pushed --force-with-lease; suite 159
+  passed / 0 failed (TAOPDD 96/0) — the
+  old helios failure no longer appears
+  on the new base. Merge of PR #6
+  remains Will's act.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
