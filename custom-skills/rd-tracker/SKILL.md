@@ -28,6 +28,10 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
 - 1.1.1/1.1.1/1.2.x — canonical concepts
 - One chapter per paper in arrival order from Chapter 2 (paper chapter + its synthesis/open-questions scrolls)
 
+## Epistemic fidelity — the Minimum Viable Oracle (charter rule 14, Will, 2026-11-07)
+
+14. Every claim-bearing scroll holds exactly one standing — True, False, Unknown, or Fiction — assigned by a basis that constrains it (stipulation/verified → True; refuted → False; attributed/open/synthesis/estimate → Unknown; construction → Fiction). The standings live in a registry rendered as Chapter 1 §4 and generated as Lean data; a Lean model proves the registry accurate (total, unique, basis-conformant) and that ingestion, legal transitions (receipt-driven only), and restructuring preserve accuracy — re-proved after every change. On new information, restructure to the Minimum Viable Oracle: the smallest organization holding everything at this fidelity, False kept visible, Unknown kept visible. Rule 8's passes run as MVO passes. Full scheme: the minimum-viable-oracle skill (`~/workspace/custom-skills/minimum-viable-oracle/`); artifacts in `~/workspace/research-tracker/epistemic/`.
+
 ## State machine review (charter rule 13, Will, 2026-11-07)
 
 13. Every paper or source study receives a state-machine pass as part of its distillation: the machines the work contains or assumes are named in its chapter as part of the delta record; a machine that is a reusable concept becomes (or links to) a canonical concept scroll; machines Emise infers rather than finds stated are marked [synthesis]; a paper that reveals a machine the world-model held only implicitly counts as a revision of the concepts it touches. Full method: the state-machine-review skill (`~/workspace/custom-skills/state-machine-review/`), which also carries the same review into MOAT's proving track. Origin: Steve Ruiz's prompt "find all of the implicit state machines in my app", posted by Will in MOAT with the direction to build the review into MOAT itself.

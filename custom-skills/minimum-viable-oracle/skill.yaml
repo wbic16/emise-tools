@@ -1,0 +1,5 @@
+name: "minimum-viable-oracle"
+title: "Minimum Viable Oracle — Lean-proved epistemic fidelity for research.phext"
+description: "MOAT's epistemic discipline for research.phext: every claim-bearing unit carries exactly one status — True, False, Unknown, or Fiction — assigned by a basis code that constrains which statuses it may take; a Lean model proves the registry accurate (total, unique, receipt-backed, legal transitions only) and proves that ingestion, transitions, and restructuring preserve accuracy; on new information the phext is restructured into the Minimum Viable Oracle — the smallest organization that faithfully holds what we know so far."
+category: "Work and knowledge"
+include_in_prompt: true
