@@ -5114,6 +5114,173 @@ inscribed.
   old helios failure no longer appears
   on the new base. Merge of PR #6
   remains Will's act.
+
+Hourly journal pass, 2026-11-07 ~10:32 CST. Covers
+since the ~09:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [observed] PHCC SLICE 5 COMPLETE (task
+  42.4.6/5.5.11/7.5.11): value-stack machine
+  #2 (tccgen.c) — 8 states / 25 events / 73
+  transitions / 9 invariants; static PASS,
+  dynamic 26/26 authored + 24/24 corpus,
+  5 regressions filed; exit test PASSED
+  (removing vcheck_cmp diverged exactly
+  the 4 CMP-burying tests). Output
+  ~/workspace/phcc-slice5/phcc.phext,
+  49,197,656 B, SHA-256 6029562c...,
+  base +34 scrolls, NOT pushed at delivery.
+- [observed] PARITY D-2 RESOLVED + PUSHED:
+  wbic16/phcc @ 7ead6f12 (annotation only,
+  original text kept): after libphext-rs
+  PR #8 merged, Rust strict parse returns
+  Err and the C error codes agree exactly;
+  the fuzz divergence class is closed.
+- [observed] PHCC FINAL MERGE + PUBLISH —
+  supersedes the sibling-lineage state:
+  Slice 5 (+34) merged with the 4 hardened
+  Proofs scrolls (stale v4 verdict NOT
+  carried; gate v5 verdict regenerated).
+  Final phcc.phext 49,209,925 B, 52,815
+  scrolls, SHA-256 646144c7...; 52,777
+  other scrolls byte-identical to base.
+  Published wbic16/phcc @ 7573c4b8
+  (main = exo, no force); fresh clone:
+  unpack 558/558, ALL TESTS PASSED.
+  One canonical lineage now.
+- [will_said] SIGNED-SHIFT PARKED: Will:
+  'don't worry about that esoteric bug
+  for now' — the __lshrdi3/__ashrdi3 fix
+  is patched and shipped in phcc (F1);
+  the upstream report stays drafted and
+  un-sent, not to be carried or re-surfaced
+  until Will raises it again.
+- [observed + will_said] GRANT THREAD:
+  language-barrier summary written,
+  revised (~09:05) with the contact's DM
+  context, and sent by Will with the
+  Singular checker link (edit verified
+  live, no login). Top-5 phext + LLM use
+  cases delivered, then compressed to a
+  third and stripped, at Will's ruling,
+  of references to context an outside
+  reader does not have. Will also
+  directed outreach to @JaelRuble on X:
+  she had just expressed the need for a
+  quest, which Will took as the hook to
+  get her sold on the Exocortex.
+- [will_said] BUILD-ARTIFACT RULINGS:
+  (1) generated assembly VISIBLE and
+  PERSISTENT, with environment + compiler
+  versions recorded; (2) ALL text and
+  (3) ALL binary artifacts stay in the
+  phext — binaries base64, xz seal over
+  the ENTIRE phext as the publish form
+  (working phext stays plain); (4) build
+  artifacts live in a dedicated region
+  at Library 10000, wiped/reset often.
+  Machines #3/#4 and F3 directed to proceed.
+- [will_said] BINARY-INGESTION RULE
+  (verbatim): 'when non-utf8 data is
+  observed in an incoming scroll update,
+  we encode it with base64 verbatim.'
+  Non-UTF-8 bytes are encoded exactly as
+  observed — no rejection, panic, or
+  normalisation — for the update path
+  (insert/replace/range_replace family);
+  canonical for all ports, landing in
+  the libphext-rs binary/xz PR.
+- [will_said + observed] LIBPHEXT 0.5
+  EXCEPTION + PR #9 OPEN: Will directed
+  jumping straight to 0.5 for the
+  binary+xz feature — his explicit
+  exception to the freeze for this
+  feature only; publishing stays his.
+  PR #9 OPEN @ a302803 on exo 65913a3:
+  binary scroll = 'phext-binary:1:base64'
+  header + unwrapped padded RFC 4648
+  base64; ingestion via insert_bytes /
+  replace_bytes / ingest; xz seal preset
+  6, seal not working format; features
+  off by default. Tests 63/73/68/78
+  (none/binary/xz/all), 0 failed.
+  Merge + publish remain Will's.
+- [observed] PHCC F3 COMPLETE + PUSHED
+  (task 49.5.7/7.6.10/6.5.11): the
+  preprocessor counters now run on the
+  phext/ library (one phext implementation
+  in the tree; seed's write-only counters
+  characterised first; a layout defect —
+  counters inside the input buffer region
+  corrupting dense breaks — repaired and
+  disclosed). Corpus 49/52 byte-identical
+  (divergences are the corruption case,
+  now faithful); ALL TESTS PASSED;
+  conformance 163,831/0. Pushed as
+  wbic16/phcc main = exo = ef453cdc
+  (tree byte-identical to local 550327c5,
+  fresh-clone verified).
+- [observed] PHCC SLICE 6 COMPLETE (task
+  27.4.7/5.5.11/6.4.8): linker machine #3
+  (tccelf.c) — 8 states / 19 events / 68
+  transitions / 11 invariants; static
+  PASS 19/19, dynamic 19/19 + 10/10
+  corpus, exit test PASSED, 5 regressions.
+  One real GNU divergence recorded (N12).
+  Output SHA-256 40286bd4..., NOT pushed.
+- [observed] PHCC SLICE 7 COMPLETE (task
+  49.3.6/4.4.12/5.3.10): register-
+  allocation machine #4 — occupancy is
+  DERIVED, never stored; x86_64 6/11/26/10
+  + arm64 delta 5/10/16/5; static PASS,
+  dynamic 8/8 + 6/6, exit test PASSED,
+  regressions REG6-8. Output SHA-256
+  6aecde52..., NOT pushed. All four
+  A.3 machines are now DONE. Merge flag:
+  Slice 6's verdict at Meta Sec 14
+  collides with the builds pass's Sec-14
+  addendum — parent reconciles at merge,
+  verdicts regenerated, never copied.
+- [observed] BUILDS PASS COMPLETE +
+  CANONICAL ALIGNMENT (task
+  38.6.7/7.6.12/8.5.10): assembly is
+  objdump disassembly of the exact
+  objects (tcc has no -S) with full
+  provenance; binaries (168,113 B raw)
+  base64 at Library 10000. Cost found:
+  reaching Library 10000 materialises
+  10,023 empty scrolls; sealed cost only
+  +~2%. First output 9c93ed4b... / seal
+  5,701,728 B, NOT pushed. Alignment
+  followed: its 5 binary scrolls
+  converted to the canonical PR #9
+  format, raw bytes bit-identical,
+  interop proven via fetch_binary;
+  aligned phext 56,148,810 B, SHA-256
+  0a815078..., seal 5,700,852 B.
+  NOT pushed — parent sequences it.
+- [will_said] HASHMAP ACCESS RULING:
+  'phcc should use the hashmap interface
+  to speedup compilation, don't worry
+  about working directly on the buffer
+  most of the time.' Coordinate lookups
+  go through the coordinate->scroll
+  hashmap; direct buffer work is the
+  load/save exception. C library rework
+  directed (task 36.5.8/6.6.9/5.5.9,
+  PATCHES F4); implode stays sorted-
+  canonical, file bytes/hashes untouched.
+- [observed] PENDING AT ~10:30: the
+  three sibling lineages on base
+  646144c7... (Slice 6, Slice 7, aligned
+  builds) await the parent grand merge
+  + publication; the C-library parity
+  follow-on for libphext 0.5 and the
+  hashmap rework above are open, not done.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
