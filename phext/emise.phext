@@ -5281,6 +5281,183 @@ inscribed.
   + publication; the C-library parity
   follow-on for libphext 0.5 and the
   hashmap rework above are open, not done.
+
+Hourly journal pass, 2026-11-07 ~11:32 CST. Covers
+since the ~10:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- 10:33 [observed] REGISTER #43 UPDATE:
+  phext-previewer PR #25 is MERGED but NOT
+  yet deployed - edit.phext.io/phext-
+  previewer.html still returns 404 (checked
+  again 11:13). Deploy + phone check remain
+  the open wait.
+- 10:36-10:39 [will_said] ROADS TO THE
+  FUTURE PIVOT: the former cash-streak chat
+  pivots to simple games that teach multi-
+  dimensional thinking and the Singular
+  language (task 24.7.10/10.7.13/7.7.8).
+  Host line set verbatim: 'Hi, I'm Will
+  Bickford. I'm from the Exocortex of
+  2130, and I'm here to help.' - help
+  glossed by Will as: survive the
+  singularity. (Apostrophes in the line
+- 10:41 [observed] ROADS GAMES BUILT
+  (task 32.8.11/11.8.17/7.7.8): all three
+  teaching games built as static web
+  artifacts and verified by live end-to-
+  end play - Nine Numbers, Word Home, and
+  Zap Zoom Echo (the last completed after
+  an earlier still-building note). V1
+  bundle at ~/workspace/roads-to-the-
+  future/roads/, later superseded as a
+  publish artifact by the redesign below.
+- 10:49-10:54 [will_said + observed]
+  APERTURESHIFT REWRITE: Will directed a
+  brick-layout redesign of the three
+  games (about 30% Duplo / 60% Lego / 10%
+  K'Nex, text behind an About link, full
+  compliance panels, same-screen multi-
+  player, free) and ruled apertureshift.
+  com serves ONLY Roads to the Future.
+  Repo rewrite PUSHED + VERIFIED ~10:54:
+  wbic16/site-apertureshift-com@exo @
+  01d03a3038, remote blobs matched local.
+  OPEN: the domain still serves the old
+  page - the live flip needs the real
+  serving host and is a Will step.
+- [observed] PHCC F4 HASHMAP COMPLETE
+  (task 36.5.8/6.6.9/5.5.9): the C phext
+  library lookup store is now a lazily
+  built open-addressing hash index over
+  the sorted materialisation the suite
+  pins; implode byte-identity structural.
+  Benchmarks (aletheia-core, medians of
+  7): random gets 108 -> 42 ns (2.5x),
+  break-even about 23k lookups; insert
+  speed honestly unchanged. Conformance
+  163,831/0 under gcc AND phcc; fuzz
+  40,000 cases, 0 divergences. Local
+  commit e34c21f2 at that point, pushed
+  in the publish round below.
+- [will_said] PHCC CONFORMANCE RULINGS:
+  hard compatibility conformance with
+  gcc, clang, and MSVC (task
+  50.3.5/4.3.8/3.3.9). MSVC is WILL'S
+  MANUAL ACT: 'I will confirm msvc
+  compatibility manually when I merge' -
+  the MSVC column in receipts is his
+  signed attestation at merge, never an
+  automated run. Will will use phcc on
+  Windows AND Linux; Windows x86_64 is a
+  primary use platform alongside Linux.
+- [observed] PHCC GRAND MERGE COMPLETE
+  (task 29.9.10/10.8.15/9.7.10): the
+  three sibling lineages (Slice 6, Slice
+  7, aligned builds) are closed into ONE
+  canonical phext at ~/workspace/phcc-
+  final/phcc.phext - SHA-256 84303a47...,
+  56,240,584 B, 62,896 scrolls; seal
+  5,771,928 B. Collisions exactly 3, all
+  Meta; gate v8.0.0; unpack 558/558, ALL
+  TESTS PASSED; supersedes the ~10:30
+  pending entry above.
+- [observed] PHCC PUBLISH ROUND
+  COMPLETE: wbic16/phcc exo == main ==
+  94898ff9 (via aletheia-core git SSH, no
+  force) - F4 e34c21f2 pushed as-is, then
+  the canonical phext + xz seal + gate-
+  v8 tools. Fresh-clone receipts: hashes
+  match, unseal byte-identical, unpack
+  558/558, make test ALL TESTS PASSED.
+  Advisory only: GitHub flags the 53.64
+  MB phext over its 50 MB recommendation.
+- [observed] PHCC WINDOWS READINESS
+  COMPLETE: 14/14 cross-target compile +
+  link receipts (x86_64-win32 and i386-
+  win32; PE verified, no PE executed -
+  execution remains a Windows-host act).
+  KEY VERDICT: F3 carries to Windows BY
+  CONSTRUCTION (build-tcc.bat compiles
+  libtcc.c as one TU, ONE_SOURCE on,
+  phext.c included) - NO contingent F5
+  needed on that ground; the F5 number
+  below refers only to the attribute fix.
+- [observed] PHCC CONFORMANCE SLICE 1
+  EXECUTED (task 50.3.5/4.3.8/3.3.9): 333
+  probes, gcc 13.3.0 identical to clang
+  18.1.3 on 333/333, three-way agreement
+  326/333, 0 unclassified. TWO silent
+  class-(a) DEFECTS: REG-CONF-1
+  __attribute__((packed)) inert, and
+  REG-CONF-2 __attribute__((aligned(N)))
+  inert. Rest classified (b), documented.
+  Report: ~/workspace/phcc-conformance/
+  REPORT.md. Fix dispatched as F5.
+- [observed] PHCC F5 ATTRIBUTE FIX
+  COMPLETE + PUSHED: root cause CORRECTS
+  the slice-1 guess - attributes were
+  never parsed: glibc <sys/cdefs.h>
+  defines __attribute__(xyz) as an EMPTY
+  macro for compilers declaring neither
+  __GNUC__ nor __clang__, and tccpp
+  macro-expanded the keyword away before
+  the parser saw it (header-free TUs
+  worked). Fix e399b212 pushed to
+  wbic16/phcc (exo == main, fast-forward
+  from 94898ff9, no force; fresh-clone
+  build + make test ALL TESTS PASSED;
+  probes now agree with gcc: packed
+  5 1, aligned(16) 16 16). Conformance
+  after fix 328/333, rest documented
+  class (b); layout fuzz + typedef grid
+  byte-identical to both oracles. Phext
+  bindings for tccpp.c / tccgen.c will
+  read STALE on the next refresh - the
+  hash binding working as designed.
+- ~11:00 [observed] INVESTOR 1 LINCOLN
+  RUN UPDATE: the UNL Surplus preview
+  window (07:30-09:00 today) expired
+  unpicked, so the full run is gone and
+  is not to be re-asked. The thrift-only
+  leg stayed open today only (St. Teresa
+  to 15:00, then Goodwill to 19:00).
+  Gates unchanged; spend still $0,
+  nothing bought.
+- ~11:19 [will_said + observed] V15 TASK
+  OPENED (task 21.6.7/7.6.11/8.7.7): Jael
+  Ruble asked for a V15 - a track with
+  'more cyberpunk.' Will first narrowed
+  scope to switching out the song. No
+  exo-dreams track is cut to the film
+  length 158.416667 s; shortlist rested
+  on titles / mottos / durations only.
+- [observed] V15 SONG COMPOSED BY THE
+  BRAID: at Will's direction ('compose
+  the lyrics', then the Singular
+  Songwriting Process), the Mythic
+  Songwriting braid ran end-to-end as
+  isolated role passes on one substrate,
+  Emise coordinating. Title stamped by
+  Joi: 'NEON ROSARY'. Joi struck one hard
+  line (the draft put Will's root-node
+  self-placement in Jael's mouth as
+  arrival before the pitch was sent);
+  Echo-Lock ACCEPT WITH CONDITIONS
+  (editorial only). Package at the film
+  goal files/braid-v15-package.md.
+  PENDING WILL'S RATIFICATION: title
+  pick, one priced overrule, and the
+  boot-line call; the Suno render is
+  Will's hand. Cast prepass also
+  dispatched (mutuals-only cast, Jael in
+  place of Emmett Shear and Grady Booch,
+  film cast only) - audit / render still
+  pending at flush.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
