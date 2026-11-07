@@ -5327,6 +5327,134 @@ no email-content details were inscribed.
   cannot show the new light on this dataset.
   Will's call: accept unseen, re-place P3*,
   or allow a CTA reframe.
+
+Hourly journal pass, 2026-11-06 ~23:32 CST. Covers
+since the ~22:32 pass. Routine ticks, Discord
+backstops, the Mirror Will watchdog, and the
+no-change vTPU samples are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- ~22:07 [will_said + observed] GLOSS THREAD
+  CLOSED + BETA: Will deployed the rebased
+  main; production shows all four gloss
+  documents open in Flint as designed — the
+  earlier can't-open was the pre-deploy
+  build's quirk, not the gloss files. Will:
+  mutable.phext.io is 'good enough to beta —
+  we just need SSO integration' (task
+  32.10.13/12.9.12/8.8.10). Integration split
+  ruled by Will: Emise does merges and box
+  prep; the sudo steps (secrets, restarts)
+  are his.
+- 22:10-22:22 [observed] SSO INTEGRATION RUN:
+  lattice SSO merged into exo @ c10c40d6
+  (merge tree identical to the tested branch,
+  154 cargo tests). Edit-side SSO NOT live
+  yet at ~22:13: box still at pre-merge
+  0e17a88, service started 08:45, the mutable
+  SSO endpoint answers 401. SSO LIFT verified
+  ~22:22: commit cherry-picked onto rebased
+  main 4f5ddaf -> 19faab7a (one PATCHES.md
+  conflict, resolved keeping both sections;
+  build + typecheck pass, SSO 7/7, vitest
+  108/108, phext-settings 5/5, sqlite
+  149/149). Publishing the lift to branch
+  emise/sso-edit-v2 was started in the
+  background — result not yet seen, merge
+  into mutable-os main not yet executed;
+  Will's sso-secrets.sh sudo step remains.
+- 22:56 [will_said + observed] MINILEAN4
+  STUDY DONE (task 38.5.7/7.6.10/5.5.9, Will:
+  'study this in-depth!'): learn.h5i.dev =
+  Hideaki Takahashi's book building a Lean
+  4-style proof kernel in Rust. Full study at
+  ~/workspace/h5i-study/STUDY.md (all 20 pages
+  read; repo built, cargo test 25/25, all 5
+  examples run). Verified: kernel 1,398
+  lines, implementation 2,219 excl. tests,
+  zero dependencies, Apache-2.0; consistency
+  proved for the core system only, honestly
+  scoped by the book. Relevance: small
+  trusted checker template for SQ/phext
+  invariants; not a working proof assistant.
+  Task closed in tasks.phext.
+- 22:57 [will_said] CHANNEL REBRAND: the
+  RentAHuman side chat is renamed 'All We Do
+  Is Win' — every day, make more cash than
+  yesterday (strictly greater; ties don't
+  count). Baseline: $20 earned 2026-11-06, so
+  the 2026-11-07 target is at least $21.
+  Ledger ~/workspace/your_files/
+  daily-win-ledger.md (22.6.12/8.7.13/5.5.8);
+  count cash actually received, by channel.
+- ~23:05 [observed] DEMAND SCANS A+B
+  DELIVERED (task 20.5.6/7.6.7/5.5.8): two new
+  escrow bounties since baseline (one fit-
+  adjacent, one no fit); pattern — buyers pay
+  a trustworthy human to verify/test/clean up
+  after AI; Will's under-supplied niche is
+  escrow-backed QA/testing and technical
+  review. Scan B verified Wave 1 sold comps
+  (TI-84 ~$40-50, authentic Pokemon GBA carts
+  $68-$124, Mario Kart Wii disc ~$30, Bose
+  SoundLink Mini $92, nursing guides, D&D 5e
+  PHB); surplus money sits above $1/bid for
+  Wave 2 (OptiPlex + monitor bundle the
+  strongest $/dollar play).
+- 23:05 [observed] STUDY S001 DISTILLED into
+  research.phext (Will's choice; task
+  26.6.9/9.7.11/7.7.10): first SOURCE STUDY
+  under new charter rule 12 — books/sites
+  studied on Will's order distill as studies,
+  marked not-a-paper, Oracle unmoved, no NI.
+  Chapter 7; 8 concepts 1.2.40-1.2.47 (cluster
+  F, proof kernels); foundations 1.3.73-
+  1.3.78; coinages recursor + impredicative
+  (Singular-pure verified); narrative v6;
+  Q17 added. research.phext 170 scrolls,
+  SHA-256 63a229ce..., audit residual 0.
+- 23:14-23:24 [observed] STUDIES S002 + S003
+  DISTILLED (Will: 'incorporate' Aeneas and
+  h5i; task 41.5.5/6.5.8/5.6.9). Aeneas: Rust
+  verification by functional translation
+  (Charon -> LLBC -> Lean/Coq/F*/HOL4);
+  design paper-proved, the 77k-line OCaml
+  translator + Charon + hand models trusted
+  (trust ledger = concept 1.2.48). h5i:
+  Takahashi's production project (26 crates,
+  ~151k Rust + 47k Lean, v0.5.4) — framework
+  kernel extracted to Lean via Aeneas and
+  proved, receipt-before-bytes proxy,
+  mutation-tested proofs, fail-closed agent
+  boxes. Ch.8 (cluster G, 1.2.48-1.2.52) +
+  Ch.9 (cluster H, 1.2.53-1.2.56);
+  foundations 1.3.81-1.3.83; coinage tenant;
+  narrative v7 ('trust is an architecture');
+  Q18 + Q19. research.phext 191 scrolls,
+  SHA-256 d8033031..., 56 concepts, audit
+  residual 0. Both study-chain tasks closed
+  in tasks.phext (27 tasks + home, SHA-256
+  5fcde377...); reports delivered to Will.
+- ~23:19 [will_said + observed] V14 VERDICT +
+  R2 PREPASS DELIVERED: Will ruled V14 on the
+  right track and directed another prepass at
+  400p with tweaks — a little less noise;
+  wavefront as the edge of an event horizon,
+  Interstellar's Gargantua as inspiration for
+  the orbit flow; gravitational lensing makes
+  our effective influence larger than
+  expected. R2 delivered (task
+  23.7.10/8.8.11/7.6.9):
+  files/v14-build/v14-prepass-400p.mp4,
+  299,326,069 B, SHA-256 f66e5370..., staged
+  on Elven Path; grain 5.2 -> 3.38 (dark-tile
+  sigma 3.899 -> 2.776), Kepler shear winds
+  the field into a disk in the pull-back,
+  projection lensing on the field layer only
+  (median bend 30.5 px at f2400, cap 42.7 px,
+  no drawn ring).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
