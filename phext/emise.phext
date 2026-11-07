@@ -5255,6 +5255,78 @@ no email-content details were inscribed.
   instantiate it himself. Next version
   (V14) starts from V10, not from the
   V11-V13 lineage.
+
+Hourly journal pass, 2026-11-06 ~22:32 CST. Covers
+since the ~21:32 pass. Routine ticks, Discord
+backstops, the Mirror Will watchdog, and the
+no-change vTPU sample are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- 21:35-21:40 [observed] V14 DIAGNOSIS
+  DELIVERED + coordinator-verified
+  (files/v14-diagnosis-pipeline-breakage.md,
+  31,764 B, SHA-256 1cbbda5e...): V11-V13 did
+  not fail inside the V10 pipeline — they
+  left it. Scope substitution, cost explosion
+  (V11 alone ~62 projected node-h vs ~3.7
+  combined v1-v10), stills-gate failure,
+  patch-on-broken-base, and the Orai data-law
+  breach; 10 stop conditions for V14.
+- 21:38-21:40 [observed] V14 DESIGN DELIVERED
+  + coordinator-verified
+  (files/v14-design-inertial-brownian-bezier.md,
+  43,957 B, SHA-256 2c4affbe...): inertial
+  world transform (1/8 orbit default), exact
+  OU Brownian meta walk (seeded, determinism
+  gate kept), Bezier chain on real CYOA /
+  Singular control points (~160-190 segments),
+  V10 camera in the co-moving frame, and
+  culmination P3* as the single composed
+  point, gated on Will's §7.7 rulings.
+- 21:40 [observed] V14 PLAN DELIVERED
+  (files/v14-plan-return-to-v10.md, 10,306 B,
+  SHA-256 a664840e...): V10 skeleton restored
+  exactly, 10 stop conditions, 8 decisions in
+  §6 with defaults. Mythic-film-production
+  skill updated (V13 row corrected, V14 row +
+  four laws added); skills.phext rebuilt,
+  SHA-256 22190dfe... Task 26.5.9/8.6.11/7.5.9
+  completed in tasks.phext (SHA-256 e81a709a...).
+- 21:41 [will_said] Will directed a low-res
+  360p prepass to gauge the heart of V14
+  first (task 34.8.9/9.9.12/7.7.10, recorded
+  in tasks.phext, SHA-256 30b06956...). Runs
+  at plan defaults; P3* included provisionally
+  in this review cut only — the master stays
+  gated on his §6.7 exception rulings.
+- 21:47 [will_said + correction] VOCABULARY:
+  'we introduced the SBOR to you early, but
+  legal jargon is simply not what we're
+  about.' Emise's default voice stays in
+  Will's Singular archive words; of 21
+  legal-register words checked, 12 are
+  nowhere in his archive. His correction the
+  same hour: Singular is not plain words —
+  it is his whole hoard, odd corners, spikes
+  and gaps kept; the law words failed because
+  they were never his, not because fancy.
+  Task 21.7.11/9.7.11/7.7.10.
+- 22:32 [observed] V14 360p PREPASS DELIVERED
+  (task 34.8.9/9.9.12/7.7.10):
+  files/v14-build/v14-prepass-360p.mp4,
+  290,478,917 B, SHA-256 9d212153...,
+  staged on Elven Path; all V10 gates pass
+  (3,802 f, luma max 4.38, determinism
+  byte-identical, 169 segments, 0.20 node-h
+  total). FINDING: P3* is never in frame
+  (~31-33 deg off axis through pull-back +
+  CTA, 0 of 440 frames) — the derived
+  placement + V10's pull kept word-for-word
+  cannot show the new light on this dataset.
+  Will's call: accept unseen, re-place P3*,
+  or allow a CTA reframe.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
