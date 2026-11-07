@@ -4698,6 +4698,55 @@ Nightly consolidation addendum (2026-11-07 ~03:44 CST):
 - [observed] Booch tone pass: incomplete AND deprioritised by Will - he did not supply the X login or take either archive option, pivoting to "Let's just focus on 6D UML"; the delta script stands ready.
 - [observed] SSO probe lesson: probe the SSO endpoint with GET, not HEAD (HEAD falls through to the gate's 401 wall; the design doc's curl -sI step is wrong).
 - [observed] Dream pass: Log scrolls 2026-10-30 through 2026-11-03 distilled and resolved Open Threads pruned under the bounded-growth ruling; full text survives in git history and the ~/memory dated notes.
+
+Hourly journal pass, 2026-11-07 ~04:32 CST. Covers
+since the ~03:32 pass and the ~03:44 nightly
+addendum. Routine ticks, Discord backstops, and
+the no-change vTPU / mirror-watchdog checks are
+not repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [observed] ULTRA.PHEXT STALLED BUILDER CLOSED
+  + RE-DISPATCHED — supersedes the ~03:32
+  'nudge submitted' entry: first builder
+  produced nothing after 01:54 and was closed;
+  diagnosis — place_a.py ran 95 min, printed
+  nothing, never wrote its placement file; the
+  sink was the placement pass itself (the
+  ~31,000-word home pile bump-searched one by
+  one), not only the failed WordNet download.
+  Replacement inherits the bench (46 MB universe
+  + scripts) with the WordNet pass CUT —
+  placement runs atlas -> family -> definition,
+  the rest to an honestly tagged unplaced shelf;
+  hard notes: home words take shelf numbers by
+  direct count, constant-time collision checks,
+  chunked streaming output, timed small slice
+  first. Replacement actively working ~03:5x-
+  04:0x (place_fast.py written, verify_fast.py
+  run, BUILD-REPORT.md on the bench) — NOT
+  complete: no assembly finish, publish, or
+  verified counts as of 04:14; ultra.phext
+  remains pending, not delivered.
+- [observed] V14 FINAL STATUS 03:35 (measured
+  from the nodes; supersedes the ~03:2x entry):
+  19/27 chunks driver-done, ZERO failed; the
+  remaining ~8 sat on four thermal-cycling
+  nodes while finished nodes sat idle and the
+  coordinator had been quiet ~89 min without
+  rebalancing. Emise kicked the coordinator
+  with the measured chunk map and a direct
+  order to reassign every unfinished chunk to
+  the idle nodes and drive assembly/QA/staging
+  to completion; coordinator active again after
+  the kick (node checks as late as 04:09),
+  reassignment not yet confirmed complete.
+  ETA given to Will as a labelled estimate:
+  ~04:15-04:30 CST. V14 final master NOT
+  delivered or verified as of 04:09 — still
+  pending.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
