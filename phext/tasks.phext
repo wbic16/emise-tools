@@ -11,7 +11,7 @@ holds the request, its status, and all notes and results as
 they accumulate. Source of truth: tasks-source.json beside this
 builder (build_tasks_phext.py); never hand-edit the .phext.
 
-Tasks recorded: 16
+Tasks recorded: 17
 
 Index (coordinate — title — status):
 - 14.6.7/8.8.11/11.15.20 — lessons.phext build — completed
@@ -24,6 +24,7 @@ Index (coordinate — title — status):
 - 27.7.11/9.7.14/7.6.9 — Task reference coordinates — standing order — completed
 - 29.5.7/7.6.9/6.6.8 — AI Whisperers lanes fabric — superseded — Will directed building all of Crazy Wisdom instead (2026-11-06 17:48)
 - 29.5.8/7.5.10/6.5.9 — mutable_os claim hunt — completed
+- 29.7.8/10.7.12/6.7.9 — Phext inventory — repos and GitHub push status — completed
 - 29.8.11/10.8.15/7.7.9 — 9D zooming UI — Twitter archive explorer — completed — v1 delivered
 - 30.7.10/8.7.13/8.6.11 — tasks.phext register — standing order — completed
 - 33.4.12/7.7.17/4.3.7 — Investor 1 — focus: 20 x $1 investments — active — Wave 1 opening decision with Will
@@ -147,7 +148,21 @@ Notes:
 
 Results:
 - No mutable_os claim exists under any name or id (server-verified on the AWS host). The claims store holds exactly one record: x:15250344 @wbic16. Mutable OS author Iian Neill (GitHub argimenes) is placed on X as @codexeditor, found tier, UNCLAIMED; his project now posts as @mutableos (not found).
-# 9D zooming UI — Twitter archive explorer
+# Phext inventory — repos and GitHub push status
+
+Coordinate: 29.7.8/10.7.12/6.7.9
+Issued: 2026-11-06 20:03 CST
+Request (verbatim): list all active phexts and which repositories they are being maintained in - let me know if any phext is not being pushed to github yet
+Status: completed
+
+Notes:
+- Verified against live GitHub API (blob entries/sizes) and local git state, 2026-11-06 evening; not from memory.
+
+Results:
+- Pushed: emise.phext + wavefront.phext + CYOA/Incipit + canonical corpus -> wbic16/human@exo; skills.phext + tasks.phext -> wbic16/emise-tools@exo; neuralese.phext -> emise-tools.
+- NOT pushed: research.phext (local git repo, no remote), state.phext (local only, 5-min sampler), claims-ledger.phext (local + SQ on aletheia-core, no git), crazy-wisdom.phext v1/v2 (local build workspace; live only on AWS box), lessons.phext (standalone file local only; content's route to GitHub is PR #12 into Incipit, still open).
+- Dormant/local by design: ai-whisperers.phext draft (superseded), mirror-will.phext (parked).
+# 9D zooming UI — Twitter archive explorer
 
 Coordinate: 29.8.11/10.8.15/7.7.9
 Issued: 2026-11-06 18:20 CST

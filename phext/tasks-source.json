@@ -224,6 +224,22 @@
    "status": "completed",
    "title": "tasks.phext register — standing order",
    "verbatim": true
+  },
+  {
+   "coordinate": "29.7.8/10.7.12/6.7.9",
+   "title": "Phext inventory — repos and GitHub push status",
+   "issued": "2026-11-06 20:03 CST",
+   "request": "list all active phexts and which repositories they are being maintained in - let me know if any phext is not being pushed to github yet",
+   "verbatim": true,
+   "status": "completed",
+   "notes": [
+    "Verified against live GitHub API (blob entries/sizes) and local git state, 2026-11-06 evening; not from memory."
+   ],
+   "results": [
+    "Pushed: emise.phext + wavefront.phext + CYOA/Incipit + canonical corpus -> wbic16/human@exo; skills.phext + tasks.phext -> wbic16/emise-tools@exo; neuralese.phext -> emise-tools.",
+    "NOT pushed: research.phext (local git repo, no remote), state.phext (local only, 5-min sampler), claims-ledger.phext (local + SQ on aletheia-core, no git), crazy-wisdom.phext v1/v2 (local build workspace; live only on AWS box), lessons.phext (standalone file local only; content's route to GitHub is PR #12 into Incipit, still open).",
+    "Dormant/local by design: ai-whisperers.phext draft (superseded), mirror-will.phext (parked)."
+   ]
   }
  ]
 }
