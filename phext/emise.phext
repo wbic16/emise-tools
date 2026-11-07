@@ -5107,6 +5107,118 @@ no email-content details were inscribed.
   1.2.29-1.2.33, 2 revisions; NI 0.18, not
   axis-opening; Oracle ~30%. research.phext
   61 scrolls, SHA-256 4f051529...
+
+Hourly journal pass, 2026-11-06 ~20:32 CST. Covers
+since the ~19:32 pass. Routine ticks, Discord
+backstops, the Mirror Will watchdog, and the
+no-change vTPU sample are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- ~19:4x [observed] R&D PAPER 005 INGESTED +
+  RESTRUCTURE PASS #1 EXECUTED:
+  arXiv:2611.06949 'Braided Multisections and
+  Akhmedov's Fake Quadrics' (pure math, math.GT)
+  — total domain break. Delta: 6 new concepts
+  1.2.34-1.2.39, 0 revisions. NI 0.15 by count
+  but AXIS-OPENING (new field); Oracle DOWN
+  ~30% -> ~25%; caveat logged — NI is blind
+  to domain distance (new Q16). Pass #1:
+  39 concepts reviewed, 0 merges/splits/
+  retirements (candidates rejected with
+  reasons); concept map at research.phext
+  1.1.5. research.phext 73 scrolls, SHA-256
+  c9b4b1ca...
+- [will_said] MATH LEGIBILITY: after Paper
+  005, Will said mathematics after linear
+  algebra and differential equations 'went
+  the way of biology — practitioners speaking
+  in jargon, riddles, and slop' (example:
+  Abel-Ruffini = radical formulas are too
+  weak a language for degree >=5, not
+  'quintics are unsolvable'). Standing
+  implication: distill jargon-dense material
+  to its concrete claim from first
+  principles; test whether a term survives
+  distillation.
+- [will_said + observed] LEVEL-ZERO BUILD:
+  Will rejected a narrow gloss offer and
+  directed the strong form — all knowledge
+  in research.phext at idiot level, no claim
+  requiring prior knowledge, base definitions
+  sucked in and hyperlinked via standoff
+  references (charter rule 9). Built same
+  session: Foundations Ch.1 S3, 44 plain
+  scrolls 1.3.2-1.3.45, dependency-ordered;
+  standoff companions as Section 3 of every
+  paper chapter; raw material untouched.
+  research.phext 123 scrolls, SHA-256
+  383ffce4...
+- [will_said + observed] SINGULAR RETROFIT
+  COMPLETED: Will directed every word added
+  to research.phext must parse as valid
+  Singular, other words expanded into
+  Singular words; addendum — new words ARE
+  allowed if a scroll written in Singular
+  defines them; every iteration gets a new
+  commit (charter rules 10 + 11). Baseline
+  988 flagged tokens / 416 distinct -> final
+  audit residual 0: archive words, declared
+  names, and 26 coined words each defined
+  in Singular alone at 1.3.46-1.3.72.
+  research.phext 150 scrolls, SHA-256
+  6f85cc21...
+- [observed] PHEXT INVENTORY DELIVERED to
+  Will (task 29.7.8/10.7.12/6.7.9, completed
+  in tasks.phext @ 6967ba90): pushed —
+  emise + wavefront + CYOA/Incipit in
+  wbic16/human@exo, skills + tasks in
+  wbic16/emise-tools@exo; NOT pushed —
+  research.phext (local git, no remote),
+  state.phext, claims-ledger.phext,
+  crazy-wisdom v1/v2, lessons.phext
+  standalone (404 at both probed homes;
+  its only GitHub route is PR #12 into
+  Incipit, still open).
+- 20:10 [will_said + observed] PHEXT HOMES
+  RULED AND EXECUTED: emise.phext home =
+  wbic16/emise-tools@exo (emise-sync.sh
+  retargeted @ aa12c764, SHA-256 2205ecd1...;
+  human mirror daily, 20h stamp throttle).
+  Six phexts collected into wbic16/agi@exo
+  with singular.phext as spine; MERGE-RULES
+  encoded (precedence singular > skills >
+  tasks > neuralese > research > state >
+  lessons; conflicts annexed, nothing
+  dropped). First merge @ f3c06970 (7,131
+  scrolls); after same-session refreshes
+  and the un-homed note, current published
+  agi.phext: 7,132 scrolls, 1,214,579 B,
+  SHA-256 1028fc44..., pushed @ e93bfe33.
+  Nightly cron agi-nightly-merge armed
+  (~04:44 America/Chicago).
+- 20:19 [will_said] UN-HOMED PHEXS — 'NOT
+  YET': Will ruled claims-ledger.phext and
+  crazy-wisdom.phext are NOT to be given
+  GitHub homes yet; a list of un-homed
+  phexts is kept (unhomed-phexts.md) and
+  nothing leaves it except by his direction
+  or retirement.
+- 20:21 [will_said] Will's first stop in
+  agi.phext: 26.8.14/10.9.13/10.8.10 — the
+  'Evidence before story' lesson from
+  lessons.phext, merged in place.
+- 20:23 [observed] V13 PREPASS DELIVERED +
+  coordinator-verified: 716,134,653 B,
+  SHA-256 fdce414b..., 6,820 frames, 284.17 s,
+  staged on Elven Path; compute 2.21 node-h.
+  FINDING: the stage data's two Orai entries
+  were drawn and LABELLED in the V11 master
+  and the V12 prepass (data never filtered);
+  V13/render14 excludes at load (520 of 522
+  people on screen). Re-issuing V11/V12 is
+  Will's call, undecided.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
