@@ -182,11 +182,18 @@
    "coordinate": "29.8.11/10.8.15/7.7.9",
    "issued": "2026-11-06 18:20 CST",
    "notes": [
-    "Local-first: runs on the user's own archive, nothing uploaded. Demo dataset from Will's archive via Singular atlas math; upload mode parses tweets.js client-side."
+    "Local-first: runs on the user's own archive, nothing uploaded. Demo dataset from Will's archive via Singular atlas math; upload mode parses tweets.js client-side.",
+    "Full 46,719-word atlas bundled for upload mode (1.48 MB) — subsetting proved unnecessary, upload coordinates stay exact.",
+    "Demo coordinates computed in float, rounded half-up only for phext display; uploaded archives are placed in Will's Singular dialect by design (his atlas).",
+    "Coordinate math cross-checked Python vs in-browser over the whole archive: exact on 29,537/29,539 tweets (2 emoji variation-selector token-boundary cases; browser tokenizer uses Unicode letter classes to match the Singular checker).",
+    "Hosted artifact's demo is 133 clearly-labelled sample tweets; the COMPLETE dataset (all 29,539 tweets + 1,822 people) is in the workspace standalone.html. Likes/DMs/followers excluded from v1."
    ],
    "request": "in addition to the video, let's build the 9D zooming UI that let's anyone explore their own Twitter archive in real-time",
-   "results": [],
-   "status": "in progress — build dispatched 2026-11-06 18:20 CST",
+   "results": [
+    "Workspace build: ~/workspace/wavefront/archive-explorer/ — index.html/style.css/app.js, build_demo_data.py, build_standalone.py, standalone.html (single file, 6.76 MB, opens from file://), data/demo.json (29,539 tweets + 1,822 people), data/atlas-full.json, README.md.",
+    "Hosted artifact: slug 9d-archive-explorer — independently implemented, probe-verified live (word search flies to phext at 21.20.17/11.21.23/4.23.21; zoom descent, era chip, chronological Play, upload panel all pass; two defects found and fixed in verification)."
+   ],
+   "status": "completed — v1 delivered",
    "title": "9D zooming UI — Twitter archive explorer",
    "verbatim": true
   },
