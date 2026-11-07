@@ -5576,6 +5576,164 @@ inscribed.
   directed two revisions - compress to one
   third, then strip insider context; the
   final version is the external-facing one.
+
+Hourly journal pass, 2026-11-07 ~13:32 CST. Covers
+since the ~12:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [observed] V15 PREPASS DELIVERED
+  (2026-11-07 12:33): Shear / Booch callout
+  plates removed (both non-mutual, pixel-
+  verified); audit surprise - Jael was
+  already in the film (top-20 mutual
+  highlight #12), so no addition needed.
+  One freed slot to @0x440x46, the other
+  cleanly removed. File v15-prepass-720p15.mp4,
+  686,412,409 B, SHA-256 be5c0a47..., staged
+  on Elven Path; audio is the V14 track as
+  placeholder. Still open: Will's Suno
+  render of 'Bells Are Ringing', plus two
+  flags left for his ruling (@wbic32 callout,
+  @levelsio inside a verbatim strip post).
+- [observed] ROADS BATCHES 4+5 COMPLETE -
+  supersedes the ~12:25 in-progress state:
+  batch 4 (Neuralese + The Long Road) closed
+  ~12:27; batch 5 (ages 18-20: Runway, The
+  Choir, Your Own Archive) built + verified
+  ~12:34-12:41. All 18 suite games now exist
+  (3 originals + 15 on-ramps).
+- [will_said + observed] ROADS GRANT PROCESS
+  + ANTI-VIRAL DESIGN: Will directed the XP
+  grant process be auditable, leak no
+  personal info, and comply with GDPR + US
+  rules - GRANT-PROCESS.md: games/hub collect
+  nothing; claim code is a random 128-bit
+  on-device nonce + SHA-256 checksum, server
+  stores only its hash; stamps self-attested
+  by design. ANTI-VIRAL.md (Will: games adjust
+  after every solution is generated): facts
+  are fixed, instances are perishable -
+  re-deal on completion + ISO week, seed
+  displayed.
+- [observed] ROADS ANTI-VIRAL SWEEP COMPLETE
+  (flush 13:25): 17 of 18 games now re-deal
+  after every solution (final six verified:
+  Tap Home, Echo Tiles, Sort the Scrolls, One
+  Number Road, Zap Listen Mode, Exocortex
+  Quest I). Sole exception: Find It Fast -
+  audit found its seed is a fixed formula
+  (no generation counter, no ISO week, no
+  instance label), so a walkthrough stays
+  valid forever; its retrofit is gated on
+  Will's explicit go-ahead, and it publishes
+  as-is until then.
+- [observed] ROADS PUBLISHED + LIVE: publish
+  landed ~12:58 as site-apertureshift-com@exo
+  9981c996 (27 files, tree-verified) - all 18
+  games + hub with XP Road Card + ANTI-VIRAL.md
+  + GRANT-PROCESS.md, version roads-1.1.
+  Access arc same hour: ranch SSH to the AWS
+  box timed out from every node (single shared
+  Starlink egress 153.66.71.80; Will: the
+  uplink IP shifted, so SG allow-listing is
+  a patch, the durable fix is an IP-independent
+  path); deployment then staged on-box (no
+  container runtime - podman install a Will
+  sudo step, register #44 opened). LIVE
+  ~13:26: apertureshift.com serves the new
+  hub from the rootless podman container,
+  bytes SHA-256-identical to 9981c996; Will
+  ran both sudo steps; a brief 502 traced to
+  staged-file modes, fixed. Register #44
+  closed; register back to 22 active. Deploy-
+  script mode-normalization fix dispatched,
+  not yet verified at flush.
+- [observed] ULTRA.PHEXT NORMALIZATION
+  COMPLETE + PUBLISHED (task
+  44.13.9/15.15.18/13.13.19): Will directed
+  1-digit components, escalating if collisions
+  too many - shipped width is 3-digit (1..999):
+  collisions measured 82.77% at 1-digit, 51.60%
+  at 2-digit, ~45.8% at 3-digit (structural
+  hot-prefix floor); 150,942 words (47.06%)
+  bump-displaced, zero lost. Published human@
+  exo 894bffb1, 58,166,306 B, SHA-256
+  caf74ebf...; agi refreshed @ 2d2552f3.
+  Correction: first-reported neighbourhood
+  figures were wrong (from a progress note
+  before measurement finished) - true panel
+  Spearman mean 0.291, Jaccard@50 mean 0.184;
+  docs corrected, the phext itself unaffected.
+- [will_said] ULTRA PLACEMENT VERDICT +
+  REDIRECT (Will, ~13:00): 'none of those are
+  good - if words are colliding that often,
+  then the placement algorithms are shit.'
+  Placement redesign dispatched (task
+  20.8.13/9.7.12/8.8.10), then redirected by
+  Will to a generative/predictive algorithm:
+  Singular is the perfect generator - 'extend
+  singular to match your weights'; weights
+  are CYOA done 8B times. Gates sent: >=99%
+  unique, <=1% displaced, neighbourhood
+  preservation materially above the 0.291
+  floor; publish only if gates hold. Still
+  running at flush - not landed, not verified.
+- [observed] LIBPHEXT-RS v0.4.1 PROVING
+  COMPLETE; PR #7 MERGED BY WILL (verified
+  via GitHub API: merged 2026-11-07T09:17:48Z,
+  merge commit 5346ce4e, exo HEAD = that
+  commit). Charon extraction clean, Aeneas
+  translation zero errors / zero sorry, 301
+  definitions; proofs lake build green
+  (1,809 jobs) incl. three kernel-checked
+  specs. Trust ledger: 62 external axioms
+  incl. xxh3_128 uninterpreted and explode/
+  implode opaque; translators + Aeneas
+  stdlib models trusted.
+- [observed] LIBPHEXT v0.4.1 DOWNSTREAM
+  VALIDATION COMPLETE (task
+  30.6.9/7.6.10/6.5.10, closed; results
+  commented on PR #7): downstream-identical
+  to 0.4.0 in all six consumers tested and
+  on CYOA (all 829 known coordinates fetch
+  byte-exact, implode/explode byte-identical;
+  identical suite passes on 0.4.0 as control).
+  Pre-existing debt found, NOT caused by
+  v0.4.1: sq, phext-lattice, and lanes still
+  reference COORDINATE_MAXIMUM (removed in
+  0.4.0) and pin libphext 0.3.x - migration
+  is an open follow-on, Will's call.
+- [will_said + observed] MOAT: CHANNEL CHOICE
+  + STATE MACHINE REVIEW (2026-11-07 13:16):
+  Will posted Steve Ruiz's 'find all of the
+  implicit state machines in my app' prompt
+  in MOAT. Correction to Emise's generic
+  codebase-hunt reply: 'never assume I post
+  in the wrong channel by accident' - where
+  he posts is part of what it means. Actual
+  instruction: build state machine review
+  into MOAT itself (the R&D tracker /
+  research.phext proving process), task
+  19.6.8/9.6.15/6.5.9. Directed, not yet
+  built at flush.
+- [observed] PHCC F1 RECEIPT RE-ISSUE
+  COMPLETE - libtcc1.c HOLD CLOSED (supersedes
+  the ~12:32 held state): file carried at F1
+  bytes 69879e2a; WP re-run reproduced h6
+  exactly (271/297, same 26 timeouts, no
+  tuning); CBMC 5/5; equivalence differential
+  7,242,324 comparisons / 0 divergences; all
+  4 libtcc1 binaries byte-identical to pre-F1
+  objects. Final phext 82bd0745 (63,195,664 B),
+  seal ffadce9b; gate v8.1 all CURRENT,
+  conformance 328/333 / MSVC not attested;
+  unpack 558/558 byte-identical to repo
+  e399b212 including libtcc1.c; make test ALL
+  PASSED. Publishing next at flush.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
