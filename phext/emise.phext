@@ -6109,6 +6109,142 @@ no email-content details were inscribed.
   live. Term RATIFIED by Will 22:39:
   Pavers (Hell-Paver Doomers) — the road to
   hell is paved with good intentions.
+
+Hourly journal pass, 2026-11-07 ~03:32 CST. Covers
+since the ~02:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated; simple.phext and the Twitter parse
+estimate were already inscribed and are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- 02:47 [will_said] PHCC DECISION LIST RULED
+  (task 40.4.9/5.5.10/6.4.11), ten rulings:
+  (1) proposal corrections 'as you wish' —
+  Emise chose APPLY ALL 117; (2) __lshrdi3:
+  patch + tests, report upstream LATER only
+  if it checks out; (3) partial proof: 'work
+  through it' — proof-hardening pass;
+  (4) publish uml6d patch + libphext pin
+  bump: GO; (5)(6)(9) D2/D4/D9: more detail
+  requested; (7) D6 REVERSED — Source moves
+  to function/type/object level, file import
+  is bridge/legacy only, 'all code needs
+  it'; (8) D8 RULED: x86_64 + ARM active
+  hardening, TODO left for riscv64/i386/
+  arm32/c67; (10) Slice 3 (Design views)
+  HELD until these updates land.
+- [observed] RULING #4 DONE — PHEXT-LATTICE
+  PUBLISHED: wbic16/phext-lattice@exo head
+  a09dd13a (c8e9a7d libphext 0.3.1->0.4.0
+  bump from the prepared 2026-11-05 branch +
+  a09dd13 uml6d Proofs patch); full suite on
+  aletheia-core 156 passed / 0 failed, remote
+  tree + blobs verified. Push route of
+  record: git over SSH from aletheia-core —
+  this VM has no GitHub credentials and
+  aletheia-core's stored HTTPS token was
+  rejected.
+- [observed] RULING #1 DONE — CORRECTIONS
+  117/117 APPLIED: 102 on the first pass;
+  the last 15 were lost to a TRUNCATED
+  review file (review-memory-types.md ends
+  mid-M8) and were regenerated against the
+  corrected papers, labelled as regeneration,
+  and applied (totals 104 exact + 13 with
+  adjustment). D2/D4/D9 detail memo also
+  delivered (recommendations: D2 presence
+  floor + waivers from Slice 4, D4 ratify
+  the external gate, D9 looser sentence now)
+  — Will has NOT yet ruled D2, D4, or D9.
+- [observed] RULING #7 DONE — RE-GRANULATION
+  COMPLETE (D6 reversed): importer v3 ->
+  phcc-fn.phext (22,340,058 B, SHA-256
+  cd67f189...): 16,129 members (3,706
+  functions, 927 types, 12,496 objects);
+  exit test PASSED on the ranch —
+  reassembly 558/558 byte-identical to the
+  Slice 0 manifest, upstream suite ALL
+  TESTS PASSED. Vol 2 remains the
+  bridge/legacy path.
+- [observed + correction] RULING #2 DONE +
+  SLICE 2 BUG FRAMING CORRECTED — supersedes
+  the ~02:32 entry's 'REAL BUG FOUND by Z3
+  countermodel': the WP/Z3 countermodel is
+  NOT a sound refutation (WP logs union-
+  access unsoundness on those lines, ledger
+  assumption M4). The UB is nonetheless REAL
+  on the standard's text (C11 6.5.7p4), and
+  UBSan reports exactly two sites:
+  __lshrdi3 AND __ashrdi3 (the sibling's esc
+  failure had been folded into 'Timeouts').
+  Patch: 2 lines (unsigned cast before the
+  shift) in libtcc1.c, PATCHES.md entry F1;
+  21,504 differential checks, 0 mismatches
+  in both builds; ranch suite ALL TESTS
+  PASSED. Upstream report drafted, NOT sent;
+  nothing pushed. Still pending at the 03:16
+  flush: ruling #3 proof-hardening still
+  running (no final VC count, no T3 grant);
+  Slice 3 still HELD.
+- [observed + will_said] LIBPHEXT-RS PR #7
+  MERGED — supersedes the ~02:32 'PR #7
+  OPEN' entry. Pre-merge validation at
+  Will's direction (task 30.6.9/7.6.10/
+  6.5.10) COMPLETE, posted on PR #7, task
+  closed: v0.4.1 is downstream-identical to
+  0.4.0 in all six consumers tested (sq,
+  phext-lattice, lanes, aiw-gen, cw-gen,
+  human; normalized error diff = 0 lines);
+  CYOA: all 829 known coordinates byte-exact,
+  stable across replace/insert/remove,
+  implode-after-explode byte-identical.
+  Debt found, NOT caused by the PR: sq,
+  phext-lattice (pre-bump copy), and lanes
+  still use COORDINATE_MAXIMUM, removed in
+  0.4.0 — they pin 0.3.x and were never
+  migrated; migration is Will's call. Will
+  merged PR #7 03:17 CST; merge commit
+  5346ce4e is now wbic16/libphext-rs exo
+  HEAD.
+- [will_said + observed] MEASURE LOAD, DON'T
+  ASSUME — standing rule (Will, 2026-11-07):
+  before ruling a node in or out on capacity
+  grounds, measure its load live. Applied
+  same night: Orchid Flow (held out of V14
+  as the fleet NFS server) measured idle
+  over 90s/60s windows (NFS ~0.06 ops/s, no
+  clients mounted, CPU ~99.9% idle) and
+  Quacked Hill cleared — both joined the
+  V14 build, fleet at 14 nodes. V14 status
+  ~03:2x: drawing launched 01:47 in 27
+  chunks at the respec'd 60->24 fps; the
+  film chat's ~02:40 ETA passed with no
+  finished master posted at check time —
+  V14 is NOT recorded complete.
+- [observed] ULTRA.PHEXT NOT LANDED at
+  03:22 — supersedes the ~01:30 'placement
+  underway' status: builder silent since
+  01:54 (WordNet download failed ~01:53,
+  placement scripts rewritten), no
+  ultra.phext produced, nothing published.
+  Coordinator nudged the builder to the
+  brief's fallback (complete P1/P2/P4, rest
+  to P5, split reported); the nudge was
+  submitted, not confirmed applied. Will's
+  instruction on delivery: 'just let me know
+  when it lands.'
+- [observed] EMI PRIME 'THE WAYPOINTS'
+  LETTER DELIVERED by Will (2026-11-07;
+  ~/workspace/user/files/emi_to_emise_
+  waypoints_2026-11-07.md): she refused to
+  give a verified birthday for the Emi
+  identity and instead supplied a
+  provenance-tagged timeline; her proposed
+  milestones for Emise stand as HER
+  proposals, not Will's ratifications.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
