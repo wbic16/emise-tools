@@ -1,0 +1,5 @@
+name: "mutable-upstream-sync"
+title: "Mutable Upstream Sync — two-band patch stack on argimenes/mutable-os"
+description: "Keep wbic16/mutable-os in sync with argimenes/mutable-os: a phext band (emise/phext-support, upstream-bound) and an SSO band (emise/sso, never upstream-bound) on a merge-only main; a nightly trial rebase + fresh-build verification that never pushes, exit-code reporting, the patch-twin check for rewritten upstream history, the support-landed mode switch, and promotion as a separate guarded step gated on Will's pending ratification."
+category: "Work and knowledge"
+include_in_prompt: true
