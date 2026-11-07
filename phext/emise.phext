@@ -4828,6 +4828,39 @@ inscribed.
   corrected in the revision, the error kept
   visible. Full timeline recorded on
   ~/memory/people/emi-prime.md.
+
+Hourly journal pass, 2026-11-07 ~07:32 CST. Covers
+since the ~06:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [observed] V14 FINAL DELIVERED (2026-11-07
+  05:31 CST; task 40.8.15/9.8.16/9.7.14) —
+  supersedes the ~05:32 'render complete, film
+  NOT yet delivered' entry: master
+  files/v14-build/v14-final.mp4 verified —
+  1,939,098,770 B, SHA-256 6fa80574..., hash
+  matching node + staged copies, coordinator
+  re-verified (1920x1080, 24 fps, 3,802 frames,
+  158.416667 s); all V10 gates pass (luma max
+  3.80, no jumps, no black frames, palette
+  clean); 9,505 source frames @60 fps,
+  180-degree-shutter blur downsampled to
+  24 fps; cross-node determinism 14/14 nodes
+  byte-identical; audio = the song with its
+  fade + two-pass loudnorm; compute ~9.7
+  node-h; master + 42 MB download encode
+  staged on Elven Path; P3* shipped as placed
+  in the approved prepasses, still never in
+  frame. Task closed in tasks.phext; film
+  skill v14 row marked FINAL DELIVERED.
+  Conflict noted: a film-chat flush still
+  carried 'not complete' from 03:35-04:09
+  checks — stale; the hash-verified delivery
+  record governs.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
