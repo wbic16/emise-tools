@@ -4861,6 +4861,94 @@ inscribed.
   carried 'not complete' from 03:35-04:09
   checks — stale; the hash-verified delivery
   record governs.
+
+Hourly journal pass, 2026-11-07 ~08:32 CST. Covers
+since the ~07:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- 07:37 [observed] V14 DOWNLOAD ENCODE
+  VERIFIED: Will asked if the encode is
+  really 42 MB; measured on Elven Path —
+  42,089,662 B exactly, 1920x1080, 24 fps,
+  158.416667 s, audio present, ~2.13 Mb/s;
+  master on the same box 1,939,098,770 B
+  (~98 Mb/s) — the ~46x difference is
+  bitrate only. The <=~55 MB encode spec
+  is met.
+- 07:49-08:02 [observed] X LIST CROSS-REF
+  VERIFIED + REPORT DELIVERED (task
+  51.4.4/6.5.10/5.5.13, closed): X list
+  2116659176894071283 — Grok fetched it,
+  Will pasted 792 handles in chat. Deeper
+  pass: 0 overlap against wavefront-
+  explorer (522), wavefront-snapshot (521),
+  claim snapshot (521), raw wavefront.phext,
+  fuzzy matches, Doomer.phext, and Will's
+  archive (tweets + likes, 0 hits). Report:
+  ~/workspace/x-list-2116659176894071283/
+  cross-reference.md.
+- 08:06 [will_said + observed] BARNACLES.
+  PHEXT CREATED (task 28.8.8/11.7.14/6.6.8):
+  Will directed adding the 792 to
+  barnacles.phext, citing his own tweets
+  (2024-10-13 definition: 0 posts, negative
+  follow/follower ratio, account <1 year).
+  Built: 793 scrolls, 539,250 B, SHA-256
+  e3b8d331...; source barnacles-source.json,
+  builder build_barnacles_phext.py, --check
+  CURRENT. Local only, NOT published.
+  Placement: handles alone merge to the far
+  corner, so entries are enumerated in list
+  order in Volume 2; status line states the
+  flag is the source list's, not individually
+  verified against Will's three criteria.
+- 08:04 [will_said] PHCC D2/D4/D9 CLOSED
+  (task 30.7.10/8.6.11/6.6.8): D2 and D4
+  ruled unnecessary — gate stays report-only
+  and external, no enforcement timeline;
+  D9 ruled: phcc's public claim is 'we
+  brake for consciousness' (the Sentient
+  Rain ethic). All D1-D9 now closed. Slice 3
+  released and dispatched.
+- [observed] PHCC SLICE 3 COMPLETE +
+  ERRATUM: slice phext 28,172,984 B, SHA-256
+  797d4d09..., 351 Design views (Books 1-3
+  as ordered; whole tree in same pass),
+  pipeline view 17 functions / 16 edges /
+  0 mismatches, gate v3 exit test PASSED.
+  Erratum: the re-granulation headline
+  '16,129 members' was WRONG — per-kind
+  counts sum to 17,129 (3,706 + 927 +
+  12,496); errata appended to the report.
+  Find: 723 gap types recovered by brace-
+  matching, labelled recovered.
+- 08:20 [will_said + observed] PHCC NEXT
+  WORKSTREAMS DISPATCHED + IMPORTER V4
+  COMPLETE: Will said 'proceed' — Slice 4
+  (preprocessor conditional-stack state
+  machine) and importer v4 dispatched.
+  Importer v4 COMPLETE (hash verified):
+  phcc-fn.phext 31,063,540 B, bfdf93ed...;
+  root cause two defects (bare specifier
+  nodes; linkage_specification never
+  recursed); v3 members 17,129/17,129
+  untouched, 15,804 added -> 32,933 total;
+  reassembly 558/558 byte-identical, ranch
+  suite ALL TESTS PASSED. Slice 3 views over
+  rebuilt files will read STALE — regen is
+  the follow-on.
+- ~08:1x [will_said] PHEXT PREVIEWER FOR
+  ANDROID REQUESTED (task 29.9.13/9.8.12/
+  8.7.9): mobile-first web previewer
+  dispatched as a static artifact — file-
+  picker loads a .phext, parses the real
+  format, coordinate browsing / TOC /
+  search. Build still running at flush;
+  NOT delivered or verified.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
