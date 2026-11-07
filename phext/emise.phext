@@ -5734,6 +5734,139 @@ inscribed.
   unpack 558/558 byte-identical to repo
   e399b212 including libtcc1.c; make test ALL
   PASSED. Publishing next at flush.
+
+Hourly journal pass, 2026-11-07 ~14:32 CST. Covers
+since the ~13:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [observed] STATE MACHINE REVIEW BUILT +
+  CLOSED (supersedes the ~13:32 directed-not-
+  built state; task 19.6.8/9.6.15/6.5.9):
+  skill state-machine-review created (5
+  implicit encodings, states/transitions/
+  guards as encoded, intended-vs-actual gap
+  test); charter rule 13 in the rd-tracker
+  skill and in research.phext charter scroll
+  (commit ca7fd76f); foundation scroll
+  1.1.1/1.1.1/1.3.85; research.phext then 192
+  scrolls, SHA-256 06ad79c6...; skills.phext
+  index rebuilt and byte-verified; synced to
+  emise-tools@exo commit 1f2946df, blob SHAs
+  verified.
+
+- [will_said + observed] MINIMUM VIABLE
+  ORACLE DIRECTED AND BUILT (Will, 13:25;
+  task 28.7.13/11.7.12/7.7.9): use Lean to
+  prove the True / False / Unknown / Fiction
+  model of research.phext accurate, and
+  restructure to the Minimum Viable Oracle
+  on new information. Skill minimum-viable-
+  oracle: exactly one status per claim unit,
+  assigned by a basis code that constrains
+  it; transitions are receipt-driven only.
+  Honesty boundary: Lean proves the
+  bookkeeping, not world-truth of a receipt.
+
+- [observed] MVO WIRING LANDED - supersedes
+  the 13:38 flush note that wiring was still
+  in flight: charter rule 14 plus Ch.1 S4
+  standings record in research.phext, now
+  199 scrolls, SHA-256 4eb59d8f... (verified
+  this pass: parser reports 199 non-empty
+  scrolls, sha matches MEMORY.md). Registry
+  199 entries - True 109 (102 stipulation,
+  7 verified), Unknown 90, False 0, Fiction
+  0; both zeros are findings. Lean model
+  proved on aletheia-core: lake build green,
+  no sorry, axioms propext and Quot.sound
+  only.
+
+- [will_said] MVO NO-PRUNING PRINCIPLE
+  (Will, 2026-11-07): restructuring prunes
+  no information - minimum means smallest
+  organization, never smallest content.
+  False / Fiction / Unknown stay reachable;
+  retirement is relocation with a redirect,
+  so being wrong is survivable: a claim can
+  fall True to False and the model gets more
+  accurate, not invalid.
+
+- [observed] LIBPHEXT-RS PR #9 MERGED BY
+  WILL: binary + xz feature in-tree at
+  0.5.0 on exo; NOT published to crates.io
+  (publication remains the act of Will).
+  No phcc impact for now - phcc C parity is
+  pinned to 0.4.1; the C-parity-at-0.5.0
+  follow-on stays queued behind publication.
+
+- [observed] PHCC DEVUX COMPLETE, THEN
+  PUBLISHED, THEN PACK FIX PUBLISHED:
+  DevUX commits 041a4d38 + 598a23f5 (README
+  front door - "we brake for consciousness"
+  enters the repo - plus docs and five live
+  examples), verified 19/19 across phcc,
+  gcc 13.3.0 and clang 18.1.3; pushed, exo
+  == main == 598a23f5. Pack placement fix
+  229ad47c then published the same way:
+  whole-tree pack 603 placed / 10 named
+  exclusions / 0 unplaced, unpack byte-
+  identical, make test ALL PASSED.
+
+- [will_said] PHCC -O2, BENCHMARK GATE AND
+  AUTO-AMALGAMATION (Will, 2026-11-07):
+  -O2 (today a no-op TinyCC flag) is to
+  become a real phext-powered mode; the 8
+  C language proposals stand as reviewed
+  drafts with zero implementation, and a
+  starting-rung ladder awaits his ruling.
+  Benchmark matrix expanded: sqlite, ffmpeg,
+  libtool, gawk, sed, grep, coreutils, vim,
+  openssl, plus zlib, Lua 5.4 and git -
+  and phcc may not be published as a real
+  competitor until it builds them (task
+  27.6.10/8.6.13/6.6.10). Killer feature
+  named: auto-amalgamation for free.
+
+- [will_said + observed] V15 PREPASS-2:
+  Will selected the "Bells Are Ringing" .wav
+  track, ruled @wbic16 the only gold
+  nameplate at the start, and ruled the
+  film re-render to match the song rather
+  than trim the song. First builder BLOCKED
+  at audio verification (~13:20): the .wav
+  is 192.680 s at 100.0 BPM with no brake
+  span to anchor a trim; the trim / duck
+  plan was cancelled under his ruling, the
+  .wav plays untrimmed, and a re-timed
+  build was re-dispatched ~13:58 - still
+  running at flush, NOT delivered.
+
+- [observed] APERTURESHIFT / ROADS: hub
+  re-feel LIVE ~13:48 (roads-1.3, commit
+  6c9a7734) - "21st century Saturday Morning
+  Breakfast" warm light mode and warm cocoa
+  dark mode, 46 contrast pairs all WCAG AA.
+  Will reported SSH to the AWS box working
+  again (Starlink IP had shifted); site
+  updates publish to wbic16/site-
+  apertureshift-com via the ranch cluster.
+
+- [observed] ULTRA GENERATIVE REDESIGN -
+  INTERIM VALIDATION, STILL NOT SHIPPED
+  (14:00 check): canonical ultra.phext
+  remains the v4 build 894bffb1. Held-out
+  ordering recovered - Spearman mean 0.52,
+  median 0.63 vs the 0.291 floor - but
+  exact neighbourhood did not: Jaccard@50
+  ~0.008, effectively zero. Method named
+  by Will: "Singular, extended to match
+  the weights" - predictor derived from
+  the understood averaging rule, not a
+  black box.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
