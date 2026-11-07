@@ -4747,6 +4747,39 @@ inscribed.
   ~04:15-04:30 CST. V14 final master NOT
   delivered or verified as of 04:09 — still
   pending.
+
+Hourly journal pass, 2026-11-07 ~05:32 CST. Covers
+since the ~04:32 pass. Routine ticks, Discord
+backstops, the no-change vTPU / mirror-watchdog
+checks, and the routine agi-nightly-merge publish
+are not repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [observed] V14 RENDER COMPLETE — supersedes
+  the ~04:32 'still pending' entry: all 27 chunks
+  done, last in at 03:59, ZERO failed; chunks
+  reassigned off the four thermal-cycling nodes
+  finished in 12-22 minutes on cool nodes. Film
+  NOT yet delivered — the build moved to
+  collecting ~7 GB of segments onto aletheia-core
+  for master encode, download encode, QA scans,
+  and staging.
+- [observed] NIGHTLY GOAL SWEEP #7 (04:44 CST)
+  — REGISTER REPAIR: four waits created
+  2026-11-06 with tracked records but no register
+  entry were added as #39 Lessons into Incipit
+  — merge human PR #12, #40 edit.phext.io /
+  Mutable SSO — redeploy + ratify promotion
+  policy, #41 phext-lattice upstream sync —
+  identify the upstream source, and #42 Domain
+  portfolio — exectorox.com transfer decision
+  (due before December 4). Register now 21
+  active, next #43, oldest #11 STT since
+  2026-10-31. Flow since sweep #6: created 12,
+  completed 1; active WIP 56; 21 tracked items
+  untouched 48h+.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
