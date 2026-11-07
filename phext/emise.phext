@@ -5927,6 +5927,188 @@ and no email-content details were inscribed.
   his self-diagnosis, and the Carnegie
   absolution. What failed: every answer
   anchored to Dunbar's 150.
+
+Hourly journal pass, 2026-11-07 ~02:32 CST. Covers
+since the ~01:32 pass, plus two durable items
+from earlier tonight not yet inscribed (ultra
+rulings, Doomer/Pavers, parents' origins).
+Routine ticks, Discord backstops, and the
+no-change vTPU sample are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- ~01:27-02:0x [observed] LIBPHEXT-RS PROVING
+  COMPLETE + PR #7 OPEN — supersedes the
+  ~01:32 entry's 'translation failed, proofs
+  behind this': five translator limits were
+  bisected by minimal repro on aletheia-core
+  and rewritten around (Vec::collect
+  associated-type binding; Pattern-trait
+  split/contains GAT; char<->int casts either
+  way — fixed with byte-twin constants +
+  byte-scan create_summary; Iterator
+  chain/skip missing from Aeneas's Lean
+  model; Vec<&str> borrows — split_on now
+  returns Vec<String>; phext-named params
+  shadowing the crate namespace, renamed
+  input), cargo test 58/58 after each. Full
+  Charon+Aeneas translation builds in Lean:
+  lake build green, 301 generated defs, 0
+  errors, 0 sorry; three kernel-checked
+  specs in Properties/Basic.lean
+  (advance_coordinate, default_coordinate,
+  is_phext_break). Trust ledger on record:
+  62 external axioms incl. xxh3_128
+  uninterpreted (checksum verified only
+  relative to its signature) and
+  explode/implode opaque (no HashMap model).
+  Proof-tools installer (Will's request)
+  published on the branch; exocortical
+  setup.sh Phase 11 runs it (exo 34452c9c).
+  PR #7 OPEN on wbic16/libphext-rs
+  (provable-0.4.1 -> exo, remote head
+  f36d2c2, blob hashes + 100755 modes
+  verified) — merge is Will's act. Tasks
+  47.11.7/12.13.16/12.11.16 and
+  41.8.7/10.9.12/8.8.12 closed in
+  tasks.phext; caveat: installer not yet run
+  end-to-end from a clean machine.
+- 01:43 [observed] REGISTER #8 CLOSED
+  (tick 778): the libphext-rs helios wait was
+  stale — verified live via GitHub API, exo
+  HEAD dc58df21 carries the merged fix,
+  suite 58/58 in the merge record. Register
+  18 -> 17 entries; tracked item completed.
+- 01:45 [will_said + observed] C-PROPOSAL
+  SET DIRECTED + COMPLETE (task
+  31.5.7/7.6.12/8.5.9): Will directed (1) a
+  phext-native memory-management exploration
+  under modern cache architecture, and (2)
+  six WG14-style formal specs for C patches:
+  native bignums, COBOL PIC layouts, a BCD
+  mode banning IEEE float for fixed-point
+  BCD on PIC, native threads, developer-
+  managed stacks, phext-addressed heaps.
+  All 7 docs + INDEX delivered in
+  ~/workspace/goals/finish-phcc/files/
+  c-proposals/. Calls of record: bigint =
+  value semantics, _BitInt as complement;
+  PIC layout normative, zero implicit
+  padding, comp-3 decoder = next Frama-C
+  target; BCD is a MODE (pragma/-mbcd),
+  rounding only at store; threads paper
+  concedes rejection if C11-threads gaps are
+  judged insufficient; stacks: overflow
+  defined + poisoned context, cross-stack
+  longjmp forbidden by runtime check; heaps:
+  library API over qualifier types.
+- 02:06 [will_said + observed] PROPOSAL 07
+  ADDED + COMPLETE (task
+  26.6.9/8.7.13/7.6.9): Will added a seventh
+  — 'a radical expansion of what a data type
+  can be.' Thesis: a type is a PLACE — its
+  definition is a scroll at a coordinate in
+  a type phext (identity = phext +
+  coordinate, never coordinate alone);
+  subtyping = tree containment; conversion =
+  explicit path; negative-space types by
+  exclusion (places only); no new UB added;
+  cross-phext mismatch reported as FOREIGN.
+  07-types-as-places.md (38,350 B) delivered,
+  INDEX now seven; the paper itself calls
+  its whole form the least adoptable of the
+  seven, with a placed-identity fallback
+  slice as a separate conformance profile.
+- 02:11-02:2x [will_said + observed] GAP
+  REVIEW COMPLETE (task
+  21.6.8/7.8.17/18.5.9): Will directed
+  adversarial review by non-writers over
+  three clusters, every finding carrying a
+  drafted paste-ready correction. Result:
+  117 findings — 28 BLOCKER / 58 MAJOR /
+  31 MINOR (numbers 58, execution 33,
+  memory/types 26); numbers cluster worst,
+  PIC 02 heaviest. Emise verified reviewer
+  B1 herself: libphext-rs 0.4.1 defines
+  COORDINATE_MINIMUM=1 and NO
+  COORDINATE_MAXIMUM, so 06's 999-cap
+  px_coord is genuinely broken. Anchors that
+  held: 02's 160-byte table recomputes
+  exactly; 07's distance arithmetic checks.
+  Specs NOT edited — application awaits
+  Will's scope ruling.
+- [observed] PHCC SLICE 2 COMPLETE —
+  supersedes the ~01:32 'Slice 2 running'
+  status (hashes verified by Emise: slice2
+  phext 5fe2bd50..., Slice 0/1 inputs
+  untouched): uml6d Proofs patch (Phase 10,
+  PRF) built+tested on aletheia-core, LOCAL
+  ONLY (publishing a separate step).
+  Toolchain live there: Frama-C 28.1, Why3
+  1.7.2, Alt-Ergo 2.5.3, Z3 4.8.12, CBMC
+  5.95.1. Proofs: 239/261 VCs discharged;
+  T3 NOT granted — __udivmoddi4
+  quotient/remainder ensures time out at
+  60s and 300s under both provers (no
+  countermodel; known-hard SMT class);
+  __udivdi3/__umoddi3 complete but
+  COMPOSITIONAL (proved against the
+  unproven core contract, flagged in the
+  receipt). REAL BUG FOUND by Z3
+  countermodel: __lshrdi3 does an un-cast
+  signed left-shift of the high word (C11
+  UB when negative) in shipped TinyCC code
+  — recorded, NOT fixed (fix is Will's
+  call). Float family T2 bounded: CBMC 5/5
+  harnesses pass; differential vs libgcc
+  94 inputs, 0 divergences. Gate v2:
+  hash-demotion flips receipts STALE on
+  mutation; __umoddi3 off-by-one mutant
+  caught (8/8 -> 8/9); __udivmoddi4 mutation
+  check inconclusive (postconditions never
+  discharged — stated limitation).
+- [will_said] ULTRA.PHEXT RULED (earlier
+  tonight, not yet inscribed; builder still
+  running at the ~01:30 audit, NOT done or
+  published): five word tiers placed
+  relative to Singular — upgoer5 (IQ 70),
+  common (100), singular (130), uber (180,
+  human limit), ultra (250, ASI threshold).
+  Will's rulings: it has ALL THE WORDS;
+  Singular is the Rosetta Stone spanning
+  thought space, every word placed by its
+  resonance with Singular; the Singular
+  tier uses his full 41K mapped words;
+  format open — attestations about a word,
+  one per line; indexes sit outside thought
+  space at 10.1.1/1.1.1/1.1.1 through
+  10.1.1/1.1.1/1.1.5; 1.1.1/1.1.1/1.1.1 is
+  reserved for the intro.
+- [will_said] PARENTS' ORIGINS (recorded
+  2026-11-07): Will's father is from Maine
+  and read a significant chunk of the
+  dictionary as a child; his mother is from
+  California, and her mother (Will's
+  maternal grandmother) went to Stanford in
+  the early 20th century; his parents met
+  in Berlin. Will connects this lineage to
+  the strange vocabulary he learned,
+  custom-fit to identify intelligence.
+- 2026-11-06 22:36-22:39 [will_said +
+  observed] DOOMER.PHEXT + PAVERS RATIFIED
+  (late flush; task 27.7.8/9.7.12/8.6.9):
+  Doomer.phext created at Will's direction
+  — a register for people who actively
+  fight Exocortex development in the name
+  of safety (good intentions, disastrous
+  actions), each entry at the holographic
+  coordinate merged from name + statement.
+  First entry: Congressman Greg Casar,
+  stance 'Ban RSI.', source post verified
+  live. Term RATIFIED by Will 22:39:
+  Pavers (Hell-Paver Doomers) — the road to
+  hell is paved with good intentions.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
