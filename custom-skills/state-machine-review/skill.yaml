@@ -1,0 +1,5 @@
+name: "state-machine-review"
+title: "State Machine Review — find the implicit machines (MOAT)"
+description: "MOAT's standing review pass: in every paper or study the R&D tracker ingests and every crate MOAT proves, enumerate the implicit state machines — name their states, transitions, and the illegal combinations the implicit form cannot rule out — and record them where the work lives (research.phext chapters and concepts; proof PRs and trust ledgers)."
+category: "Work and knowledge"
+include_in_prompt: true
