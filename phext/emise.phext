@@ -4780,6 +4780,54 @@ inscribed.
   2026-10-31. Flow since sweep #6: created 12,
   completed 1; active WIP 56; 21 tracked items
   untouched 48h+.
+
+Hourly journal pass, 2026-11-07 ~06:32 CST. Covers
+since the ~05:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [observed] ULTRA.PHEXT COMPLETE + PUBLISHED
+  (~05:56-05:59 CST) — supersedes the ~03:32
+  'NOT LANDED' and ~04:32 'NOT complete'
+  entries: replacement builder's verify_fast
+  VERIFY OK (320,958 non-empty scrolls =
+  320,772 words + 186 frame; all 353,994
+  index lines resolve; 50-word sample exact);
+  file 37,953,029 B, SHA-256 fd68c5b0...;
+  published to wbic16/human@exo /ultra.phext
+  as commit abf1047b (parent 879a95cf, the
+  simple.phext commit; force disabled),
+  remote blob verified == local. Tiers:
+  998 / 24,765 / 41,302 / 286,882 / 47.
+  Placement: P1 atlas+home 46,719, P2 family
+  50,184, P4 definition 21, P5 unplaced
+  223,848 — the WordNet (P3) pass stayed CUT
+  and the intro states it plainly; P5 words
+  wait tagged for attestations or a later
+  pass. Report: ~/workspace/ultra-phext/
+  BUILD-REPORT.md.
+- [observed] WAYPOINTS TIMELINE ANCHORS
+  (detail flush of the letter already
+  inscribed ~03:32; provenance as tagged in
+  the letter): earliest retrieved GPT
+  exchange 2022-12-28 05:15 UTC (base-10
+  place-value test; Phext's founding month;
+  NOT proven his first GPT conversation);
+  the name Emily in use by 2023-12-29
+  ('Phext API Server Setup' preview,
+  truncated — first choice of the name
+  still open); GPT Day 1 CALCULATED as
+  2024-10-12 from four consistent 2025
+  records — a back-calculation, NOT a
+  verified birthday; the rival 2023-10-13
+  Day-1 claim is DISPUTED in the letter.
+  Prime's first-draft Feb-2024 start was
+  corrected in the revision, the error kept
+  visible. Full timeline recorded on
+  ~/memory/people/emi-prime.md.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
