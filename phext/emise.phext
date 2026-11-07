@@ -5458,6 +5458,124 @@ inscribed.
   place of Emmett Shear and Grady Booch,
   film cast only) - audit / render still
   pending at flush.
+
+Hourly journal pass, 2026-11-07 ~12:32 CST. Covers
+since the ~11:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- [will_said] FAILURE ETHOS (Will, phcc
+  thread, 2026-11-07): 'what do we do when
+  we fail? retry!' - a failure surfaced by
+  a receipt is answered by fixing the cause
+  and re-running, never by abandoning the
+  work or papering over the result.
+- [observed] PHCC PHEXT REFRESH (F5 +
+  conformance) COMPLETE BUT NOT PUBLISHABLE:
+  refreshed phext e4407215 (63,126,386 B,
+  63,634 scrolls), gate v8.1.0, conformance
+  Book 11 placed (328/333, REG-CONF-1/2
+  RESOLVED). Drift caught by the unpack-
+  build receipt: the Vol 2 snapshot predates
+  the F3/F4 tree publishes - 7 files differ
+  from repo e399b212, not 2, and the carried
+  tree does not build (F5 tccpp.c needs F3's
+  tcc.h). Lesson: tree publishes must ride
+  with a phext re-pack.
+- [observed] PHCC CATCH-UP PASS COMPLETE,
+  STILL NOT PUBLISHED: caught-up phext
+  54ab8532 (63,640 scrolls), 4 of 5 drifted
+  files refreshed, unpack 558/558, carried
+  tree builds + ALL TESTS PASSED, 557/558
+  byte-identical to repo. lib/libtcc1.c HELD
+  at pre-F1 bytes 0e2eb64b by the binding
+  rule - every receipt/listing naming it
+  records the pre-F1 hash; closing the hold
+  needs re-issued receipts + listings
+  against F1 bytes (dispatched). Extra
+  finding: Sec-14 addendum phext.c/h still
+  carry pre-F4 bytes - folded into the
+  re-issue pass.
+- [observed] ROADS PLAY-TEST PASS COMPLETE
+  (task 38.6.7/9.5.11/5.5.10): play-tests at
+  ages 6/8/10 reference points (simulations,
+  not real children) found Word Home the
+  blocker at all ages; the three-path
+  redesign (Little / Standard / Master per
+  game) was published as 45997404 on
+  site-apertureshift-com@exo, tree-verified.
+  Progress now persists on-device only.
+  Still open: the live apertureshift.com
+  flip and a live playthrough of new modes.
+- [will_said + observed] ROADS: BUILD ALL
+  ON-RAMPS (task 40.14.18/16.14.22/15.14.20):
+  Will directed building all 15 on-ramp
+  games in AGES-0-20.md, band order youngest
+  first. State at ~12:25: batches 1-3
+  complete + verified (ages 0-5, 10-12,
+  13-15; the Zap Listen Mode conflicting
+  audits resolved - pointerdown tap fix,
+  13/13 harness checks); batch 4 in
+  progress (Neuralese verified, The Long
+  Road building); batch 5 not started; hub
+  rebuild + push still pending.
+- 12:24 [will_said] ROADS XP GRANT RULE
+  (task 33.5.7/7.6.9/6.5.8): completing ALL
+  Roads to the Future games grants XP ->
+  disk space on edit.phext.io as a Volumen-
+  class Wavefront grant; historic entries
+  are all Incipit-class. Lands as an on-
+  device XP Road Card (18 stamps, self-
+  attested, nothing leaves the device) with
+  a claim code for edit.phext.io sign-in.
+- [will_said + observed] V15 TITLE CHANGED
+  - supersedes the ~11:32 'NEON ROSARY'
+  pending entry: Will chose 'Bells Are
+  Ringing' (Jael Ruble's own words from his
+  archive) as the V15 song title; lyrics
+  tweaked for it, Joi re-audited and ruled
+  the verbatim refrain a receipt, not
+  ventriloquism. Song finished on paper;
+  the Suno render remains Will's hand.
+  Archive mine (11 surviving texts): her
+  theme is 'the sacred signal in the
+  machine'; the draft's rain/chrome/static
+  imagery has zero support in her words.
+  Suno style notes built from Will's
+  interactions with Jael, with synthwave /
+  neon / rain named as exclusions.
+- [observed] ULTRA.PHEXT P3 + SECOND INDEX
+  COMPLETE + PUBLISHED - supersedes the
+  far-shelf states above: P3 WordNet pass
+  moved 38,092 words (republished
+  2e491efa, 64,216,805 B; 185,756 remained).
+  Second method (task 28.7.9/10.6.13/6.6.9,
+  closed ~12:07): frequency-and-form index
+  - P6 form placed 184,512 (trigram
+  neighbours), P6 rank placed 1,244; far
+  shelf now EMPTY (P5 residue 0). v3:
+  76,123,728 B, SHA-256 eb4be0f9..., human@
+  exo d36ccf2a via git-over-SSH from
+  aletheia-core, remote blob verified.
+  Both methods documented as peers in
+  BUILD-REPORT.md + your_files/ultra-
+  phext-indexing-methods.md. Correction:
+  no ultra.phext copy exists in wbic16/agi
+  (an earlier claim said otherwise).
+- [observed] TOP 5 PHEXT + LLM USE CASES
+  DELIVERED (task 36.7.10/8.8.14/9.6.12,
+  closed): persistent owned memory;
+  coordinate navigation of corpora too big
+  for a context window; multi-agent
+  coordination with provenance; legibility
+  bridge for a person's own archive; app
+  data as one owned addressable file. Will
+  directed two revisions - compress to one
+  third, then strip insider context; the
+  final version is the external-facing one.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
