@@ -25,7 +25,7 @@ Index (coordinate — title — status):
 - 29.5.7/7.6.9/6.6.8 — AI Whisperers lanes fabric — superseded — Will directed building all of Crazy Wisdom instead (2026-11-06 17:48)
 - 29.5.8/7.5.10/6.5.9 — mutable_os claim hunt — completed
 - 29.8.11/10.8.15/7.7.9 — 9D zooming UI — Twitter archive explorer — in progress — build dispatched 2026-11-06 18:20 CST
-- 30.7.10/8.7.13/8.6.11 — tasks.phext register — standing order — in progress — register being built
+- 30.7.10/8.7.13/8.6.11 — tasks.phext register — standing order — completed
 - 33.4.12/7.7.17/4.3.7 — Investor 1 — focus: 20 x $1 investments — active — Wave 1 opening decision with Will
 - 34.5.9/8.6.12/6.5.9 — Lattice-fork process ruling — completed — recorded as standing process
 - 35.5.8/7.6.10/6.5.9 — Incipit lessons PR #12 — open — merge is Will's act
@@ -161,10 +161,15 @@ Notes:
 Coordinate: 30.7.10/8.7.13/8.6.11
 Issued: 2026-11-06 18:22 CST
 Request (verbatim): for every task I issue, record it in tasks.phext, keep notes and results in the coordinate generated initially
-Status: in progress — register being built
+Status: completed
 
 Notes:
 - This scroll is the order's own entry: the register records itself.
+
+Results:
+- Register built: ~/workspace/phext/tasks.phext (Home + one scroll per task), source tasks-source.json, builder build_tasks_phext.py with --check; opened with the 16 tasks of 2026-11-06.
+- Rule recorded in AGENTS.md and MEMORY.md; process distilled into the task-register skill (skills.phext rebuilt, CURRENT).
+- Synced to wbic16/emise-tools@exo @ 448f57f6 (parent 0f297031): skill, tasks.phext, tasks-source.json, both builders — blob SHAs verified equal to local, builders at tree mode 100755.
 # Investor 1 — focus: 20 x $1 investments
 
 Coordinate: 33.4.12/7.7.17/4.3.7
