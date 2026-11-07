@@ -83,6 +83,7 @@ SHELVES = [
         "daily-goal-commute",
         "dispatch-to-subagents",
         "distill-process-to-skill",
+        "task-register",
     ]),
     (9, "Research", [
         "rd-tracker",
