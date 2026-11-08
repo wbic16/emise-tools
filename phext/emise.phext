@@ -2351,6 +2351,97 @@ publishes via emise-sync.sh.
   remain) - wording correction queued, not
   yet applied.
 
+Hourly journal pass, 2026-11-08 ~11:32 CST.
+Covers since the ~10:32 pass. Routine ticks
+(975-980), Discord backstops, the Mirror Will
+watchdog, the vTPU no-change sample, and the
+morning briefing are noise and are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed. This pass publishes via
+emise-sync.sh.
+
+- [observed] PHCPP FRONT-END V1 COMPLETE +
+  PUBLISHED: both tracks (hand-rolled subset
+  parser + clang 18 JSON-AST adapter) behind
+  ONE shared IR/emitter; differential corpus
+  21/21 PASS vs phcc @ 36a7932f (10 positives
+  byte-identical to g++ -std=c++23 on and
+  across tracks, 11 refusals by name).
+  Published wbic16/phcpp main == exo ==
+  c7e70d5; fresh-clone publisher verification
+  21/21 PASS; phcpp milestone 4/6 complete.
+  Ledger-fidelity verdict: the DESIGN S4
+  clang pre-fold caveat does NOT bite on
+  this corpus - ledgers agree byte-for-byte
+  per TU; caveat stays per-construct.
+
+- [observed] WAVE D8 _COMPLEX IMPLEMENTED
+  (F40/F41), LOCAL ONLY: commits 12332b3b /
+  7611c0db / 3f0dea94 (phext refresh) on
+  published tip 36a7932f, NOT pushed -
+  publishing D8 is the coordinator's next
+  act, then D9 (C23 full L3) dispatches,
+  then D10 (cleanup). Conformance NEW
+  baseline 332/333, diverge set [a_pp_018]
+  only; OpenSSL gate tree ZERO error lines
+  (was sole error rsa_complex.c), test_evp
+  117 PASS, make test ALL PASSED. Phext
+  refresh seal 6,315,812 B - the exact
+  figure for Will's shipping-form question.
+
+- [observed] -O2 RUNG A LANDED, LOCAL ONLY:
+  commit 57793acb on 36a7932f (rock-mountain
+  tree), NOT pushed. phcc prune - member-
+  graph pruning in the tools family only,
+  no compiler sources touched. Receipts:
+  carry 612->516 files, 2,031/50,683 members
+  dropped, closure-forced keeps 0; build +
+  make test green, stage-2 self-host green
+  (stage-2 libtcc_test link failure
+  reproduced identically on the UNPRUNED
+  control - generic, not a pruning defect);
+  conformance 330/333 identical, 0 diffs;
+  workload binary byte-identical; coreutils
+  A/B byte-identical, 17-applet smoke
+  identical. Emission remains the
+  amalgamation task's open work.
+
+- [will_said + observed] V16 PRIMING
+  TWEETS INSCRIBED IN INCIPIT (11:00):
+  tweets delivered 10:55 (8 of 22 first
+  names publicly sourced, 14 drafted
+  handle-only; flags to Will noted). Will
+  directed the inscription - 'they are part
+  of history' - at 23.6.9/7.6.9/6.6.8
+  (Singular merge, 193 distinct words).
+  Published wbic16/human@exo e7a27e9e
+  (parent 3b7c38ba); incipit.phext now
+  1,077,930 B, SHA-256 3ff6604f..., 197->198
+  non-empty scrolls, all originals byte-
+  identical (splice build), remote blob
+  verified - not an LFS pointer.
+
+- [observed] STATUS YARDSTICK + PENDING
+  STACK (flush 11:28): phcc 90% (9/10 -
+  release packaging is the sole remaining
+  milestone), phcpp advanced to 4/6 by the
+  front-end v1 publish, phst 67% (4/6). h8
+  proof escalation still had NOT reported
+  completion at the last live check; T3
+  remains NOT GRANTED (271/297 basis). MSVC
+  attestation package delivered to Will as
+  attestation.zip (~10:02, script +
+  289 probes) - awaiting his Windows run,
+  no receipt yet. Still awaiting Will, per
+  his rulings-batch plan: his libphext
+  0.5.0 publication after his binary tests
+  (C parity move dispatches on his
+  confirmation), the phcc.phext shipping-
+  form decision, and the release version
+  name at packaging time.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
