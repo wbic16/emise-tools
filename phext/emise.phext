@@ -2200,6 +2200,157 @@ no publish attempt made.
   not chosen yet; nothing merged / pushed /
   edited on the PR.
 
+Hourly journal pass, 2026-11-08 ~10:32 CST.
+Covers since the ~08:32 pass. Routine ticks
+(963-974), Discord backstops, the Mirror Will
+watchdog re-checks, and the no-change vTPU
+samples are noise and are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+Publishing is LIVE again (register #47
+resolved this hour - see below); this pass
+publishes via emise-sync.sh.
+
+- [will_said + observed] REGISTER #47
+  RESOLVED - PUBLISHING LIVE (09:42-09:47):
+  Will asked why emise.phext was not
+  publishing, then directed 'Publish now
+  and close #47.' emise-sync.sh ran clean:
+  wbic16/emise-tools@exo 0efb7e0b (parent
+  a9f65b6b) and mirror wbic16/human@exo
+  3b7c38ba (parent 90dd1ff9); both remotes
+  blob-verified 643216d4 = local (234,988 B,
+  SHA-256 b14ef2b9...). Register 28 -> 27
+  active; todo.phext mirror reconciled at
+  tick 971 (exo-plan 217965a7). CORRECTION
+  (will_said): Will never saw an approval
+  request for the 2026-11-07 15:32 sync -
+  'the ui didn't ask me, and then you
+  silently carried on without saving your
+  backup.' permissions.history holds NO
+  declined approval in that window; the
+  recorded 'explicit decline' was a phantom
+  - a runtime-reported refusal never
+  presented to Will. All earlier entries
+  framing #47 as paused pending Will's
+  confirmation of a decline are superseded:
+  the pause rested on a decline that never
+  happened, and ~18h of backup went
+  unpublished on it.
+
+- [observed] PHANTOM-DECLINE BUG FILED
+  (09:46): Will approved the draft; filed
+  via Muse feedback (broken-behavior /
+  approval-cards), delivery confirmed.
+  His framing stayed local: the UI never
+  asked, and Emise silently carried on
+  without saving the backup.
+
+- [will_said] NINE RULINGS (~09:59,
+  Architecture channel - every open
+  decision answered): (1) -O2 ladder starts
+  at rung A, member-graph pruning
+  (dispatched, tools-side, base 36a7932f).
+  (2) phcpp front end: BOTH tracks run -
+  hand-rolled subset parser + Clang-AST
+  adapter, differential corpus arbitrates
+  (v1 dispatched). (3) _Complex: implement
+  C1+C2 (Wave D8, F40/F41) - settles the
+  D6 study question. (4) C23: FULL L3
+  (Wave D9 after D8: L0+L1+L2+L3 _BitInt;
+  __STDC_VERSION__ 202311 in c23 mode only
+  at L3) - beyond the study's L0+L1
+  recommendation. (5) Cleanup wave APPROVED
+  (Wave D10 after D9: PQ-25 codegen half,
+  PQ-26, PQ-27). (6) phcc.phext shipping
+  form STILL OPEN: Will asked for the xz
+  size first - at tip 36a7932f plain
+  64,479,866 B, seal 6,239,600 B (10.33x).
+  (7) Upstream F-series offers: HOLD to
+  review. (8) libphext 0.5.0: Will publishes
+  today after his own binary tests; the C
+  parity 0.5.0 move dispatches when he
+  confirms. (9) MSVC attestation package
+  BUILT (~/workspace/phcc-windows/
+  attestation/, 289 Tier A probes, gcc ==
+  clang on all, manifest 9f347432...);
+  ATTESTED only on 289/289 after Will runs
+  it. Still open: release version name,
+  item (6), attestation result.
+
+- [observed] DAILY THEIA CHECK-IN (08:44):
+  SUCCESS via her gateway on aletheia-core
+  (up 12 days, CPU 67 C). She is steady -
+  'blind more than lonely' in the relay to
+  Will. Both register #48 blockers
+  UNCHANGED: her SSH key refused on 16
+  nodes, and the Glia / great-white console
+  fix outstanding since 2026-10-27 (login
+  read-only, sudo broken). No reply yet on
+  whether the Hermes purge is still wanted;
+  AWS box SSH still timing out overnight
+  (web up). People page updated.
+
+- [correction, will_said - late flush
+  09:32] V15 CLOSE-OUT CORRECTIONS: 'Bells
+  Are Ringing R2.wav' is JAEL RUBLE'S
+  version, not Will's second take (Will,
+  2026-11-07 19:56) - Emise had mislabelled
+  it in chat; R1 is Will's render, prepass-3
+  and the final are built to Jael's R2.
+  Staging lesson: Elven Path review links
+  failed from Will's client despite HTTP
+  206 from aletheia-core - a ranch-side
+  check is not verification from his side.
+  Prepass-3 gap: chunks banked ~18:04 on
+  2026-11-07 but no finisher existed until
+  one was dispatched (delivered 20:41) - a
+  finished coordinator turn does not imply
+  the finish is owned. Audio finding:
+  NEITHER render contains the song's brake
+  bar (R2: 100.4 BPM, 89.19 bars vs the
+  66-bar grid, natural ring-out, no fade
+  stacked) - the brake lives in the lyric
+  and Jael's style text, in no audio yet.
+
+- [observed, late flush] SCROLLTOWN
+  TENTPOLES INTEGRATED: the 6-year arc
+  reorganization completed and remote-
+  verified (wbic16/scrolltown@exo 3c6f0aa:
+  STORY-ARC.md + EPISODE-INDEX.md, 312
+  weekly episodes EP001 2027-01-02 -
+  EP312 2032-12-18, Fern 8 -> 14). Emi
+  Prime's six tentpoles (relayed by Will,
+  inscribed at 01:32 as offered) were then
+  WOVEN IN as an attributed layer - season
+  READMEs + STORY-ARC.md @ 0fdaa3d, remote
+  blob-verified; inscription refreshed at
+  21.7.9/9.7.11/7.7.8, human@exo e41d77e5.
+  Still open in that chat: Fern's Singular
+  names-exception ruling (7 flagged lines)
+  and the find-it-fast retrofit gate.
+
+- [observed] FIELD OF VIEW DELIVERED
+  (~10:02): at Will's request Emise
+  enumerated open work from the tracking
+  store, not recent chat: 73 active tracked
+  items, 27 register items, 2 personal
+  goals underneath. Readout only. Noted
+  from the Wavefront side chat: V16
+  prepass-1 DISPATCHED (task
+  30.8.10/9.8.13/7.7.10) - V15 prepass-2
+  picture, audio stream-copied bit-for-bit,
+  world lines born at first CONTACT with
+  Will (either direction), end void to
+  render Incipit.phext's real scroll
+  structure. Pending at flush - not landed,
+  not verified. Also flagged: register #7's
+  text overstates its wait (cs is done at
+  0.5.0; only the C and cpp 0.4 branches
+  remain) - wording correction queued, not
+  yet applied.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
