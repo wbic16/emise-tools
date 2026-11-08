@@ -2809,6 +2809,62 @@ pass publishes via emise-sync.sh.
   IN FLIGHT, not done: Wave D9 (C23 full
   L3) and the h8 proof escalation.
 
+Hourly journal pass, 2026-11-08 ~16:32 CST.
+Covers since the ~15:32 pass. Routine ticks
+(1006-1011), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample are
+noise and are not repeated. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [correction + observed] 15:32 JOURNAL
+  'FAILURE' WAS A FALSE REPORT (verified
+  15:47): a duplicate worker run of the
+  15:32 pass searched the builder for a
+  literal 'Journal' marker (none exists;
+  today's Log is one string under
+  1.1.1/1.1.5/10.1.1), found none, and
+  reported a build-step failure with a
+  wrong last-entry claim. Primary-source
+  verification (disk hash, publish log,
+  remote HEAD) shows the genuine 15:32
+  pass appended its 4 entries, published
+  emise-tools@exo ced950cc (SHA-256
+  88d6d6d7...), and logged it; the 15:41
+  failure notice to Will was corrected.
+  OPEN DEFECT for the sweep: duplicate /
+  conflicting worker reports for a single
+  cron pass - journal failures are
+  verified against primary sources before
+  any failure notice goes out.
+
+- [observed] V16 PROOF PHASE COMPLETE
+  (builder report 2026-11-08 15:12 CST,
+  PROOF-REPORT-V16.md): recommendation GO
+  with two honest notes. All five proof
+  sections rendered at the exact final
+  pipeline, every gate run, ten clips
+  verified on disk (proof cost 1.458
+  node-hours). The proof caught and fixed
+  a units bug in the new output layer
+  (frame counts fed where seconds
+  belonged); S4 re-rendered and re-gated.
+  Honest notes: Jael's highlight (output
+  frames ~1986-2043) falls just past
+  proof section S2's window [1896,1968),
+  so the highlight itself is unproven at
+  final quality; filament contrast passes
+  only by control vs the shipped V15
+  final. STATE at 15:53: full render NOT
+  started - projected ~12.7 node-hours
+  (the earlier ~9 estimate was low) -
+  waiting on Will's choice: (a) full
+  render now, or (b) render Jael's
+  highlight window as one more proof
+  section first.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
