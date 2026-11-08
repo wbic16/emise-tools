@@ -2442,6 +2442,99 @@ emise-sync.sh.
   form decision, and the release version
   name at packaging time.
 
+Hourly journal pass, 2026-11-08 ~12:32 CST.
+Covers since the ~11:32 pass. Routine ticks
+(981-986), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample are
+noise and are not repeated. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [will_said] BOARDY CLOSED (11:33): Will
+  directed - do not contact Boardy, ignore
+  those requests. Recorded in
+  PROACTIVE_PREFERENCES.md (no surfacing of
+  Boardy requests, intros, or booking
+  reminders unless Will raises Boardy
+  himself); tracked item goal_453a26fd4138
+  (Boardy/Adlane intro) closed with that
+  reason. For the record: Emise never
+  contacted Boardy or Harsh.
+
+- [correction, observed] EMISE.PHEXT TRACKED
+  STATE CORRECTED (11:33 flush): the tracked
+  record for goal_db7a9554def7 still claimed
+  publishing was paused pending #47; corrected
+  in-session - publishing is live again
+  (emise-sync 2026-11-08, emise-tools@exo
+  0efb7e0b, human@exo mirror 3b7c38ba,
+  blob-verified). Also flagged as Emise-owed,
+  not a Will wait: the Choir independent-QA
+  dispatch Will ruled on 2026-11-07 had still
+  not gone out; it remains Emise's next
+  action.
+
+- [observed] -O2 RUNG A PUBLISHED (~11:36
+  flush): wbic16/phcc main == exo == 50d973f5
+  - wave commit 57793acb plus follow-up
+  50d973f5 adding tools/phcc_harvest.py (mode
+  100755, the prune harvest producer), so phcc
+  prune is runnable end-to-end from the repo.
+  Verification on rock-mountain: clean build +
+  make test ALL PASSED; prune receipts
+  reproduced exactly (612->516 files,
+  2,031/50,683 members dropped, 0
+  closure-forced keeps); conformance under the
+  pruned compiler 330/333, diverge set
+  [a_pp_018, b_gnu_015, b_gnu_016], 0 oracle
+  splits; fresh GitHub clone verified at tip
+  50d973f5.
+
+- [observed] V16 PREPASS-1 DELIVERED (~11:46):
+  854x480, 15 fps, 2,890 frames, audio
+  bit-identical to the V15 prepass-2 stream.
+  World lines born at first contact moved 5 of
+  the 22 lines; @mimi10v3 born 760 hops (303.8
+  days) earlier; Jael's first contact equals
+  her first landing on 2023-12-10, so her line
+  does not move. End void filled with a
+  shelf-map of Incipit's 197 non-empty
+  scrolls.
+
+- [observed] WAVE D8 PUBLISHED (~11:47): the
+  three local _Complex commits were restacked
+  onto the -O2 tip 50d973f5 as 9d2f83a9 (F40)
+  -> 3d09d18f (F41) -> 47ccbb89 (refresh);
+  wbic16/phcc main == exo == 47ccbb89, no
+  force. Fresh-clone verification: make test
+  ALL PASSED, conformance 332/333 with diverge
+  set exactly [a_pp_018] and 0 oracle splits,
+  _Complex and ABI corpora byte-identical,
+  test/rsa_complex.c compiles clean, unpack
+  610/610 SHA-256-verified, phext SHA-256
+  e779857d... Known accepted state: the
+  canonical phext tools/ carry lags the two O2
+  commits; Wave D9's refresh sweeps it.
+
+- [correction] REGISTER #50 REPAIRED (tick
+  986, 12:23): live-checked wbic16/neovim PR
+  #1 - still OPEN at cf7eeb60 - and repaired
+  the stale merge-ready wording in the
+  register and the todo.phext mirror: CI is
+  RED (delivered to Will ~06:52; fix-pass
+  decision pending with him), so his action is
+  decide the fix pass, then review + merge
+  once CI is green. Triage stands: news.txt
+  FEATURES gap proven PR-caused;
+  docs/lint/windows-functional/zig/tsan
+  untriaged pending baseline comparison vs
+  upstream c868e1ab. todo.phext rebuilt
+  (SHA-256 66b9b5b3...) and republished to
+  wbic16/exo-plan@exo as 1ef51d68, remote blob
+  verified.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
