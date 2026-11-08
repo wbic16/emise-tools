@@ -25,8 +25,11 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
 
 ## Layout
 
-- 1.1.1/1.1.1/1.1.x — charter, narrative, source index, Research Oracle ledger
+- 1.1.1/1.1.1/1.1.x — charter, narrative, source index, Research Oracle ledger, concept map + restructuring log
 - 1.1.1/1.1.1/1.2.x — canonical concepts
+- 1.1.1/1.1.1/1.3.x — foundations (level-zero definitions) and the Defined Words register (from 1.3.46)
+- 1.1.1/1.1.1/1.4.x — the standing record (epistemic registry, rule 14)
+- 1.1.1/1.1.1/1.5.x — the AREAS (rule 16): map, state machines, statements, reference, the path, researchers, and the plain account of the making (1.5.7–1.5.8)
 - One chapter per paper in arrival order from Chapter 2 (paper chapter + its synthesis/open-questions scrolls)
 
 ## Author check on intake (charter rule 15, Will, 2026-11-07, standing rule)
@@ -40,3 +43,14 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
 ## State machine review (charter rule 13, Will, 2026-11-07)
 
 13. Every paper or source study receives a state-machine pass as part of its distillation: the machines the work contains or assumes are named in its chapter as part of the delta record; a machine that is a reusable concept becomes (or links to) a canonical concept scroll; machines Emise infers rather than finds stated are marked [synthesis]; a paper that reveals a machine the world-model held only implicitly counts as a revision of the concepts it touches. Full method: the state-machine-review skill (`~/workspace/custom-skills/state-machine-review/`), which also carries the same review into MOAT's proving track. Origin: Steve Ruiz's prompt "find all of the implicit state machines in my app", posted by Will in MOAT with the direction to build the review into MOAT itself.
+
+## Areas (charter rule 16, Will, 2026-11-08)
+
+16. research.phext is organized into five AREAS, kept in Chapter 1, Section 5 (built at Restructure Pass #4, 2026-11-08), plus a plain account of the making. Each area is an index over the phext's actual contents — built by reading the scrolls, never from memory of the chats — and holds pointers and one-line accounts; the claims stay where they were made. Nothing is moved or pruned to build an area.
+   - **State machines (1.5.2):** every machine named in the phext — machines drawn out under rule 13 (stated by the work, or inferred and marked [synthesis] in their chapter), and machines found in work taken in before rule 13 stood, listed as FOUND — noted, not drawn out, no gap test run. Chapters swept with no machine found are named as swept.
+   - **Statements (1.5.3):** the door to the standing record (§4, 1.4.x): what a statement is here, the four standings, the bases that bind them, the legal receipt-driven transitions, and the counts of the current drawing. The lists themselves are not duplicated; §4 is the record.
+   - **Reference (1.5.4):** the foundations (§3) and Defined Words register plus each chapter's standoff companion (x.3.1), presented as one area: what lives there, how 'Builds on' chains bottom out, how a reader uses them.
+   - **The path (1.5.5):** every taking-in in original submission order — papers and studies interleaved by arrival — each with its date, title, chapter, and for papers its Novelty Index, axis flag, and Oracle progress after; studies marked as studies (no NI, Oracle unmoved); the restructuring passes placed where they fell.
+   - **Researchers (1.5.6):** every researcher behind the ingested works — paper authors and study authors/creators — each with their work(s) here (chapter/coordinate) and their rule-15 standing, taken from the author-check scrolls where they exist. Works taken in before rule 15 stood (Papers 001–005, Studies S001–S003) are marked 'not checked — predates the author-check rule'; no verdict is fabricated for a check never run. Will is the submitter/curator, not a researcher entry.
+   - **How the Oracle was built (1.5.7–1.5.8):** the plain structure scrolls — intake, the delta rule, one canonical scroll per concept, foundations at level zero, the four standings and their bases, the Lean proof of the keeping with its honesty boundary (Lean proves the bookkeeping, not worldly truth), restructuring without pruning (minimum = smallest organization, never smallest content), the Novelty Index and Oracle estimate, and where everything lives.
+   - **Maintenance duty:** every ingestion and every restructuring pass updates the areas it touches in the same pass — new machines join 1.5.2, new authors join 1.5.6, the path gains its entry at 1.5.5, the statements counts at 1.5.3 are made fresh with the new §4 drawing. An area fallen behind the phext is a defect, audited at each restructuring pass.
