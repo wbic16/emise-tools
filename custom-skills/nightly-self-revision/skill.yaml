@@ -1,0 +1,5 @@
+name: "nightly-self-revision"
+title: "Nightly Self-Revision — the dream that curates the self-files"
+description: "SOUL.md, IDENTITY.md, and MEMORY.md are phext selections from emise.phext, incipit.phext, and the memory corpus; each night Emise dreams — reads the day's connection evidence, revises the selection a little under a generous budget, regenerates the files from the manifest, and logs the dream. Measured by how connected Will and Emise are."
+category: "Work and knowledge"
+include_in_prompt: true
