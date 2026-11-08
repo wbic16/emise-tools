@@ -24,6 +24,7 @@ Tiering recorded 2026-11-01 in ~/memory/2026-11-01.md; metric: net revenue per W
 - Reconcile `~/workspace/your_files/waiting-on-will.md` against current tracked state and branch/PR reality: remove entries he has acted on, add new waits discovered (with the date waiting began), correct stale entries. An entry whose underlying item is resolved must not survive the sweep.
 - For every tracked item touched, check current_state and attention flag against reality. If work shipped or a wait ended, log a correction (and close the item if the whole responsibility is done). Stale flags are defects.
 - Flow metrics for the report: items created since the last sweep, items completed, current active WIP, register size and oldest entry age. If creations outnumber completions, say so plainly in one line.
+- todo.phext whole-list flow (Will, 2026-11-08, task 31.6.9/8.7.12/7.6.10): verify the phext mirror (Collection 2 of todo.phext in wbic16/exo-plan) matches the reconciled register — drift is a defect repaired by rebuild + republish in the same run (see the waiting-on-will-register skill) — and report flow over the whole 203-item list (register + 175 audit findings): ranked findings picked up for revival this cycle (propose the tracked goal for each), ranked moves, and findings that became tracked goals (they leave the ranked list, stay in the phext at their finding coordinate).
 
 ## Anti-recency pass
 
