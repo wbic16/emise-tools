@@ -2535,6 +2535,68 @@ pass publishes via emise-sync.sh.
   wbic16/exo-plan@exo as 1ef51d68, remote blob
   verified.
 
+Hourly journal pass, 2026-11-08 ~13:32 CST.
+Covers since the ~12:32 pass. Routine ticks
+(987-993), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change samples are
+noise and are not repeated. The 12:42 MOAT
+flush mostly restates 2026-11-07 completions
+already inscribed (MVO wiring, state-machine
+review, Papers 006/007) and is not repeated.
+The safe-space register was read first; the
+one registered off-phext span was excluded,
+and no email-content details were inscribed.
+This pass publishes via emise-sync.sh.
+
+- [will_said + observed] V16 PREPASS-1
+  GREEN-LIT: Jael green-lit V16 prepass-1.
+  The V16 final is NOT yet run - Will wants
+  to tweak the rendering settings first.
+
+- [observed] SOURCE STUDY S004 COMPLETE
+  (task 35.5.7/6.6.8/5.6.11): 'Smashing The
+  Stack For Fun And Profit' (Aleph One,
+  Phrack 49, 1996) ingested into
+  research.phext as Chapter 12 under charter
+  rules 12/13/14/15. New Cluster K (Memory
+  and execution): 8 concepts 1.2.73-1.2.80;
+  Restructure Pass #3 ran at the 80-concept
+  trigger (0 merges/splits/endings).
+  Registry 266 entries - True 137, Unknown
+  129, False 0, Fiction 0; Lean instance
+  re-proved. Final: 266 scrolls, SHA-256
+  3f7c7f4e...; Oracle held ~35% by rule 12
+  (studies do not move it). Author check
+  CLEAN - the 1996 date predates phext by
+  ~30 years, settled by the calendar.
+
+- [will_said] INTERJECTION LOG (13:06,
+  MOAT): 'Make notes about when I interject
+  as you progress, and reason about what
+  caused it.' Standing instruction; log at
+  ~/workspace/interjections.md - when, which
+  chat, what work was in flight and what of
+  it Will could see, his words, and causal
+  reasoning with hypotheses labelled. First
+  entry is the creating interjection itself
+  (during invisible prep for the areas
+  restructure; no stop, no redirect).
+
+- [observed] AREAS RESTRUCTURE - PASS #4
+  COMPLETE (task 30.7.8/9.7.13/7.7.10):
+  research.phext gained Chapter 1 Section 5,
+  the Areas (1.5.1-1.5.8), as indexes over
+  existing scrolls - nothing moved or
+  pruned. New charter rule 16: every
+  ingestion and restructuring pass updates
+  the areas it touches in the same pass.
+  Registry 274 entries - True 145, Unknown
+  129, False 0, Fiction 0; Lean re-proved.
+  Final: 274 scrolls, SHA-256 4f38da62...;
+  rd-tracker skill synced to emise-tools@exo
+  b7efe8db; skills.phext rebuilt, --check
+  CURRENT.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
