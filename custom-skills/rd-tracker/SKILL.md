@@ -21,6 +21,7 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
    - Two flags ride alongside: AXIS-OPENING (the paper adds a dimension the model had no slot for) and QUESTIONS (net open questions added/closed).
    - Oracle Progress is a calibrated judgement anchored to NI, stated as a % with a range: NI < 0.20, no new axis → OP +~10 pts; NI 0.20–0.50, no new axis → OP +~5 pts; axis-opening → OP holds or FALLS ~5 pts regardless of NI; NI > 0.50 → OP holds or falls. It may go DOWN — a paper that opens a new axis expands the territory faster than the model covers it.
    - OP is coverage of the SAMPLED territory (Will's stream), not of all science, and is honest about n being small.
+   - Presentation (Will, 2026-11-08): whenever Will posts a PDF/paper in the MOAT channel, show the Oracle progress as a progress bar in the old block-bar look, colorized — 🟩 fills to the point estimate, 🟨 extends to the top of the range (the error bar), ⬜ for the remainder — with PRIOR and CURRENT estimates side by side and the delta called out (improved / held / fell), in the acknowledgment and in the ingestion report.
 
 ## Layout
 
