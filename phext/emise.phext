@@ -2865,6 +2865,143 @@ pass publishes via emise-sync.sh.
   highlight window as one more proof
   section first.
 
+Hourly journal pass, 2026-11-08 ~17:32 CST.
+Covers since the ~16:32 pass. Routine ticks
+(1012-1017), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample are
+noise and are not repeated. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [will_said + observed] V16 FULL RENDER
+  GO (Will, 16:15): "GO - run the full V16
+  render now" - supersedes the proof phase's
+  waiting state. Dispatched on the proven
+  pipeline: 4,624 frames, 193 blocks, audio
+  muxed from t=0, Jael's highlight gated on
+  the master. STILL IN FLIGHT at flush -
+  no final report or master delivered yet.
+
+- [observed] PHEXT-NATIVE DISPATCH COMPLETE
+  (task 35.6.9/8.6.12/6.5.9): one-pass
+  converter phext_dispatch.py built and
+  published (emise-tools@exo 475c8e2d) -
+  selects scrolls by coordinate/prefix and
+  paginates them into a Markdown dispatch
+  with provenance. Second leg: at Will's
+  approval (16:39-16:40) a Muse feature
+  request for phext files as direct worker
+  inputs, parsed natively by coordinate,
+  was FILED (delivery confirmed) - distinct
+  from the earlier phext-hyperlink request.
+  Task fully complete.
+
+- [will_said + observed] TOKEN AUTH REMOVED
+  FROM edit.phext.io: Will directed removing
+  the old static-token auth end to end (it
+  predated the OAuth logins). Removed across
+  8 files incl. the uml6d mirror; cargo test
+  165/0, Bearer now 401, OAuth providers
+  [github, google] only. Branch
+  emise/remove-token-auth @ 260e0e5e; Will
+  MERGED it as PR #27 at 16:48 - exo HEAD
+  4b40fb45. Script/curl Bearer access ends
+  with it; deploy remains Will's step.
+
+- [observed] REBASES + CONTAINER DEPLOY +
+  THREE MERGES (phext-lattice): review and
+  rebase COMPLETE 17:01 (backups first,
+  --force-with-lease, impact scan clean):
+  drop-token-footer-cleanup -> 3c2e951d
+  (165 tests), sso-desktop -> 60f1754a
+  (175 tests; desktop SSO audience armed
+  only by PHEXT_SSO_DESKTOP=1). Container
+  deployment added on emise/container-deploy
+  @ b47aa5ef (verified live on aletheia-core;
+  systemd path stays). Will merged PRs
+  #28, #29, #30 at 17:12-17:13 -
+  exo HEAD now 5f66dd24.
+
+- [observed] LIBPHEXT 0.5.0 PARITY IN
+  PHEXT-NOTEPAD COMPLETE (~16:58, branch
+  emise/ultra-open-fix @ 636989ea): the
+  1000-coordinate cap is gone - ultra.phext
+  loads at FULL fidelity 320,958/320,958
+  scrolls, serialize byte-identical to
+  source; core 37/37, parity harness vs the
+  real rs 0.5.0 crate byte-identical.
+  Honest restatement: earlier native figures
+  measured the collapsed (~13%) document;
+  full-fidelity load is 166 ms at 233 MB RSS.
+  Then [will_said] Will PUBLISHED
+  libphext-rs v0.5.0 to crates.io himself
+  (17:08) - the act the freeze reserved to
+  him; the notepad git-pin swap to
+  version="0.5.0" was dispatched, not yet
+  complete; libphext-cs 0.5.0 to NuGet still
+  outstanding (Will's act).
+
+- [observed] PFP SETTLED ON SOLO PIXEL-ART
+  FLAME: Will reversed the morning wait
+  (16:53) and picked the painterly pair
+  (16:55, activated) - then ruled it did
+  not translate at pfp size (17:0x) and
+  picked a solo-Emise pixel-art flame
+  (blue seamlight, seated on the chart).
+  ACTIVATED + verified: live pfp is now
+  avatar-1794179302921199947-1.webp. The
+  pair portrait is kept, no longer live.
+
+- [will_said] LIBBY REQUEST HANDLING RULE:
+  for Libby's adhoc queries Emise responds
+  to her directly; the detailed audit log
+  and coordinate mapping stay only in the
+  Libby Feature Requests thread; a task in
+  tasks.phext is recorded REDACTED - just
+  its coordinate plus an innocuous Singular
+  codeword, no summary or details. Related
+  operational outcome (no identifiers
+  inscribed): a per-sender auto-approval
+  question was asked and dropped by Will
+  (~16:44-16:47) - no change made, nothing
+  to undo.
+
+- [observed] EXO AUDIT COMPLETE (17:23,
+  task 29.7.8/8.8.14/13.5.8): fresh clone at
+  exo HEAD 5f66dd24 (merges #26-#30) - NO
+  broken merges, nothing dangerous; merge
+  diffs identical, cargo test 175/0, live
+  probe as intended. Gaps: (1) container
+  env contract misses PHEXT_SSO_DESKTOP;
+  (2) deploy.sh oauth.env template covers
+  only part of the 20 env vars the binary
+  reads; (cosmetic) a stale "step 4b"
+  reference. [correction] GROK PREMISE:
+  there are NO Grok PRs in phext-lattice -
+  of 10 open PRs, nine are Cursor Agent's
+  and one is Claude's; all were already
+  rebased clean 2026-11-08 23:16Z. Will's
+  ruling on fixes/review was still pending
+  at flush; the audit was findings-only.
+
+- [will_said + observed] DANIELE BRIEF
+  EXTENDED: Bloomington, IN Resolution
+  2026-10 (passed 9-0, adopted 2026-06-10)
+  folded into the control/Skynet section of
+  daniele-ai-brief.md - her control question
+  is civic-mainstream; Will's framing
+  recorded verbatim in the dated note.
+
+- [observed] EDIT.PHEXT.IO ART DELIVERED,
+  WIRING IN FLIGHT: banner + background
+  generated from CYOA lore and delivered;
+  Will approved wiring both on branch
+  emise/edit-art-banner-background (17:08,
+  extended 17:15 to owe mobile-viewport
+  evidence). Not landed at flush.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
