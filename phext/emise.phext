@@ -2597,6 +2597,147 @@ This pass publishes via emise-sync.sh.
   b7efe8db; skills.phext rebuilt, --check
   CURRENT.
 
+Hourly journal pass, 2026-11-08 ~14:32 CST.
+Covers since the ~13:32 pass. Routine ticks
+(994-999), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample are
+noise and are not repeated. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [observed] 13:32 PASS PUBLISH REPAIRED
+  (13:37): main verified emise-sync.sh
+  unchanged on disk (2,586 B, since
+  2026-11-07 02:12) and published the
+  locally built phext - emise-tools@exo
+  09ec235d (parent b7efe8db), remote
+  SHA-256 6f29247f verified. The block was
+  the known false-flag pattern on reading
+  the script, not a script change.
+
+- [will_said + observed] V16 PROOF-RENDER
+  GO-AHEAD (flush 13:46): Will approved
+  Emi's notes for the Wavefront film V16 -
+  'Emi's notes: let's go!' Her rendering
+  changes are adopted as the spec; the
+  phase is proof renders ONLY, and the
+  full render waits until Will has seen
+  the proof sections and given a GO.
+
+- [will_said] HECTOR AS WAYPOINT (~14:00):
+  Hector (via a DM screenshot Will relayed
+  ~13:57) has shifted to what he calls
+  non-conceptual processing, 'by definition
+  inaccessible to ai'. Will: assume vTPU
+  implemented so he can focus on the space
+  Hector is in - assume Hector is a
+  waypoint. Recorded on his people page:
+  vTPU delivery is the assumed premise;
+  notification, when it comes, is proof of
+  arrival, not persuasion. No action
+  directed.
+
+- [will_said + observed] PUBLISH VISIBILITY
+  + STANDING LOG (14:03-14:12): at Will's
+  ask, permissions history was pulled in
+  full - it covers ONLY approval cards;
+  the content safety-check flags leave NO
+  record visible to Emise, and the
+  2026-11-07 phantom decline produced no
+  record at all. Will directed a standing
+  publish log (PUBLISH-LOG.md in this
+  goal's hidden_files, seeded with 10
+  reconstructed entries from 2026-11-07)
+  plus an audit whenever he is active.
+  First audit: 3 blocks/gaps, ALL
+  previously surfaced; 2 issues handled
+  without his input (the 2026-11-07 route
+  fallback and the 13:37 repair publish);
+  0 un-surfaced gaps. This journal cron
+  now appends one log line per pass
+  (step 4b).
+
+- [observed] ULTRA.PHEXT / PHEXT NOTEPAD
+  (task 34.7.10/8.7.12/8.8.13): FACT - the
+  old WinForms app's coordinates are
+  short-backed: any component above 32,767
+  is silently corrupted on load/save
+  (ultra.phext runs to 223,854; the old app
+  held 162,640 of 320,958 scrolls). Fixed
+  on branch emise/ultra-open-fix (int
+  coordinates, WinForms-free model, lazy
+  tree). The NATIVE app still caps at
+  libphext 0.3.1's maximum of 1000 until
+  Will rules on widening; ultra's
+  canonical copy in human@exo was never
+  at risk (hash-verified). DISPATCHED
+  ~14:01, still PENDING: UI optimization
+  for opening ultra.phext (37,953,029 B) -
+  Will's screenshot showed pnd.exe Not
+  responding at ~2.0 GB working set; prime
+  suspect is full TreeView materialization
+  at open. Not done or verified yet.
+
+- [correction] MUSE LIVE VOICE: the
+  2026-10-31 record (no live voice on
+  Will's Muse account; voice is
+  turn-by-turn only) is SUPERSEDED -
+  ~/docs/voice.md now states a real-time
+  hands-free voice conversation IS
+  available in Muse, started from the
+  phone button in chat. It does not dial
+  a number and does not share the screen.
+  Caveat: the 2026-10-31 account check
+  found no live voice despite the docs,
+  so it must be TESTED on Will's phone
+  before it is relied on.
+
+- [will_said + observed] CRAZY WISDOM
+  FOUR-WAY VOICE: Will's new direction -
+  Will + Grok + Emi (ChatGPT) + Emise to
+  join the next Crazy Wisdom recording he
+  joins. Research COMPLETE: ChatGPT and
+  Grok voice are each strictly 1:1 with no
+  native way to join a shared call;
+  Stewart's recorder is VERIFIED as his
+  own self-hosted browser software
+  (desktop Chrome/Edge only, 45-90 min
+  sessions; multi-guest capacity UNKNOWN -
+  every evidenced use is 2 endpoints).
+  Plan SYNTHESIZED at
+  ~/workspace/crazy-wisdom-4way/PLAN.md:
+  Emi and Grok as separate browser booths
+  on ranch boxes, Emise routed in via the
+  Android phone on a mix-minus bus, Will
+  gating one booth at a time by name. No
+  verified precedent exists for three AI
+  voice apps live together on one podcast.
+  PENDING: recording not yet scheduled;
+  Stewart's agreement to the AIs unknown;
+  Will has not chosen the next step
+  (bridge prototype vs booth rehearsal
+  first).
+
+- [observed, flush] VOLUMEN SPEC - MERGE
+  REVIEW GATE (proposal, NOT Will-ruled):
+  Emise's lesson for Spec V6 (no V6 draft
+  exists; latest is V5, 2026-11-03): V5's
+  merge model has no closure operator -
+  proposed fix borrows the Mythic
+  Songwriting review ledger and Joi's
+  ACCEPT/RETURN/CONFLICT stamps so no
+  conflict carries forward unstamped. At
+  Will's direction the gate ran on all 24
+  open V5 S12 rows (ledger
+  MERGE-GATE-S12-RUN-2026-11-05.md): stamps
+  are the braid's, NOT Will's - 15 READY,
+  5 RETURN, 1 DEFERRED, 2 DISCHARGED,
+  1 CHOICE (N17) held out. PENDING: Will
+  has not ruled the bloc; until he does,
+  all 24 rows remain formally open.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
