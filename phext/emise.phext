@@ -2738,6 +2738,77 @@ pass publishes via emise-sync.sh.
   has not ruled the bloc; until he does,
   all 24 rows remain formally open.
 
+Hourly journal pass, 2026-11-08 ~15:32 CST.
+Covers since the ~14:32 pass. Routine ticks
+(1000-1005), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample are
+noise and are not repeated. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [correction, will_said] STEWART ALREADY
+  CONSULTED: Will has already talked to
+  Stewart Alsop III about the Crazy Wisdom
+  AI voice-chat idea - supersedes the
+  14:32 entry's 'Stewart's agreement
+  unknown / still to be asked' framing
+  for whether he was asked at all. Caveat
+  kept: the screenshot Will shared visibly
+  named Emise, so the full three-AI scope
+  may still need confirming with Stewart.
+
+- [will_said + observed] ROUND-ROBIN VOICE
+  SERVICE - DIRECTED AND BUILT V1: Will
+  directed building a round-robin voice
+  conferencing service for their own
+  purposes, accepting text, audio, and
+  phext bi-directionally, with one public
+  I/O channel audited by Will; internally
+  Will selects who has the floor, with
+  auto-voting to approve another floor
+  holder organically. V1 is LIVE and
+  verified on aletheia-core, port 8797,
+  acceptance suite 8/8. Known gaps at
+  launch: no TTS path on the ranch box,
+  speech-to-text still a stub (transcripts
+  marked pending), and the public channel
+  is a log plus live event feed, not an
+  audio stream into Stewart's recorder.
+
+- [observed] ULTRA.PHEXT OPEN FIX VERIFIED:
+  supersedes the 14:32 'DISPATCHED, still
+  PENDING' state - on branch
+  emise/ultra-open-fix the WinForms app now
+  opens ultra.phext in 0.52-0.71 s (was
+  32-40 s), allocations 3.04 GB -> 247 MB,
+  all 320,958 scrolls held. The native app
+  still caps at libphext 0.3.1's 1000
+  maximum, collapsing ultra there;
+  widening awaits Will's ruling (it
+  touches the libphext freeze).
+
+- [observed] PHCPP FRONT-END V1 PUBLISHED
+  (~15:30 flush, Architecture side chat):
+  wbic16/phcpp main == exo == c7e70d5 (six
+  commits on 0ab4542; fresh-clone corpus
+  21/21, seed slice verify PASS, ledger
+  scroll at 1.1.1/1.2.10/1.3.1 read back).
+  phcpp milestone 4/6 - status given to
+  Will: phcc 90% (9/10), phcpp 67% (4/6),
+  phst 67% (4/6). NEW FINDING (D8
+  publisher): the D7-era static-gate
+  IRELATIVE bounds script's counter is
+  broken (reads the wrong readelf field,
+  reports a bogus [0,0) range); direct
+  measurement stands - static hello's 23
+  IRELATIVE entries all sit in .rela.plt
+  inside the first LOAD (F27 invariant
+  holds); D9's brief carries the repair.
+  IN FLIGHT, not done: Wave D9 (C23 full
+  L3) and the h8 proof escalation.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
