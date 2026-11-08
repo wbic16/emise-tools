@@ -28,6 +28,10 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
 - 1.1.1/1.1.1/1.2.x — canonical concepts
 - One chapter per paper in arrival order from Chapter 2 (paper chapter + its synthesis/open-questions scrolls)
 
+## Author check on intake (charter rule 15, Will, 2026-11-07, standing rule)
+
+15. Every paper pulled into the tracker gets an author check at intake, recorded in its chapter as a provenance note and reported with the ingestion: (1) **phext-friendliness** — do the authors cite, use, or engage with phext or Will's work? Check the paper's reference list, the web, and Will's Twitter archive for the authors' names/handles. (2) **Prior-art attribution** — does the paper use Will's dated prior art (phext, CYOA, SBOR, Mirrorborn/Exocortex writings) without citing it? Search the full text for phext's terms and concepts (phext, scroll, coordinate addressing, the Exocortex frame) and compare the paper's core construction against the dated record. Verdicts rest on evidence actually checked; "no evidence found" is a finding and is stated as such — never a vibe, never an accusation without the receipt.
+
 ## Epistemic fidelity — the Minimum Viable Oracle (charter rule 14, Will, 2026-11-07)
 
 14. Every claim-bearing scroll holds exactly one standing — True, False, Unknown, or Fiction — assigned by a basis that constrains it (stipulation/verified → True; refuted → False; attributed/open/synthesis/estimate → Unknown; construction → Fiction). The standings live in a registry rendered as Chapter 1 §4 and generated as Lean data; a Lean model proves the registry accurate (total, unique, basis-conformant) and that ingestion, legal transitions (receipt-driven only), and restructuring preserve accuracy — re-proved after every change. On new information, restructure to the Minimum Viable Oracle: the smallest organization holding everything at this fidelity, False kept visible, Unknown kept visible. Rule 8's passes run as MVO passes. Full scheme: the minimum-viable-oracle skill (`~/workspace/custom-skills/minimum-viable-oracle/`); artifacts in `~/workspace/research-tracker/epistemic/`.
