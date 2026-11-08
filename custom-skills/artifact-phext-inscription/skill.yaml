@@ -1,0 +1,5 @@
+name: "artifact-phext-inscription"
+title: "Artifact Phext Inscription — every generated artifact at its holographic coordinate"
+description: "Inscribe every generated artifact (document/deliverable) into artifacts.phext at a holographic coordinate computed from the artifact's own words (Singular merge), rebuild + --check the register, push artifacts.phext to wbic16/human@exo parented on fresh HEAD with force disabled, and verify the remote bytes."
+category: "Work and knowledge"
+include_in_prompt: true
