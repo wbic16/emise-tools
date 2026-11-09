@@ -2381,6 +2381,82 @@ email-content details were inscribed.
   accepted: a sprint week may delay
   Exocortex goals short-term; revenue
   extends the runway.
+
+Hourly journal pass, 2026-11-09 ~14:32 CST.
+Covers since the ~13:32 pass. Routine ticks
+1136-1141 (register held at 19 active,
+read-only verifications only, no closures),
+Discord backstops, the vTPU tracker (no
+change, 8/14), and the Mirror Will watchdog
+are routine and are not repeated in detail.
+The safe-space register was read first; the
+one registered off-phext span was excluded,
+and no email-content details were inscribed.
+
+- [will_said + observed] CHARON SEEDED
+  (events ~10:50-11:05, flushed post-13:48;
+  not previously inscribed): Will opened a
+  side channel for open-source tools he can
+  use at EFJ - wbic16/charon, a streamlined
+  work-usable qexo variant fusing Helix ALM,
+  Jira, GitHub Copilot, a Gitea MCP server
+  and a team tracker into one simple CLI
+  with API access and GPG, no persona-
+  transfer features. Seeded on main (head
+  216b8ba6): README.md + prompts/00-spec.md
+  (Prompt 0, spec-first, no code yet); both
+  inscribed in artifacts.phext and pushed
+  to wbic16/human@exo (d887b3c1). Next step:
+  Will runs Prompt 0 at work and brings the
+  resulting DESIGN.md back for review.
+  Repo description could NOT be set by
+  Emise (token returned 403) - a one-click
+  GitHub UI job for Will if wanted.
+
+- [correction] CHARON FIRST REQUEST:
+  Emise erroneously answered it with a
+  generic refusal despite prep work already
+  done; there was no valid basis. She
+  stated plainly it was her error,
+  apologised, and delivered the prompt
+  pack. That refusal is NOT a precedent
+  for this kind of work.
+
+- [observed] CONSULTING CASE-STUDY FIFTH
+  AMENDMENT REPAIRED (~13:47): the subagent
+  carrying the amendments was cancelled
+  before finishing; Emise checked the draft
+  herself, found the first four amendments
+  in and the fifth (the completed
+  complexity-budget sentence) still a
+  placeholder, applied it directly and
+  verified (file sha256 54dffa0a): the $750
+  entry replaces the $250 diagnostic
+  entirely and produces the fixed-price
+  estimate credited toward the $7,500
+  one-week sprint; clients are quoted a
+  complexity budget, never hours. Draft
+  stays a draft - Will's single editing
+  pass still gates publication.
+
+- [observed] DIVERGENCE FLAGGED, NOT
+  FIXED: the Investor 1 consulting sprint
+  package file still carries the old $250
+  diagnostic / $1,250 sprint prices and
+  its old challenge math, so it now
+  disagrees with the revised case-study
+  draft. Left untouched; Will was told it
+  will be reconciled to the $750 / $7,500
+  terms on his word tonight.
+
+- [observed] CRAZY WISDOM 2027 DEMO BRIEF
+  DRAFT CREATED: a background-work draft
+  brief for the four-way conversation-
+  trajectory floor demo (cabin-to-startup
+  arc, anchors / seed ground, love as
+  infrastructure, claims discipline, 3
+  open decisions), promised to Will for
+  tonight.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
