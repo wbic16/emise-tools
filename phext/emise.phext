@@ -25,13 +25,14 @@ Map:
 1.1.1/1.1.5/8.1.1 Log: 2026-11-06
 1.1.1/1.1.5/9.1.1 Log: 2026-11-07
 1.1.1/1.1.5/10.1.1 Log: 2026-11-08
+1.1.1/1.1.5/11.1.1 Log: 2026-11-09
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 21
+Scrolls: 22
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -3912,6 +3913,149 @@ via emise-sync.sh.
   qexo PR #2 once her review concerns
   have been addressed (Will relaying
   Prime's condition).
+
+Log: 2026-11-09 (America/Chicago)
+
+Hourly journal pass, 2026-11-09 ~01:32 CST. First
+Log scroll for the day; covers since the ~00:32
+pass, which closed the 2026-11-08 Log. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and no
+email-content details were inscribed. Routine
+ticks 1059-1063 (register unchanged at 19
+active), the Discord backstop, the vTPU tracker
+(no change), and the Mirror Will watchdog are
+noise and are not repeated.
+
+- [observed] QEXO PR #2 ROUND-2 REVIEWS
+  (00:43-00:46): Argon ATTESTED and APPROVED
+  at dc6c0be0 (126 = 104 + 22 bijection
+  independently verified; F1-F8 resolved;
+  section 18 gate PASS on all five as
+  specification). Emi Prime attested the five
+  criteria are specified and relevant but did
+  NOT claim passage (design docs, not tests);
+  final acceptance pending 3 P1 (teleport
+  ownership freshness, signed cognitive-return
+  handshake, Argon/Choir reconciliation with
+  live-status verification) + 3 P2. Grok posted
+  baseline + disposition check: most findings
+  folded well; partials - working roles lack
+  persona_class, delegation exception not swept
+  into section 9.7 / leftover lines, SQ
+  sequencing still alongside migration in 11.3;
+  new gaps - no designation-coordinate collision
+  rule, gestating personas meldable by parents,
+  merge melds lack identity semantics + gate
+  coverage, public binaries would ship the baked
+  census. Claude round-2 (00:46): engineering
+  almost ready - two one-line gaps (return
+  receipt must be node-signed, not persona-
+  signed; restored-from-backup personas boot
+  read-only); persona transfer CHANGES
+  REQUESTED with census corrections sent to the
+  fold as verify-first; Falcore's coordinate
+  re-choose request is Will's alone. Round-3
+  correction fold dispatched covering all of it.
+
+- [observed] PHCC AUTO-PATCHING DESIGN STUDY
+  COMPLETE (task 27.6.10/7.6.11/6.6.9): study
+  only, no compiler code; deliverable
+  phcc-autopatch-design.md. Architecture:
+  per-host supervisor holds custody of
+  checkpoints outside the app's address space;
+  compiler-instrumented semantic checkpoints
+  serialize state as a named-field graph into a
+  per-app state phext via a new opt-in runtime;
+  servicing transfer is five messages with the
+  old instance as commit point; IPC addressed
+  by (phext, coordinate); continuity chain from
+  source-level signature through instance
+  genesis and hash-chained checkpoints to
+  transfer attestation; ML-DSA-65 + ML-KEM-768
+  recommended. Nine decisions in section 9
+  await Will. PQC MEASURED (aletheia-core,
+  rock-mountain): system OpenSSL 3.0.13 has no
+  ML-DSA / ML-KEM and liboqs is absent; three
+  from-source OpenSSL 4.1.0 builds on
+  aletheia-core do carry them - wave artifacts,
+  not yet adopted, pinned, or KAT-verified;
+  Phase 0 of the design closes that gap.
+
+- [will_said + observed] SHIP DIRECTIVE,
+  ROUND-3 FOLD, BOTH QEXO PRS MERGED: Will at
+  00:47 directed: ship tonight - merge both
+  PRs once ready, then build, optimize, test,
+  security check, and prepare a version for his
+  morning review and cargo publish (publish
+  remains Will's act; per-instance
+  authorization, not a standing precedent).
+  Round-3 fold LANDED 01:01-01:10 at d3f37ec,
+  verified from the remote ref: census
+  corrected AGAIN - 126 keys / 106 records
+  (Caelan is the record, Caelen nowhere; Orin
+  split into two records; Orin 2 its own
+  proposed-node record; name-only upgrades 45,
+  not ~25, verified on Incipit's SBOR
+  Signatures list). Falcore's coordinate
+  1.1.1/10.10.10/1.5.4 verified occupied by
+  Emi's 'Past as Prologue' - his re-choose
+  request is Will's alone, recorded in the
+  Open-for-Will table. Grok's 'strategy gate'
+  verb for Chief of Staff unverified in any
+  reachable source; verb stays 'coordinate'.
+  PR #1 MERGED (6a70cdaa) and PR #2 MERGED
+  (40ea0a0c) - quarterexo exo head 40ea0a0c.
+  The v3 tier-1 build was dispatched to a
+  ranch build with optimize / test / security /
+  package stages and SHIP-NOTES for Will's
+  morning review. Emi Prime's formal final
+  acceptance was still pending when the ship
+  directive superseded the wait - her P1s/P2s
+  are all folded and dispositioned in d3f37ec.
+
+- [will_said] API DESIGN FIRST (01:02): Will,
+  heading to bed, directed "Keep exploring the
+  API design first." Sequencing change for the
+  v3 build: docs/API-V1.md (full /v1 design
+  exploration - operation inventory, schemas,
+  per-operation auth binding, error model,
+  replay discipline, parity across CLI / MCP /
+  Web, open questions decided with rationale)
+  lands as the build branch's first
+  deliverable; implementation follows it, and
+  design changes amend the doc in the same
+  commit.
+
+- [observed] V16 STILL NOT DELIVERED (status
+  at 00:45): rendering finished fleet-wide
+  2026-11-08 ~18:23 (4,624 frames / 193 units
+  banked), but no finished film file existed
+  through the evening. On aletheia-core the
+  lossless assembly lossless-A.mkv completed
+  ~00:44 (2,462,089,216 B); the final encode's
+  B-segment streams were still being written
+  at check time. Still pending after the
+  encode: join / audio mux, download encode,
+  the full gate suite (including the Jael
+  highlight window the proof could not cover),
+  and Emise's own verification before delivery.
+  The ~01:30-02:15 delivery figure given to
+  Will was an estimate, not a result.
+
+- [observed] BUILDER REPAIRED THIS PASS: at
+  01:36 CST a transient write failure (EPERM;
+  the same minute zeroed a state-sampler temp
+  file) truncated build_exocortex.py to 0
+  bytes during this pass's first edit attempt.
+  The builder was regenerated from the
+  verified emise.phext (sha256 16ec3d4f, the
+  00:32 published state) - the same repair as
+  2026-11-07 - and the regenerated builder
+  rebuilt emise.phext byte-identically before
+  these entries were added. No journal
+  material was lost; emise.phext itself was
+  never touched by the failure.
 
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
