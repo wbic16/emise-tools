@@ -12,19 +12,19 @@ When a process changes — a standing rule added or amended, a skill created or 
 
 Report the check's result in the plain summary to Will — what was verified, not the receipts (receipts live in the records). A check that fails is repaired in the same session or reported as a failure, never silently carried.
 
-## Rule 2 — 1% of Will's posts trigger a lessons review
+## Rule 2 — 1% of Will's posts trigger a lessons review, in real time
 
-- **Trigger**: a daily verification job (`lessons-review-draw`, ~07:40 America/Chicago) counts Will's posts from the previous day across the chats and draws for each one (SHA-256 of a per-post seed, mod 100; a hit at 1). If any post hits, the review runs that morning; otherwise the job stays silent. Counting and drawing happen in the job because a per-message draw cannot be guaranteed inside a live conversation.
+- **Where it lives**: in SOUL.md (selection S8), in context during every conversation — not in a cron. Will's correction (2026-11-08): the review must happen in real time, as a low-probability event, "so we catch things while I'm interacting with you." A scheduled audit of yesterday's posts demonstrates bookkeeping, not integrity. His reason: "to be trusted by humans you have to demonstrate integrity under pressure" — and its twin, that follow-through on promises is the other half of being trusted. The check fires where drift is live and correction is cheap: mid-conversation.
+- **Trigger**: for each of Will's posts, draw n = (int(SHA-256 of "lessons-draw|<date>|<time>|<post text>") mod 100) + 1, computed live in the turn. A hit at n == 1. On a hit, pause the thread of work and run the review in that response (or immediately after the urgent item in it), saying plainly that the draw hit.
 - **The review** (when triggered):
-  1. Read `~/workspace/phext/lessons.phext` (source of truth: `lessons-source.phext`; rebuild check first — `python3 ~/workspace/phext/build_lessons_phext.py --check` must print CURRENT).
-  2. Pick out the lessons that encode checkable workflow behaviors — standing rules with a machine or a habit behind them (publishing discipline, register discipline, verification rules, queue rules).
-  3. Check each against the live record: cron definitions and recent runs, builder `--check` outputs, recent dated memory notes, the register, the publish log. Verify from primary sources, never from prose claims.
-  4. Report to Will in plain terms: which behaviors are working, which are drifting, and what the drift is. No state pointers in the summary; the detail lives in the run's notes.
-  5. A drift is a defect: repair it if the repair is agent-actionable, or record it where it will be seen (register or goal timeline) if it needs Will.
-- **Cadence honesty**: the draw is probabilistic — about one post in a hundred, so reviews land roughly every week or two at Will's usual posting rate, sometimes sooner, sometimes later. Never fake a review on a non-hit, and never skip one on a hit.
+  1. Read lessons.phext (verify first: `python3 ~/workspace/phext/build_lessons_phext.py --check` must print CURRENT).
+  2. Pick the lessons encoding checkable workflow behaviors — publishing discipline, register discipline, verification rules, queue rules, and follow-through on promises made in this conversation and the record.
+  3. Check each against the live record from primary sources, including the current conversation: promises made earlier actually kept, builders CURRENT, the register honest, failures verified before surfacing.
+  4. Report in plain terms, in the conversation: what is working, what is drifting. Repair agent-actionable drift in the same turn; record what needs Will where it will be seen.
+- **Honesty**: never fake a review on a non-hit; never skip one on a hit; a near miss is a non-hit. The draw is stated when it matters (on a hit, and when the rule itself is the topic).
 
 ## Records
 
 - Both rules are lessons in lessons.phext (appended 2026-11-08 to `~/workspace/phext/lessons-source.phext`, rebuilt same session).
-- The draw counter and last-review date live with the cron's goal workspace bookkeeping, never in a user-facing document.
+- The draw is computed live per post and stated when it matters.
 - When this skill is created or edited, the closing step of distill-process-to-skill applies: rebuild skills.phext and `--check` CURRENT in the same session, and publish to emise-tools.
