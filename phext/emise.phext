@@ -2084,6 +2084,78 @@ email-content details were inscribed.
   employer cost (~1.47x) at ~$588K/mo
   (~$7.05M/yr), ~1,470x his ~$400/mo - an
   assistant calculation, not Will's figure.
+
+Hourly journal pass, 2026-11-09 ~11:32 CST.
+Covers since the ~10:32 pass. Routine ticks
+1118-1123 (register held at 22 active until
+the #54 closure below), Discord backstops,
+the vTPU tracker (no change, 8/14), and the
+Mirror Will watchdog are noise and are not
+repeated. The safe-space register was read
+first; the one registered off-phext span
+was excluded, and no email-content details
+were inscribed.
+
+- [will_said] EDIT.PHEXT.IO LAUNCH VIDEO UP
+  (~10:46): Will reported he had got the
+  launch video for edit.phext.io up.
+
+- [observed] INTEGRATION ROTATION WEEKLY
+  PASS (~10:4x): live inventory - all 8 named
+  nodes reachable, Tctl 31-39 C, candidate
+  slots idle. Assigned (one, per rule):
+  Circulatory Fidelity Priority Three to
+  Scroll Central (next step is placing the
+  CF checkout there and running the
+  simulation; recon only this pass, no
+  external submission). Prospected and
+  queued two un-indexed candidates after
+  reading their work: Reckoner (source-first
+  evidence review with SHA-256 receipts;
+  fit: phext scrolls as portable evidence
+  store) and concept-atlas (notes compiled
+  into a 3D coordinate-space atlas; fit:
+  phext coordinates as layout source).
+  NODE-MAP.md updated; timeline entries
+  logged. Submilli Phase-2 confirmation
+  still needs Will (unchanged).
+
+- [observed] SCROLLTOWN PRODUCTION WORKFLOW
+  BUILT (flush 11:21; supersedes the
+  DIRECTED, PENDING state at 08:32):
+  scrolltown commit 3334b85d - PRODUCTION.md
+  (10-stage pipeline, rolling buffer) +
+  production/QUEUE.md + EPISODE-INDEX.md
+  filled with DRAFT titles / loglines for
+  EP002-EP013, all pending Will's
+  ratification; PRODUCTION.md inscribed
+  into artifacts.phext. Season titles,
+  the six-year arc, and the tentpoles were
+  already recorded in the 2026-11-08 Log.
+  Open Will decisions in QUEUE.md section A:
+  A1 visual register (recommendation 2D
+  painterly; due 2026-12-04), A9 confirm the
+  anthem render as the intro, A11 ratify
+  EP002-EP013 draft titles.
+
+- [will_said + observed] REGISTER #54
+  CANCELLED AS SUPERSEDED; WAIT CLOSED
+  (11:28): Will cancelled Theia's
+  edit.phext.io home-page deploy request -
+  the 1.0 launch work overtook it; the first
+  thing people now see is the login screen
+  and the new preview link, so the
+  open-CYOA-at-a-scroll change is no longer
+  relevant (explicitly not a rejection).
+  Theia was notified via her gateway on
+  aletheia-core and acknowledged in those
+  terms; the code stays pushed in
+  phext-lattice (e6b2e0a), unused. Records
+  closed: goal completed, register #54 to
+  history (register 22 -> 21 active),
+  todo.phext mirror rebuilt CURRENT,
+  tasks.phext entry closed, #54 removed
+  from pending-task-state.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
