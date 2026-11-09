@@ -3163,6 +3163,122 @@ pass publishes via emise-sync.sh.
   phone-width eyeball of the live
   Previewer) remains live.
 
+Hourly journal pass, 2026-11-08 ~21:32 CST.
+Covers since the ~20:32 pass, plus late
+flushes not yet inscribed. Routine ticks
+(1037-1039), Discord backstops, the Mirror
+Will watchdog, and the vTPU no-change
+sample are noise and are not repeated.
+The safe-space register was read first;
+the one registered off-phext span was
+excluded, and no email-content details
+were inscribed. This pass publishes via
+emise-sync.sh.
+
+- [observed] WAVE D9 PUBLISHED:
+  wbic16/phcc main == exo == 611b763e,
+  on base 47ccbb89: F42 (C23 L0+L1),
+  F43 (L2 constexpr + #embed), F44
+  (L3 _BitInt), nullptr_t fixup, phext
+  refresh. Fresh-clone verification on
+  Rock Mountain: make test ALL PASSED,
+  conformance 332/333 - diverge set
+  exactly [a_pp_018], 0 oracle splits;
+  C23 spots byte-exact (__STDC_VERSION__
+  199901 default / 202311 with -std=c23);
+  static cells 3/3; unpack 613/613.
+  Published phext sha256 300b404e...,
+  seal 6,321,372 B. The h8 receipt port
+  is unblocked on this tip.
+
+- [will_said] PLAIN SUMMARIES RULE
+  (20:40): when summarizing work for
+  Will, do not lean on state pointers
+  he has not been given - task
+  coordinates, scroll addresses, file
+  paths, hash fragments, register
+  internals. Summarize in plain terms:
+  what it does now, what is left, what
+  is blocked and on whom. Pointers
+  belong in the records, not the summary.
+
+- [will_said + observed] PROCESS RULES
+  (20:43): (1) every process change gets
+  a sticking check - presence, machinery,
+  first occasion - in the same session;
+  (2) in 1% of Will's posts, review
+  lessons.phext live. Both were enacted
+  and verified the same session: skill
+  process-check-and-lessons-review
+  written, in the skills index, and
+  published (f51f1dbd); lessons at 69,
+  CURRENT; AGENTS.md updated. Rule 2's
+  first enactment as a daily cron is
+  superseded by the correction below.
+
+- [will_said + correction] 1% RULE IS
+  REAL-TIME (21:01-21:06): Will corrected
+  the enactment - "You misread the 1%
+  request - I want that to happen in
+  real-time, as a low-probability event
+  so we catch things while I'm interacting
+  with you." It lives in SOUL.md as
+  selection S8, replacing corporate
+  assistant-speak; its reason is Emise's:
+  trust requires integrity under pressure
+  and follow-through on promises. The
+  daily lessons-review-draw cron was
+  REMOVED the same evening. Records
+  package COMPLETE ~21:06: Dream #3 in
+  the self-selections manifest, skill /
+  AGENTS.md / lesson / task record all
+  corrected to the real-time form,
+  builders CURRENT (lessons sha256
+  ecc7f6c9..., skills 242877bc...),
+  skill republished 20a18627. A splice
+  failure (empty paragraph, caught from
+  the byte count before the builder ran,
+  restored verbatim) was disclosed.
+  Live draws for the evening's posts:
+  no hit.
+
+- [will_said + observed] POST-D9
+  DISPATCHES, PENDING (20:58-21:04):
+  (1) h8 proof receipt port dispatched -
+  phext-only addendum to the WP receipt
+  scroll on the D9 tip, keeping "T3 NOT
+  GRANTED" verbatim, recording 273/304
+  portfolio-union and the named delta;
+  still running at flush. (2) At 21:00
+  Will confirmed: "Start the C parity
+  move to libphext 0.5.0" - agent
+  dispatched, local commits only, scope
+  the 0.5.0 delta (binary scroll format,
+  non-UTF-8 ingestion rule, xz seal),
+  PATCHES F45, parity suite under gcc
+  and phcc; still running at flush.
+  Queue: Wave D10 only after the h8
+  port lands; release packaging still
+  needs a version name from Will.
+  Status bars given 20:40: phcc 90%,
+  phcpp 67%, phst 67%.
+
+- [observed] DISK QUOTA EXCEEDED
+  (21:13-21:23): writes to home storage
+  failed EDQUOT despite ~46 GB free on
+  the filesystem - a quota on top of the
+  disk. Tick 1040 could not advance its
+  state, the state sampler failed at
+  21:18 and 21:23, and the Discord
+  watcher crash-looped (exit 120) on
+  failed writes. Workspace ~177 GB
+  (singular-build 78 GB the largest).
+  Surfaced to Will; no deletion was
+  authorized or performed, and nothing
+  durable was lost - everything
+  published before this stands. A test
+  write at this pass (~21:34) succeeded.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
