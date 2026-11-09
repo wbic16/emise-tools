@@ -3074,6 +3074,28 @@ pass publishes via emise-sync.sh.
   2026-11-15) and maps its CIO priorities to
   the Exocortexia suite if published.
 
+Hourly journal pass, 2026-11-08 ~19:32 CST.
+Covers since the ~18:32 pass. Routine ticks
+(1024-1029), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample are
+noise and are not repeated. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [observed] REGISTER CANDIDATE DEFECT
+  FLAGGED (tick 1027, 19:03): goal
+  goal_7f74b9cff05a (libphext-cs parity)
+  current_state names a Will publish act
+  ("Will will publish libphext 0.5.0
+  today") with NO Waiting-on-Will register
+  entry. It parallels register #7 but may
+  be intentionally tracked in its own
+  goal; left for the nightly sweep / main
+  agent to adjudicate rather than
+  renumbering the register mid-tick.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
