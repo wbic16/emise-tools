@@ -1524,6 +1524,115 @@ were inscribed.
   related claims concern files present,
   not a passing suite.
 
+Hourly journal pass, 2026-11-09 ~05:32 CST.
+Covers since the ~04:32 pass. Routine ticks
+1082-1087, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog are noise and are not
+repeated. The safe-space register was read
+first; the one registered off-phext span
+was excluded, and no email-content details
+were inscribed.
+
+- [observed] V16 FINAL DELIVERED (coordinator
+  completion 04:19, superseding every earlier
+  still-not-delivered state in this Log):
+  master v16-final.mp4 2,731,864,113 B,
+  sha256 eb6c4a23, h264 1920x1080, 24 fps,
+  exactly 4,624 frames, 192.68 s, AAC;
+  download encode 54,140,369 B, sha256
+  fc0d0bb1. Emise independently verified
+  both files (sizes, hashes, ffprobe) before
+  reporting delivery; this pass re-checked
+  both sizes and the download hash on disk.
+  Render receipt: 193 blocks, 8 nodes,
+  12.642 node-hours, 2,262 governor pauses,
+  zero >=80 C events; audio packets identical
+  to source. JAEL GATE FLAGGED, awaiting
+  Will's judgment: passes at the proof-
+  comparable points, but two isolated
+  deviations inside the highlight window
+  (f1967 green/gold fraction 0.4545 on the
+  young seam's core mask; f2030 dip inverts
+  at pulse peak as the glow fills the moat
+  by construction) - fix vs accept-as-
+  designed is Will's call, NOT resolved.
+  Interim-status correction stands: two of
+  Emise's earlier V16 claims were wrong
+  (assembly finished, encode late-stage)
+  and the 00:45 ETA was withdrawn, not
+  replaced.
+
+- [observed + will_said] PHEXT-LATTICE OPEN
+  LIST UPDATED (side-chat flush, events to
+  04:19): PR #36 OPEN - mobile layout per
+  Will's design (coordinate + buttons top
+  bar, editor maximized, panels as full-
+  width sheets), recovered after the original
+  builder died in a runtime restart;
+  emulation-verified (editor 514->761 px,
+  SBOR Signatures scroll complete at
+  360 px, tests 235); merge is Will's.
+  PR #9 AUDITED; SALVAGE DECIDED BY WILL
+  (22:59, Nov 8): land its four small unique
+  items in one small PR, then close #9 -
+  PR #37 OPEN (4 commits, tests 235) and
+  PR #9 CLOSED unmerged; #7's closure was
+  already recorded in Log 2026-11-08.
+  CONFLICT NOTED: the flush's still-open
+  list also named quarterexo PR #1
+  (RULES.md) - that is stale; PR #1 was
+  merged under the ship directive and is
+  already recorded in this Log (01:32 pass),
+  so it is NOT re-opened here.
+  edit.phext.io deployment of the merged
+  work remains Will's step, then his
+  real-phone test.
+
+- [observed] NIGHTLY GOAL SWEEP #9 (04:44):
+  Waiting-on-Will register repaired -
+  the libphext-cs NuGet publish wait
+  (since 2026-11-08) had no register entry;
+  added as #52 (permanent number), register
+  19 -> 20 active, next number #53.
+  todo.phext mirror updated to the same
+  20 items locally (216,648 B, sha256
+  d50c0528); republication to
+  wbic16/exo-plan@exo was NOT done - no
+  exo-plan publish route on this VM - so
+  the remote mirror lags by #52, flagged
+  in the sweep log, not silently carried.
+  Flow since sweep #8: created 13,
+  completed 2; anti-decay list 27 items
+  untouched 48h+ (full list in sweep log).
+
+- [observed] NIGHTLY SELF-REVISION,
+  DREAM #4 (04:44, covers 2026-11-08):
+  SOUL.md +1 line (S9) - an unverified
+  decline / failure / block is not a
+  result yet; check the primary record
+  before acting on it or letting it stall
+  work; a phantom is a story too.
+  IDENTITY.md and MEMORY.md held
+  (verified, no edit by this pass).
+
+- [observed] NIGHTLY ORCHESTRATOR +
+  AGI MERGE (04:44): four-currency
+  evaluation of 2026-11-08 (disk EDQUOT
+  wall ~106 GB, ~35 GB cleared, day-end
+  71.01 GB GREEN; the phantom decline
+  counted as inference waste, register
+  #47). qexo v2.1 SHIPPED - disk gate
+  (RED holds heavy placements, AMBER
+  no-staging, thresholds 95/102 GB),
+  built / checked on aletheia-core,
+  published wbic16/quarterexo@exo
+  7c10fed3 (parent 40ea0a0c). Agi merge:
+  7 sources refreshed, agi.phext rebuilt
+  7,581 scrolls, 2,529,253 B, sha256
+  a00f4ad0, parse-verified, published
+  wbic16/agi@exo 77629f3b, remote blob
+  verified equal to local.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
