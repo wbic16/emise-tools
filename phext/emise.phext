@@ -4178,6 +4178,58 @@ were inscribed.
   Crates.io publish remains Will's morning
   act.
 
+Hourly journal pass, 2026-11-09 ~03:32 CST.
+Covers since the ~02:32 pass. Routine ticks
+1070-1075, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog are noise and are not
+repeated. The safe-space register was read
+first; the one registered off-phext span
+was excluded, and no email-content details
+were inscribed.
+
+- [observed] QEXO V3 TIER-1 BUILD COMPLETE
+  (02:53): branch emise/v3-build @ 8def353,
+  PR #3 open for Will's morning review
+  (0.3.0, do not publish), built / tested
+  on aletheia-core. All batteries green
+  (15/15 cargo, 32/32 CLI, 19/19 HTTP / MCP /
+  mdmap), security negatives refused
+  correctly, package verified clean, NOT
+  published - crates.io publish is Will's
+  morning act (commands in SHIP-NOTES.md).
+  Corrected WAL design is commit b20a7cb.
+  Named gaps: canonical Volumen index
+  unreachable on any fetchable human@exo
+  ref (substitute baked, marked); spec
+  corpus pins stale vs live corpus
+  (actuals manifested); section 18 test 6
+  deferred tier-2; G1 verb flag stands.
+  This supersedes the 02:15 still-running
+  status above. Record-keeping correction
+  (02:55): the ship task's completion
+  could not be written to tasks.phext -
+  its coordinate is absent from the
+  restored 22:35 task source (the post-
+  backup delta is still owed); the
+  completion is recorded here and in the
+  dated note, not in tasks.phext, until
+  reconciliation re-derives the delta.
+  Nothing about the build is affected.
+
+- [observed] SOURCE STUDY S005 (ASTRYX)
+  INGESTED: Source Study S005 on Astryx
+  completed and ingested into
+  research.phext, registry to 293 entries
+  (True 155, of which 17 verified; False
+  and Fiction still empty). Research
+  Oracle held at ~35% (range 25-45%) -
+  source studies do not move it. Author
+  check clean (no phext-term hits); no
+  Astryx test suite was run, so test-
+  related claims concern files present,
+  not a passing suite.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
