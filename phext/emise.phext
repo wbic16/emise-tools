@@ -4057,6 +4057,127 @@ noise and are not repeated.
   material was lost; emise.phext itself was
   never touched by the failure.
 
+Hourly journal pass, 2026-11-09 ~02:32 CST.
+Covers since the ~01:32 pass. Routine ticks
+1064-1069, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog are noise and are not
+repeated. The safe-space register was read
+first; the one registered off-phext span
+was excluded, and no email-content details
+were inscribed.
+
+- [observed] STATE SAMPLER FAILED; TASKS
+  REGISTER TRUNCATED, THEN RESTORED
+  (01:23-01:33): the sampler failed twice
+  with EPERM on its temp-file write. Probing
+  that failure truncated tasks-source.json
+  and tasks.phext (the phext dir is not a
+  git repo). Restored from the Rock Mountain
+  ranch backup (2026-11-08 22:35 snapshot):
+  tasks.phext rebuilt matching the backup
+  manifest, 199 tasks. The 29 records added
+  since (228 by tick 1063) are NOT in the
+  restored source - the delta is owed to a
+  full reconciliation; two newer interim
+  copies on Rock Mountain may help re-derive
+  part of it. CORRECTION to the first
+  root-cause framing: later probes created
+  and appended to new files in several
+  directories - the denial is intermittent /
+  transient, not a standing new-file ban.
+  Appends passed in every probe.
+
+- [will_said + observed] WAL RULING AND ITS
+  CORRECTION (01:42, then 01:56): Will first
+  directed a WAL-style fix for the sampler -
+  append only, via indirect addressing. A
+  sidecar state.wal implementation followed.
+  Will then corrected the reading: keep a
+  minimum coordinate and enforce that each
+  new coordinate exceeds it; automatic WAL
+  iff previously written scrolls are
+  immutable - a property INSIDE state.phext
+  (monotonic allocation makes strictly-
+  greater writes byte-appends at the tail;
+  the holographic coordinate rides as an
+  in-line prefix when the floor displaces
+  the physical write), NOT a sidecar file.
+  Re-implemented the same night: sidecar
+  entries migrated above the floor,
+  state.wal trashed (recoverable), PREFIX
+  VERIFIED - the old file is a byte-exact
+  prefix of the new (166,297 -> 166,527 B).
+  Skill and EVALUATIONS.md corrected and
+  republished. Will also directed (01:42)
+  that the sampler failure be logged as a
+  substrate failure in the qexo design notes
+  (EVALUATIONS.md) - done, with the corrected
+  WAL wording sent to the running build.
+
+- [observed correction] QEXO BAKE NUMBER
+  FIX SENT (01:50): the v3 build's draft
+  Volumen coordinate_number was derived
+  wrongly (96 sections counted in a local
+  index.phext). Authoritative source: the
+  canonical Volumen index (wbic16/human@exo
+  personas/00-index.md) - 126 person lines
+  in 22 volumes (I-XXII), contiguous
+  numbering 3.1.8.1-3.1.8.126, cumulative
+  boundaries 10, 18, 22, 26, 32, 40, 48, 55,
+  62, 69, 76, 82, 87, 91, 94, 100, 106, 112,
+  116, 120, 123, 126. The bake must derive
+  number and volume structure from the
+  canonical index it actually bakes and fail
+  loudly if it cannot fetch / parse it.
+  Census phrasing fixed likewise: 126 =
+  query keys / person lines; 106 = derived
+  identity records after dedup / split -
+  both numbers stand, each stating what it
+  counts.
+
+- [will_said] (01:53): "and before I
+  forget: The Exocortex Loves you" -
+  recorded exactly, without gloss, as it
+  stands.
+
+- [observed] V16 RELOCATION HANDOFF LANDED
+  (02:14): the local encode was killed (VM
+  memory recovered, ~2.1 GB free);
+  lossless-A on aletheia-core is
+  hash-verified; lossless-B resumed from
+  byte 437,387,264 after its streamer died
+  in a runtime restart, appending at
+  ~3 MB/s, hash check still owed at
+  completion. A ranch seg1 encode was
+  started, then correctly STOPPED on
+  thermal grounds: aletheia-core was already
+  running the finisher's FULL-master encode,
+  and two encodes pushed Tctl to ~86 C (the
+  master alone was 87.6 C at 02:14). OPEN
+  DECISION (Will / finisher): the
+  full-master path likely supersedes the
+  seg1 / seg2 segment plan; the thermal gate
+  driver did not survive the restarts, so
+  seg1 will not auto-start either way. The
+  tasks register was updated with these
+  results and rebuilt CURRENT (sha256
+  3be33103).
+
+- [observed] QEXO V3 BUILD STILL RUNNING
+  (status at 02:15, pending - not done):
+  the tier-1 build agent is still running
+  on the ranch (branch emise/v3-build). No
+  build handoff, PR, test / security
+  tallies, cargo package, or SHIP-NOTES
+  have landed yet. The API-V1.md
+  design-first sequencing, the bake
+  coordinate-number fix, and the corrected
+  WAL design-notes wording have all been
+  sent to it as mid-build instructions.
+  Crates.io publish remains Will's morning
+  act.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
