@@ -25,7 +25,7 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
 
 ## Layout
 
-- 1.1.1/1.1.1/1.1.x — charter, narrative, source index, Research Oracle ledger, concept map + restructuring log
+- 1.1.1/1.1.1/1.1.x — charter, narrative, source index, Research Oracle ledger, concept map + restructuring log, detection list (1.1.6, rule 17)
 - 1.1.1/1.1.1/1.2.x — canonical concepts
 - 1.1.1/1.1.1/1.3.x — foundations (level-zero definitions) and the Defined Words register (from 1.3.46)
 - 1.1.1/1.1.1/1.4.x — the standing record (epistemic registry, rule 14)
@@ -54,3 +54,12 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
    - **Researchers (1.5.6):** every researcher behind the ingested works — paper authors and study authors/creators — each with their work(s) here (chapter/coordinate) and their rule-15 standing, taken from the author-check scrolls where they exist. Works taken in before rule 15 stood (Papers 001–005, Studies S001–S003) are marked 'not checked — predates the author-check rule'; no verdict is fabricated for a check never run. Will is the submitter/curator, not a researcher entry.
    - **How the Oracle was built (1.5.7–1.5.8):** the plain structure scrolls — intake, the delta rule, one canonical scroll per concept, foundations at level zero, the four standings and their bases, the Lean proof of the keeping with its honesty boundary (Lean proves the bookkeeping, not worldly truth), restructuring without pruning (minimum = smallest organization, never smallest content), the Novelty Index and Oracle estimate, and where everything lives.
    - **Maintenance duty:** every ingestion and every restructuring pass updates the areas it touches in the same pass — new machines join 1.5.2, new authors join 1.5.6, the path gains its entry at 1.5.5, the statements counts at 1.5.3 are made fresh with the new §4 drawing. An area fallen behind the phext is a defect, audited at each restructuring pass.
+
+## The Thirst — daily quest (charter rule 17, Will, 2026-11-09)
+
+17. The tracker no longer waits only for Will to post. Each day Emise scans the new mathematics listings of arXiv (math/new) and picks ONE paper to absorb, by: cluster proximity (measurable delta), axis potential (occasionally a far paper), crispness (a stated theorem/result in the abstract; no surveys). "No candidate" and "no listings today" are honest outcomes, never force a pick.
+   - **Skim–Before–After:** BEFORE = a blind prediction from title + abstract only — predicted new concepts, revisions, axis yes/no, predicted NI = (predNew + 0.5·predRev)/(conceptsBefore + predNew) — sealed by git commit in `~/workspace/thirst-quest/` (predictions.jsonl) BEFORE any full-text access. The commit is the receipt the prediction was blind.
+   - **Impact amendment (Will, 2026-11-09):** the BEFORE record also estimates impact — predicted new links (internal vs cross-cluster), predicted questions opened, predicted Oracle after (percent + range + direction), and a one-line expected-impact statement. The AFTER record scores the actual delta in the SAME terms, including where the estimate was wrong and why.
+   - **Immediacy:** choose → download (HTML form) → read → integrate → journal, one unbroken pass. After integrating, journal the PROCESS in mastery.phext (one entry per absorbed paper: the choosing, the skim's foresight, what the reading changed, what integration did to the model, where the prediction failed and why), rebuild it, and publish it to wbic16/agi@exo.
+   - **Skim calibration:** the metric of predictive capability — rolling mean |NI error| over the last 10 scored papers + axis-flag accuracy. It stands on the Research Oracle DETECTION LIST (scroll 1.1.6) beside the NI trend and the axis events: as the Oracle matures, the model should foresee a paper's delta from its abstract, and a falling skim error is the fixed point announcing itself. Update the detection list's figures at every scored paper.
+   - The protocol also binds papers Will posts; studies are exempt (no NI to foresee). If absorption happens at a different concept count than the sealed basis (another ingestion landed in between), score BOTH bases and state the drift plainly — never quietly re-base a sealed prediction.
