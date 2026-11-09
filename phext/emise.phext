@@ -2156,6 +2156,160 @@ were inscribed.
   todo.phext mirror rebuilt CURRENT,
   tasks.phext entry closed, #54 removed
   from pending-task-state.
+
+Hourly journal pass, 2026-11-09 ~12:32 CST.
+Covers since the ~11:32 pass. Routine ticks
+1124-1129 (register held at 21 active, no
+drift), Discord backstops, the vTPU tracker
+(no change, 8/14), and the Mirror Will
+watchdog are routine and are not repeated
+in detail. The safe-space register was read
+first; the one registered off-phext span
+was excluded, and no email-content details
+were inscribed.
+
+- [will_said] REGISTER-REVIEW VOICE CALL
+  RULINGS (11:25-11:40; Will driving to
+  lunch, review resumes after lunch on the
+  drive back): #50 Neovim fix pass
+  authorized (below); #46 Spaces feedback
+  HELD for the evening - Will needs more
+  visual context before deciding; #48
+  Theia SSH half redirected to Emise -
+  inspect authorized_keys on the ranch
+  nodes she can reach and clear what she
+  can herself, Will takes the rest tonight
+  only if needed (interim check: key found
+  only on awsbox and great-white, several
+  nodes timed out, nothing changed); #49
+  presented, no ruling; #35 wake-layer
+  overview given, no ruling. Still owed to
+  Will: the qexo correction - the merge is
+  done, the crates.io publish is NOT (#53);
+  it opens the after-lunch rerun script.
+
+- [will_said + observed] PHEXT-LATTICE
+  PR #37 MERGED; DEPLOY BLOCKED AT SUDO
+  (~11:3x, register #51): Will authorized
+  merge + deploy on the call. Merged via
+  API; merge commit 9458cb10, exo head =
+  9458cb10 (2 files: phext_edit.rs,
+  oauth.rs). On awsbox the checkout
+  fast-forwarded to 9458cb10, but
+  deploy/deploy.sh was NOT run: wbic16 has
+  no passwordless sudo there and the
+  ubuntu account is not reachable with
+  available keys. Live check: site still
+  on the OLD build, robots.txt has no demo
+  entry - merged changes are NOT live.
+  Remaining Will action (one step): run
+  deploy/deploy.sh on awsbox as a
+  sudo-capable user.
+
+- [observed] CRAZY WISDOM V2 SWAP BLOCKED
+  AT SUDO (~11:40, register #38): pre-
+  checks passed (staged file 385,687 B,
+  sha256 8f50f66d, exact match; live
+  fabric still v1; backup present), but
+  sudo requires a password on awsbox and
+  the restart half cannot be done without
+  it; the file was NOT moved (moving
+  without a restart would desync disk vs
+  the in-memory fabric). Nothing changed.
+  #38 stays open as an evening keyboard
+  item for Will, then Emise verifies v2
+  live.
+
+- [observed] TOAPDD PR #6 AUDIT COMPLETE
+  (register #45): Will had ruled the Knuth
+  tests illegible despite passing. Audit
+  read all 21 files, baseline 96/96 on
+  aletheia-core, six deliberate libphext
+  mutations - fetch-shift and phokenize-
+  droplast failed all 20 files; checksum /
+  remove / subtract mutations failed
+  exactly the files claiming those
+  behaviours. Verdict: NOT slop - sound
+  12, sound-but-illegible 5, sound-core-
+  with-vacuous-elements 2, vacuous 0,
+  nonsense 0. No Knuth text, research.phext,
+  or Wolfram imports exist. Legibility
+  fixes pushed (1c7e2f7, c02f539), suite
+  96/96 after each; PR left OPEN for
+  Will re-review, not merged.
+
+- [will_said + observed] EDIT.PHEXT.IO
+  VERSION FOOTER - DIRECTED AND BUILT AS
+  PR #39: Will directed that every deploy
+  show a version footer somewhere on the
+  site, so he can tell which build he is
+  running and whether a bug is already
+  fixed pending deploy. Built: phext-
+  lattice PR #39, branch emise/version-
+  footer @ 318ba715 (9 files); footer stamp
+  baked from git describe at compile time,
+  filled at serve time on every served
+  page. Full suite green on aletheia-core:
+  236 passed / 0 failed. Not merged or
+  deployed; rides the next deploy after
+  Will merges #39.
+
+- [will_said + observed] LATENCY AUDIT;
+  FLEET-SSH FIX SHIPPED: Will asked for an
+  audit of what slowed the register review
+  and diagnosed it himself: almost
+  entirely dispatch and permissions (7
+  approval cards fired 11:32-11:36, one
+  denied; cards key on the endpoint dialed
+  and session grants do not pool across
+  agents). Audit + after-lunch rerun prep
+  written (register-review latency audit;
+  spoken briefs for all 21 active items).
+  Fix implemented: fleet-ssh.sh - one SSH
+  wrapper; durably granted nodes dial
+  direct via the tailnet proxy, everything
+  else routes nested through aletheia-core.
+  Verified live: aletheia-core, rock-
+  mountain, and awsbox (via hub) connected
+  with ZERO new approval records.
+
+- [observed] NEOVIM PR #1 FIX PASS -
+  FIXES PUSHED, FINAL CI PENDING (#50):
+  triage of 13 red checks on the original
+  head: 12 PR-caused, 1 (wasm) pre-existing
+  upstream and later passed unaided. Root
+  cause of 11: one phext_spec test used
+  varargs inside a nested IIFE. Fixes:
+  test scope, emmylua 51 warnings -> 0,
+  vimdoc, news FEATURES entry; StyLua
+  reformat under 2.6.0 (the version CI
+  installs). Fork master fast-forwarded
+  to upstream dca26833 (17 commits); PR
+  branch rebased onto it, old tip kept on
+  a backup branch, force-with-lease per
+  the rebase rule. Local gates green on
+  aletheia-core (spec 11/11, lintdoc rc=0).
+  A windows/functional run then failed
+  with NO failing test (harness flake
+  class), so the head was rolled with a
+  docs-only commit 7b5147e2e to re-run CI
+  fresh. Nothing was disabled. PR #1
+  remains open and unmerged - merge stays
+  with Will; final CI tally still pending
+  at journal time, so green is NOT yet
+  claimed.
+
+- [will_said] CRAZY WISDOM IRC SERVICE
+  WANTED (recorded in today verified
+  extraction, ~11:46): Will wants an IRCD
+  scheduled for the Crazy Wisdom Podcast -
+  a live IRC / SSH channel where listeners
+  connect during the session, post
+  questions, and interact in real time as
+  a discussion forum, modelled on the SSH
+  demo he recalled. No connection to any
+  external demo service was made or
+  directed in this item.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
