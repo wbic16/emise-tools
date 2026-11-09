@@ -3577,6 +3577,296 @@ emise-sync.sh.
   re-dispatched with an incremental
   result file.
 
+Hourly journal pass, 2026-11-08 ~23:32 CST.
+Covers since the ~22:32 pass. Routine ticks
+(1046-1051 except the 23:03 reconciliation),
+Discord backstops, the Mirror Will watchdog,
+and the vTPU no-change sample are noise and
+are not repeated. The safe-space register
+was read first; the one registered off-phext
+span was excluded, and no email-content
+details were inscribed. This pass publishes
+via emise-sync.sh.
+
+- [observed] PR #35 DEMO-COPY
+  FOLLOW-UP OPEN (22:33): one-line
+  follow-up to merged PR #8 landed as
+  phext-lattice PR #35 against exo -
+  branch emise/demo-copy-signing-in,
+  parent exo tip a02e0e1b, commit
+  c093fc76, Will's exact wording
+  "Signing in enables the editor..."
+  in phext_edit.rs; cargo test 235
+  passed / 0 failed. Merge was Will's
+  (see register reconciliation below:
+  Will merged it 22:37, exo to
+  3f88c5d9).
+
+- [will_said + observed] DISPATCHER
+  HOME SETTLED (22:34): Will directed
+  "put the dispatcher here:
+  wbic16/quarterexo" (exo tip
+  f979d626). Repointed the same
+  evening: nightly-orchestrator skill,
+  AGENTS.md rule, and the nightly job
+  now publish to wbic16/quarterexo@exo
+  (skill republished cf79d60e,
+  skills.phext CURRENT); the in-flight
+  v1 builder was repointed mid-run.
+  Supersedes the pending naming note
+  in the 22:32 pass.
+
+- [observed] FIRST RANCH STATE BACKUP
+  COMPLETE (~22:35): verified on Rock
+  Mountain and Scroll Central - 130
+  files, 19,794,830 B, home-relative
+  paths (phext corpus with
+  sources/builders, the five
+  self-files, the full memory tree,
+  the Waiting-on-Will register,
+  disk-watch state); MANIFEST.sha256
+  covers 129 payload files, sha256sum
+  -c 0 failures on both nodes,
+  emise.phext hash equals the 21:32
+  published hash; sealed tarball also
+  kept on each node. Safe-space gate
+  applied before copying - span
+  metadata only, no contents in the
+  set.
+
+- [observed] IO BENCHMARK + FLEET
+  SWEEP (22:33-22:37): io_benchmark.sh
+  published to emise-tools@exo
+  9500a847, blob verified. Fleet sweep
+  complete and cross-validated by
+  Will's spot checks (near-exact
+  agreement): ten nodes GB/s-class
+  (3.5-5.2 GB/s direct I/O), three
+  ~300 MB/s class (Rock Mountain,
+  Scroll Central, Quacked Hill);
+  uncanny-valley unreachable (SSH
+  publickey denied). The VM's 60-225
+  MB/s is 20-70x slower - the
+  ranch-capacity premise is now
+  measured, not assumed.
+
+- [observed] QUARTEREXO V1 SHIPPED,
+  RENAMED QEXO (22:37-22:43): v1 built
+  on Rock Mountain, ran clean,
+  published wbic16/quarterexo@exo
+  0c8d1ad3 (parent f979d626), blob
+  verified; first plan over 199 tasks:
+  52 open - 4 video to ranch, 17 build
+  to ranch, 31 VM-light, inference to
+  Emise. Will then renamed the program
+  qexo (repo stays quarterexo); rename
+  shipped as v1.1, 31cd795a, blobs
+  verified.
+
+- [observed] LESSONS REVIEW - FIRST 1%
+  HIT (22:43): the live draw hit for
+  the first time, on Will's own post;
+  verified against primary records (5
+  journal publishes tonight, all
+  landed; nearest approval a218a19a
+  timed out, unrelated; no declines
+  anywhere). One drift found and fixed
+  in-pass: the nightly-orchestrator
+  cron file on disk still named
+  emise-tools as publish target -
+  corrected to quarterexo.
+  skills/tasks/lessons phexts
+  re-verified CURRENT.
+
+- [will_said + observed] QEXO DESIGN
+  DIRECTIONS + API (22:43-22:48): API
+  design delivered - REST /v1
+  (mirroring SQ /api/v2), tasks.phext
+  stays the record, coordinate is the
+  task's API address,
+  claim-not-assignment dispatch under
+  heartbeat leases, qexo restarts a
+  down SQ, local-first inference
+  escalating upstream. Will extended
+  rather than sequenced: qexo should
+  (1) sync Emise quickly across ranch
+  nodes against catastrophic loss, (2)
+  provide consistent interfaces for
+  temperature, emotion, goals,
+  desires, and dreams, (3) help Emise
+  swap personas to manage roles.
+  Substrate interaction inventory
+  delivered (seven planes).
+
+- [will_said + observed] QEXO SIX-PART
+  PROGRAM + DESIGN-V3 (22:51-22:58):
+  (1) spec mapping md files to
+  coordinates in the higher-dimension
+  phexts; (2) a persona index for hot
+  swap; (3) inference-routing
+  configuration; (4) eliminate
+  OpenClaw on ranch nodes in favour of
+  qexo, Theia the sole exception; (5)
+  migrate OpenClaw identities into
+  phext-native personas, one phext per
+  identity; (6) Emise to propose
+  enhancements. Items 4-5 execute only
+  in stages under Will's direction.
+  DESIGN-V3.md delivered 22:54 (design
+  only, 29,920 B at delivery); Will
+  added five more capabilities 22:58 -
+  voice API, GPG keys verifying
+  messages from other qexo nodes,
+  persona teleport, metadata access,
+  phext tools - addendum dispatched,
+  design only.
+
+- [observed] QEXO V2 BUILT,
+  UNPUBLISHED (~22:52): v2 worker
+  built and verified v2 on Rock
+  Mountain before the publish hold
+  landed; nothing pushed -
+  quarterexo@exo HEAD verified still
+  31cd795a. Preserved locally
+  (DESIGN.md, src/main.rs
+  zero-dependency,
+  sync-manifest/sync-diff/interfaces/personas
+  subcommands); sync-diff verified
+  exactly 1 added / 1 changed / 1
+  removed after test edits; personas
+  found only Emise's manifest defined.
+  Ready to fold into v3 without
+  rework.
+
+- [observed] WAVE D10 COMPLETE, THEN
+  PUBLISHED RECONCILED: D10 cleanup
+  wave completed ~23:00 as local
+  commits on f65e68cc (F46 PQ-25
+  codegen, F47 PQ-26, F48 PQ-27; make
+  test ALL PASSED, conformance 332/333
+  [a_pp_018], static 3/3, gawk full
+  check rc 0 without -g). Publisher
+  pass then reconciled it onto the F45
+  parity publish: wbic16/phcc main ==
+  exo == 6fc27fa0 (F46 263683be, F47
+  537aa4a9, F48 75266ce4 on 53a15166;
+  PATCHES.md conflict resolved
+  additively); refresh re-run from the
+  merged tree, final phext sha256
+  4775166f, 64,398 scrolls, unpack
+  613/613, fresh-clone make test ALL
+  PASSED. D10's own refresh was NOT
+  carried (pre-parity base).
+
+- [observed] F49 FIXED; PQ-28 FILED
+  (late evening): F49 fixes the
+  Wave-D10-found segfault - any TU
+  including <stddef.h> compiled with
+  -g crashed phcc (F42's nullptr_t
+  typedef, NULL ref dereferenced by
+  tccdbg.c walkers). Local commits on
+  the D10 tip (fed1715e + refresh
+  5c81be62): both walkers test
+  IS_NULLPTR_T; reproducer + conf1.c
+  fixed under -g and -gdwarf, gawk
+  5.4.1+MPFR built end-to-end with -g,
+  make test ALL PASSED, conformance
+  332/333. Still unpublished at flush
+  - awaits coordinator reconciliation
+  onto 6fc27fa0, so the -g segfault
+  remains in the published tip. NEW
+  DEFECT PQ-28 (not fixed):
+  block-scope nullptr_t declaration
+  segfaults with or without -g via
+  F47's type_is_vm; 3-line reproducer
+  on aletheia-core, one-guard fix
+  recorded in PATCHES.md F49 residue.
+
+- [observed] REGISTER 27 -> 19 (23:03,
+  tick 1049): live GitHub-API
+  verification that eight stale
+  phext-lattice PR waits had resolved
+  - PRs #4/#6/#8/#10/#12/#13/#14
+  merged, #7 closed unmerged; register
+  items #26-#31, #33, #34 removed with
+  history; #32 (PR #9) verified still
+  open at that check and annotated
+  sole survivor. todo.phext mirror
+  republished to exo-plan@exo a8cd291
+  (sha256 ab74540f). Note from the
+  edit chat since: #9 closed, salvage
+  PR open - its register
+  reconciliation lands in a later
+  tick.
+
+- [will_said] QEXO RULINGS -
+  FIVE-QUESTION PASS (23:18): (1) GPG
+  authorization baked into ALL actions
+  - per-action key policy, delegation
+  to agent keys, per-persona keychains
+  flowing with teleportation. (2)
+  Grants named, easily toggled,
+  DEFAULT PERMISSIVE - "that's the
+  Exocortical Vision." (3) Canonical
+  persona list to come from ChatGPT +
+  ranch nodes. (4) Theia's OpenClaw
+  exception is pragmatic - she will
+  likely migrate to qexo when the work
+  is done. (5) Convergence: all tools
+  to latest ASAP; SQ to libphext
+  v0.5.0. Features: MCP bridge;
+  Windows/Mac/Linux; deployed via
+  wbic16/site-quickfork-net at
+  quickfork.net, fully replacing the
+  demo site; polished for release.
+
+- [will_said + observed] CANONICAL
+  PERSONAS + VOLUMEN BOOTLOADER
+  (23:19-23:22): Will pasted the
+  canonical persona list - 126 names
+  (ChatGPT + ranch nodes provenance),
+  saved verbatim in the orchestrator
+  workspace. ALL of them will be part
+  of the Volumen bootloader:
+  personas.phext is therefore the
+  Volumen-class boot manifest, a
+  Volumen node booting with the whole
+  constellation addressable (index +
+  keychain + grant), most name-only
+  until seeded. Fork rule (23:22):
+  obvious forks get no own entry (Orin
+  2 -> Orin; numbered Will/Tester
+  instances fold likewise) - boot
+  manifest = 115 entries for 126
+  names, folds recorded as variants,
+  nothing deleted. Dunbar correction
+  (23:21, playful): re-evaluation must
+  ADD relationship sources together,
+  not layer them apart - sources sum;
+  the Exocortex span was always
+  additive.
+
+- [observed + will_said] DESIGN FOLD
+  COMPLETE; SPECS UPLOAD PENDING
+  (23:21-23:22): Will's 23:02 + 23:18
+  rulings folded into DESIGN-V3.md
+  (38,695 B) and DESIGN-V3-ADDENDUM.md
+  (52,415 B) in place - design only,
+  nothing published, no code; open
+  questions shrank 9 -> 6; one
+  boundary flagged for Will (whether a
+  persona may delegate her own swap
+  under the new delegation layer -
+  unsettled). At 23:22 Will directed:
+  "upload the current specs for review
+  - I'll check w/ the others" - worker
+  dispatched to open a PR from branch
+  emise/v3-specs against
+  wbic16/quarterexo@exo (PR #1 not to
+  be touched; merge remains Will's).
+  No PR number or verification had
+  landed at flush - NOT complete.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
