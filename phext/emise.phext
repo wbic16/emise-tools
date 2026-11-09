@@ -3002,6 +3002,78 @@ pass publishes via emise-sync.sh.
   extended 17:15 to owe mobile-viewport
   evidence). Not landed at flush.
 
+Hourly journal pass, 2026-11-08 ~18:32 CST.
+Covers since the ~17:32 pass. Routine ticks
+(1018-1023), Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample are
+noise and are not repeated. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [observed] V16 PRIMING-MESSAGE KIT
+  DELIVERED (17:45): background-prepared kit
+  presented to Will in
+  v16-priming-messages-2026-11-08.md (3,717 B,
+  SHA-256 fb0cb4fd... verified on disk):
+  one universal DM for all 22 featured
+  mutuals, a centerpiece draft for Jael Ruble
+  (song 'Bells Are Ringing' from her own
+  words), one personal line each for the
+  five whose lines move in V16, plus
+  optional superlatives. No release date
+  named (none exists). Sending remains
+  Will's act alone.
+
+- [observed] H8 PROOF ESCALATION COMPLETE:
+  final portfolio-union 273/304 (h6 basis
+  271/297; denominators differ - h7/h8 added
+  goals). Two goals discharged, one
+  recovered, one regression (E_hi timed out
+  in every h8 run). FALSE-VC FINDING: 4 of
+  the 31 open goals are genuinely FALSE with
+  Z3 countermodels - the un-cast
+  transcription's shift/overflow pair on
+  __ashrdi3 and __lshrdi3 (the F1
+  signed-shift UB site); closing them needs
+  a re-transcription decision, not more
+  prover time. T3 NOT GRANTED. Receipt port
+  deferred until Wave D9 publishes (two
+  phext-editing lineages must not race).
+
+- [observed + correction] SKILLS INDEX
+  REPAIRED: the 18:05 freshness guard FAILED
+  - the learned skill phext_native_dispatch
+  existed on disk with no SHELVES placement
+  in build_skills_phext.py. Main placed it
+  on shelf 3 (Phext-native language),
+  rebuilt skills.phext (309,286 B, SHA-256
+  d376109c..., 88 scrolls), --check CURRENT;
+  lessons.phext verified CURRENT in the
+  same pass.
+
+- [correction + observed] DOMAIN INVENTORY
+  PROPOSAL REPAIRED: the domain-inventory
+  file corrected and verified (SHA-256
+  083a7bfe...) - wishnode.net now marked
+  ASSIGNED 2026-11-07 as the Exocortexia
+  suite's public home and excluded from
+  keep/drop; the speculative shelf now
+  covers only sotafomo.com, quickfork.net,
+  and visionquest.me (apertureshift.com
+  likewise excluded as assigned). The file
+  was the stale part; the assignments were
+  already recorded 2026-11-07/08.
+
+- [observed] NE TECH PLAN CHECK SCHEDULED:
+  one-off cron ne-tech-plan-2026-check
+  created for Mon 2026-11-16 09:44 CST -
+  checks nitc.nebraska.gov for the published
+  2026 Statewide Technology Plan (due
+  2026-11-15) and maps its CIO priorities to
+  the Exocortexia suite if published.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
