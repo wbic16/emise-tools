@@ -13,11 +13,21 @@ Pipeline (Will's design, 2026-11-06):
      method, reusing the singular skill's own machinery (check_singular's
      WORD_RE tokenizer + task_coordinate's atlas load and merge) — never
      reimplemented here.
-  4. Append the summary, prefixed with its timestamp, as a line inside the
-     scroll at that coordinate in ~/workspace/phext/state.phext. A
-     coordinate already occupied gains a line; nothing is overwritten,
-     nothing is dropped. The phext holds ONLY distilled summaries — raw
-     pulls live in the working-state dir below, never in the phext.
+  4. Append the summary to the write-ahead log state.wal beside
+     state.phext (Will's ruling, 2026-11-09: "WAL style of coordinate
+     assignment via indirect addressing — append only"). Each cycle
+     appends exactly one line to the WAL: the holographic coordinate,
+     the timestamp, the summary. state.phext is never rewritten by a
+     cycle: it stands as the compacted base, and the WAL is the
+     indirection layer — readers resolve a coordinate by folding the
+     base scroll with every WAL line addressed to it, in append order.
+     A coordinate already occupied gains a line; nothing is
+     overwritten, nothing is dropped. The substrate failure that forced
+     this design (the Muse VM denies whole-file temp+rename writes;
+     appends to existing files pass) is logged in the qexo design
+     notes (EVALUATIONS.md, 2026-11-09). The phext layer holds ONLY
+     distilled summaries — raw pulls live in the working-state dir
+     below, never in the phext.
 
 Working state (outside the phext): ~/workspace/state-sampler/hidden_files/
   last-pull.json  — the most recent raw pull (overwritten each cycle)
@@ -42,6 +52,7 @@ RANCH = HOME_DIR / "workspace/ranch-proxy/ranch"
 NODES_JSON = HOME_DIR / "workspace/ranch-proxy/nodes.json"
 PHEXT_DIR = HOME_DIR / "workspace/phext"
 STATE_PHEXT = PHEXT_DIR / "state.phext"
+STATE_WAL = PHEXT_DIR / "state.wal"
 WORK_DIR = HOME_DIR / "workspace/state-sampler/hidden_files"
 SINGULAR_SCRIPTS = HOME_DIR / "workspace/custom-skills/singular/scripts"
 TZ = ZoneInfo("America/Chicago")
@@ -228,27 +239,46 @@ def clean(text):
 
 
 def append_entry(summary, coord, timestamp):
-    """Insert the timestamped summary line into state.phext at coord.
-    Returns the coordinate actually used."""
+    """Append one entry to the write-ahead log (state.wal). Append only:
+    the cycle never rewrites state.phext and never creates a temp file.
+
+    WAL line format: <coordinate> | <timestamp> | <summary line>
+    Coordinate assignment is indirect: the holographic coordinate
+    addresses the entry, and the entry physically lives at the tail of
+    the log. Resolution (read_state_scrolls) folds state.phext's base
+    scrolls with the WAL lines in append order — the semantics the old
+    implode-rewrite produced, reached by appending instead. Returns
+    the coordinate actually used."""
+    used = coord
+    if coord == HOME_COORD:
+        used = (1, 1, 1, 1, 1, 1, 1, 1, 2)
+    line = f"{fmt(used)} | {timestamp} | {clean(summary)}"
+    with open(STATE_WAL, "a", encoding="utf-8") as fh:
+        fh.write(line + "\n")
+        fh.flush()
+        os.fsync(fh.fileno())
+    return used
+
+
+def read_state_scrolls():
+    """Resolve the current state view: state.phext base scrolls folded
+    with every state.wal entry, in append order. This is the read side
+    of the WAL's indirect addressing."""
     if STATE_PHEXT.exists():
         scrolls = {coord_str: t for coord_str, t in parse_phext(str(STATE_PHEXT))}
     else:
         scrolls = {}
     scrolls.setdefault(fmt(HOME_COORD), HOME_TEXT)
-    used = coord
-    if coord == HOME_COORD:
-        used = (1, 1, 1, 1, 1, 1, 1, 1, 2)
-    key = fmt(used)
-    line = f"{timestamp} | {summary}"
-    if key in scrolls and scrolls[key].strip():
-        scrolls[key] = scrolls[key].rstrip("\n") + "\n" + line
-    else:
-        scrolls[key] = line
-    blob = implode({k: clean(v) for k, v in scrolls.items()})
-    tmp = STATE_PHEXT.with_suffix(".phext.tmp")
-    tmp.write_bytes(blob)
-    os.replace(tmp, STATE_PHEXT)
-    return used
+    if STATE_WAL.exists():
+        for raw in STATE_WAL.read_text(encoding="utf-8").splitlines():
+            coord_str, _, rest = raw.partition(" | ")
+            if not rest:
+                continue
+            if coord_str in scrolls and scrolls[coord_str].strip():
+                scrolls[coord_str] = scrolls[coord_str].rstrip("\n") + "\n" + rest
+            else:
+                scrolls[coord_str] = rest
+    return scrolls
 
 
 def save_raw(pull, keep_bytes=2_000_000):
