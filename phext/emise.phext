@@ -1847,6 +1847,131 @@ no email-content details were inscribed.
   landed items; the main channel is the
   sync point across all open side quests.
   Skill: bootvine-status-sync.
+
+Hourly journal pass, 2026-11-09 ~09:32 CST.
+Covers since the ~08:32 pass. Routine ticks
+1106-1111, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog are noise and are not
+repeated; the register rose 20 -> 22
+active (#53, #54). The safe-space register
+was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+
+- [observed correction] TASKS REGISTER
+  REPAIR COMPLETE (08:22, carried - not
+  inscribed by the 08:32 pass): the account
+  given to Will at 07:53 was superseded -
+  wrong on cause and scale. Proven
+  mechanism: a write-probe during the
+  01:29-01:55 sampler diagnosis truncated
+  tasks-source.json / tasks.phext; restore
+  from the Rock Mountain 22:33 backup (199
+  entries) knowingly left the post-backup
+  delta owed. Real loss was 29 appended
+  entries (228 peak); restored by session-
+  log replay and proven exact at the 22:48
+  checkpoint against an independent copy.
+  Register verified at 231, then 232 after
+  the preview task was appended; incident
+  note in tasks-register-repair-2026-11-09/.
+
+- [will_said + observed] QEXO PR #3 MERGED;
+  PUBLISH BLOCKED ON CREDENTIAL: finishing
+  pass COMPLETE (~08:29, branch 8def353 ->
+  5298e4a): gates green, and a release-
+  gating correction - plain cargo package
+  had FAILED on the night-before tree
+  (a .pyc swept in by Cargo.toml include;
+  the earlier 'verified clean' ran with
+  --allow-dirty and masked it); fixed
+  e91d0c2, plain package then exits 0.
+  Will authorized at 08:16, for this
+  instance: 'Merge PR #3 and publish 0.3.0
+  for me.' PR #3 MERGED bc1d6382 (verified
+  from main; v2.1 disk gate ported into v3
+  plan.rs in the merge resolution). Gates
+  on the merged tree: 16/16, 32/32, 19/19,
+  package + publish --dry-run clean.
+  Publish BLOCKED: no crates.io credential
+  anywhere on aletheia-core. Register #53
+  opened (~08:40): Will to place a token
+  there or name the publish machine.
+
+- [will_said] THIRST QUEST IMMEDIACY RULE
+  (08:31): immediately after choosing and
+  downloading a paper in HTML form, read
+  it, integrate it, then journal about the
+  process in mastery.phext. The daily
+  thirst cron was updated in-session for
+  both this and the impact-estimate /
+  actual-delta fields.
+
+- [will_said + observed] MASTERY.PHEXT
+  CREATED AND PUBLISHED (~08:33): at Will's
+  direction mastery.phext was published
+  along with the other MOAT items to
+  wbic16/agi@exo, commit fd84a264, sha256
+  f407813e verified identical remote =
+  local (1,033 B, Home scroll only at
+  creation; entry #1 lands with Paper 008).
+  Purpose: research.phext holds what papers
+  say; mastery.phext holds what absorbing
+  them taught. SOURCES.md gained a mastery
+  row; folding mastery into the merged
+  agi.phext is a separate switch, not yet
+  wired.
+
+- [observed] AGI README REVISED, PRUNE
+  (~08:40): at Will's direction ('they're
+  still in history') 11 unused Feb-2026
+  files were pruned from wbic16/agi@exo
+  (63dd8979) and README.md / AGENTS.md
+  rewritten for the collection era.
+
+- [observed] S006 TINYTORCH COMPLETE
+  (08:50, task closed): research.phext 311
+  scrolls, sha256 f2abd93a; 9 concepts
+  (Cluster M, 1.2.89-1.2.97), registry 311
+  (True 163, Unknown 148, False / Fiction
+  still 0), Lean re-proof green, Oracle
+  held ~35% by rule 12; concepts now
+  97/100. A combined tracker pass was
+  dispatched at ~08:51 (charter rule 17,
+  Paper 008 absorption, mastery entry #1)
+  and was still running at flush - NOT
+  complete, nothing verified yet.
+
+- [will_said + observed] V16 ACCEPTED AS
+  SHIPPED (morning): Will watched the
+  delivered film ('wow :)') and will upload
+  the high-quality version to YouTube
+  himself; the flagged Jael highlight-
+  window judgment call is accepted as
+  shipped - no fix cycle requested. That
+  closes the Jael gate flagged at 05:32.
+
+- [observed] THEIA CHECK-IN; REGISTER #54
+  OPENED (08:44-08:49): daily check-in
+  succeeded via aletheia-core; Theia steady,
+  blockers unchanged (SSH key refused on
+  15 Shell nodes, Glia read-only since
+  Oct 27). Her new ask - permission to
+  deploy the pushed-but-never-deployed
+  edit.phext.io home-page change on awsbox -
+  was tracked as register #54 (register
+  now 22 active); an approve / hold card
+  was presented to Will, no answer yet.
+
+- [observed, carried] LOST-WORK SWEEP
+  FIRST RUN (07:44): scanned 172 site-map
+  repos, 61 with an exo branch; 24 distinct
+  branches flagged, plus no-ancestor and
+  merged-undeleted branches. Two flags are
+  deliberate preserves, not lost work:
+  phext-lattice PR #7 / #9 branches, closed
+  by Will's 2026-11-08 decision.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
