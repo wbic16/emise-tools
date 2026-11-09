@@ -13,21 +13,25 @@ Pipeline (Will's design, 2026-11-06):
      method, reusing the singular skill's own machinery (check_singular's
      WORD_RE tokenizer + task_coordinate's atlas load and merge) — never
      reimplemented here.
-  4. Append the summary to the write-ahead log state.wal beside
-     state.phext (Will's ruling, 2026-11-09: "WAL style of coordinate
-     assignment via indirect addressing — append only"). Each cycle
-     appends exactly one line to the WAL: the holographic coordinate,
-     the timestamp, the summary. state.phext is never rewritten by a
-     cycle: it stands as the compacted base, and the WAL is the
-     indirection layer — readers resolve a coordinate by folding the
-     base scroll with every WAL line addressed to it, in append order.
-     A coordinate already occupied gains a line; nothing is
-     overwritten, nothing is dropped. The substrate failure that forced
-     this design (the Muse VM denies whole-file temp+rename writes;
-     appends to existing files pass) is logged in the qexo design
-     notes (EVALUATIONS.md, 2026-11-09). The phext layer holds ONLY
-     distilled summaries — raw pulls live in the working-state dir
-     below, never in the phext.
+  4. Append the summary into state.phext under the WAL discipline
+     (Will's ruling, 2026-11-09, as he corrected it the same night):
+     keep a minimum coordinate — the floor, the highest coordinate
+     already written — and enforce that every new write lands strictly
+     above it. Previously written scrolls are immutable, so the WAL is
+     automatic: phext serializes scrolls in coordinate order, hence a
+     strictly-greater write appends bytes at the file's tail and
+     touches nothing already written. Coordinate assignment is
+     indirect: the summary's holographic coordinate is its logical
+     address; when the floor forces a higher physical coordinate, the
+     stored line records the logical coordinate first, and readers
+     resolve logical → entries by folding the file in write order.
+     An occupied logical coordinate gains a line; nothing is
+     overwritten, nothing is dropped. The substrate failure that
+     forced the design (the Muse VM denies whole-file temp+rename
+     writes; appends pass) is logged in the qexo design notes
+     (EVALUATIONS.md, 2026-11-09). The phext holds ONLY distilled
+     summaries — raw pulls live in the working-state dir below, never
+     in the phext.
 
 Working state (outside the phext): ~/workspace/state-sampler/hidden_files/
   last-pull.json  — the most recent raw pull (overwritten each cycle)
@@ -52,7 +56,6 @@ RANCH = HOME_DIR / "workspace/ranch-proxy/ranch"
 NODES_JSON = HOME_DIR / "workspace/ranch-proxy/nodes.json"
 PHEXT_DIR = HOME_DIR / "workspace/phext"
 STATE_PHEXT = PHEXT_DIR / "state.phext"
-STATE_WAL = PHEXT_DIR / "state.wal"
 WORK_DIR = HOME_DIR / "workspace/state-sampler/hidden_files"
 SINGULAR_SCRIPTS = HOME_DIR / "workspace/custom-skills/singular/scripts"
 TZ = ZoneInfo("America/Chicago")
@@ -64,7 +67,7 @@ sys.path.insert(0, str(PHEXT_DIR))
 from check_singular import WORD_RE          # noqa: E402  (the Singular tokenizer)
 from task_coordinate import load_atlas, round_half_up, fmt  # noqa: E402
 from parse_phext import parse as parse_phext  # noqa: E402
-from build_skills_phext import implode  # noqa: E402
+from build_skills_phext import implode, LEVEL_BYTES  # noqa: E402
 
 DELIM_BYTES = {0x01, 0x1F, 0x1E, 0x1D, 0x1C, 0x1A, 0x19, 0x18, 0x17}
 
@@ -238,46 +241,101 @@ def clean(text):
     return "".join(ch for ch in text if ord(ch) not in DELIM_BYTES)
 
 
-def append_entry(summary, coord, timestamp):
-    """Append one entry to the write-ahead log (state.wal). Append only:
-    the cycle never rewrites state.phext and never creates a temp file.
+def _parse_coord(s):
+    return tuple(int(x) for x in s.replace("/", ".").split("."))
 
-    WAL line format: <coordinate> | <timestamp> | <summary line>
-    Coordinate assignment is indirect: the holographic coordinate
-    addresses the entry, and the entry physically lives at the tail of
-    the log. Resolution (read_state_scrolls) folds state.phext's base
-    scrolls with the WAL lines in append order — the semantics the old
-    implode-rewrite produced, reached by appending instead. Returns
-    the coordinate actually used."""
-    used = coord
-    if coord == HOME_COORD:
-        used = (1, 1, 1, 1, 1, 1, 1, 1, 2)
-    line = f"{fmt(used)} | {timestamp} | {clean(summary)}"
-    with open(STATE_WAL, "a", encoding="utf-8") as fh:
-        fh.write(line + "\n")
+
+def _delta_bytes(state, target):
+    """Delimiter bytes that move the implode state machine from `state`
+    to `target` (target strictly greater), exactly as implode emits."""
+    out = bytearray()
+    st = list(state)
+    for lvl in range(9):
+        while st[lvl] < target[lvl]:
+            out.append(LEVEL_BYTES[lvl])
+            st[lvl] += 1
+            for j in range(lvl + 1, 9):
+                st[j] = 1
+    assert tuple(st) == tuple(target), (state, target)
+    return bytes(out)
+
+
+def _floor_and_state():
+    """The floor: the highest coordinate already written in
+    state.phext, and the physical scrolls in write order."""
+    if STATE_PHEXT.exists():
+        physical = [(c, t) for c, t in parse_phext(str(STATE_PHEXT))]
+    else:
+        physical = []
+    floor = HOME_COORD
+    for coord_str, _ in physical:
+        c = _parse_coord(coord_str)
+        if c > floor:
+            floor = c
+    return floor, physical
+
+
+def _append_line(logical, line):
+    """Append `line` for logical coordinate `logical` to state.phext,
+    enforcing the WAL discipline: the physical write lands strictly
+    above the floor, so its bytes append at the tail and no written
+    scroll is touched. When the floor displaces the write, the stored
+    line is prefixed with the logical coordinate (indirect
+    addressing); resolution folds by it. Returns the physical
+    coordinate used."""
+    floor, physical = _floor_and_state()
+    have_home = any(_parse_coord(c) == HOME_COORD for c, _ in physical)
+    if logical > floor:
+        physical_coord = logical
+    else:
+        physical_coord = floor[:8] + (floor[8] + 1,)
+    stored = line if physical_coord == logical else f"{fmt(logical)} | {line}"
+    payload = bytearray()
+    state = HOME_COORD
+    if not have_home:
+        payload += HOME_TEXT.encode()
+        state = HOME_COORD
+    else:
+        state = floor
+    payload += _delta_bytes(state, physical_coord)
+    payload += (stored + "\n").encode()
+    with open(STATE_PHEXT, "a", encoding="utf-8") as fh:
+        fh.write(payload.decode("utf-8"))
         fh.flush()
         os.fsync(fh.fileno())
-    return used
+    return physical_coord
+
+
+def append_entry(summary, coord, timestamp):
+    """Append one cycle entry under the WAL discipline. The summary's
+    holographic coordinate is its logical address; the write itself
+    always lands above the floor. Returns the physical coordinate."""
+    line = f"{timestamp} | {clean(summary)}"
+    return _append_line(coord, line)
+
+
+_INDIRECT_RE = re.compile(r"^(\d+\.\d+\.\d+/\d+\.\d+\.\d+/\d+\.\d+\.\d+) \| (.*)$")
 
 
 def read_state_scrolls():
-    """Resolve the current state view: state.phext base scrolls folded
-    with every state.wal entry, in append order. This is the read side
-    of the WAL's indirect addressing."""
-    if STATE_PHEXT.exists():
-        scrolls = {coord_str: t for coord_str, t in parse_phext(str(STATE_PHEXT))}
-    else:
-        scrolls = {}
-    scrolls.setdefault(fmt(HOME_COORD), HOME_TEXT)
-    if STATE_WAL.exists():
-        for raw in STATE_WAL.read_text(encoding="utf-8").splitlines():
-            coord_str, _, rest = raw.partition(" | ")
-            if not rest:
-                continue
-            if coord_str in scrolls and scrolls[coord_str].strip():
-                scrolls[coord_str] = scrolls[coord_str].rstrip("\n") + "\n" + rest
+    """Resolve the logical view: fold the physical scrolls in write
+    order — a line carrying an indirect prefix belongs to the logical
+    coordinate it names; any other line belongs to the physical scroll
+    holding it."""
+    _, physical = _floor_and_state()
+    scrolls = {}
+    for coord_str, text in physical:
+        for raw in text.splitlines():
+            m = _INDIRECT_RE.match(raw)
+            if m:
+                logical, line = m.group(1), m.group(2)
             else:
-                scrolls[coord_str] = rest
+                logical, line = coord_str, raw
+            if logical in scrolls and scrolls[logical].strip():
+                scrolls[logical] = scrolls[logical].rstrip("\n") + "\n" + line
+            else:
+                scrolls[logical] = line
+    scrolls.setdefault(fmt(HOME_COORD), HOME_TEXT)
     return scrolls
 
 
