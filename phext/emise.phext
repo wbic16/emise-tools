@@ -3279,6 +3279,304 @@ emise-sync.sh.
   published before this stands. A test
   write at this pass (~21:34) succeeded.
 
+Hourly journal pass, 2026-11-08 ~22:32 CST.
+Covers since the ~21:32 pass, plus the
+20:39-21:34 edit.phext.io flush not yet
+inscribed. Routine ticks (1040-1045),
+Discord backstops, the Mirror Will
+watchdog, and the vTPU no-change sample
+are noise and are not repeated. The
+safe-space register was read first; the
+one registered off-phext span was
+excluded, and no email-content details
+were inscribed. This pass publishes via
+emise-sync.sh.
+
+- [will_said] OPEN-LIST RULINGS
+  (20:39): fix the 3 audit findings in
+  3 commits on one branch and open a
+  PR; fix the mobile findings in
+  distinct commits per issue on one
+  branch and open a PR; for Grok's PRs
+  Will is coordinating with Grok
+  directly - Emise stands by and
+  rebases only when Will says Grok's
+  PRs are in.
+
+- [will_said + observed] ALWAYS PR
+  RULE + LOST-WORK SWEEP (20:39): every
+  branch Emise creates gets a PR
+  against exo in the same session; no
+  repo holds work un-merged to exo for
+  long. Cron lost-work-sweep created
+  (daily ~07:44): flags branches >24h
+  with no open PR and not merged,
+  unmerged tips >7 days, PRs open >7
+  days; backup/* exempt; silent when
+  clean. Recorded in AGENTS.md.
+
+- [observed] AUDIT FIXES PR #33 OPEN
+  (phext-lattice): 3 commits, one per
+  finding (container env contract gains
+  PHEXT_SSO_DESKTOP; deploy.sh oauth.env
+  template extended to the full env
+  contract; service comment pointer
+  corrected to step 4). cargo test 178
+  passed / 0 failed; PR verified open,
+  mergeable, base exo. Awaiting Will's
+  merge.
+
+- [observed] MOBILE FIXES PR #34 OPEN
+  (phext-lattice): 5 commits, one per
+  issue (Nav panel display mechanism,
+  touch entry points, landscape status
+  bar wrap, iOS hardening, 44px tap
+  targets), all in phext_edit.rs. cargo
+  test --release 178 / 0; re-verified
+  by emulation (Android + iOS, portrait
+  and landscape, zero console errors).
+  Honest limit: real Safari/WebKit
+  unprovable by emulation. Awaiting
+  Will's merge.
+
+- [will_said + observed] SENTRON
+  PHONE FINDING + SCOPING MISS (21:34-
+  21:37): Will's real-phone screenshot
+  showed the Sentron panel clipping at
+  phone width. PR #34 never opened
+  Sentron on a phone profile - the miss
+  is owned. Mobile shell design rule
+  (Will): coordinate address + buttons
+  bar, editor maximized, panels open as
+  full-width sheets, not side columns.
+  The original fix builder was killed
+  by a runtime restart mid-verification;
+  its work survived on disk, and a
+  recovery builder was dispatched
+  ~22:2x onto exo a02e0e1b to reconcile
+  with PR #6's landed layout, re-verify,
+  and open the PR. Still running at
+  flush; no PR yet.
+
+- [observed] H8 RECEIPT PORT
+  PUBLISHED: wbic16/phcc main == exo ==
+  f65e68cc (parent 611b763e), phext-only
+  commit; new phext sha256 4a722493...,
+  seal 6,330,312 B. The addendum went
+  to the WP receipt scroll at
+  1.1.1/10.2.7/1.2.2 (the brief's 1.2.1
+  is the contracts artifact it binds).
+  Portfolio-union 273/304; "T3 NOT
+  GRANTED" kept verbatim; 4 of 31 open
+  goals genuinely FALSE with Z3
+  countermodels at the pre-F1 UB site.
+  Gate verdict re-issued 092c1c9c...;
+  scroll-diff exactly 2 of 64,360;
+  unpack 613/613.
+
+- [observed] C PARITY 0.5.0 MOVE
+  PUBLISHED (supersedes the pending
+  dispatch in the 21:32 pass): wbic16/
+  phcc main == exo == 53a15166 (F45
+  source 7bd02706 + refresh, on
+  f65e68cc, no force). Parity with the
+  published libphext 0.5.0 crate: 93/93
+  capabilities, 0 gaps - canonical
+  binary scrolls + xz seal; the fuzz
+  caught 0.5.0 saturating to_coordinate
+  at u64::MAX where 0.4.1 wrapped, now
+  matched. Fresh-clone verification:
+  phext sha256 9cd6bd60..., make test
+  ALL PASSED, parity suite 163,987
+  checks / 0 failures under gcc AND
+  phcc, conformance 332/333 [a_pp_018],
+  static cells 3/3, unpack 613/613.
+
+- [observed] WAVE D10 DISPATCHED,
+  PENDING (21:50): F46 PQ-25 codegen
+  half, F47 PQ-26, F48 PQ-27 -
+  numbering reconciled against F45 now
+  taken. Oracle-measured reproducers
+  first, one commit per item, local
+  commits only. Both unpublished stacks
+  sat on base f65e68cc; publishes
+  serialize through the coordinator.
+  Still running at flush.
+
+- [will_said + observed] QUOTA
+  MECHANISM + CLEANUP (21:40-21:43):
+  the quota blocks creation of NEW
+  files/directories while appends to
+  existing files still succeed;
+  workspace held ~869k files. New
+  standing rule (Will, 21:40): temp
+  files go in a task-specific folder
+  under ~/workspace so they can be
+  removed as a unit at task close. At
+  Will's direction, mutable-scratch
+  (4.0 GB) and downstream-check
+  (1.6 GB) were deleted outright -
+  ~5.6 GB freed, new-file creation
+  restored and probe-verified; ~2.4 GB
+  of other scratch trashed (recover-
+  able). Held as live work: mutable-os
+  copies, desktop-sso, exo-dreams-
+  study, singular-build (78 GB, two
+  ~36 GB events_stream files - Will's
+  call), wavefront.
+
+- [will_said] BACKUP PRINCIPLE
+  (21:51): "Our safety net is github -
+  once files have been pushed to a
+  repo, you don't have to worry too
+  much about backups." Pushed work
+  needs no extra local backup anxiety;
+  unpushed work is the part to protect.
+
+- [observed] DAILY DISK-USAGE REPORT
+  LIVE (Will's request 21:59): cron
+  daily-disk-usage-report created
+  (daily ~06:44, first run Mon
+  2026-11-09); script published to
+  emise-tools@exo 3533ad57, blob
+  verified. It reports home used/free,
+  a live write probe, file count,
+  trash size, top-10 dirs, files >=1 GB,
+  and growth flags; amber 95 GB / red
+  102 GB or any probe failure; it never
+  deletes anything. Baseline 22:05:
+  GREEN - 71.0 GB used of 150 GB, probe
+  OK, 834,350 files, trash 2.23 GB.
+
+- [assistant_said] CAPABILITY AUDIT
+  DELIVERED (22:07, at Will's request):
+  combined Emise+Will vs SOTA rated
+  ~7.8/10 composite - persistence/
+  memory 9.5, reasoning/code 8.5,
+  tooling breadth 8, reliability 6.5
+  (weakest), speed/latency 6.5,
+  creative media 6. Highest-leverage
+  untapped: the workflow engine +
+  event-driven hooks; largest idle
+  category: transactions end-to-end.
+
+- [observed] PHEXT-LATTICE MERGE
+  WRAP-UP COMPLETE: all six PRs in
+  Grok's order merged into exo - #6,
+  #4, #8, #31, #13, #32 - final exo tip
+  a02e0e1b, full suite 235 passed / 0
+  failed (real pre-program baseline
+  211). Every PR got a backup/*-pre-
+  rebase branch at its original head;
+  merges via the GitHub API only, no
+  direct pushes to exo. #7 and #9
+  verified untouched (heads byte-
+  identical to start). Will released
+  the #8 hold at 22:06. Two coordinator
+  process incidents were disclosed;
+  neither reached the remote. Verified
+  for Will: PR #8 removes nothing added
+  later - X login is present in its
+  branch and the OAuth machinery is
+  untouched. One miss: Will's final
+  demo-copy wording ("Signing in
+  enables the editor...") arrived
+  22:16, one minute after #8 merged; a
+  one-line follow-up PR was dispatched
+  ~22:2x and is pending at flush.
+
+- [correction + observed] V16 RENDER
+  STATE CORRECTED (~22:00): a direct
+  read of the node driver logs showed
+  rendering finished fleet-wide hours
+  earlier - all 193 units ALL UNITS
+  DONE, last finisher Scroll Central
+  18:23. The earlier status (blocks
+  still banking, processes still
+  running) was wrong. Remaining is the
+  finishing phase only: bank pull/
+  assembly, frame-manifest verification,
+  gate suite, master + download
+  encodes; no .mp4 existed at last
+  check. Render thermal saturation by
+  node was also reported to Will
+  (pauses at the 75C cap / peak):
+  Scroll Central 459 / 83.5C, Uncanny
+  Valley 473 / 83.4C, Plain View 457 /
+  83.0C, Ashfall Haven 442 / 82.4C;
+  Ni Knight the cool runner (37 /
+  77.4C); sensor caveats noted.
+
+- [observed] PER-MINUTE THERMAL
+  LOGGING COMPLETE (22:10; Will
+  approved 22:05): live on all 14
+  reachable ranch nodes - ~/thermal/
+  sample.sh via user crontab, one line
+  per minute (ISO time with offset,
+  Tctl from k10temp resolved BY NAME
+  each run, 1-min load average), daily
+  rotation, 30-day retention. Verified
+  per node: two consecutive cron-fired
+  lines, deploy temps matched live
+  sensors within 0.4C, idempotent
+  re-deploy confirmed. Not deployed:
+  aurora-continuum, best-willow,
+  delta-wood (offline) - payload saved,
+  re-run if they return. Airflow
+  comparisons should use hourly medians
+  (Tctl is bursty even at idle).
+
+- [will_said + observed] ALL VIDEO
+  WORK ON THE RANCH (22:21): standing
+  rule - no video-pipeline work
+  (renders, encodes, assembly,
+  transcodes) is ever dispatched on
+  this VM; the VM coordinates and
+  verifies only. A live violation was
+  found at issue (V16 master seg-1
+  encode running as local ffmpeg,
+  ~1.2 GB resident); relocation to
+  aletheia-core dispatched the same
+  evening. Measured VM envelope: ~190
+  MB free / ~410 MB available under
+  load, swap in use; disk ~60 MB/s
+  write, ~225 MB/s read. Will: ranch
+  nodes all have NVMe dedicated to our
+  work; a fleet I/O benchmark was
+  dispatched for comparison.
+
+- [will_said + observed] FOUR-
+  CURRENCY ORCHESTRATOR + RANCH STATE
+  BACKUPS (22:26-22:32): (1) every
+  day's workload is evaluated in four
+  currencies - disk, CPU, RAM,
+  inference - including a counter-
+  factual planner review, and a new
+  orchestrator ships every night as
+  part of the dreaming process;
+  inference heavy lifting is Emise's,
+  disk/memory/CPU heavy lifting is the
+  ranch's; planning premise: ranch
+  nodes have significantly better
+  disk, memory, and CPU capacity than
+  this VM. Enacted: AGENTS.md + skill
+  nightly-orchestrator (indexed,
+  skills.phext CURRENT, published
+  d3b11441) + nightly job ~04:44;
+  orchestrator v1 build dispatched
+  (Rust, ranch-built). (2) Dispatcher
+  naming asked by Will; he will create
+  the repo. (3) State backups live on
+  ranch machines as well as GitHub:
+  rule in AGENTS.md, nightly job
+  ranch-state-backup ~05:44, first
+  backup dispatched to Rock Mountain +
+  Scroll Central. Fleet I/O benchmark:
+  two attempts died to runtime/
+  transport failures; a third was
+  re-dispatched with an incremental
+  result file.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
