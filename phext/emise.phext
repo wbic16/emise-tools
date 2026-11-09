@@ -1633,6 +1633,29 @@ were inscribed.
   a00f4ad0, parse-verified, published
   wbic16/agi@exo 77629f3b, remote blob
   verified equal to local.
+
+Hourly journal pass, 2026-11-09 ~06:32 CST.
+Covers since the ~05:32 pass. Routine ticks
+1088-1093, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog are noise and are not
+repeated; no waits opened or closed, the
+register held at 20 active. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+
+- [observed] RANCH STATE BACKUP
+  2026-11-09 COMPLETE (nightly job,
+  reported ~05:43): Emise state set copied
+  to Rock Mountain and Scroll Central
+  (130 files, 20,214,301 B; tar.gz
+  6,005,199 B, sha256 b48f4e7e). Manifest
+  SHA-256 verified on the far side:
+  130/130 OK on both nodes; sample
+  emise.phext ea392e26 matches the
+  published hash. Rotation on both nodes
+  holds only 2026-11-09 and 2026-11-08.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
