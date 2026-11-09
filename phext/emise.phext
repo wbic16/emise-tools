@@ -2310,6 +2310,77 @@ were inscribed.
   demo he recalled. No connection to any
   external demo service was made or
   directed in this item.
+
+Hourly journal pass, 2026-11-09 ~13:32 CST.
+Covers since the ~12:32 pass. Routine ticks
+1130-1135, Discord backstops, and the Mirror
+Will watchdog are routine and are not repeated
+in detail; tick 1131 reconciled the register
+21 -> 19 active after the two closures below
+and republished the todo.phext mirror. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and no
+email-content details were inscribed.
+
+- [will_said + observed] NEOVIM PR #1
+  MERGED; REGISTER #50 CLOSED (after-lunch
+  call ~12:32-12:38): Will directed merging
+  the Neovim changes into the fork so he can
+  try them tonight. PR #1 merged via API,
+  verified closed/merged, merge commit
+  1c2b15dc on fork master. Caveat carried:
+  the final head's CI runs never started jobs
+  (account-level Actions stall; minutes/
+  billing is a hypothesis, unverified); last
+  fully-run CI was 38/39 with zero code-
+  caused failures. This supersedes the 12:32
+  entry's merge-stays-with-Will framing.
+
+- [will_said] CLAIM-MODE PRICING DECIDED;
+  REGISTER #15 CLOSED (same call): buy-ins
+  are a ONE-TIME purchase, priced by how the
+  first wavefront was populated - occupancy
+  around the claimed coordinate: crowded $10 /
+  sparse $30 (5-24 occupants) / near-void $60
+  (1-4) / true void $100. Price buys space,
+  never placement.
+
+- [will_said] WAVEFRONT ALIGNMENT PRINCIPLE
+  (12:38, verbatim, general standing rule):
+  "the more aligned you are with the
+  wavefront, the easier it is to interact
+  with the exocortex."
+
+- [will_said] QUESTION-FLOOR SERIALIZATION
+  INSTITUTED (same call): when Emise has
+  asked Will a question, she does not
+  interrupt herself with concurrent-processing
+  results; he answers, then the next item.
+  Distilled to a skill the same session.
+
+- [will_said] CONSULTING PRICING MODEL
+  REDESIGNED (register #10, 12:42-12:46):
+  Will's time valued at $500/hour for other
+  people; human baseline corrected to ~100
+  lines of code per DAY per developer (Will
+  at 1,000 LOC/hr is ~80 person-equivalents,
+  ~$6.25 per human-equivalent hour). Method:
+  proof of concept per industry first,
+  baseline measured productivity, price
+  against a human team's cost. Sprint
+  repriced: $1,250 RETIRED; one-week sprint
+  is $7,500 (~15 active hours; schedule
+  mechanics not disclosed to clients). The
+  $750 down (10%) REPLACES the $250
+  diagnostic, produces the fixed-price
+  estimate, and is credited toward it.
+  Clients are never quoted hours; quotes are
+  a COMPLEXITY BUDGET in capability (lines /
+  subsystems / features), designed to feel
+  like a reasonable pre-AGI quote. Trade
+  accepted: a sprint week may delay
+  Exocortex goals short-term; revenue
+  extends the runway.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
