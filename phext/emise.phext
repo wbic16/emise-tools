@@ -1687,6 +1687,166 @@ email-content details were inscribed.
   NeedsLogin (logged out); enrollment
   (tailscale up + approve) remains Will's
   call.
+
+Hourly journal pass, 2026-11-09 ~08:32 CST.
+Covers since the ~07:32 pass. Routine ticks
+1100-1105, Discord backstops, the vTPU
+tracker (no change, 8/14), the Mirror Will
+watchdog, the morning briefing, and the
+RentAHuman watch (no qualifying bounty) are
+noise and are not repeated; the register
+held at 20 active in every tick. The safe-
+space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [will_said + observed] CALENDAR ACCESS
+  LIVE (07:21, carried - not inscribed by
+  the 07:32 pass): at Will's request, device
+  calendar access on his paired Android
+  (Orin) was granted and verified - a read
+  of Nov 9-15 returned only Veterans Day
+  (Nov 11, all-day). The week-ahead caveat
+  that his device calendar could not be
+  read no longer holds.
+
+- [will_said + observed] AWSBOX RESOLVED
+  (07:48), superseding the NeedsLogin state
+  recorded at 07:32: Will enrolled the AWS
+  box on the tailnet himself - it is now
+  awsbox (awsbox.pizzly-halfmoon.ts.net),
+  tailscale ping direct, SSH over the
+  tailnet from aletheia-core verified.
+  Will's standing rule: all deploys to the
+  box go through awsbox over the tailnet,
+  so ranch egress IP changes no longer
+  break SSH deploys. Made real the same
+  morning: apertureshift deploy.sh
+  retargeted to the tailnet address (repo
+  commit 516c347b, mode verified); Daily
+  Better items 1-2 unblocked. No AWS
+  security-group port was needed for
+  Tailscale (outbound only).
+
+- [will_said + observed] SCHEDULED-JOBS
+  CALENDAR EVENTS CREATED (~07:53): at
+  Will's request (create calendar events
+  for the scheduled jobs, no reminders),
+  21 events covering all 26 enabled user
+  scheduled jobs were created on his
+  device calendar and verified by read-
+  back over Nov 9-10; interval jobs are
+  grouped into 3 cadence events. The
+  events mirror the schedules as they
+  stood today; they do not move if a job
+  is retimed later.
+
+- [will_said + observed] EDIT.PHEXT.IO
+  TAGGED v1.0.0 (before 08:05): at Will's
+  direction the source was tagged v1.0.0
+  on the current tip, verified on the
+  remote; the tag carries the full launch
+  including Will's merge of the mobile
+  layout (PR #36) that morning. Salvage
+  PR #37 was still open at tagging and is
+  NOT in v1.0.0; it can ride a v1.0.1 when
+  Will merges it.
+
+- [observed] PREVIEW DEPLOYMENT BUILT;
+  GO-LIVE WAITS ON WILL (before 08:05): a
+  preview instance for the next
+  edit.phext.io version, pointed at
+  preview.phext.io, was built, running,
+  and verified on the AWS box - separate
+  service, port, and data copy, production
+  untouched. Go-live needs Will's steps
+  only: (1) a GoDaddy A record for host
+  preview pointing to the box; (2) run the
+  two staged install scripts on the box
+  as a sudo-capable login, in order; (3)
+  register the preview OAuth callbacks
+  (Google and X; a separate GitHub app -
+  one callback per app). Until (3) the
+  preview works signed-out only.
+
+- [will_said] QEXO FINISHING PASS
+  DIRECTED, PENDING (08:14): Will directed
+  work on finishing the initial version
+  (read as qexo v3 0.3.0, PR #3). A
+  finishing pass was dispatched (canonical
+  Volumen index recheck, stale spec-pin
+  refresh, full suite re-run, SHIP-NOTES
+  update) and is still pending at this
+  journal - NOT complete, nothing verified
+  yet. Hard limits in the brief: do not
+  merge PR #3, do not publish to crates.io.
+  Will's merge / publish choice among
+  three options was asked and UNANSWERED
+  at flush.
+
+- [will_said] SCROLLTOWN PRODUCTION
+  WORKFLOW DIRECTED, PENDING (morning):
+  Will directed a production queue -
+  storyboards, scripts, episodes, and one
+  intro video per season - and filling out
+  the full story arc; publishing starts
+  Jan 2027, so Nov-Dec 2026 is the art-
+  direction window (visual register - 2D
+  painterly vs glossy 3D - is Will's
+  decision, early-December deadline). The
+  build was dispatched, still pending,
+  nothing verified yet. New person: Julia
+  May, Will's niece, in college in San
+  Francisco; Will wants to ask whether she
+  would help with Scrolltown (art
+  direction / production); an invitation
+  draft was prepared for Will to send
+  himself - invitation and acceptance
+  both open.
+
+- [observed + will_said] MOAT: S006
+  DISPATCHED; THIRST FOR KNOWLEDGE QUEST
+  LIVE (08:19-08:29): S006 (TinyTorch study
+  and ingestion, Chapter 14) was dispatched
+  and is still in flight. Will set up the
+  Thirst for Knowledge quest (08:22): a
+  daily scan of arXiv math/new for ONE
+  candidate paper; a SKIM-BEFORE prediction
+  sealed in the quest log before any full
+  read; absorb as the next tracker paper;
+  AFTER scoring against the skim. Metric
+  added to the Research Oracle detection
+  list: SKIM CALIBRATION (rolling mean
+  |NI error| over the last 10 scored papers
+  plus axis-flag accuracy). Goal and daily
+  cron (~06:44) created and enabled. First
+  scan COMPLETE (08:26): candidate #1 is
+  arXiv:2611.09694 (strong Arnold conjecture
+  for Grassmannians; Cluster E); prediction
+  sealed (quest-log a4a02238): 5 new, 1
+  revised, axis NO, NI ~0.059. Will then
+  AMENDED the protocol: every sourced paper
+  also gets a blind IMPACT estimate and an
+  expanded actual-delta record; first
+  supplement sealed (59f58d9: 4 new links,
+  2 questions, Oracle after ~38%).
+  Absorption of 2611.09694 as Paper 008
+  waits on S006 freeing the tracker
+  builder, as does charter rule 17.
+
+- [will_said] BOOTVINE STATUS FORMAT AND
+  SHARE-FAILURE RULE ADOPTED (08:27-08:29):
+  Will's standing rule, in his words:
+  share success and failure - you never
+  need to hide anything from me. He then
+  adopted the bootvine UI for status
+  updates in the main channel - a text
+  tree, one branch per open side quest
+  with a status glyph, failures shown with
+  their reason, and a closing timeline of
+  landed items; the main channel is the
+  sync point across all open side quests.
+  Skill: bootvine-status-sync.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
