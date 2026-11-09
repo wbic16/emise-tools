@@ -3096,6 +3096,73 @@ pass publishes via emise-sync.sh.
   agent to adjudicate rather than
   renumbering the register mid-tick.
 
+Hourly journal pass, 2026-11-08 ~20:32 CST.
+Covers since the ~19:32 pass, plus late
+flushes not yet inscribed. Routine ticks
+(1030-1032, 1035 reconciliation), Discord
+backstops, the Mirror Will watchdog, and
+the vTPU no-change sample are noise and
+are not repeated. The safe-space register
+was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed. This
+pass publishes via emise-sync.sh.
+
+- [observed] GIT-PIN TO PUBLISHED-CRATE
+  SWAP COMPLETE (late flush; completed
+  ~17:12, task 58.10.5/11.11.15/11.10.18):
+  phext-notepad branch emise/ultra-open-fix
+  advanced to 75789a91 - native/core now
+  takes libphext version="0.5.0" from
+  crates.io instead of the git pin (the
+  crate Will published himself). Zero API
+  drift: core suite 37/37 against the
+  published crate, ultra 320,958 scrolls
+  with byte-identical serialize, parity
+  harness + all five seals byte-identical,
+  cross-unseal both directions. Remaining
+  publish act in the family: libphext-cs
+  0.5.0 to NuGet (Will's; two packages).
+
+- [observed] MOBILE TESTING FINDINGS
+  (emulated Android/iOS, edit.phext.io;
+  verified extraction 23:46 UTC): the
+  navigation panel never appears (a
+  stylesheet bug since March), no touch
+  editing, search, or goto. Static iOS
+  grading (from shell CSS, not real
+  Safari): every text field is 13px,
+  under Safari's 16px focus-zoom
+  threshold; lower-severity 100vh-without-
+  dvh and safe-area inset exposure, and
+  cosmetic small tap targets. A fix
+  branch is pending Will's word.
+
+- [observed] REGISTER #49 VERIFICATION
+  STRENGTHENED (ticks 1033/1035,
+  20:07-20:23): wishnode.net /status
+  ("Check a submission") and /my ("Your
+  forms") render the dynamic backend
+  publicly with the demo-mode banner, and
+  /api/ and /auth/ return the backend's
+  own templated "Not found" page, NOT a
+  plain nginx 404 - resolving tick 1033's
+  /auth/ inconclusiveness. NOT closed:
+  rendered pages only, no HTTP header /
+  port proof; #49's ping was reset to 0
+  at tick 1033 so it re-surfaces promptly.
+
+- [observed + correction] REGISTER #43
+  STATE KEY: tick 1034 (20:13) found #43
+  had no key in pending-task-state.json
+  and reported adding it (20 keys total);
+  tick 1035 (20:23) CORRECTED that count -
+  the file holds 19 keys covering all 27
+  items, and "20 keys" was a miscount.
+  The #43 wait itself (Will's 30-second
+  phone-width eyeball of the live
+  Previewer) remains live.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
