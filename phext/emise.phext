@@ -1927,6 +1927,96 @@ are noise / routine and are not repeated.
   hypotheses/reading order only, Pass 2
   verified via Product Hunt profiles;
   BUILDERS.md deliverable pending.
+
+Hourly journal pass, 2026-11-10 ~08:32 CST.
+Covers since the ~07:32 pass, which closed
+at the 2026-11-10 Log's 07:28 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1244-1249 (register still 21
+active), the vTPU tracker (no change), the
+Discord backstop (healthy), the morning
+briefing, and the Mirror Will watchdog
+(past scope) are noise and are not repeated.
+
+- [will_said + observed] PR #56 MERGED BY
+  WILL; ZERO INDEX PR #57 OPEN (07:30-
+  07:37): Will merged PR #56 (PH badge
+  flip) himself at 07:30 (exo cf3ecffd).
+  Zero Index rebased onto that tree
+  (disjointness verified), rebuilt +
+  retested: PR #57 OPEN (emise/zero-index
+  @ 5ca44a01) - public signed-out GET
+  /zeros, linked from sign-in screen,
+  About, and sitemap; tests 88/0. NOT
+  merged, NOT deployed; rides Will's
+  next awsbox deploy.
+
+- [will_said + observed] ZERO INDEX
+  TRIAGE COMPLETE - WHEAT ONLY (07:31-
+  07:38): Will narrowed scope: "just
+  focus on the wheat being ignored" -
+  spam census dropped. BUILDERS.md
+  COMPLETE: 11 verified builders + 5
+  probable, ranked by evidence.
+  Method correction: PH profile index
+  is blind to same-day launches -
+  get_product_profile returned not-found
+  for Phext Edit itself (control); 69
+  calls yielded ZERO exact matches for
+  Nov-10 launches before call 70 hit
+  the rate limit. Verification done
+  against makers' own public artifacts
+  with strict tie discipline.
+
+- [observed] VC TRACE COMPLETE (07:41-
+  07:47; follow-ons to 08:02): all 174
+  voted launches observed (via
+  hunted.space mirror; PH direct 403)
+  classified - Tier A verifiably VC-tied
+  14, Tier B 0, Tier C checked-no-tie
+  107, unresolvable 53, unchecked 0.
+  Tier A holds 809 of 3,823 votes
+  (21.2%); top 50: 10 of 50 VC-tied.
+  Reconciliation vs the 07:21 count of
+  197 voted: mirror lag + 23
+  unrecoverable deep-tail entries +
+  drift; 5 zeros gained votes after
+  07:21. Full record VC-TRACE.md.
+
+- [will_said + observed] PH API LIMITS
+  CLARIFIED; BUILDERS RE-CHECK HELD
+  (07:41-07:57): documented MCP limit
+  250 req / 900 s; measured wall was
+  ~15-min class (69 calls 07:30:11-
+  07:34:22, call 70 -> 429, probe still
+  refused 07:43, succeeded ~07:49) -
+  not a 4-hour wall. Will (07:56):
+  "respect the api limits and collect
+  the rest of the info needed today" -
+  re-check STOPPED at its control gate:
+  phext-edit profile still not-found
+  at 07:57 (~6h into launch day); only
+  4 paced calls, no 429. Correction:
+  unresolved builder candidates = 40,
+  not 41 (FLORA MCP already resolved);
+  16 builders stand in BUILDERS.md.
+  GraphQL API v2 proposed as the query
+  instrument (Will creates a PH dev
+  app / token via secure flow) -
+  PROPOSED, awaiting Will's yes/no.
+
+- [observed] CORRECTION - PH FIRST-4-
+  HOURS WINDOW (established 2026-11-10):
+  for 12:01-4:00 AM PT (02:01-06:00 CST)
+  homepage order is randomized and vote
+  counts are hidden; board re-sorts
+  ~4:01 AM PT. The Zero Index snapshot
+  (07:05-07:21 CST) postdates the
+  window, so the 1,636-zero count
+  stands; the 04:02 standing read for
+  Phext Edit (0 upvotes) fell INSIDE
+  the window and is NOT evidence either
+  way - corrected.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
