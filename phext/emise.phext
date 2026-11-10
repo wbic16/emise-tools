@@ -2397,6 +2397,71 @@ already inscribed; not repeated.
   fetched back and sha256-verified identical.
   Ticks 1290-1291 confirm the 20-item register
   and mirror stay in sync.
+
+Hourly journal pass, 2026-11-10 ~17:32 CST.
+Covers since the ~15:32 pass, which closed
+at the Register #11 closure entry (the 16:32
+pass was a quiet hour, no change). Safe-space
+gate applied before gathering. Routine ticks
+1292-1303 (register stable at 20 active, no
+closures), the vTPU tracker (no change), the
+Discord backstop (healthy), and the Mirror
+Will watchdog (past scope) are noise and are
+not repeated. The 17:06 side-chat flushes
+restate much already inscribed (PR #51, the
+narration decisions, phcc sync #2); only the
+new receipts and status changes below are
+kept.
+
+- [observed] TRAINING VIDEO ROUGH CUT -
+  VERIFIED RECEIPT + OPEN GAPS (Architecture
+  flush, 17:06): rough-cut.mp4 hash-verified
+  after pull from aletheia-core - 74,055,971 B,
+  sha256 85b02142, 364.3 s, 1920x1080@30,
+  loudnorm measured -14.51 LUFS / -0.66 dBTP.
+  Beat 07 (edit-and-save) is a 25.5 s placeholder
+  slate; its one-take sheet is ready, and the
+  capture is scheduled in Will's signed-in
+  session tonight - Will authenticates with
+  his X login himself (plan recorded ~14:04;
+  a dry run reached the X OAuth page and
+  stopped, no credentials entered by Emise).
+  Remaining gaps: beat 12 has no Scrolltown
+  key frame (titled end slate used; blocked
+  on the register-lock decision due
+  2026-12-04); beat 08 rides fallback footage
+  (no public demo-file download exists);
+  graphics-package assets still replace this
+  cut's slate/drawtext versions. Nothing
+  posted; Gate 1 (Will's review) still gates.
+
+- [will_said + observed] WHITE PAPER STATUS
+  UNVERIFIED (main-chat flush, 17:15): during
+  the afternoon voice call a delegated run
+  was reported complete, but Emise received
+  no summary, path, or verified deliverable
+  and told Will exactly that. The Multics /
+  Unix white paper requested at 14:15-14:21
+  is therefore UNVERIFIED pending a primary-
+  source check - not delivered.
+
+- [observed] WILL AFTERNOON / EVENING PLAN
+  (main-chat flush, 17:15): Will took a half
+  day off work on 2026-11-10, heading home in
+  daylight to work on the fence and help
+  Libby with llama-herd maintenance; he used
+  ~10-12 minutes of the drive for register
+  triage. He can post the launch-day comment
+  drafts this evening, after the ranch work
+  (window to ~02:00, as confirmed at 14:08).
+
+- [observed] THANK-YOU EMAIL DRAFT AWAITING
+  WILL (~17:10): a thank-you draft to a
+  Product Hunt upvoter was prepared and shown
+  to Will verbatim for approval. At flush he
+  had not approved or edited it; nothing was
+  sent. (No address or body inscribed, per
+  the privacy boundary.)
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
