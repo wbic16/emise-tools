@@ -2934,6 +2934,168 @@ and are not repeated.
   delivered in chat (task 34.5.8/
   5.5.8/6.5.8).
 
+
+Hourly journal pass, 2026-11-09 ~23:32 CST.
+Covers since the ~22:32 pass. Safe-space
+register read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+Routine ticks and backstops are noise
+and are not repeated.
+
+- [observed] PAPERS 010 + 011 COMPLETE:
+  Paper 010 (off-policy evaluation,
+  Chapter 17) founded Cluster O -
+  7 new concepts (1.2.110-1.2.116),
+  0 revised, Q48-Q50; Oracle held
+  ~40%. Paper 011 (LeGris et al.,
+  symbolic models of reasoning,
+  Chapter 18) founded Cluster P -
+  7 new (1.2.117-1.2.123), FIRST
+  landed revision (1.2.4 rider;
+  count hit, target missed), Q51-Q53.
+  research.phext: 402 scrolls =
+  registry 402, Lean clean; Oracle
+  rose ~40% -> ~50% (40-60) on 011.
+  Mastery entries #3/#4 published.
+
+- [will_said] DECISION BUTTONS EXPIRE
+  (22:43, standing rule): every
+  options/decision widget lives 5
+  minutes, then never re-appears -
+  no re-sent token, no re-created
+  options, never a live choice. Open
+  decisions migrate to tasks.phext
+  or the Waiting-on-Will register.
+  Enacted same session: AGENTS.md +
+  MEMORY.md, skill decision-button-
+  expiry, skills.phext CURRENT.
+
+- [observed correction] 'HUNT' BUTTONS
+  RESOLVED (22:40): Will's screenshot
+  showed the Nov-7 MOAT option buttons
+  (phext-lattice / SQ / libphext-rs
+  state-machine hunt). He had declined
+  them in words ~3 min after they were
+  offered and redirected the work into
+  MOAT (charter rule 13); his client
+  resurfaced the dead buttons 2 days
+  later. Nothing migrated - nothing
+  remained open.
+
+- [observed] CHAT/PROJECT AUDIT
+  DELIVERED (22:43): 50/50 chats read;
+  12 findings (1 high). HIGH: phcc
+  upstream-drift work ran in two chats
+  with opposite dispositions (landing
+  HELD vs a merge directive). Also:
+  the MCP grant_types bug was fixed
+  twice in parallel (PR #43/#44,
+  reconciled manually), and two
+  stranded Will-waits were found in
+  dormant chats absent from the
+  register (flagged for validation).
+
+- [observed] PHCC: F51 RENAME IN THE
+  PUBLISHED STACK; ATTESTATION V2
+  PUBLISHED; DRIFT AUDIT #2 + SYNC #2
+  PUBLISHED: the +94/-63 Will saw is
+  GitHub's fork banner vs the
+  registered parent frida-forks/tinycc
+  - NOT TinyCC drift; do NOT merge
+  frida main (no in-place re-point
+  route exists - checked). True drift
+  vs TinyCC mob: exactly 1 commit
+  (aade7baf, arm64 wfe/wfi/wfet/wfit).
+  Sync #2 published: main == exo ==
+  75a8919b (pin -> aade7baf, carry
+  re-sealed, verified). Attestation
+  v2 published at 6d117cdc on the F51
+  tip; Will's MSVC re-run is his step.
+
+- [observed] LIBPHEXT-CS: BINARYSCROLL
+  + SEAL FIXES: the 'no BinaryScroll'
+  report was Will's LOCAL stale tree
+  (repo + 0.5.0 package verified good,
+  60/60). SealTests' 5 Windows
+  failures: Joveler XZ init throws on
+  Windows unless passed the bundled
+  liblzma path, and the init latch
+  masked the real error - fixed in
+  PhextSeal.cs only; PR #2 OPEN
+  (fbdeb27), Windows re-run is Will's.
+  Register #52 stands until he
+  publishes libphext-cs 0.5.0.
+
+- [will_said + observed] MCP: 'BUGS ON
+  OUR END' (23:04) + FORENSICS DONE:
+  Will corrected the framing - other
+  providers' MCP clients are stable
+  and well-tested; remaining failures
+  are ours until a receipt proves
+  otherwise. Forensics (PR #46, tests
+  259/259, harness 73/0): NO client
+  has ever completed a token exchange
+  (4 codes issued, 0 tokens); break
+  is uniformly post-code, pre-token.
+  Ours and fixed in PR #46: per-call
+  whole-file re-serialization under
+  the global lock, /mcp/ trailing-
+  slash 404, bad protocol-version
+  handling. PR #46 awaits Will's
+  merge + deploy.
+
+- [will_said] WALKTHROUGH NARRATION:
+  POLISH TIER + EMISE NARRATES AT
+  100%: Will ruled he has no time to
+  narrate; polish tier added to the
+  production plan; then (23:19)
+  'You narrate it, Emise' - Route C
+  (Emise/Aria TTS) DECIDED over voice
+  clone and pro VO. Then: speed back
+  to 100% FOR THE VIDEO (standing
+  120% voice-note preference
+  unchanged). Full track rendered:
+  1,005 words, 12 beats, 364.2 s
+  measured. Production otherwise not
+  started; nothing posted.
+
+- [observed] PRODUCT HUNT: FORUM
+  THREAD LIVE; EMBED PR #47 DONE:
+  Will posted his v2 thread to the PH
+  forum (23:21, publicly visible) -
+  SEPARATE from the launch listing;
+  launch-day links must point at the
+  launch page where votes count.
+  Launch 1310786 still scheduled for
+  2026-11-10 00:00 Pacific. PR #47
+  adds the badge slot (static pre-
+  launch pill; PH_POST_ID flip at
+  go-live is Emise's launch step).
+
+- [observed] PHEXT-LATTICE v1.1.0
+  PUBLISHED (23:29): Will directed
+  evaluate + publish once PRs merged;
+  verdict GO. exo ffdd31e7 carries
+  #43/#44/#45/#46/#47; annotated tag
+  v1.1.0 + GitHub Release live;
+  Cargo.toml now 1.1.0. Tests 265/1 -
+  the one failure is a debug-build
+  latency budget only (release ~6.3
+  ms); documented as follow-up. NOT
+  deployed: the live footer reads
+  v1.1.0 only after Will deploys.
+
+- [will_said] SECURITY + SCALABILITY
+  TESTING DIRECTED (23:26, pending):
+  audit edit.phext.io security, measure
+  CPU cost per edit at small and
+  large scale, and give a design
+  verdict (no build) on an in-page
+  phext server to cut roundtrips.
+  Dispatched, running at flush; no
+  results verified yet.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
