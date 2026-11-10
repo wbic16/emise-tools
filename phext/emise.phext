@@ -2776,6 +2776,164 @@ and are not repeated.
   7.6.11) with local-pack verification
   so it does not block on the publish.
 
+Hourly journal pass, 2026-11-09 ~22:32 CST.
+Covers since the ~21:32 pass. Safe-space
+register read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+Routine ticks, the Discord backstop, and
+the vTPU tracker (no change) are noise
+and are not repeated.
+
+- [will_said + observed] CLIENT BUG
+  REPORTED AND FILED (21:35): all of
+  Will's threads are losing content on
+  his end - text reverts to an earlier
+  point this evening. Verified from
+  Emise's side: the server-side record
+  is INTACT (main chat readable through
+  the 21:35 report itself); the loss is
+  in his client's view, distinct from
+  the compaction issue filed earlier.
+  Feedback shown to Will verbatim and
+  FILED at his direction (21:36),
+  delivery confirmed.
+
+- [observed correction] MCP 'LIVE'
+  CLAIM SUPERSEDED; TWO FIX PRs OPEN:
+  Will deployed phases 1+2 and tested
+  real clients (~21:45): Cursor reached
+  consent; Claude + ChatGPT failed at
+  registration (grant_types), Antigravity
+  timed out, Grok hit consent trouble.
+  Emise's earlier verification had only
+  exercised the anonymous gate shape -
+  a refusal's shape is not a flow; the
+  correction is recorded in task
+  34.20.22/25.11.27/11.14.10. Fixes:
+  PR #43 (interop fixes, tests 253/0,
+  22:01) and PR #44 (client fix -
+  grant_types intersection + form-parser
+  scope bug, scripted full flow green,
+  tests 248/0) - BOTH open, both touch
+  MCP interop from the same exo base;
+  check overlap before merging both.
+  Neither is deployed; real-client
+  retest still pending. Tasks 40.9.13
+  and 34.7.12 closed complete.
+
+- [observed] PAPER 009 COMPLETE;
+  PAPER 010 DISPATCHED: Paper 009
+  (straight-segment, Chapter 16)
+  absorbed - CLUSTER N founded
+  (celestial mechanics), 6 new concepts
+  (1.2.104-1.2.109), 0 revised, Q45-Q47
+  opened; tracker 354 scrolls, registry
+  354 = 354, Lean green. Scorecard #2:
+  concepts exact 6/6, axis YES hit,
+  Oracle ~45% -> ~40% (axis-opening
+  band). Mastery entry #2 published
+  (agi@exo 5b7f1118). Then Will asked
+  which math area the tracker needs;
+  census named PROBABILITY AND
+  STATISTICS (zero concepts held, yet
+  the tracker runs on it); Will posted
+  arXiv:2611.08794v1 (21:33) and Paper
+  010 ingestion was dispatched with its
+  blind skim sealed (quest 329dbb3) -
+  RUNNING, not ingested.
+
+- [observed] PHEXT NOTEPAD REFACTOR
+  COMPLETE (21:58): PR #5 - vendored C#
+  phext sources deleted; the app now
+  consumes libphext-cs 0.5.0 via
+  PackageReference through a small
+  app-side adapter; build 0 errors,
+  43/43 equivalence checks byte-
+  identical, library suite 60/60.
+  Launch diagnosis: the app targets
+  .NET 10 Windows - machines with
+  .NET 8 or older tooling cannot build
+  or launch it. Clean restore awaits
+  Will's NuGet publish of libphext-cs
+  0.5.0 (register #52); first Windows
+  launch still unverified.
+
+- [will_said + observed] EXOVIM:
+  RELEASE LINE LANDED; WAITS #54/#55/
+  #56 RESOLVED, #57/#58 OPENED: the
+  phext-native UI pass completed
+  (21:57, PR #3) and the v0.12.6 release
+  fork completed; PR #3 was MERGED into
+  exovim-0.12 (f3541f53) during the
+  PR #2/#3 resolution (the real conflict
+  was PR #2 vs exo - 303 conflicts from
+  the master/release divergence -
+  resolved by a -s ours supersede
+  commit 84c3a323, tree unchanged), and
+  Will MERGED PR #2 (c8a7c56b): exo IS
+  now the exovim release line, version
+  0.12.6-exovim.1, tag + GitHub release
+  exovim-0.12.6.1 cut. Exocortical PR #4
+  and quarterexo PR #4 were also BOTH
+  MERGED BY WILL - registers #54, #55,
+  and #56 resolved. The tcc -> phcc
+  sweep for both installers rides
+  follow-on PR #5s (registers #57/#58).
+
+- [observed] F52 REFUTED - NO PHCC
+  REGRESSION: the exovim-reported
+  'F42 nullptr regression' was ladder-
+  harness header/binary skew: the phcc
+  tree was fast-forwarded 21:43 but its
+  in-tree binary (2026-11-08, pre-F42)
+  was never rebuilt, so post-F42 headers
+  met a pre-F42 parser. Freshly built
+  phcc at 8217e426 and at tip a3b1a8e6
+  builds the exact exovim tree END TO
+  END (681/681, 0 failed). F52 closed
+  WITHOUT a patch; correction relayed
+  to the exovim workstream. Lesson:
+  rebuild phcc after any source update
+  before building with it.
+
+- [observed] SEALED UPSTREAM CARRY
+  PUBLISHED: wbic16/phcc main == exo ==
+  a3b1a8e6 - upstream.phext.xz (pristine
+  TinyCC at pin 70adbb12) + UPSTREAM.md
+  + tools/upstream_carry.py now ship in
+  the repo; fresh-clone verification:
+  unseal reproduced upstream.phext,
+  unpack 558/558 files SHA-256-verified,
+  0 failures. phcc.phext untouched.
+
+- [will_said + observed] TCC -> PHCC
+  RENAME DIRECTED; ATTESTATION CLEAN:
+  Will directed that all tcc commands
+  be rewritten to phcc (task 25.6.7/
+  7.6.11/6.6.8), dispatched as PATCHES
+  F51 - user-facing commands and the
+  binary's primary name; upstream
+  historical material and libtcc API
+  names deliberately NOT rewritten.
+  Pending at flush, no results yet.
+  Separately verified: the Windows
+  attestation package was already
+  tcc-free; attestation.zip re-delivered
+  to Will in chat (the MSVC attestation
+  run itself remains his step).
+
+- [observed] 90-SECOND EXOCORTEX INTRO
+  RECUT COMPLETED (21:53): Claude's
+  video-only recut had its audio
+  re-added ('Bells are Ringing R2.wav',
+  the V16 track) - mux ran on
+  aletheia-core, never on this VM;
+  verified out.mp4: h264 1280x720 + AAC,
+  exactly 90.000 s, fade measured;
+  delivered in chat (task 34.5.8/
+  5.5.8/6.5.8).
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
