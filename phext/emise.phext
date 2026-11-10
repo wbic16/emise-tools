@@ -3298,6 +3298,140 @@ already closed) are noise and are not repeated.
   aletheia-core was still running at
   flush - do NOT treat PR #52 as
   verified or merged.
+
+Hourly journal pass, 2026-11-10 ~01:32 CST.
+Covers since the ~00:32 pass, which closed
+at the 2026-11-10 Log's 00:21 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1202-1207 (register still 21
+active), the vTPU tracker (no change), and
+the Mirror Will watchdog (watch long over)
+are noise and are not repeated, except the
+tick-1205 register flag noted below.
+
+- [observed] PR #52 VERIFICATION:
+  MERGE-READY (~00:24-00:45): verified
+  on aletheia-core, head d4eaae3 on
+  exo c30be62 (v1.1.1 line + PR #51).
+  Diff CLEAN: 3 files, +91/-12 - only
+  the three stated fixes + tests /
+  harness / docs. cargo test: lib
+  183/183, bin 86/86, image 4/4, real
+  3/3; sole failure the e2e_local
+  latency assertion, CONFIRMED
+  pre-existing on the pristine base.
+  MCP E2E harness: 75 checks, 0
+  failures, 2 skips (by design).
+  Served-instance spot-checks 20/20:
+  anon GET /mcp -> 401 with
+  WWW-Authenticate; consent CSP gains
+  only localhost / 127.0.0.1 http;
+  no-scope registration offered
+  read+write, explicit read stays
+  read-only. One nit: mcp_e2e.py mode
+  100755 -> 100644 (cosmetic). Nothing
+  merged in the verification itself.
+
+- [will_said + observed] MCP WORKS -
+  WILL CONFIRMED (~00:50): Will:
+  "it works!" - screenshot of Claude
+  (hosted client) connected to the
+  phext-edit MCP server; it answered
+  "find the test of will" with 18
+  hits across 13 scrolls, correctly
+  listing the Test of Will. A hosted
+  client - the class that failed
+  registration on 2026-11-09 - has
+  registered, authorized, and run a
+  real search against production.
+  Task 38.4.7/7.5.7/6.6.11 complete;
+  the MCP client fix is fully closed,
+  closing the loop on Will's
+  2026-11-09 "you didn't actually
+  test" correction. Emise's protocol
+  probes agreed: discovery 200; DCR
+  with a superset grant returned 201
+  with grants intersected to
+  [authorization_code, refresh_token];
+  authorize survives the sign-in round
+  trip. Emise's scripted browser leg
+  was stood down as superseded; a
+  read-only test client registration
+  remains server-side, never
+  authorized, holding no secret.
+
+- [will_said + observed] MCP INTEROP
+  CONTINUES: ONLY CLAUDE WORKING;
+  PR #53 OPEN; FINAL-DEPLOY RULING
+  (~00:58-01:15): Will: "only Claude
+  is working so far." Every
+  anonymously probeable server leg
+  passed live. Production footer
+  reads v1.1.1-4-ga6d4d26 - PR #51 and
+  PR #52 ARE merged and deployed in
+  that build (superseding their
+  earlier not-merged states above).
+  Cursor's flow reached a correct
+  consent page (client Cursor, scope
+  phext:read only) but Approve "does
+  not do anything"; Grok gets stuck
+  on accept. Hypothesis, NOT proven:
+  phone app browsers swallow the
+  cross-origin redirect that follows
+  the consent form POST. PR #53 OPEN
+  (emise/consent-continue-page @
+  41ed5da on exo a6d4d26; phext_edit.rs
+  +274/-18), awaiting Will's merge +
+  deploy: cross-origin consent POST
+  outcomes now answer 200 with an
+  "Approved - you're connected"
+  Continue page (anchor + meta-refresh
+  + JS replace); same-origin keeps
+  the 302. Tests 278/1 with fix vs
+  277/1 pristine - sole failure the
+  pre-existing latency assertion.
+  Will's ruling: the deploy carrying
+  this fix "will be the final deploy
+  before launch, let the chips fall
+  where they may" - then the site is
+  frozen for the 02:00 CST Product
+  Hunt launch. Separately: Claude
+  WRITE access failed - most likely a
+  read-only token (insufficient_scope
+  by design); remedy is reconnect and
+  approve BOTH scopes; Claude's exact
+  error text not yet seen.
+
+- [observed] REGISTER FLAG (tick
+  1205, 01:03): the preview
+  deployment tracked wait
+  (goal_1936f7cb8ed3 - Will's DNS,
+  install, OAuth callback, and
+  separate GitHub app steps) has NO
+  Waiting-on-Will register entry -
+  the same defect class as earlier
+  unregistered waits. NOT added in
+  the tick; flagged for the nightly
+  sweep / main agent to adjudicate
+  as a potential register #60, not
+  silently dropped.
+
+- [observed] EXOVIM FLUSH (01:26;
+  2026-11-09 evening session): the
+  tcc -> phcc sweep is COMPLETE -
+  exocortical PR #5 (register #57),
+  quarterexo PR #5 (#58), and exovim
+  PR #5 (#59) all verified OPEN,
+  merges remain Will's. The phcc
+  rename LANDED in the published
+  stack: wbic16/phcc main == exo at
+  6d117cdc; a fresh build produces
+  ONLY a phcc binary (1.0.0), no tcc
+  file and no shim, libtcc API names
+  deliberately kept. Upstream merge
+  for exovim is a verified NO-MERGE
+  case: upstream release-0.12 head
+  equals the PATCHES pin, delta 0.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
