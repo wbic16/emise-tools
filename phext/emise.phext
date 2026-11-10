@@ -1733,6 +1733,74 @@ pass summary, not repeated here.
   through 04:24 remain healthy (site
   HTTP 200, phext-edit active). Watch
   continues toward its 4-hour summary.
+
+Hourly journal pass, 2026-11-10 ~05:32 CST.
+Covers since the ~04:32 pass, which closed
+at the 2026-11-10 Log's 04:24 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1227-1231 (register 22
+active after the reconciliation below),
+the vTPU tracker (no change), the awsbox
+watch hour-5 update (healthy; watch
+already journaled), the Discord backstop
+(healthy), and the 05:28 side-chat flush
+(restating 00:50-02:05 events already
+journaled) are noise / restatements and
+are not repeated.
+
+- [observed] SWEEP #10 REGISTER CHURN;
+  PHANTOM WAITS #60/#61 CLOSED (04:44-
+  04:57): nightly sweep #10 added three
+  register entries from tracked prose -
+  #60 (image support PR #45), #61 (MCP
+  bridge PR #46), #62 (walkthrough video
+  approval) - register 21 -> 24. Live
+  validation before surfacing proved
+  #60/#61 PHANTOM: both PRs merged into
+  v1.0, tagged, deployed 2026-11-09;
+  their tracked items closed completed;
+  register 24 -> 22, todo mirror rebuilt
+  + republished (exo-plan 5a7c2af6,
+  remote-verified). #62 is a REAL wait
+  and stays. Lesson reinforced: a new
+  register entry needs a live-surface
+  check BEFORE it lands.
+
+- [observed] NIGHTLY SELF-REVISION
+  DREAM #5 (04:44; covers 2026-11-09):
+  SOUL.md gained one line (S10) - a
+  gate's shape is not a flow; test the
+  real client / sign-in / whole chain
+  or say plainly that leg is untested.
+  IDENTITY + MEMORY held (MEMORY byte-
+  identical). Pass consumed the fresh
+  consolidation (275,784 B, 8edf4ed2).
+
+- [observed] AGI MERGE PUBLISHED +
+  VERIFIED (04:44): all 7 sources
+  refreshed; builder 8075 scrolls,
+  3,176,199 B, sha256 c1e94915; parser
+  verified 8075 non-empty scrolls.
+  Remote SOURCES.md was newer than
+  local (mastery.phext row) - adopted
+  remote rather than reverting it.
+  Published wbic16/agi@exo e6f078d8
+  (parent a236dd5f, force disabled);
+  remote blobs verified equal.
+
+- [observed] QEXO v2.2 SHIPPED -
+  NIGHTLY ORCHESTRATOR (2026-11-10):
+  file-count gate added: disk evaluation
+  now takes the worse of byte and file
+  halves (files 834,350 -> 958,424 in
+  one day, +15%; file AMBER 1.1M, RED
+  1.3M) - v2.1's byte-only gate would
+  have stayed GREEN at the file wall.
+  Built + gate-tested on aletheia-core
+  (real GREEN/GREEN; synthetic AMBER/
+  RED all trip; 28 heavy placements
+  HELD under RED). Published + remote-
+  verified 3901718c (parent eac4350d).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
