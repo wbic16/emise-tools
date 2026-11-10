@@ -1653,6 +1653,86 @@ noise and are not repeated.
   phext-edit active). Watch continues;
   it removes itself after the final
   4-hour summary.
+
+Hourly journal pass, 2026-11-10 ~04:32 CST.
+Covers since the ~03:32 pass, which closed
+at the 2026-11-10 Log's 03:29 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1220-1225 (register still 21
+active), the mutable-upstream-sync (03:44,
+exit 0, no drift), the Discord backstop
+(healthy), and the Mirror Will watchdog
+(watch long over) are noise and are not
+repeated. The nightly dream pass (~04:19)
+is recorded in its own publish log and
+pass summary, not repeated here.
+
+- [observed] PHEXT EDIT LAUNCH API-VERIFIED
+  LIVE + STANDING (03:37-04:02): Product
+  Hunt API: launch 1310786 status = "live",
+  tagline intact, mcpServerUrls carries
+  https://edit.phext.io/mcp. Standing at
+  04:02 (signed-out post page): Launching-
+  today badge showing, no featured/rank
+  indicator yet (normal at 2h in), Will's
+  maker comment is the only visible
+  discussion comment, product shows 1
+  follower; PH does not expose numeric
+  upvote counts to logged-out readers -
+  no counts are claimed.
+
+- [observed] CORRECTION - BADGE POST ID;
+  PR #56 OPEN (03:50-04:00): live /embed
+  verification (3x, 2 loads) shows post_id
+  = 1310786, the SAME id as the launch -
+  the build-time "NOT the launch id"
+  assumption was wrong for this launch.
+  Shipped badge code also carried a typo
+  (utm_souce) and lacked embed=true. PR
+  #56 OPEN: "Product Hunt badge goes live
+  (post id 1310786)", branch
+  emise/ph-badge-live on exo 28ce439d,
+  tests lib 183/0, bin 87/0, render clean.
+  Merge + deploy remain Will's.
+
+- [observed] CORRECTION - JOURNAL PR
+  NUMBERS RECONCILED (04:00): a fresh exo
+  read proves exo HEAD = 28ce439d, six
+  commits past the v1.1.1 bump, and PRs
+  #51-#54 are the real sequence (public
+  example wiki, MCP discovery + read/write
+  fix, consent Continue page, challenge
+  scopes). The 01:39-01:40 conclusion
+  that the signed-out browser PR list was
+  unreliable / did not match is
+  SUPERSEDED - the journal narrative was
+  real; the contradiction was resolved
+  by the stronger primary source, not by
+  dismissing either side.
+
+- [observed] SECOND DEPLOY CONFIRMED +
+  WIKI LIVE (04:04): live footer (signed-
+  out) reads "Running build: v1.1.1-8-
+  g28ce439" - production runs current exo
+  head, so the #51-#54 set IS deployed;
+  Will did a second deploy before the
+  launch freeze. Wiki acceptance MET:
+  signed-out https://edit.phext.io/wiki/
+  renders the example encyclopedia with
+  NO wall - 49 scrolls, "The Mini
+  Encyclopedia". The training video's
+  wiki prerequisite is satisfied; the
+  video itself remains parked by Will's
+  call.
+
+- [observed] AWSBOX WATCH HOUR 4 HEALTHY
+  (04:04-04:24): hour-4 update: 13 samples
+  since 03:00, avg load1 0.02, peak 0.15,
+  lowest memory available 2892 MB, 100%
+  service/site uptime, no alerts. Samples
+  through 04:24 remain healthy (site
+  HTTP 200, phext-edit active). Watch
+  continues toward its 4-hour summary.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
