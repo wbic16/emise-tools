@@ -2523,6 +2523,149 @@ no email-content details were inscribed.
   of his own or for discovery/research
   is awaiting his answer.
 
+Hourly journal pass, 2026-11-09 ~20:32 CST.
+Covers since the ~19:32 pass. Routine ticks
+1172-1177, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog (watch over, past scope) are
+routine and are not repeated in detail. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [will_said + observed] FLAME FAVICON
+  CHOSEN, BUILT, AND LIVE: Will chose
+  concept A - flame alone (~19:34) over
+  B (flame + lattice) and C (banner crop).
+  Production set built (favicon.ico with
+  16/32/48, SVG twin, apple-touch-icon,
+  favicon-512). Banner optimization also
+  completed: banner 583,458 B to 120,551 B
+  AVIF / 182,496 B WebP, background
+  234,130 B to 27,167 B AVIF / 54,894 B
+  WebP; combined ~817 KB to ~148 KB per
+  page load. Will also confirmed flipping
+  the Product Hunt thumbnail AND the
+  Phext Edit product-page logo to the
+  flame (~19:36); update applied, launch
+  1310786 still scheduled for 2026-11-10
+  00:00 Pacific. Assets wired as phext-
+  lattice PR #40; Will merged it (~19:56,
+  exo ac80d589). A deploy attempt then
+  blocked at the awsbox sudo gate
+  (password-gated sudo, key-only session),
+  but by ~20:16 outside verification
+  showed the deploy had gone live: flame
+  favicon (4,313 B), optimized banner
+  (182,496 B) and background (54,894 B),
+  and robots.txt demo entry all serving.
+  Register #51 CLOSED; register 19 to 18
+  active; todo.phext mirror rebuilt
+  CURRENT. edit.phext.io now carries the
+  new face on the eve of the launch.
+
+- [observed] PRODUCT HUNT SCOUR FOR QEXO
+  DELIVERED (~19:37): brief grounded in
+  37 read-only Product Hunt MCP calls.
+  Top ideas: list the MCP bridge qexo
+  already has in the MCP directories;
+  front an MCP gateway (Metorial /
+  Scalekit) instead of building auth
+  plumbing; model long-task semantics on
+  FastMCP 3.0; adopt a bounded-execution
+  contract; a glanceable status surface
+  over the qexo queue and ranch state.
+
+- [observed] QEXO DEFINITION + YOUSPOT
+  VOICE TEXT DELIVERED: tweet-worthy qexo
+  definition candidates delivered ~19:38
+  (no pick recorded; recommended: the
+  conductor for your exocortex, pronounced
+  queso). YouSpot How-you-write paste-
+  ready text delivered ~19:50 from the
+  measured tweet register, then replaced
+  ~19:53 by an email adaptation at his
+  direction - same habits re-derived for
+  email (claim first, colon load-bearing,
+  never em-dashes, ask unhedged, concrete
+  times, subject carries the point).
+
+- [will_said] MUTABLE CI/CD RATIFIED
+  (20:04): Will granted standing
+  ratification for unattended mutable
+  phext.io deployment - watch upstream
+  argimenes/mutable-os and automatically
+  deploy updates as continuous CI/CD,
+  resolving the ratification pending
+  since 2026-11-06. Verification remains
+  the gate: failed build/tests, conflicts,
+  or band-purity failures block and
+  report. Skill updated, skills.phext
+  rebuilt CURRENT, synced (78671a8f).
+
+- [observed] MUTABLE DEPLOYMENT PROCESS
+  RESULT (20:08, task 42.4.7/5.5.10/
+  4.4.9): Part A - phext band PURE (three
+  independent checks over the 154-file
+  diff; check-band-purity.sh is now the
+  standing gate). Part B - upstream PR
+  to argimenes/mutable-os BLOCKED on
+  credentials: the token 403s on the
+  upstream repo and the stored gh token
+  on aletheia-core is expired; title and
+  body staged; unblock is with Will.
+  Part C - CI/CD built under the
+  ratification (promote-and-deploy.sh,
+  daily cron ~04:44 CST, dry run exit 0,
+  nothing deployed); SSO at deploy time
+  is env-gating, flagged for confirmation
+  by Will; the sudo link from a key-only
+  session remains unproven.
+
+- [observed] MCP BRIDGE FOR EDIT.PHEXT.IO
+  BUILT (20:16, task 40.9.13/11.10.15/
+  9.9.13): MCP served natively by phext-
+  edit at POST /mcp (stateless Streamable
+  HTTP, JSON-RPC 2.0) behind the existing
+  OAuth session gate of the site; five
+  tools (list_phexts, phext_toc,
+  read_scroll, search_scrolls,
+  write_scroll). PR #41 open (8ea3e232
+  on exo ac80d589); tests 238/0 on
+  aletheia-core. Merge and deploy are
+  with Will / the standing route.
+  Phase 2 (the site as an OAuth 2.1
+  server for hosted web clients) is
+  designed, not built.
+
+- [will_said + observed] CHAT-STATE LOSS
+  MEASURED; FEEDBACK FILED (~20:13-20:16):
+  compaction triggers at 272,000 of a
+  350,000-token window (~78%, not user-
+  configurable); a compaction keeps only
+  the last ~20,000 tokens verbatim.
+  Load-bearing state survives because it
+  lives in files. At the direction of
+  Will, feedback was filed with the Muse
+  team asking to raise the threshold or
+  make it configurable, and confirmed
+  sent.
+
+- [will_said] CORRECTION - THE EDUCATION
+  OF WILL (20:24): Will said he does have
+  a BS in Computer Science from UNL in
+  2006. Verified against his canonical
+  resume: BS Computer Science, University
+  of Nebraska-Lincoln, December 2006.
+  The earlier no-pedigree self-taught
+  gloss was over-broad: no pedigree
+  means no elite-brand pedigree and no
+  pedigree-channel career, not no degree;
+  self-taught covers his deep skills.
+  USER.md corrected in-session; the old
+  line in the investor draft was flagged
+  to Will with a rewrite offered.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
