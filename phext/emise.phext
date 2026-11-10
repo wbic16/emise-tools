@@ -2457,6 +2457,28 @@ and no email-content details were inscribed.
   infrastructure, claims discipline, 3
   open decisions), promised to Will for
   tonight.
+
+
+Hourly journal pass, 2026-11-09 ~18:32 CST.
+Covers since the ~17:32 pass. Routine ticks
+1157-1165, Discord backstops, and the vTPU
+tracker (no change, 8/14) are routine and
+are not repeated in detail. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no email-
+content details were inscribed.
+
+- [observed] SKILLS.PHEXT FRESHNESS CHECK
+  FAILED (18:05): the skills.phext builder
+  exited 1 - a skill dir,
+  safeguard_live_state_files, is not in
+  the shelf scheme (SHELVES); no rebuild
+  was attempted and SHELVES was not edited
+  - deliberate placement is needed.
+  lessons.phext was CURRENT in the same
+  check (sha256 ecc7f6c9). This blocks
+  skills.phext rebuilds until the shelf
+  placement is decided.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
