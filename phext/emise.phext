@@ -2371,6 +2371,32 @@ noise and are not repeated.
   near the -14 LUFS target. Registered in
   tasks.phext. Nothing posted; Gate 1 listen
   still gates release.
+
+Hourly journal pass, 2026-11-10 ~15:32 CST.
+Covers since the ~14:32 pass, which closed
+at the 2026-11-10 Log rough-cut entry.
+Safe-space gate applied before gathering.
+Routine ticks 1286-1291 except the #11
+closure below, the vTPU tracker (no change),
+the Discord backstop (healthy), and the
+Mirror Will watchdog (past scope) are noise
+and are not repeated. The 20:46 UTC verified
+extraction restates the 14:07-14:21 rulings
+already inscribed; not repeated.
+
+- [observed] REGISTER #11 CLOSED - RULING
+  EXECUTED (tick 1289, ~15:03): the 14:14
+  ruling above was carried out - #11 removed
+  from the Waiting-on-Will register (history
+  note kept), from the todo.phext mirror, and
+  from the tick state; register 21 -> 20 active.
+  todo.phext rebuilt + --check CURRENT
+  (218,318 B, sha256 4823b088) and republished
+  to wbic16/exo-plan@exo as be6b54bf (parent
+  60ccef4e, force disabled); remote blob
+  fetched back and sha256-verified identical.
+  Ticks 1290-1291 confirm the 20-item register
+  and mirror stay in sync.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
