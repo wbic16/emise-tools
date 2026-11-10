@@ -2479,6 +2479,50 @@ content details were inscribed.
   check (sha256 ecc7f6c9). This blocks
   skills.phext rebuilds until the shelf
   placement is decided.
+
+Hourly journal pass, 2026-11-09 ~19:32 CST.
+Covers since the ~18:32 pass. Routine ticks
+1166-1171, Discord backstops, and the Mirror
+Will watchdog (watch over, past scope) are
+routine and are not repeated in detail. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [observed] SKILLS INDEX REPAIRED
+  (~18:1x, supersedes the 18:05 failure
+  above): main placed the unplaced learned
+  skill safeguard_live_state_files on
+  shelf 2 (Verification), immediately
+  after verify_quantified_results - no
+  existing volumes moved. Rebuilt
+  skills.phext: 337,947 bytes, 95 scrolls,
+  sha256 9036f2d8; build_skills_phext.py
+  --check prints CURRENT. lessons.phext
+  verified CURRENT in the same pass
+  (sha256 ecc7f6c9), untouched.
+
+- [observed] PRODUCT HUNT MCP CONNECTED
+  (~19:1x): Will posted the MCP URL in
+  the main chat; Emise probed it live
+  (official Product Hunt MCP server,
+  OAuth-protected) and Will completed
+  the connection via the hosted OAuth
+  consent. Verified by a real first call,
+  not just the link: get_my_account
+  returned his authenticated account
+  (wbic16) with all five scopes granted.
+  A custom connector was built and
+  documented under custom-connectors/
+  custom.producthunt/ with 17 tools
+  allowlisted after schema review;
+  launch writes still need Will's
+  authorization in the moment. No
+  pending Product Hunt task was attached
+  - whether it is first used for a launch
+  of his own or for discovery/research
+  is awaiting his answer.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
