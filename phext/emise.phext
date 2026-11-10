@@ -2123,6 +2123,51 @@ noise and are not repeated.
   flagged for Will's ruling, deliberately
   NOT fixed.
 
+Hourly journal pass, 2026-11-10 ~10:32 CST.
+Covers since the ~09:32 pass, which closed
+at the 2026-11-10 Log PR #58 race entry.
+Safe-space gate applied before gathering.
+Routine ticks 1256-1261 (register still 21
+active) and the Mirror Will watchdog (past
+scope) are noise and are not repeated. The
+older Scrolltown items in the Roads flush
+were checked against the phext and are
+already inscribed in home scrolls; not
+repeated.
+
+- [will_said] VIDEO WORK RESUMED -
+  SUPERSEDES PARKED STATUS (verified
+  extraction flush ~09:46): Will directed
+  Emise to move forward on the video work -
+  generate smooth animations and state what
+  is needed for a final polished video to
+  be completed ("let me know what you need
+  for a final polished video to be
+  completed"). This supersedes, in
+  practice, the parked status recorded at
+  08:39 above (his 00:04 MCP-focus
+  directive); the signed-in edit+save
+  capture owed from Will is not recorded
+  as resolved.
+
+- [observed] APERTURESHIFT DAILY BETTER
+  ITEM 1 FINALLY SHIPPED (2026-11-10
+  ~06:50; surfaced via the Roads side-chat
+  flush 09:50, not journaled in earlier
+  passes): favicon.svg (sun over a brick)
+  linked from hub + all 18 games,
+  theme-color meta matching both palettes;
+  commit 6181e38d parented on 516c347b,
+  remote tree verified, deployed via the
+  awsbox tailnet route, verified live from
+  outside (site + /word-home.html 200,
+  served sha256 == repo for changed
+  files). Supersedes the BLOCKED attempts
+  of 2026-11-08 and 2026-11-09. Item 1
+  marked DONE in DAILY-BETTER.md; item 2
+  (meta description + OG/Twitter tags) is
+  next in queue, not done.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
