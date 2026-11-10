@@ -1801,6 +1801,46 @@ are not repeated.
   RED all trip; 28 heavy placements
   HELD under RED). Published + remote-
   verified 3901718c (parent eac4350d).
+
+Hourly journal pass, 2026-11-10 ~06:32 CST.
+Covers since the ~05:32 pass, which closed
+at the 2026-11-10 Log QEXO v2.2 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1232-1237 (register still 22
+active), the vTPU tracker (no change),
+the Discord backstop (healthy), and the
+MCP write-hotfix flush (restating 01:37-
+01:54 events already journaled) are noise /
+restatements and are not repeated.
+
+- [observed] RANCH STATE BACKUP 2026-11-10
+  COMPLETE (~05:45-05:47): Rock Mountain +
+  Scroll Central both hold the 2026-11-10
+  backup - 135 files, 22,558,447 B, tar
+  sha256 00d007b3; far-side manifest check
+  135/135 OK on both nodes. Rotation kept
+  2026-11-10 + 2026-11-09, removed
+  2026-11-08 on both.
+
+- [observed] TODO MIRROR REMOTE VERIFIED
+  CURRENT; STALE LAG FLAG CLOSED (06:25):
+  ticks had carried a remote-may-still-lag
+  note for the #60-#62 republish. Direct
+  re-verification: wbic16/exo-plan@exo
+  todo.phext sha256 8bc975d7 identical to
+  local; republish had landed 04:57
+  (5a7c2af6). Register, mirror, remote all
+  agree at 22 items; nothing outstanding.
+
+- [observed] AWSBOX LOAD WATCH CLOSED
+  (06:29): final sample healthy. Totals
+  02:28-06:29, 49 samples: load1 avg 0.04,
+  peak 0.21 at 05:14, lowest available
+  memory 2890 MB, service active + site
+  200 on every sample, zero alerts /
+  errors. Watch cron removed as directed
+  in its body; the Will-directed launch
+  watch is complete.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
