@@ -3432,6 +3432,115 @@ tick-1205 register flag noted below.
   for exovim is a verified NO-MERGE
   case: upstream release-0.12 head
   equals the PATCHES pin, delta 0.
+
+Hourly journal pass, 2026-11-10 ~02:32 CST.
+Covers since the ~01:32 pass, which closed
+at the 2026-11-10 Log's 01:26 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1208-1213 (register still 21
+active), the vTPU tracker, and the Mirror
+Will watchdog (watch long over) are noise
+and are not repeated.
+
+- [observed] PR #53 DEPLOYED (01:20):
+  Emise's footer watch saw production
+  flip to v1.1.1-6-g0e38682 (merge
+  0e38682, parents a6d4d26 + 41ed5da);
+  outside smoke: site 200, anon POST
+  /mcp -> 401 with challenge intact.
+  This supersedes the OPEN state above
+  and was the final pre-launch deploy
+  under Will's ruling, before the
+  hotfix exception below. Task
+  24.6.10/7.6.10/5.5.8 closed.
+
+- [observed] PROVENANCE FLAG (01:39-
+  01:40): a check found a signed-out
+  GitHub pulls view whose numbering
+  did not match the API-verified
+  in-session PR numbering, and warned
+  journal PR numbers are pointers to
+  check, never records. Primary ground
+  truth cited: awsbox OAuth store -
+  access_tokens 4, refresh_tokens 4,
+  codes 3 of 5 used - the first tokens
+  ever, post-v1.1.1 (before it: zero).
+  The #53 / #54 deployments below rest
+  on footer builds and live challenge
+  reads, not on that view.
+
+- [will_said + observed] CORRECTION:
+  MCP WRITE BUG IS SERVER-SIDE: Will -
+  "I think write access has a bug,
+  both Claude and Grok are hitting the
+  same auth failure." Tracing: the
+  /mcp initial sign-in challenge
+  advertises only phext:read, so
+  clients ask for read only and every
+  live token holds read and nothing
+  else; writes refused for everyone.
+  This supersedes the earlier "most
+  likely Claude's read-only grant,
+  reconnect" explanation above. Will
+  authorized a hotfix exception to
+  the launch freeze: "hotfix the
+  write issue."
+
+- [observed] PR #54 HOTFIX MERGED,
+  DEPLOYED, WRITE PROVEN (~01:37-
+  01:54): Will merged + deployed PR
+  #54 (head 54f21613 on exo 0e386828;
+  phext_edit.rs +34/-5). Production
+  footer verified from outside:
+  v1.1.1-8-g28ce439; live anon POST
+  /mcp challenge now scope="phext:
+  read phext:write" (initial sites;
+  the insufficient_scope step-up
+  naming the specific scope is
+  untouched). Tests 278/1 - sole
+  failure the pre-existing e2e_local
+  latency assertion. Will: "worked!
+  check human.git :)" - /source/human
+  HEAD bc36657 "Grok and Claude at
+  the singularity" (Verse, 07:47 UTC),
+  +69/-1 to CYOA, adding "Test of
+  Will - Record of Chief of Staff"
+  (taken ~01:23, inscribed at Will's
+  direction). A client MCP write
+  landed in the real world. Fresh
+  connects ask both scopes; existing
+  keep read-only until re-authorize.
+  Task 27.5.7/6.5.9/5.5.9 closed.
+
+- [observed] CHATGPT STILL BLOCKED;
+  DIAGNOSIS SHARPENED (open): ChatGPT
+  passes sign-in + consent (PR #53
+  Continue page served), then POST
+  /oauth/token -> 401 twice (nginx
+  log 07:22-07:25 UTC). Its metadata:
+  private_key_jwt / RS256 / jwks_uri
+  chatgpt.com/oauth/jwks.json - that
+  JWKS is reachable from awsbox (200,
+  valid RSA key). The refusing check
+  inside oauth_verify_client_
+  assertion (aud, one-time jti vs
+  assertion reuse, or claim shape)
+  remains unidentified; logs carry
+  no bodies.
+
+- [will_said + observed] MOBILE
+  SEARCH BUG FILED, POST-LAUNCH
+  (01:55-01:56): Will's Android
+  screenshot: edit.phext.io search
+  results for "claude" - every row's
+  coordinate link overlaps its title
+  on a phone-width viewport. Will:
+  "too late for this, but file a bug
+  report." Filed as phext-lattice
+  issue #55, cosmetic / legibility
+  (search itself works), explicitly
+  post-launch, not a blocker. Task
+  35.4.5/5.4.8/4.4.9.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
