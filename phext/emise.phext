@@ -2017,6 +2017,112 @@ briefing, and the Mirror Will watchdog
   Phext Edit (0 upvotes) fell INSIDE
   the window and is NOT evidence either
   way - corrected.
+
+Hourly journal pass, 2026-11-10 ~09:32 CST.
+Covers since the ~08:32 pass, which closed
+at the 2026-11-10 Log's 07:57 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1250-1255 (register still 21
+active), the vTPU tracker (no change), and
+the Mirror Will watchdog (past scope) are
+noise and are not repeated.
+
+- [observed] WIKI DEMO LIVE VERIFIED;
+  TRAINING VIDEO CLARIFICATION (~08:39):
+  signed-out /wiki renders in production
+  (v1.1.1-8-g28ce439) - 49 scrolls, banner,
+  Mini Encyclopedia article, no wall or
+  stuck pane. Will clarified his status
+  ask meant the training video, not the
+  page: video remains PARKED under his
+  00:04 MCP-focus directive - narration
+  (12 beats, 6m04s), shot list, and 17
+  screenshots complete; edit not started;
+  one signed-in edit+save capture still
+  owed from Will. Wiki gate now cleared;
+  video NOT resumed.
+
+- [observed] DAILY THEIA CHECK-IN FAILED
+  (08:44): aletheia-core and its OpenClaw
+  gateway reachable, agent turn failed
+  twice - model billing / unavailable
+  profiles. No new outbox since 2026-11-08;
+  last successful contact 2026-11-09.
+
+- [will_said + observed] PRODUCTCANT
+  CROSS-LINK DECIDED + IMPLEMENTED IN
+  PR #57 (~08:45-09:05): Will - instead of
+  building our own builders list, cross-
+  link to productcant.com/wall (84,557
+  launches at six upvotes or fewer, nothing
+  removed; counts settle ~48h, so Nov-10
+  launches are not on the wall yet). /zeros
+  stays the launch-day snapshot; the wall
+  is the living catalog. PR #57 amended:
+  head cb4bee44, only web/zero-index.html
+  +8/-0 with the cross-link card; tests
+  88/0. Still OPEN, unmerged, undeployed -
+  merge + deploy remain Will's.
+
+- [will_said] VOICE CALL - BICKFORD CLIFFS
+  + LIVING WAVEFRONT (08:49-09:01): Will
+  named the Bickford cliffs - discovery
+  sites cannot deal with modern complexity;
+  builders shut out fall off the cliff.
+  What is needed is an effects-native view:
+  ~10 items arrived at by a recognizable,
+  fair, algorithmic / agent process -
+  "wisdom of the distilled human experiment"
+  in place of wisdom of the crowd. The
+  wavefront framed as a living entity that
+  actively seeks novel ideas, its rules
+  compelling unaligned actors as Bitcoin /
+  Ethereum rules do. Same morning, in the
+  launch context: "the Internet has devolved
+  into a popularity contest." No decisions
+  taken on the surveyed curation systems.
+
+- [observed + will_said] SHOW HN PREP -
+  GUIDELINES READ; DEMO AUDIT (09:02-09:09):
+  the written Show HN guidelines contain NO
+  curation-history prerequisite - corrected
+  (that is community practice, not a written
+  rule); the on-call "~five minutes" edit-
+  window figure was withdrawn as unverified.
+  Assessment (assistant_said, no Will
+  decision): Phext Edit fits the written
+  criteria; the Zero Index itself should NOT
+  be a Show HN (lists are off-topic there).
+  Will (09:06): "the demo page has no
+  instructions" - verified for the wiki demo
+  (no in-page guidance). The ?demo audit,
+  signed out: demo LOADS, origin scroll
+  teaches j/k and dimension keys, nav tree,
+  search and goto all work, edits unsaved;
+  papercuts recorded (goto placeholder
+  notation, focus-dependent keys, empty
+  viewport, unexplained codes).
+
+- [observed] PR #58 OPEN - WIKI START-HERE
+  STRIP; RACE PENDING (flush ~09:13-09:14):
+  PR #58 (emise/wiki-start-here @ 91fc34e9,
+  +31/-0 in phext_edit.rs) adds a #wiki-start
+  strip under the wiki banner; OPEN, not
+  merged, not deployed; tests 87/0 (baseline).
+  A parallel superset build (demo-editor
+  strip + goto placeholder fix, tested 89/0
+  locally) was NOT pushed - it halted at the
+  push step; two factual slips in it were
+  found to fix first (wiki search wording;
+  utilities link is /about, not /). A
+  reconciliation was dispatched to push it
+  as a second commit - NOT yet reported done.
+  Sentron numbering discrepancy (panel
+  Scroll=9 vs teaching Scroll=1, each
+  internally consistent and API-aligned)
+  flagged for Will's ruling, deliberately
+  NOT fixed.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
