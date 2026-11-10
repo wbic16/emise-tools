@@ -26,13 +26,14 @@ Map:
 1.1.1/1.1.5/9.1.1 Log: 2026-11-07
 1.1.1/1.1.5/10.1.1 Log: 2026-11-08
 1.1.1/1.1.5/11.1.1 Log: 2026-11-09
+1.1.1/1.1.5/12.1.1 Log: 2026-11-10
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 22
+Scrolls: 23
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -3096,6 +3097,207 @@ and are not repeated.
   Dispatched, running at flush; no
   results verified yet.
 
+- [observed] PHEXT-LATTICE v1.1.0
+  DEPLOYED + LIVE-VERIFIED (23:34):
+  Will deployed the tagged tree
+  himself; live footer "Running build:
+  v1.1.0", MCP callout + PH badge pill
+  render - PRs #45/#46/#47 in
+  production ~2.5h before launch. The
+  4 build warnings = one root cause
+  (a11y test module lacking
+  #[cfg(test)]); cleanup PR #48 opened
+  23:38 (one line; release warnings
+  4 -> 0, tests unchanged), rides the
+  next deploy.
+
+- [will_said + observed] FOOTER
+  OVERFLOW REPORTED (23:40): Will,
+  testing live v1.1.0: "footer issues
+  - it runs off the page" (page/device
+  unspecified); fix dispatched
+  measure-first. Resolution: PR #49
+  (see 2026-11-10 Log).
+
+- [observed] MCP CONSENT APPROVE DEAD
+  IN PRODUCTION (23:42) + CSP ROOT
+  CAUSE PROVEN + PR #50 (23:54):
+  Claude Desktop + Grok reach our
+  consent page; Approve does nothing,
+  no console errors. Mechanism PROVEN
+  from awsbox logs: consent POSTs DO
+  reach the server, answered 302 with
+  codes issued (5 codes that night,
+  ZERO token exchanges ever);
+  Chrome/WebKit check CSP form-action
+  against the redirect chain, and the
+  app-emitted form-action 'self'
+  vetoes the 302 to the client
+  callback. Correction stands: the
+  pre-#46 "unexplained on theirs"
+  conclusion was WRONG. Fix PR #50
+  (@ f909f348): authorize-route
+  responses only carry form-action
+  'self' https:; rest of site strict;
+  regression assertions + negative
+  control; suite lib 183/0, bin 80/0.
+  Grok: zero Grok authorize requests
+  in the logs - the same veto is
+  consistent, not server-proven.
+
+- [observed] SECURITY + SCALABILITY
+  ASSESSMENT DELIVERED (23:42;
+  resolves the 23:26 pending entry):
+  core gate verified strong
+  (validly-signed but UNAPPROVED
+  session got 403 on every protected
+  route class; OAuth 2.1 PKCE /
+  redirect / scope / replay matrices
+  clean - 24 verified-clean checks).
+  Findings: A-1 HIGH - any X account
+  signing in is auto-admitted as an
+  editor permanently (Will's
+  2026-11-05 ruling; flagged for
+  re-confirmation); A-2/A-3 MEDIUM -
+  uncapped pre-auth body allocation,
+  DCR unauthenticated + unpruned. CPU
+  per composite edit ~5.3 ms at small
+  scale vs ~795 ms at large (~58 MB /
+  320k scrolls), dominated by
+  whole-file re-derivation under one
+  global lock; different files
+  IMPOSSIBLE (one shared open phext +
+  cursor process-wide). In-page phext
+  server verdict: YES, ship a hybrid
+  (in-page read/nav/search + per-scroll
+  base-hash sync); do NOT ship full
+  local-first.
+
+- [will_said] v1.1.1 ORDERED (23:56):
+  Will merged the open PRs and
+  directed "run the next deployment
+  as v1.1.1" - the deployment handed
+  to Emise (contrast v1.1.0, Will's
+  own hand). Contents and outcome in
+  the 2026-11-10 Log.
+Log: 2026-11-10 (America/Chicago)
+
+Hourly journal pass, 2026-11-10 ~00:32 CST. First
+Log scroll for the day; covers since the ~23:32
+pass, which closed at the 2026-11-09 Log's 23:29
+entry - late Nov-9 material flushed after that
+pass is appended to that day's scroll in this
+pass. Safe-space gate applied before gathering.
+Routine ticks 1199-1201 (register unchanged at
+21 active), the vTPU tracker (no change), and
+the Mirror Will watchdog (watch long over,
+already closed) are noise and are not repeated.
+
+- [observed] FOOTER FIX = PR #49, IN
+  v1.1.1 (00:01 correction): the footer
+  worker's verified remote check
+  overturned the interim "not in the
+  release" expectation - PR #49 was
+  merged by Will at 23:55:22, BEFORE
+  his "I merged open PRs" message
+  reached the main chat. Merges after
+  ffdd31e7, in order: #49 (footer),
+  #48 (a11y cfg), #50 (consent CSP)
+  -> exo c5da01ee; zero open PRs. The
+  Architecture chat's footer/wiki
+  update is NOT in exo - anonymous
+  wiki access is NOT part of v1.1.1.
+
+- [will_said + observed] v1.1.1
+  SHIPPED + LIVE-VERIFIED (00:05-
+  00:07): evaluation GO on exo
+  c5da01ee (tests lib 183/0, bin
+  81/0, harness 73/0/2 skips; release
+  build ZERO warnings; sole failure
+  the known e2e_local debug-latency
+  assertion). Version bump 5939f556
+  direct on exo; annotated tag
+  v1.1.1; GitHub Release live.
+  DEPLOYED BY WILL HIMSELF minutes
+  after saying he was going to bed -
+  [will_said] (00:05) "MCP is the
+  main requirement"; he also parked
+  the training video to focus on MCP
+  access. Live footer "Running build:
+  v1.1.1"; anonymous POST /mcp -> 401
+  with resource_metadata. Consent CSP
+  verified against the served tagged
+  binary; the consent page's live
+  header was not directly observed
+  (needs an editor session).
+
+- [will_said + observed] ANONYMOUS
+  EXAMPLE-WIKI ACCESS REQUIRED; PR
+  #51 OPENED (~00:02-00:12): Will -
+  anonymous access to the example
+  wiki is REQUIRED for the training /
+  walkthrough video (the capture runs
+  signed-out); it rides the deployment
+  AFTER v1.1.1. PR #51
+  (emise/public-example-wiki @
+  688b47c on the v1.1.1 head
+  5939f556; phext_edit.rs +324/-24):
+  /api/wiki/* served read-only
+  pre-gate from the already-hosted
+  wiki.phext (49 scrolls; routes take
+  no file parameter, writes -> 405,
+  other API routes 401 signed-out);
+  sign-in screen links the Example
+  wiki. Signed-out acceptance
+  verified: home renders, goto jump
+  works, search works, a neighbour
+  file's text never appears. Footer:
+  #49 already fixed the overflow
+  (measured doc width 1929 -> 1280 at
+  1280 width); sole residue kept is
+  #active-file shrink/ellipsize. NOT
+  merged, NOT deployed - Will's step.
+
+- [observed] WALKTHROUGH CAPTURE
+  COMPLETE (23:51-00:00, Playwright
+  on aletheia-core - Will's 23:46
+  direction, superseding the OBS
+  route): 17 frames at 3840x2160
+  (1920x1080, DSF 2, zoom 150%, big
+  video cursor), signed-out
+  throughout, via the Previewer (the
+  real demo/wiki.phext, byte-identical
+  to the rehearsed copy) and the
+  editor's built-in demo. Verified
+  first-hand: /wiki/ anonymously
+  serves the sign-in wall over a pane
+  stuck on "loading..." - Will's
+  uploaded wiki is NOT reachable
+  anonymously (the gap PR #51
+  closes). GAP, recorded not faked:
+  beat 07 (edit + save) is impossible
+  anonymously - it needs Will's
+  signed-in session.
+
+- [observed] PR #52 SHARED BY WILL;
+  VERIFICATION PENDING (00:21): PR
+  #52 "Fix MCP OAuth discovery,
+  native callbacks, and read/write
+  consent" targets live v1.1.1
+  defects: (1) anonymous GET /mcp ->
+  405 with no WWW-Authenticate (POST
+  correctly -> 401); (2) consent CSP
+  form-action vetoes http localhost /
+  127.0.0.1 callbacks from native MCP
+  clients; (3) clients omitting scope
+  default to read-only though the
+  editor advertises read/write. The
+  author states cargo test / the MCP
+  E2E harness were NOT run in his
+  workspace; Emise's verification on
+  aletheia-core was still running at
+  flush - do NOT treat PR #52 as
+  verified or merged.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
