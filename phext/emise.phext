@@ -2666,6 +2666,116 @@ no email-content details were inscribed.
   line in the investor draft was flagged
   to Will with a rewrite offered.
 
+Hourly journal pass, 2026-11-09 ~21:32 CST.
+Covers since the ~20:32 pass. Safe-space
+register read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+Routine ticks, the Discord backstop, and
+the vTPU tracker (no change) are noise
+and are not repeated.
+
+- [observed] MCP PHASES 1+2 BOTH MERGED;
+  DEPLOY PENDING: PR #41 (native /mcp,
+  phase 1) merged by Will at 20:22
+  (b111a3a1, exo head then); status check
+  20:38 found it NOT yet deployed - live
+  /mcp 404, awsbox checkout still at
+  ac80d589. Phase 2 - phext-edit as a
+  full OAuth 2.1 authorization server
+  for /mcp (discovery, DCR, CIMD, PKCE
+  S256, rotating refresh, replay-revokes-
+  family, RFC 8707/9207; scopes
+  phext:read / phext:write) - BUILT
+  21:05 as PR #42 (8d55edd6, tests
+  245/0). Will questioned it 21:22
+  ("PR#42, ffs really"); verified REAL
+  from the branch blobs, not the worker
+  report. Will MERGED PR #42 at 21:23
+  (merge 2c72b68b, exo head, API-
+  verified). One deploy (pull to
+  2c72b68b + deploy.sh, Will's sudo
+  step) now lands both phases together;
+  live /mcp and AS metadata stay 404
+  until then.
+
+- [will_said + observed] PAPER 009
+  DISPATCHED; PREDICTION SEALED (20:57):
+  Will posted arXiv:2611.08625v1 in MOAT
+  - "Singularities and Collision
+  Criteria in the Gravitational
+  Straight-Segment Problem" (Crespo et
+  al., celestial mechanics). Task
+  45.3.3/4.4.9/4.4.15. Blind skim
+  prediction sealed BEFORE full-text
+  read (quest log da13559): 6 new, 1
+  revised, axis YES (first classical-
+  mechanics ground), NI ~0.060, Oracle
+  ~42% hold/slight fall. Ingestion
+  (Chapter 16, AFTER scoring as
+  calibration datum #2, mastery entry
+  #2) was RUNNING at last flush - no
+  delta, NI, or Oracle result exists
+  yet; do not record as ingested.
+
+- [will_said] TIME-TRAVELER FRAMING
+  (21:02): closing the burn-rate /
+  team-equivalence thread, Will: "Suddenly
+  the time traveler framing is exact."
+  His pattern, per his own record:
+  preparation ahead of need - he did not
+  jump to the future; he built for it
+  and it arrived.
+
+- [will_said + observed] EXOVIM: BUNDLE
+  DIRECTIVE, BOTH HALVES DONE; PROJECT
+  NAME + FULL FORK DIRECTED: Will
+  directed (~21:10) exocortical and qexo
+  to include the Ubuntu build/test deps
+  (ninja-build gettext cmake curl
+  build-essential git unzip + pkg-config
+  lua5.1 liblua5.1-0-dev) and bundle a
+  copy of exovim (task 38.6.8/7.6.10/
+  6.5.8). DONE same evening: exocortical
+  PR #4 (Phase 1 apt extended; new
+  Phase 12 builds exovim into
+  /opt/exovim, stamp-idempotent) and
+  quarterexo PR #4 (qexo had NO tool
+  registry before; PR introduces a
+  static ToolSpec catalog, exovim entry
+  complete with deps, recipe, and the
+  phcc LUA_MATH_LIBRARY pitfall); both
+  PRs verified OPEN at tick 1183
+  (21:23), merges are Will's (register
+  #54/#55). Then Will made exovim the
+  PROJECT name and directed the full
+  fork from Neovim's last release
+  v0.12.6 instead of tracking master
+  (task 31.6.9/8.6.11/6.6.9, executing),
+  renaming the repo himself to
+  wbic16/exovim, main branch master ->
+  exo. A phext-native UI pass (task
+  35.6.6/7.6.10/6.6.9) is also
+  executing. NOTE: the dated-note flush
+  (~21:14) had the fork as answer-only,
+  not directed; MEMORY.md (updated
+  21:30) supersedes it - the direction
+  and rename came later in the hour.
+
+- [will_said + observed] PHEXT NOTEPAD
+  REFACTOR DIRECTED (21:23): Will can't
+  launch Phext Notepad from PR #5
+  (emise/ultra-open-fix); he directed
+  refactoring the C# app to consume
+  libphext-cs from NuGet instead of its
+  vendored phext sources, and said he
+  will get libphext-cs published
+  himself - register #52 confirmed in
+  motion by his own statement. Refactor
+  dispatched (task 41.6.9/8.7.12/
+  7.6.11) with local-pack verification
+  so it does not block on the publish.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
