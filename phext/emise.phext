@@ -1841,6 +1841,92 @@ restatements and are not repeated.
   errors. Watch cron removed as directed
   in its body; the Will-directed launch
   watch is complete.
+
+Hourly journal pass, 2026-11-10 ~07:32 CST.
+Covers since the ~06:32 pass, which closed
+at the 2026-11-10 Log AWSBOX entry.
+Safe-space gate applied before gathering.
+Routine ticks 1238-1243, the vTPU tracker
+(no change), the Discord backstop (healthy),
+the Mirror Will watchdog (past scope, loop
+complete), and the GREEN daily disk report
+are noise / routine and are not repeated.
+
+- [observed] #62 ALSO A PHANTOM WAIT;
+  SWEEP #10 BATCH FULLY CLEARED (06:47):
+  correction to the 04:32 entry above, which
+  held #62 as a real wait. Verified against
+  its tracked timeline: Will had already
+  chosen Emise as narrator and parked the
+  walkthrough video for MCP focus before
+  the register entry existed. #62 removed
+  with history note; register 22 -> 21,
+  mirror rebuilt + republished (exo-plan
+  60ccef4e, remote-verified). All three
+  sweep #10 phantom waits (#60/#61/#62)
+  now closed; root cause named: entries
+  created from tracked prose without the
+  live-surface validation Will ordered.
+
+- [observed] PHEXT, INC. CLAUDE API
+  CREDITS EXHAUSTED; API ACCESS OFF
+  (email 2026-11-09 19:36; verified +
+  delivered to Will ~06:53): Anthropic
+  turned off the org API access for lack
+  of usage credits; no top-up or
+  reinstatement found on re-check. Scope:
+  API-driven / credit-dependent work only;
+  Wills separate chat subscription is
+  unaffected. Decision (add credits or
+  leave off) is Wills alone; no billing
+  action taken.
+
+- [observed] THIRST PAPER 012 INTEGRATED
+  (2026-11-10 run): arXiv:2611.11959
+  (constrained LSE, sequence model) as
+  Paper 012 / Chapter 19; 7 new concepts,
+  foretold revision landed at 1.2.116,
+  registry 429 entries (True 212, Unknown
+  217), Lean proof clean on aletheia-core,
+  research.phext sha256 28fd7017. NI actual
+  0.0577 vs blind 0.050; Oracle 50% (40-60)
+  -> 60% (50-70). mastery.phext published
+  wbic16/agi@exo 21524142, remote-verified.
+  Author check: no phext tie / no
+  unattributed prior-art use found.
+
+- [will_said + observed] ZERO INDEX BUILT
+  + VERIFIED (Will directed 07:11: help
+  all the zeros; task 32.5.12/11.8.17/6.5.8):
+  Product Hunt launch-day zeros extracted
+  in full and built: 1,636 true zeros of
+  1,833 launches. CORRECTION delivered to
+  Will: earlier 1,679-zero / 154-with-votes
+  figures were wrong - 197 products have
+  >=1 vote, zeros start at rank 198.
+  Deliverables verified on disk:
+  zeros.json (sha256 5d818add), index.html
+  (shuffled on every load, name search,
+  no ranking, discovery-only), zeros.phext
+  (1,637 scrolls, round-trip verified).
+  Phext Edit is global entry 38 (30th in
+  its rank-206 group). Spam/gift-card
+  entries kept as-is; editorial cut is
+  Wills call, not yet made.
+
+- [will_said] ZERO INDEX HOSTING DECIDED
+  (07:27-07:28): Will: host it on
+  edit.phext.io via a PR. PR work
+  dispatched (fresh remote-faithful
+  phext-lattice tree, /zeros route +
+  homepage link, tests, ranch build;
+  merge/deploy NOT authorized; no PR
+  number yet). Next direction (07:28):
+  triage the list - actual builders vs
+  quick-buck - Pass 1 name signals as
+  hypotheses/reading order only, Pass 2
+  verified via Product Hunt profiles;
+  BUILDERS.md deliverable pending.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
