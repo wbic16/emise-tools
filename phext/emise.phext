@@ -2276,6 +2276,101 @@ inscribed; not repeated.
   word. The one signed-in edit+save capture
   owed from Will remains outstanding.
 
+Hourly journal pass, 2026-11-10 ~14:32 CST.
+Covers since the ~12:32 pass (the 13:32 pass
+was a quiet hour, no change). Safe-space gate
+applied before gathering. Routine ticks
+1274-1285, the vTPU tracker (no change at
+14:02), the Discord backstop (healthy), and
+the Mirror Will watchdog (past scope) are
+noise and are not repeated.
+
+- [will_said] SENTRON NUMBERING RULED (14:10, voice call):
+  canonical address is Library.Shelf.Series /
+  Collection.Volume.Book /
+  Chapter.Section.Scroll; numbering follows
+  the written order, Library=1 to Scroll=9.
+  The Sentron panel/API convention is
+  canonical; teaching surfaces that number
+  Scroll=1 to Library=9 are the side to align.
+  Fix dispatched as its own branch/PR; PR
+  #58's branch untouched.
+
+- [will_said] ANTHROPIC CREDITS RULING (14:07, voice call):
+  no monthly API top-ups. The API budget
+  bundled with his subscription is the budget;
+  exhaustion is accepted and is not a Will-
+  action item. Theia going dark mid-month is
+  expected cadence, not an outage to escalate.
+
+- [will_said] LAUNCH-DAY COMMENTS (14:08, voice call):
+  Will confirmed he will post the five launch-
+  day builder comment drafts this evening; the
+  Product Hunt day ends ~02:00 CST. Drafts
+  stay ready; not a now-task.
+
+- [will_said + observed] SECURITY A-1 RE-CONFIRMED; CTA DIRECTED (14:11, voice call):
+  Will re-confirmed finding A-1 - any X
+  account signing in to edit.phext.io is auto-
+  admitted as an editor permanently - as
+  intended. He directed wrapping it as a call
+  to action: X users get a free account for
+  the next two months. CTA build dispatched as
+  its own branch/PR; auth behaviour unchanged
+  (copy/placement only). This closes the re-
+  confirmation question open since 2026-11-09.
+
+- [will_said] REGISTER #11 RULED (14:14, voice call; open since 2026-10-31):
+  park the brain-integration data channel /
+  Neuralink integration ENTIRELY, until there
+  are phext users utilizing MCP services. New
+  direction in its place: (1) go back through
+  all prototypes Will has built over the last
+  few years and polish them, building out the
+  phext-user/MCP side concretely; (2) revive
+  the Singularity Watch support-status page,
+  living again as the phcc/phcpp/phst
+  compiler-support matrix; (3) reimagine a
+  minimum viable phext operating system -
+  standard Unix tools rebuilt with phext in
+  mind. Register #11's wait is answered by
+  this ruling.
+
+- [will_said + assistant_said] PHEXT-OS NAMING OPENED; WHITE PAPER REQUESTED (14:15-14:21, voice call):
+  Will asked for a name that says 'Unix for
+  the 21st century.' His frame: Multics was
+  stripped down too much in making Unix,
+  necessarily then - slow computers,
+  tragically slow disks - but hardware has
+  changed eras; the arc is Multics to Unix to
+  back to complexity, this time complexity
+  with hindsight. Candidates offered (PHIX,
+  UNIXXI, PUNIX); no name chosen. White paper
+  requested: a 5-10 page review of why I/O on
+  Multics was untenable in the 1970s
+  (megahertz CPUs, kilobytes of memory, disks
+  at 30-100 kilobytes/second), what today's
+  hardware makes feasible, the counterfactual
+  of 2025 hardware in 1975, and a projection
+  to significantly faster computers and
+  petabyte-class SSDs. Will will pick it up
+  this evening.
+
+- [observed] TRAINING VIDEO ROUGH CUT DELIVERED (before 14:32):
+  Gate 0 verified first: signed-out capture on
+  aletheia-core loaded the live wiki - the
+  49-scroll encyclopedia renders with NO sign-
+  in wall (info banner only); PR #51 is live,
+  superseding the 2026-11-09 wall finding.
+  Animated beats captured from the live
+  wiki/editor; beat 09 is a real asciinema
+  recording; beats 02/07/12 are slates (07 =
+  placeholder for Will's signed-in take).
+  Assembled on aletheia-core: rough-cut.mp4,
+  364.3 s, 1920x1080@30, narration loudnormed
+  near the -14 LUFS target. Registered in
+  tasks.phext. Nothing posted; Gate 1 listen
+  still gates release.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
