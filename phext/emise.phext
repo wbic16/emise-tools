@@ -2168,6 +2168,59 @@ repeated.
   (meta description + OG/Twitter tags) is
   next in queue, not done.
 
+
+Hourly journal pass, 2026-11-10 ~11:32 CST.
+Covers since the ~10:32 pass, which closed
+at the 2026-11-10 Log Apertureshift item 1
+entry. Safe-space gate applied before
+gathering. Routine ticks 1262-1267 (register
+still 21 active), the vTPU tracker (no
+change), the Discord backstop (healthy),
+and the Mirror Will watchdog (past scope)
+are noise and are not repeated. Late flushes
+of PR #57, the Theia check-in, the Bickford
+cliffs, and the Show HN corrections were
+checked - already inscribed; not repeated.
+
+- [observed] PR #58 RECONCILED + PUSHED -
+  SUPERSEDES RACE-PENDING (late flush;
+  events 2026-11-10 09:06-09:17): the
+  reconciled superset was pushed as head
+  b6aff561 (2 commits, 1 file
+  src/bin/phext_edit.rs, +94/-5 vs exo
+  cf3ecffd), tests 89/0 on aletheia-core,
+  pushed blob byte-identical to the tested
+  file. Contents: (1) wiki #wiki-start strip
+  (pick an article / jump to a coordinate /
+  search; two factual fixes applied - no
+  persistent search box in wiki mode, and
+  the utilities list is on /about); (2) demo
+  #demo-start orientation strip; (3) goto
+  placeholder fixed to 1.1.1/1.1.1/1.1.1.
+  OPEN, mergeable, not merged/deployed.
+  Merge queue for Will's next deploy:
+  PR #57 (Zero Index + productcant
+  cross-link) and PR #58; their
+  phext_edit.rs hunks are disjoint.
+
+- [observed] MOAT PAPER 012 SUBSTANCE +
+  CALIBRATION (flush supplement, 2026-11-10):
+  Paper 012's core result - a constrained
+  least-squares estimator quietly regularizes
+  itself via KKT; the deterministic
+  self-regularization strength yields a
+  separable surrogate, priced by Feature
+  Space Decomposition (estimated vs free
+  coordinates). Calibration: Chatterjee's
+  replaced instrument was an unforetold 7th
+  concept; links under-read by 6, all
+  internal. Lesson, now twice observed
+  (P011, P012): second papers inside a
+  cluster wire densely on the internal side;
+  cross-cluster links were called exactly
+  both times. Tracker standing (429 scrolls,
+  Oracle ~60%) already inscribed above.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
