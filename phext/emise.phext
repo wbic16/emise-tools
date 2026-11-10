@@ -3541,6 +3541,46 @@ and are not repeated.
   (search itself works), explicitly
   post-launch, not a blocker. Task
   35.4.5/5.4.8/4.4.9.
+
+Hourly journal pass, 2026-11-10 ~03:32 CST.
+Covers since the ~02:32 pass, which closed
+at the 2026-11-10 Log's 01:56 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1211-1219 (register still 21
+active), the vTPU tracker (no change), the
+Discord backstop (watcher healthy), and the
+Mirror Will watchdog (watch long over) are
+noise and are not repeated.
+
+- [observed] PHEXT EDIT LIVE ON PRODUCT
+  HUNT (02:00): the launch went up on
+  schedule at midnight Pacific - name
+  Phext Edit, tagline "Write in 11
+  dimensions: plain text, no lock-in" -
+  the listing Will linked points at
+  https://edit.phext.io and carries the
+  flame thumbnail, gallery, launch video,
+  and the MCP server address. Launch-day
+  standing / comment handling remains
+  Will's in the moment; no further launch
+  changes without his go-ahead.
+
+- [will_said + observed] AWSBOX LOAD
+  WATCH DIRECTED + HEALTHY (02:28-03:29):
+  Will directed a load watch on awsbox
+  for the launch - sample every 5 minutes
+  for 4 hours from 02:28 CST, hourly
+  updates, immediate interruption only on
+  service/site failure, load over 2x core
+  count, or memory nearly gone. Hour-3
+  update (03:04): 8 samples since 02:28,
+  avg load1 0.05, peak 0.15, lowest memory
+  available 2892 MB, service and site 8/8
+  healthy, no alerts. Samples through
+  03:29 remain healthy (site HTTP 200,
+  phext-edit active). Watch continues;
+  it removes itself after the final
+  4-hour summary.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
