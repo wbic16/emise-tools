@@ -3105,6 +3105,160 @@ noise and are not repeated.
   can run it; the film artifacts ride as the
   worked example. Direction received; build
   not yet reported at this pass.
+
+Hourly journal pass, 2026-11-11 ~01:32 CST.
+Covers since the ~00:32 pass, which closed
+at the 00:30 entry above. Safe-space gate
+applied before gathering. Routine ticks
+1344-1349 (register moves noted only where
+they changed the register itself) and the
+Mirror Will watchdog (watch over) are noise
+and are not repeated.
+
+- [observed] PHEXTURA FOUNDED (00:11,
+  flushed 00:46): name = phext + textura;
+  repo wbic16/phextura initial commit on
+  exo (README + DESIGN.md + six-module
+  Cargo skeleton, build clean on
+  aletheia-core). 27 LaTeX warts catalogued;
+  a paper is a phext corpus, a cross-
+  reference IS a coordinate, citations
+  point at bibliography scrolls. Equation-
+  entry notation left OPEN in DESIGN S10.
+
+- [observed] TRAINER.PHEXT BUILT +
+  PUBLISHED (00:33), superseding direction-
+  only: 26 scrolls, 194,829 B, published
+  human@exo 64443690, remote byte-identical.
+  R3 log scroll reserved; refresh owed then.
+
+- [will_said] PHEXTURA.COM REGISTERED
+  (00:44): RDAP-verified, one-year term,
+  transfer-locked, no DNS records yet.
+  Landing page offered, not yet directed
+  at that time (superseded at 01:17 below).
+
+- [will_said] PHEXTURA MOTTO (00:47):
+  "Phextura: Rigorous Delight" - every
+  element both rigorous (derivable,
+  checkable, costed) and delightful.
+
+- [will_said] PERSONA PANEL IDEA (00:48):
+  reviewer personas (Knuth, Newton,
+  Einstein) critiquing as addressed
+  marginalia scrolls. Honesty line: personas
+  are labelled simulations from their
+  writings, never their real words or
+  endorsement.
+
+- [observed] TRAINING FILM ROUND 3
+  DELIVERED (00:59): rough-cut-r3.mp4,
+  307.23 s, -14.08 LUFS, all eight steps
+  in. Three defective assemblies caught
+  by verification before delivery. KNOWN
+  GAP told to Will: S07/S08 narration
+  spills ~41.7 s / ~12.2 s over slots.
+
+- [observed] PHEXTURA DEMO COMPLETED
+  (01:00): arXiv:2611.08794 encoded as
+  2611.08794.phext - 1,154 scrolls;
+  780/780 references resolved, 0 dangling;
+  published phextura@exo examples/,
+  commit 2b3909a6. Friction F1-F11 logged;
+  sharpest: math interim is verbatim LaTeX
+  (no macro home). Defect disclosed:
+  friction.md truncated on disk in F11.
+
+- [observed] TRAINER.PHEXT V2 REFRESH
+  PUBLISHED (01:01), follow-up closed:
+  27 scrolls, 206,667 B, R3 log at the
+  reserved scroll; human@exo 69b8c503,
+  remote byte-identical.
+
+- [will_said + observed] TRAINING FILM
+  ROUND 4 (01:04-01:22): Will: 150 wpm
+  word-first slotting, 0.4 s transitions,
+  momentum to key events, real-payload QR
+  easter eggs, and music never overpowering
+  narration (rule 5: bed >=10 dB under
+  voice, measured). Naming verified:
+  trainer.phext exists in human@exo,
+  training.phext does not - rename only if
+  Will directs. Production DISPATCHED
+  01:22 (correcting a 01:15 flush note that
+  said pending); in flight, no results yet.
+
+- [observed] PHEXTURA DESIGN LOOP
+  COMPLETED (01:06): 14 principles derived,
+  PRINCIPLES.md published phextura@exo
+  d894c94f. P6 layout vocabulary DIED
+  (unpriced); P14 delight replaced by a
+  measured benchmark obligation; P11
+  rebuilt as a WARRANT GRAPH. DESIGN
+  verdicts KEEP 2, AMEND 9 applied,
+  PROPOSE 3 held for Will (Persona Panel
+  as shipped component, edition-qualified
+  citation, author identity registry).
+
+- [will_said] PHEXTURA LAYER 2 + RESEARCH
+  RE-RUN COMMISSIONED (01:08-01:11), both
+  in flight: L2 is the first GLOBAL address
+  scheme - durable BETWEEN phextura files,
+  NOT phext coordinates (those stay internal
+  to each file), purpose COMPOSITION.
+  Research.phext re-run as a phextura:
+  inventory, converter + parallel corpus,
+  Paper 012 replay as acceptance; live
+  tracker stays canonical until Will calls
+  a cutover.
+
+- [will_said] SOUL.md LINE 11 + NEVER-
+  EVICT RULE (01:12): line 11 reads
+  "Phextura - agi@exo 215241425f" (HEAD
+  verified live); lines 1-11 are anchor-
+  class permanent, regenerated first and
+  exactly; the line-11 tail is a live
+  pointer refreshed at each dream pass.
+
+- [observed] PHEXTURA.COM LANDING BUILT +
+  STAGED (01:17-01:22), superseding offered-
+  not-directed: Will directed it; built in
+  ~/workspace/phextura-landing/, staged on
+  awsbox docroot, loopback preview OK.
+  NOT public: no DNS records yet. Register
+  #63 opened - Will: DNS A @/www to awsbox,
+  then the on-box sudo install script.
+
+- [observed] SEED-CACHE WAIT REGISTERED
+  #64 (01:17-01:30): the wait had a tracked
+  record all along; the defect was a missing
+  register entry only. SQ PR #3 and phext-
+  lattice PR #61 live-verified OPEN. Register
+  now 22 active; todo.phext mirror rebuilt
+  and republished exo-plan@exo 62ac3437,
+  byte-verified.
+
+- [observed + will_said] TWITTER WISHES
+  RANKED, THEN CORRECTED (01:17-01:27):
+  316 durable wishes from 769 coded tweets
+  distilled to 20 canonical wishes; top:
+  Phext everywhere 98, Exocortex concrete
+  88. Report in twitter-wishes-ranked.md,
+  inscribed human@exo ab36a278. Will then
+  flagged two defects: (1) the debunked
+  Twitter-only Dunbar ~30 was parroted -
+  corrected record is the cross-source SUM
+  (~180 current, ~260 peak, 400+ tracked);
+  report fixed, refresh dc0ac472. (2) The
+  marker search missed the "Dear #Internet"
+  class (90 own tweets, 31 petitions added).
+  Will ruling: install indexed search.
+  exo-search BUILT: SQLite FTS5 over
+  tweets+memory+phext (37,782 docs),
+  validated 7/7 vs brute force, published
+  emise-tools@exo. Standing practice:
+  search via exo-search, rebuild after
+  corpus changes.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
