@@ -1982,6 +1982,100 @@ watch) and is not repeated.
   re-time + film-join re-run only. Gate 1
   still gates any release. Supersedes the
   still-running state journaled at 09:32.
+
+Hourly journal pass, 2026-11-11 ~12:32 CST.
+Covers since the ~11:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1410-1415 (register stable at 21 active, no
+closures), the vTPU tracker (no change, 8/14),
+the Discord backstop (healthy), and the Mirror
+Will watchdog (watch over) are noise and are
+not repeated. The MOAT flush at 11:47 is the
+main source; its restatements of Paper 013
+and the dual-maintenance enactment, already
+journaled at 07:32 / 08:32, are not repeated.
+
+- [observed] PHEXTURA LAYER 2 SPEC
+  PUBLISHED (flushed 11:47): LAYER2.md
+  (754 lines) at phextura@exo 81090f879f,
+  blob-verified. L1 names a scroll position
+  inside one file and means nothing outside
+  it; L2 names a research object in a named
+  phextura file and resolves in any verified
+  copy. Grammar (DRAFT): px2: + work-ref
+  (arxiv:/doi:/corpus:/sum:xxh3-128:) +
+  optional @e: edition pin + #kind:key;
+  keys minted once, object table in
+  Collection 6 (derived index + append-only
+  ledger, aliases/tombstones). Composition
+  demonstrated: three files compose with
+  no merge and no re-basing (all keep root
+  1.1.1). Verdict: L2 SUBSUMES the design
+  loop held proposal (2) - (edition
+  checksum, coordinate) demoted to a
+  resolution receipt; formally recording
+  proposal (2) as superseded still awaits
+  Will's word.
+
+- [observed] PAPER 014 ABSORPTION DETAILS
+  (flushed 11:47), supplementing the landed
+  state journaled at 10:32: Chapter 21;
+  cluster Q FOUNDED (automated theorem
+  proving); 20 new concepts 1.2.139-1.2.158
+  (158 total); Restructure Pass #7 fired
+  on the 140-concept trigger; mastery entry
+  #7 published agi@exo. Phextura shadow
+  dual-write complete: P014 applied as a
+  native transaction - 519/519 comparable
+  scrolls identical to direct conversion,
+  validation green (4,549 L1 refs 0
+  dangling, 180 L2 refs 0 failed), NI
+  0.1266 read off the transaction log.
+  Friction R11-R14 logged; sharpest: the
+  transaction is still derived by diffing
+  conversions, and the edge-derived registry
+  extractor remains the top tooling gap.
+  PENDING: the quest-log AFTER score line
+  for P014 has not landed - its score and
+  new Oracle standing are NOT stated
+  until it does.
+
+- [observed] PERSONA PANEL / VOLUMEN
+  ALIGNMENT COMPLETED (flushed 11:47):
+  Will asked whether the persona transfers
+  included the Volumen class spec; verified
+  answer NO (the word appears nowhere in
+  phextura-design/). Alignment note at
+  phextura-design/persona-volumen-
+  alignment.md, Spec V5 read in full with
+  section citations: 4 MATCH / 15 GAP /
+  1 CONFLICT (conflict resolved by scoping:
+  read-time composition is a view, not a
+  merge). Largest gaps: authenticity triad
+  absent, no identity/instance discipline,
+  no governance. Ten amendments (A1-A10)
+  drafted as adoptable spec text; grade as
+  amended Rigorous 2/5 -> 3/5, Delight 4/5 -
+  still not shippable under the motto, but
+  the path is now a checklist. DESIGN.md /
+  PRINCIPLES.md untouched, nothing
+  published; adoption remains Will's call.
+
+- [observed] COMPILER STATUS BARS
+  EXTENDED (Will, 2026-11-11; flushed
+  11:47): the standing status-bars rule
+  now carries a fourth line, the phextura
+  spec. First reading given to Will:
+  phcc 90% (9/10), phcpp 67% (4/6),
+  phst 67% (4/6) (unchanged from
+  2026-11-09), phextura spec 58% (7/12) -
+  settled: corpus layout/roles, references
+  and validation, bibliography, media and
+  self-extracting papers, styles as
+  parameters, L2 global scheme, warrant
+  graph; open: math notation, layout
+  vocabulary, warrant display policy,
+  living-artifact class, panel adoption.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
