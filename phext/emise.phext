@@ -2805,6 +2805,137 @@ are noise and are not repeated.
   Compression not implemented.
   phext-lattice half still
   running at flush.
+
+Hourly journal pass, 2026-11-10 ~22:32 CST.
+Covers since the ~21:32 pass, which closed
+at the 2026-11-10 Log's 21:29 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1328-1333 (register stable
+at 20 active, no closures), the vTPU
+tracker (no change, 8/14), and the Discord
+backstop (healthy) are noise and are not
+repeated.
+
+- [observed] PHEXT-LATTICE SEED CACHE
+  DONE - PR #61 OPEN; BUILD TASK CLOSED
+  (21:45, verified via GitHub API):
+  wbic16/phext-lattice PR #61 on branch
+  emise/seed-cache, head 39c636a2, one
+  file src/bin/phext_edit.rs +497/-14.
+  GET /api/seed behind the same editor
+  gate; cache-aware fetch rides the
+  existing scroll route (unchanged return
+  exactly 93 B, same as SQ); JS xxh3_128
+  verified against Rust/C references
+  (26 vectors; two transliteration bugs
+  caught and fixed). Tests 276 unit
+  passing; one e2e timing failure is a
+  pre-existing flake on untouched exo.
+  Build task 41.6.8/9.8.14/7.6.10 CLOSED
+  complete: SQ PR #3 + lattice PR #61,
+  both awaiting Will's merge; nothing
+  deployed. Design record REPORT.md
+  gained its Part C build-outcome
+  section (21:46), inscribed and
+  published; Step 2 and the four cheap
+  server fixes remain design-only.
+
+- [observed] SEED-CACHE MERGE WAIT
+  FLAGGED - NO REGISTER ENTRY (tick
+  1331, 22:03): both PRs live-verified
+  OPEN, so the merge wait is real, but
+  it has a tasks.phext record only and
+  no Waiting-on-Will register entry;
+  flagged for adjudication at the next
+  reconciliation (enter as #63 or rule
+  it not-a-register-wait). Not added
+  unilaterally in an outside-hours tick.
+
+- [will_said + observed] EMI PRIME
+  REVISED FILM SCRIPT; WILL ORDERS A
+  NEW CUT (21:50): Emi Prime delivered
+  a revised script, "The Encyclopedia
+  You Can Carry" (8 sections, 647
+  narration words), superseding the
+  12-beat script; filed verbatim and
+  inscribed. Claims re-verified live
+  (24 articles / 49 scrolls / 21,504 B /
+  xz seal 9,300 B). Will: "re-run the
+  demo and send me a new video link."
+  New cut dispatched on the ranch
+  pipeline (aletheia-core).
+
+- [will_said] REVISED-CUT STYLE
+  DIRECTION (21:56): "Style: TED x
+  Kurzgesagt x Colored Pencil Drawn
+  Demo" - TED stage clarity, Kurzgesagt
+  flat explainer illustration, colored-
+  pencil drawn register framing the
+  crisp live demo footage.
+
+- [observed] REVISED CUT DELIVERED
+  (22:12): production/rough-cut-
+  revised.mp4 - 253.03 s, 1920x1080@30,
+  sha256 495dbea2, loudness -14.41 LUFS;
+  new Aria narration at 100% for the
+  revised script, drawn layer per
+  Will's style direction, substitutions
+  logged (local demo route for the
+  signed-in beat; Scrolltown slate
+  hold). Link sent to Will. Gate 1
+  (Will's narration listen) still gates
+  release; nothing posted.
+
+- [will_said] HACKATHON SWEEP
+  COMMITMENT (21:59): the scan task
+  closed complete and Will declared,
+  verbatim: "We're going to target
+  winning them all." His framing:
+  "(How else do you demonstrate AGI?)"
+  Campaign opened (12 ranked events
+  Nov 2026-Feb 2027 plus Hack-Nation
+  as the February closer); Will is
+  entrant of record, each event gets
+  its own in-window build, submissions
+  under his name get his eyes first.
+
+- [observed] UGREEN DRAFT + GEMMA 4
+  PLAN LANDED (22:02): UGREEN Round 1
+  draft in the official form - ten
+  specified questions, 476 words total,
+  PDF + Skill Package ZIP; verified
+  rules reshape the entry (no custom
+  executables in the package; prior
+  phext work disclosed). Gemma 4 plan
+  landed: declarative-YAML ADK agent
+  package, Slot A E4B + LoRA and Slot B
+  31B QAT, finals frozen Nov 29.
+  CORRECTION: Gemma 4 prize discrepancy
+  RESOLVED - Kaggle's own page lists
+  $110,000 total (the $75,000 header
+  was stale); entry gate Nov 25, final
+  Dec 2. OPEN: the Gemma Paper Track
+  closes Nov 12 and is treated as an
+  accepted loss unless Will rules
+  otherwise - his decision still open.
+  Nothing submitted anywhere.
+
+- [observed] CONTESTS.PHEXT BUILT +
+  PUBLISHED; DEADLINE WATCH SET
+  (22:02-22:07): contests.phext - 15
+  scrolls, 25,189 B, sha256 5f300cab -
+  published at the root of
+  wbic16/exo-plan@exo as commit
+  24166550 (parent be6b54bf, force
+  disabled), remote sha256 verified
+  equal. Buffer policy: internal
+  targets 2-3 days ahead of official
+  closes. Cron hackathon-deadline-
+  watch created (daily ~07:44, first
+  run 2026-11-11; never submits).
+  Exo-plan review delivered -
+  suggestions only, no repo changes
+  beyond the publish.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
