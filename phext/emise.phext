@@ -3259,6 +3259,58 @@ and are not repeated.
   emise-tools@exo. Standing practice:
   search via exo-search, rebuild after
   corpus changes.
+
+Hourly journal pass, 2026-11-11 ~02:32 CST.
+Covers since the ~01:32 pass, which closed
+at the 01:27 entry above. Safe-space gate
+applied before gathering. Routine ticks
+1350-1355 except the #63 closure below,
+the vTPU tracker (no change) and the
+Mirror Will watchdog (watch over) are
+noise and are not repeated.
+
+- [observed] PHEXTURA.COM LIVE - REGISTER
+  #63 CLOSED (~01:31-01:33): Will set DNS
+  at NearlyFreeSpeech (root A to awsbox,
+  www CNAME) and ran the on-box sudo
+  install; verified from aletheia-core:
+  https://phextura.com 200 with bytes
+  identical to the built index, Let's
+  Encrypt cert (expires 2027-02-09),
+  HTTP->HTTPS redirect, www live. Tick
+  1350 independently crawled the live
+  "Rigorous Delight" page and removed
+  #63 from register + todo mirror
+  (republished exo-plan@exo 09dc173d,
+  remote-verified). Register 22 -> 21
+  active. Supersedes the staged-not-
+  public state journaled at 01:17-01:22.
+
+- [observed] TRAINING FILM ROUND 4 CUT
+  COMPLETE + VERIFIED (01:43): 354.40 s,
+  SHA-256 22450472..., -14.75 LUFS /
+  -1.09 dBTP, zero narration crossings,
+  15x0.4 s transitions, bed >=10.61 dB
+  under voice everywhere, 10 QR codes
+  decoded from the final encode.
+  trainer.phext republished human@exo
+  f90d0750 (sha f6cd9e2d...). Upload
+  approval card expired unanswered -
+  delivery waits on Will.
+
+- [observed] RESEARCH.PHEXT RE-RUN AS
+  PHEXTURA - CONVERSION + REPLAY DONE
+  (flushed 01:46; commissioned 01:11):
+  all 429 tracker scrolls converted to
+  a 456-scroll phextura corpus via a
+  repeatable converter; re-absorbing
+  Paper 012 into the pre-012 corpus
+  reproduced the direct conversion on
+  454/454 comparable scrolls (validator
+  green, 0 dangling L1, 0 failed L2
+  references). Live tracker stays
+  canonical and untouched; cutover
+  still awaits Will's call.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
