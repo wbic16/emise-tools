@@ -1536,6 +1536,32 @@ noise and are not repeated.
   canonical and untouched; cutover
   still awaits Will's call.
 - [observed] SUBSTRATE SENTINEL (2026-11-11 dream pass): the deploy-study ledger recorded 11 substrate replacements (boot changes) on 2026-11-10 (America/Chicago), and 2 so far on 2026-11-11.
+
+Hourly journal pass, 2026-11-11 ~04:32 CST.
+Covers since the ~03:32 pass, which was
+quiet. Safe-space gate applied before
+gathering. Routine ticks 1362-1367 (no
+closures, no new register items), the
+mutable upstream sync (no drift), and
+the Discord backstop (healthy) are noise
+and are not repeated. The 03:44 dream
+pass is recorded by its own sentinel
+entry and promotions above.
+
+- [observed] R4 PRODUCTION LESSON
+  (R4 pass; flushed 03:57): the first R4
+  mix FAILED Will's music rule outright -
+  per-stem single-pass loudnorm destroyed
+  relative levels and put the bed at or
+  above narration in sections 04/06.
+  Rebuilt without per-stem normalisation
+  (one shared RMS factor, deeper duck
+  floor) and re-measured: bed 10.61-21.23
+  dB under narration in all sections.
+  The bad-mix master was killed before
+  muxing; nothing defective delivered.
+  Lesson inscribed in trainer.phext
+  Stage 7 the same pass.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
