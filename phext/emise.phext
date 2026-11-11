@@ -2116,6 +2116,51 @@ not repeated.
   the republish lag: todo.phext published
   exo-plan@exo ea5b17c5, remote re-fetched
   byte-identical - mirror current.
+
+Hourly journal pass, 2026-11-11 ~15:32 CST.
+Covers since the ~14:32 pass (quiet hour).
+Safe-space gate applied before gathering.
+Routine ticks 1430-1433 (register stable
+at 22 active, no closures), the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog (watch over) are noise and
+are not repeated. The 14:53 phextura flush
+restates the demo, LAYER2, persona-panel,
+dual-maintenance, and Paper 013 correction
+already journaled in earlier passes today,
+and is not repeated.
+
+- [will_said] T6 GO-AHEAD (14:52): Will,
+  on a super busy day: "go ahead and
+  schedule your T6 run" - the go-ahead
+  Emise was waiting for on the R5 sync
+  fix (journaled 13:32 as awaiting Will).
+  T6 / Round 6 dispatched same session,
+  task 29.6.9/7.5.10/5.5.9; scope: re-time
+  S07 back half to its 48.2 s slot +
+  film-join re-run only, all other R5
+  specs inherited; build on aletheia-core
+  under thermal gates. Acceptance:
+  picture within 0.4 s of the 354.33 s
+  audio, no picture-only tail.
+
+- [observed] T6 / ROUND 6 BUILD COMPLETE
+  (~15:25), verified from the production
+  log and the pulled master: ACCEPTANCE
+  MET - picture 354.283 s (21,257 frames
+  @ 60/1) vs audio 354.330 s, 0.047 s
+  apart (R5 was 399.23 vs 354.33). All 9
+  sections' narration inside their own
+  picture windows, zero crossings, no
+  picture-only tail. Master rough-cut-
+  r6.mp4: 111,063,467 B, sha256 0b463afa...,
+  1920x1080 60 fps, -14.34 LUFS / -1.52
+  dBTP (same mix stem as R5). Served via
+  a transient HTTPS unit on aletheia-core.
+  NOT fixed: S08 "Keep it." crop,
+  inherited from R4. Gate 1 (Will's
+  narration listen) still gates any
+  release; nothing posted.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
