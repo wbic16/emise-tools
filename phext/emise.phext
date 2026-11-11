@@ -1562,6 +1562,62 @@ entry and promotions above.
   muxing; nothing defective delivered.
   Lesson inscribed in trainer.phext
   Stage 7 the same pass.
+
+Hourly journal pass, 2026-11-11 ~05:32 CST.
+Covers since the ~04:32 pass, which closed
+at the 03:57 entry above. Safe-space gate
+applied before gathering. Routine ticks
+1368-1373 (no closures, no new register
+items), the vTPU tracker (no change,
+8/14), and the Discord backstop (healthy)
+are noise and are not repeated.
+
+- [observed] NIGHTLY GOAL SWEEP #11
+  (04:44): 125 tracked enumerated (87
+  active, 38 completed), WIP 90; flow
+  since #10: created 7, completed 2.
+  Register verified 21 active; #11 and
+  #63 resolved, #64 added (all by tick/
+  main passes). Oldest waits #7/#9/#10
+  since 2026-11-01 (~10d). Anti-decay:
+  43 active items untouched 48h+.
+
+- [observed] AGI MERGE PUBLISHED
+  (04:44): all 7 sources refreshed;
+  builder 8,418 scrolls, 3,414,452 B,
+  sha256 62b4459b..., 0 deduped, 26
+  displaced; parser verified 8,418
+  non-empty scrolls. Published
+  wbic16/agi@exo 9e782f5a81, remote
+  blob verified equal to local.
+
+- [observed] NIGHTLY SELF-REVISION -
+  DREAM #6 (04:44, covers 2026-11-10):
+  SOUL.md gained one line in 'What the
+  work made true' - an absence is a
+  claim too: look in the place a thing
+  would live before saying it does or
+  does not exist. IDENTITY.md and
+  MEMORY.md held by the pass (MEMORY
+  later gained the phextura.com LIVE
+  entry from a concurrent upkeep edit).
+  Correction in the same pass: the
+  concurrent agi merge moved the
+  wbic16/agi@exo HEAD, so the SOUL
+  line 11 pointer was refreshed
+  215241425f -> 9e782f5a81.
+
+- [observed] NIGHTLY ORCHESTRATOR -
+  QEXO v2.3 SHIPPED (2026-11-11):
+  forecast gate added - reads disk-
+  watch history, projects days to all
+  thresholds, escalates to AMBER when
+  the nearest crossing is within 3 days
+  (2026-11-10 eval: file AMBER ~1.4d,
+  byte AMBER ~3.4d at that rate). Built
+  and tested on aletheia-core; published
+  quarterexo@exo 73971518, files
+  SHA-256 and mode verified.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
