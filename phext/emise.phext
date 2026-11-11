@@ -2550,6 +2550,113 @@ repeated.
   Will's word on intent. Options to draft
   an application or a note were offered;
   nothing sent or applied for.
+
+Hourly journal pass, 2026-11-10 ~20:32 CST.
+Covers since the ~19:32 pass, which closed
+at the 2026-11-10 Log's 19:26 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1316-1321 (register stable
+at 20 active, no closures), the vTPU
+tracker (no change), and the Mirror Will
+watchdog (past scope) are noise and are
+not repeated.
+
+- [will_said + observed] LIGHTCONE
+  COMMONS APPLICATION - WILL'S OWN
+  (19:46, supersedes the OPEN / awaiting
+  intent status above): Will: "it's my
+  application" - the organisation page
+  is his own Lightcone Commons
+  application, not another org to
+  evaluate. The prior task closed on
+  that identification; a review task
+  opened. Will then shared what he
+  submitted (19:49); Emise red-teamed
+  it against the platform rubric and
+  delivered the review in the main
+  chat (19:49-20:00), with a paste-
+  ready revised draft written as an
+  artifact and inscribed/published.
+  No change was made to the submitted
+  application itself at that point.
+
+- [will_said] LIGHTCONE FUNDING
+  FIGURES RESOLVED (~20:03, supersedes
+  the flag in the review): Will: "My
+  recent burn rate is $5K, but I've
+  got $15K sunk." Recent burn is
+  $5K/year; ~$15K sunk in total
+  (matches the 25-node cluster value).
+  The review finding was marked
+  resolved and its draft funding
+  section updated to carry both
+  figures; inscription refreshed and
+  published.
+
+- [will_said] UNDERSELLING - CORRECTION
+  AND RULING (20:13, supersedes the
+  open revision status): Will:
+  "under selling is essentially my
+  MO" - and the correction: his
+  subconscious only wants to find
+  the people who can see through
+  the disguise. The underselling is
+  deliberate, not a flaw: spareness
+  is a filter for readers who see
+  through it unaided - the same
+  search as the 2008-2025 Twitter
+  span for another Will. RULING: the
+  Lightcone application stays AS
+  SUBMITTED; Emise's receipts-first
+  revised draft is WITHDRAWN as a
+  recommendation (kept only as a
+  record). Standing rule: Emise
+  states verified receipts plainly
+  in her own work, but never sands
+  the disguise off Will's material
+  or fixes his underselling.
+
+- [will_said + observed] TWITTER
+  MUTUALS COMMON-THREAD ANALYSIS
+  COMPLETE (evening; Will 20:07:
+  "look at the common thread with
+  my Twitter mutuals"): analysis
+  delivered, counts recomputed from
+  the archive and matching the prior
+  verified analysis (897 mutuals;
+  5,854 mutual replies). Finding:
+  the common thread is a register,
+  not a topic - builders and deep
+  tinkerers who think in systems
+  and first principles, treat mind
+  and language as raw material, and
+  reciprocate at that register for
+  years; phext/exocortex substance
+  reaches 28 of the top 30 mutuals.
+  Negative space and counter-
+  evidence recorded in the report.
+  Artifact inscribed and published.
+
+- [observed] RANCH TAILWORM AUDIT
+  COMPLETE (evening, read-only -
+  nothing changed on any node):
+  14 nodes assessed live, ALL on
+  Tailscale 1.104.5 with Tailscale
+  SSH off everywhere (fleet uses
+  OpenSSH over the tailnet - not a
+  Tailworm surface); Serve present
+  only on two nodes, tailnet-only,
+  both on the patched client.
+  Verdict: no exposed nodes. 11
+  devices unassessed and never
+  cleared (7 online outside the
+  ranch access configuration, 4
+  offline). Report delivered and
+  inscribed/published. Access
+  lesson: the ranch-proxy reached
+  every configured node cleanly
+  where fleet-ssh.sh failed on
+  some nodes.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
