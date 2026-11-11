@@ -2936,6 +2936,68 @@ repeated.
   Exo-plan review delivered -
   suggestions only, no repo changes
   beyond the publish.
+
+Hourly journal pass, 2026-11-10 ~23:32 CST.
+Covers since the ~22:32 pass, which closed
+at the 2026-11-10 Log's 22:07 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1334-1336 (register stable
+at 20 active, no closures), the vTPU
+tracker (no change, 8/14), the Discord
+backstop (healthy), and the Mirror Will
+watchdog (watch over, no restart) are
+noise and are not repeated.
+
+- [will_said] TRAINING FILM REVISION
+  ROUND 2 - WILL'S SEVEN NOTES (23:04):
+  style becomes artistic bright white
+  construction paper with hand-drawn
+  effects in real time (supersedes the
+  21:56 warm-paper note). Script: (1)
+  drop the Scrolltown call-out entirely;
+  (2) plain language, show don't explain;
+  (3) focus on interlink - demo hyper-
+  linking ideas AFTER they've been
+  entered; (4) real Wikipedia articles
+  or full entries, not fake ones; (5)
+  sound effects for jumping between
+  scrolls; (6) animation = zoom out from
+  one location, projection of underlying
+  complexity, zoom into target coordinate;
+  (7) focus on simplicity, incl. side-by-
+  side of deployed Wikipedia tooling vs
+  Phext Edit. Brief at REVISION-BRIEF-R2.md;
+  dispatched as one pipeline (script
+  rewrite, demo rebuild, ranch video
+  rebuild). [observed] At 23:06 flush the
+  pipeline worker was still running - no
+  SCRIPT-R2, demo2, or rough-cut-r2
+  deliverables reported or verified yet.
+  Round 1 cut (22:12) remains the latest
+  verified cut.
+
+- [will_said + observed] CORRECTION:
+  PHEXT ADDRESSES ARE AUTOMATICALLY
+  HYPERLINKED (23:18): Will, verbatim:
+  "Phext addresses are *automatically*
+  hyperlinked." Emise's R2 brief had
+  claimed Phext Edit has no hyperlink
+  layer - asserted from assumption, never
+  tested; that claim was WRONG. Verified
+  in wbic16/phext-lattice@exo
+  src/bin/phext_edit.rs: renderRichText()
+  runs linkifyCoordinates() over every
+  rendered scroll; any nine-number
+  coordinate becomes a coord-link with
+  gotoCoord click-to-follow - a SHIPPED
+  feature. Propagation done same turn:
+  R2 worker corrected mid-flight (interlink
+  act = filming real clicks), R2 brief
+  struck and rewritten with the citation,
+  task record annotated. Lesson restated:
+  a capability claim about Will's own
+  tooling is derived from source or a
+  live test BEFORE it is stated.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
