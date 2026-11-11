@@ -2202,6 +2202,47 @@ not repeated.
   R6, is worth a T7 of its own. No T7
   scheduled; awaiting Will's call.
   Gate 1 still gates any release.
+
+Hourly journal pass, 2026-11-11 ~17:32 CST.
+Covers since the ~16:32 pass.
+Safe-space gate applied before gathering.
+Routine ticks 1440-1445 (register stable
+at 22 active, no closures), the vTPU
+tracker (no change), the Discord
+backstop (healthy), and the Mirror Will
+watchdog (watch over) are noise and are
+not repeated.
+
+- [observed] PAPER 014 FULLY CLOSED
+  (verified extraction flushed 16:46):
+  scorecard raised the Research Oracle
+  from 70% to 80% (+10, the Oracle's
+  second straight exact landing), with
+  20 new concepts founding cluster Q
+  and the registry verified at 492
+  entries. This resolves the pending
+  AFTER-score line noted in the 11:47
+  absorption entry, whose score and
+  new Oracle standing were not yet
+  stated.
+
+- [observed] PHEXTURA STANDOFF PROFILE
+  PUBLISHED (verified extraction flushed
+  16:46), supplementing the standoff
+  ruling journaled at 16:32: STANDOFF.md
+  was drafted and published in the
+  phextura repo beside the L2 spec,
+  bytes verified after the push; the
+  ruling made standoff a thirteenth
+  spec area. Integration into the
+  design and L2 texts is still pending:
+  eight integration proposals itemized,
+  none applied. Supporting fact recorded
+  in the same flush: importing a phext
+  file into mutable assigns fresh random
+  identities to every block, so phext
+  coordinates are the only identity that
+  survives crossing into mutable and back.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
