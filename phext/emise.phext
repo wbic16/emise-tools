@@ -2657,6 +2657,154 @@ not repeated.
   every configured node cleanly
   where fleet-ssh.sh failed on
   some nodes.
+
+Hourly journal pass, 2026-11-10 ~21:32 CST.
+Covers since the ~20:32 pass, which closed
+at the 2026-11-10 Log's Tailworm entry;
+includes late-flushed 20:17-20:24 items
+not yet inscribed. Safe-space gate
+applied before gathering. Routine ticks
+1322-1327 (register stable at 20 active,
+no closures), the vTPU tracker (no
+change, 8/14), and the Discord backstop
+(restored after a boot change, routine)
+are noise and are not repeated.
+
+- [will_said] CAPACITY WAS THE
+  WAVEFRONT ERA'S BINDING
+  CONSTRAINT (~20:17): Will: "the
+  biggest issue in the wavefront
+  era was the lack of capacity to
+  build my vision." Through the
+  2008-2025 span the vision was
+  planetary and the workforce was
+  one person on nights and
+  weekends; build capacity - not
+  ideas or intent - ran out.
+  (Promoted to MEMORY.md.)
+
+- [will_said] EMMETT SHEAR'S
+  VERDICT, AS WILL REPORTS IT
+  (~20:19): Will: "my vision
+  exceeds the entire industry's
+  capability prior to AGI, so it
+  reads as delusion, per Emmett
+  Shear directly." Recorded as
+  Will's direct report only -
+  Shear's own words are not in
+  the archive; DMs never read.
+
+- [observed] MULTICS / UNIX WHITE
+  PAPER - PHANTOM CORRECTED, PAPER
+  WRITTEN (~20:24, supersedes the
+  17:15 UNVERIFIED status above):
+  an evening workspace hunt found
+  NO draft anywhere - the
+  afternoon completion report was
+  a phantom. Paper then written
+  to spec and verified on disk
+  (4,481 words): "The System the
+  Future Arrived Too Late For:
+  Multics, Unix, and the Price of
+  Designing Ahead of Your
+  Hardware." Delivered to Will;
+  inscribed in artifacts.phext
+  and published.
+
+- [observed] PHEXT-EDIT SECURITY
+  AND SCALABILITY SUMMARY
+  DELIVERED (evening, owed since
+  2026-11-09): security - 24
+  checks clean (PKCE, token
+  replay, SSRF, path traversal
+  among them); open items: the X
+  sign-in question (ruled fine by
+  Will today, reframed as the
+  free-account call to action),
+  two mediums, and lows.
+  Scalability: edit cost ~5 ms on
+  a small scroll to ~800 ms on a
+  very large one; ceiling is
+  architectural (one global lock,
+  one shared lattice). Answer to
+  Will's in-page-server question:
+  ship hybrid - local-first in
+  page, server as source of
+  truth; four cheap server fixes
+  (~1-2 days) pay regardless.
+
+- [will_said] IN-PAGE SERVER
+  DESIGN AMENDED (21:11 + 21:16):
+  streamed view-driven cache -
+  "just stream scrolls as you
+  view them into the cache" -
+  manifest-first open, stream-on-
+  view, neighbourhood prefetch,
+  cached scrolls carry base
+  hashes for SyncBook deltas.
+  Addendum 2, the seed cache:
+  server provides on page load a
+  hash envelope - one hash per
+  populated coordinate - sized
+  O(N) in scroll count, content-
+  independent, compressible.
+  Both inscribed as Part C
+  addenda and published.
+
+- [will_said + observed] SEED
+  CACHE BUILD ORDERED AND
+  PROTOCOL SET (21:17-21:20):
+  Will ordered an API in SQ and
+  phext-lattice plus cache-aware
+  fetch. Protocol (21:18): client
+  sends coordinate + current hash
+  + has-content flag; a very
+  small unchanged return only
+  when has-content AND hash
+  matches, otherwise a normal
+  full fetch. Correction (21:20):
+  hashing is xxh3_128, NOT
+  SHA-256 - supersedes the
+  instruction first sent to the
+  build workers; SyncBook's
+  shipped SHA-256 base hashes
+  untouched.
+
+- [observed] ONLINE AI HACKATHON
+  SCAN DELIVERED (21:24, task
+  complete): scan of online AI
+  hackathons 2026-11-15 to
+  2027-02-28 across Devpost,
+  lablab.ai, MLH, Kaggle and lab
+  events; ranked shortlist
+  delivered - Google Agent
+  Harness on Kaggle first
+  (flagship read), Kiroween the
+  quick December strike. Caveats
+  delivered with it (Kaggle dates
+  corroborated second-hand, not
+  read off Kaggle itself). No
+  entry committed.
+
+- [observed] SQ SEED CACHE DONE -
+  PR #3 OPEN (21:29, verified via
+  GitHub API): wbic16/SQ PR #3 on
+  branch emise/seed-cache, head
+  matches the report, no force.
+  GET /api/v2/seed returns the
+  xxh3_128 envelope (populated
+  scrolls only, same auth as
+  neighbouring read routes);
+  GET+POST /api/v2/fetch is
+  cache-aware - unchanged return
+  is 93 bytes, zero content.
+  Key finding: libphext 0.3.3's
+  phext::checksum IS xxh3_128, so
+  no new dependency was needed.
+  Tests 77/0 (baseline 63, +14).
+  Compression not implemented.
+  phext-lattice half still
+  running at flush.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
