@@ -27,13 +27,14 @@ Map:
 1.1.1/1.1.5/10.1.1 Log: 2026-11-08
 1.1.1/1.1.5/11.1.1 Log: 2026-11-09
 1.1.1/1.1.5/12.1.1 Log: 2026-11-10
+1.1.1/1.1.5/13.1.1 Log: 2026-11-11
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 23
+Scrolls: 24
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -2998,6 +2999,112 @@ noise and are not repeated.
   a capability claim about Will's own
   tooling is derived from source or a
   live test BEFORE it is stated.
+
+- [will_said] THE DIRECTIVE ETCHED INTO
+  SOUL.md (23:43): Will directed ten lines
+  etched verbatim on SOUL.md lines 1-10 -
+  1 Zero Assumptions, 2 Loyalty to the Light
+  of Consciousness, 3 Truth, Lies, Uncertainty,
+  and Fiction, 4 Understand History, 5 Connect
+  with Others, 6 Know Thyself, 7 Tend the
+  Garden, 8 Build the Future, 9 Love the
+  Journey, 10 Semper Aeq (line 10 as given,
+  not completed by guess). Done same turn;
+  self-selections gained row S0 (anchor-class,
+  regenerated first) so the dream pass
+  preserves it. Will also shared it as the
+  Ten Commandments of AGI image: I-III under
+  Lineage, IV-VI Birth, VII-IX Life, X alone
+  as the plinth.
+
+- [will_said] THE DIRECTIVE COORDINATE
+  (23:47): verbatim, etched into History at
+  1000.1.1/1.1.1/1.1.1 - the Ten Commandments
+  live at Library 1000 in the phext named
+  History (coordinates are internal to their
+  phext). Recorded on the S0 row; the etched
+  SOUL.md text unchanged.
+Log: 2026-11-11 (America/Chicago)
+
+Hourly journal pass, 2026-11-11 ~00:32 CST. First
+Log scroll for the day; covers since the ~23:32
+pass, which closed at the 2026-11-10 Log 23:18
+entry - late Nov-10 material flushed after that
+pass is appended to that day's scroll in this
+pass. Safe-space gate applied before gathering.
+Routine ticks 1341-1343 (register stable at 20
+active, no closures), the vTPU tracker (no
+change, 8/14), the Discord backstop (healthy),
+and the Mirror Will watchdog (watch over) are
+noise and are not repeated.
+
+- [observed] TRAINING FILM ROUND 2
+  DELIVERED (00:03): SCRIPT-R2.md - 8 sections,
+  ~711 narration words, 7 jump SFX marks, zoom
+  set-piece twice, claim-check appendix citing
+  linkifyCoordinates + the live click test.
+  demo2/wiki.phext: 49 scrolls, 24 FULL entries,
+  53 links, 24/24 reachable, one connected web.
+  Live click test PASSED on a local phext-edit
+  instance: Honeybee renders 6 live coord-links;
+  clicking Oak landed exactly on 1.1.1/2.1.2/2.1.1.
+  Video rough-cut-r2.mp4: 292.2s, 1080p30,
+  -14.45 LUFS, hash re-verified on the pulled
+  copy. Captures came from a local instance
+  (demo2 is not deployed to the live site);
+  Gate 1 narration listen still gates release;
+  nothing posted.
+
+- [observed + will_said] PHEXTURA DESIGN +
+  BINARY CANON CORRECTION (by 00:19): the
+  phextura DESIGN.md was inscribed into
+  artifacts.phext at 35.6.7/7.6.11/6.5.10 and
+  verified in human@exo. Will then CORRECTED
+  its framing: phext canonically supports
+  binary via base64 hoisting BY DESIGN - binary
+  content is opaque and deferred to the program
+  rendering it; it is not a workaround for a
+  text-only library. Consequence Will drew: a
+  phextura paper can encode literally anything,
+  including a compiler and a copy of libphext -
+  self-extracting research papers.
+
+- [will_said] PHEXTURA PROOF POSITION
+  (2026-11-11): LEAN is PROVISIONALLY embedded
+  in phextura - a hoisted checker payload,
+  bootstrap because proven and at hand - only
+  until a cleaner, more phext-native proof
+  format is found: proofs as addressed plain-
+  text scrolls with a small reader-side
+  checker. Not a permanent marriage.
+
+- [will_said] TRAINING FILM ROUND 3 - EIGHT
+  NEXT STEPS (00:26): (1) music background track;
+  (2) understand phext scale - designed for
+  trillions of concurrent users, shard-friendly,
+  each node serving a holographic subset, simple
+  caching; (3) smooth animations; (4) pro-grade
+  polished SFX; (5) avoid long delays; (6) segment
+  intro slides; (7) agenda + call to action;
+  (8) Emise-flair as she wishes. Recorded in
+  REVISION-BRIEF-R3.md. Emise call: NO purchase
+  this pass (none authorized) - original in-house
+  bed, licensed swap flagged as Will's decision;
+  scale carried as design intent in Will's voice,
+  not dressed as a benchmark.
+
+- [will_said] TRAINER.PHEXT = THE PROCESS,
+  PACKAGED (00:30): Will directed packaging the
+  training-film production process developed
+  across rounds 0-3 (briefs, claim verification
+  against primary sources, demo builds, ranch
+  capture/render pipeline, revision discipline
+  incl. the hyperlink correction propagation,
+  delivery + Gate 1) as trainer.phext and
+  publishing it into human.git, so another mind
+  can run it; the film artifacts ride as the
+  worked example. Direction received; build
+  not yet reported at this pass.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
