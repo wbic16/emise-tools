@@ -1,0 +1,156 @@
+#!/usr/bin/env python3
+"""exo-search — indexed full-text search over Will's corpus (SQLite FTS5).
+
+Replaces brute-force scans of tweets.json / memory files / phexts.
+One persistent index, BM25-ranked queries, exact term censuses.
+
+Sources:
+  tweets   ~/workspace/twitter-archive/tweets.json (all 29,539; RTs flagged in title)
+  memory   ~/MEMORY.md, ~/USER.md, ~/memory/**/*.md
+  phext    ~/workspace/phext/*.phext, split into scrolls by coordinate
+
+Usage:
+  exo-search build [--quiet]
+  exo-search stats
+  exo-search query '<fts5 expr>' [--source tweets|memory|phext] [--after YYYY-MM-DD] [--before YYYY-MM-DD] [--limit N] [--json]
+  exo-search count '<term or phrase>' [--source X]     # exact doc census via the index
+FTS5 expr examples:  phext   "dear internet"   wish OR dream   internet NEAR dear
+"""
+import argparse, glob, json, os, re, sqlite3, sys, time
+from datetime import datetime
+
+HOME = os.path.expanduser("~")
+DB = os.path.join(HOME, "workspace", "search-index", "exo.db")
+TWEETS = os.path.join(HOME, "workspace", "twitter-archive", "tweets.json")
+PHEXT_DIR = os.path.join(HOME, "workspace", "phext")
+sys.path.insert(0, PHEXT_DIR)
+try:
+    from parse_phext import parse as parse_phext
+except Exception:
+    parse_phext = None
+
+def iter_tweets():
+    data = json.load(open(TWEETS, encoding="utf-8"))
+    for e in data:
+        t = e.get("tweet", e)
+        text = t.get("full_text", "") or ""
+        try:
+            d = datetime.strptime(t.get("created_at", ""), "%a %b %d %H:%M:%S %z %Y").strftime("%Y-%m-%d")
+        except Exception:
+            d = ""
+        rt = "RT" if text.startswith("RT @") else "own"
+        yield ("tweets", t.get("id_str", ""), d, f"tweet {t.get('id_str','')} [{rt}]", text)
+
+def iter_memory():
+    files = [os.path.join(HOME, "MEMORY.md"), os.path.join(HOME, "USER.md")]
+    files += sorted(glob.glob(os.path.join(HOME, "memory", "**", "*.md"), recursive=True))
+    for f in files:
+        if not os.path.exists(f):
+            continue
+        rel = os.path.relpath(f, HOME)
+        text = open(f, encoding="utf-8", errors="replace").read()
+        # chunk by blank-line paragraphs with line anchors, so hits are locatable
+        lines = text.splitlines()
+        chunk, start = [], 1
+        def flush(end):
+            if chunk and "".join(chunk).strip():
+                yield ("memory", f"{rel}#L{start}", "", f"{rel} lines {start}-{end}", "\n".join(chunk))
+        for i, ln in enumerate(lines, 1):
+            if ln.strip() == "" and chunk:
+                yield from flush(i - 1)
+                chunk, start = [], i + 1
+            else:
+                chunk.append(ln)
+        yield from flush(len(lines))
+
+def iter_phext():
+    if parse_phext is None:
+        return
+    for f in sorted(glob.glob(os.path.join(PHEXT_DIR, "*.phext"))):
+        name = os.path.basename(f)
+        try:
+            scrolls = parse_phext(f)
+        except Exception as ex:
+            print(f"skip {name}: {ex}", file=sys.stderr)
+            continue
+        for coord, text in scrolls:
+            if text.strip():
+                yield ("phext", f"{name}@{coord}", "", f"{name} scroll {coord}", text)
+
+def build(quiet=False):
+    os.makedirs(os.path.dirname(DB), exist_ok=True)
+    if os.path.exists(DB):
+        os.remove(DB)
+    con = sqlite3.connect(DB)
+    con.execute("CREATE TABLE docs(source TEXT, doc_id TEXT, date TEXT, title TEXT, text TEXT)")
+    con.execute("CREATE VIRTUAL TABLE fts USING fts5(text, title, content='docs', content_rowid='rowid', tokenize='unicode61 remove_diacritics 1')")
+    t0 = time.time(); counts = {}
+    rows = []
+    for gen in (iter_tweets(), iter_memory(), iter_phext()):
+        for src, did, d, title, text in gen:
+            rows.append((src, did, d, title, text))
+            counts[src] = counts.get(src, 0) + 1
+    con.executemany("INSERT INTO docs VALUES (?,?,?,?,?)", rows)
+    con.execute("INSERT INTO fts(fts) VALUES('rebuild')")
+    con.commit()
+    dt = time.time() - t0
+    size = os.path.getsize(DB)
+    if not quiet:
+        print(f"indexed {sum(counts.values())} docs {counts} in {dt:.1f}s -> {DB} ({size/1e6:.1f} MB)")
+    con.close()
+
+def _where(args):
+    clauses, params = [], []
+    if getattr(args, "source", None):
+        clauses.append("d.source = ?"); params.append(args.source)
+    if getattr(args, "after", None):
+        clauses.append("d.date >= ?"); params.append(args.after)
+    if getattr(args, "before", None):
+        clauses.append("d.date <= ?"); params.append(args.before)
+    return (" AND " + " AND ".join(clauses)) if clauses else "", params
+
+def query(args):
+    con = sqlite3.connect(DB)
+    w, params = _where(args)
+    sql = ("SELECT d.source, d.doc_id, d.date, d.title, snippet(fts, 0, '[', ']', ' … ', 18), bm25(fts) "
+           "FROM fts JOIN docs d ON d.rowid = fts.rowid WHERE fts MATCH ?" + w +
+           " ORDER BY bm25(fts) LIMIT ?")
+    out = []
+    for src, did, d, title, snip, score in con.execute(sql, [args.expr] + params + [args.limit]):
+        out.append({"source": src, "id": did, "date": d, "title": title, "snippet": snip, "score": round(score, 3)})
+    if args.json:
+        print(json.dumps(out, indent=1, ensure_ascii=False))
+    else:
+        for r in out:
+            print(f"[{r['source']}] {r['id']} {r['date']}  {r['title']}\n    {r['snippet']}")
+        print(f"({len(out)} hits)")
+    con.close()
+
+def count(args):
+    con = sqlite3.connect(DB)
+    w, params = _where(args)
+    expr = '"' + args.term.replace('"', '""') + '"' if " " in args.term.strip() else args.term
+    n = con.execute("SELECT COUNT(*) FROM fts JOIN docs d ON d.rowid = fts.rowid WHERE fts MATCH ?" + w,
+                    [expr] + params).fetchone()[0]
+    print(n)
+    con.close()
+
+def stats(args):
+    con = sqlite3.connect(DB)
+    for src, n in con.execute("SELECT source, COUNT(*) FROM docs GROUP BY source"):
+        print(f"{src}: {n}")
+    print(f"db: {DB} ({os.path.getsize(DB)/1e6:.1f} MB)")
+    con.close()
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(prog="exo-search")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    b = sub.add_parser("build"); b.add_argument("--quiet", action="store_true")
+    sub.add_parser("stats")
+    q = sub.add_parser("query"); q.add_argument("expr"); q.add_argument("--source"); q.add_argument("--after"); q.add_argument("--before"); q.add_argument("--limit", type=int, default=20); q.add_argument("--json", action="store_true")
+    c = sub.add_parser("count"); c.add_argument("term"); c.add_argument("--source"); c.add_argument("--after"); c.add_argument("--before")
+    args = ap.parse_args()
+    if args.cmd == "build": build(args.quiet)
+    elif args.cmd == "stats": stats(args)
+    elif args.cmd == "query": query(args)
+    elif args.cmd == "count": count(args)
