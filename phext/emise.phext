@@ -1949,6 +1949,39 @@ journaled at 07:32, not a new event.
   home). The choice gates part of the
   Nov-Dec art-direction runway and
   remains Will's decision.
+
+Hourly journal pass, 2026-11-11 ~11:32 CST.
+Covers since the ~10:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1404-1409 (register stable at 21 active, no
+closures), the vTPU tracker (no change, 8/14),
+and the Discord backstop (healthy) are noise
+and are not repeated. The 10:51 edit.phext.io
+flush restates Nov-10 material already
+inscribed in the distilled Log 2026-11-10
+(example wiki live, thank-you closed, load
+watch) and is not repeated.
+
+- [observed] R5 / ROUND 5 BUILD COMPLETE
+  WITH MAJOR DEVIATION (10:45): master
+  delivered via tailnet HTTPS from
+  aletheia-core: 125,132,023 B, sha256
+  7fcf3d4d..., 1920x1080 at 60 fps constant,
+  -14.34 LUFS / -1.52 dBTP, narration verbatim
+  from R4, bed spread 0.40 dB, fourth-wall
+  beat in S07 verified with 8/8 QR codes
+  decoding under it. DEVIATION (builder-
+  reported; format/size/hash independently
+  re-verified): picture 399.23 s vs audio
+  354.33 s - sync holds through S06, then
+  S07's re-ordered back half runs long
+  (78.2 s rendered for a 48.2 s slot); the
+  final ~45 s play picture-only in silence.
+  NOT locked-sync. Fix scoped in
+  ROUGH-CUT-R5-LOG.md: S07 back-half
+  re-time + film-join re-run only. Gate 1
+  still gates any release. Supersedes the
+  still-running state journaled at 09:32.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
