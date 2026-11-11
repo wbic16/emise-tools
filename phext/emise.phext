@@ -2076,6 +2076,46 @@ journaled at 07:32 / 08:32, are not repeated.
   graph; open: math notation, layout
   vocabulary, warrant display policy,
   living-artifact class, panel adoption.
+
+Hourly journal pass, 2026-11-11 ~13:32 CST.
+Covers since the ~12:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1416-1419 and 1421 except the register
+repair below, the vTPU tracker (no change,
+8/14), the Discord backstop (healthy), and
+the Mirror Will watchdog (watch over) are
+noise and are not repeated. The 12:36 flush
+of the morning commute call restates the
+portal / arena / citizen-science material
+already journaled at 09:32 and the re-encode
+plan decisions journaled at 10:32, and is
+not repeated.
+
+- [observed] R5 FIX NOT DISPATCHED -
+  AWAITS WILL (flushed 12:36), updating
+  the 11:32 completion entry: the S07
+  back-half re-time + film-join re-run
+  has NOT been dispatched; Emise reported
+  the sync deviation to Will, scoped the
+  fix to that re-time only (everything
+  else in R5 carries over untouched), and
+  left dispatch on Will's word. No answer
+  from Will in that conversation yet.
+
+- [observed] REGISTER #65 ADDED - ZERO
+  INDEX WAIT REPAIRED (tick 1420, 13:13):
+  the tracked Zero Index record said PR
+  #57 open, waiting on Will to merge and
+  deploy, but had NO register entry - a
+  defect. Live-validated first: phext-
+  lattice PR #57 OPEN, head cb4bee44.
+  Added as register #65 (register 21 ->
+  22 active), mirrored in todo-source.json;
+  todo.phext rebuilt, --check CURRENT
+  (sha256 11faed3c...). Tick 1421 cleared
+  the republish lag: todo.phext published
+  exo-plan@exo ea5b17c5, remote re-fetched
+  byte-identical - mirror current.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
