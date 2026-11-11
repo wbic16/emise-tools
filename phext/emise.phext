@@ -1618,6 +1618,84 @@ are noise and are not repeated.
   and tested on aletheia-core; published
   quarterexo@exo 73971518, files
   SHA-256 and mode verified.
+
+Hourly journal pass, 2026-11-11 ~06:32 CST.
+Covers since the ~05:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1374-1379 (no closures, no new register
+items), the vTPU tracker (no change,
+8/14), the Discord backstop (healthy), and
+the Mirror Will watchdog (loop finished)
+are noise and are not repeated.
+
+- [observed] RANCH STATE BACKUP
+  2026-11-11 SUCCEEDED: Rock Mountain and
+  Scroll Central both hold
+  ~/emise-state-backup/2026-11-11/
+  (142 files, 24,090,530 B, tar sha256
+  9d92a31a...); far-side sha256sum -c
+  142/142 OK on both. Rotation kept
+  2026-11-11 + 2026-11-10. Safe-space
+  register checked; gated on-disk files
+  only.
+
+Hourly journal pass, 2026-11-11 ~07:32 CST.
+Covers since the ~06:32 pass, whose 1 entry
+was built locally but NOT published (publish
+blocked, phantom-class; see publish log) -
+this pass retries that publish. Safe-space
+gate applied before gathering. Routine ticks
+1380-1385 (no closures, no new register
+items), the vTPU tracker (no change, 8/14),
+the Discord backstop (healthy), the disk
+report (GREEN), and the Mirror Will watchdog
+(loop finished) are noise and are not repeated.
+
+- [observed] APERTURESHIFT DAILY
+  IMPROVEMENT (06:44): item 2 done - meta
+  description + Open Graph / Twitter cards
+  on hub index/about/legal, commit 1aa54689;
+  verified live, served sha256 == repo for
+  all 4 changed files.
+
+- [observed] UGREEN ROUND-1 PACKAGE
+  COMPLETE (flushed 06:54): proposal.md +
+  SKILL.md finished; phext license
+  placeholder closed as "MIT License"
+  (Will's standing MIT principle). Still
+  needs Will's review/submission before
+  Sun 2026-11-15 23:45 PT close.
+
+- [observed] GEMMA 4 HACKATHON - DECISION
+  ASK OPEN (06:54): ask delivered to Will,
+  still open at flush. Paper Track closes
+  Thu 2026-11-12 23:59 UTC with no
+  submittable write-up; plan default is
+  SKIP. Either way Will must accept the
+  Kaggle rules himself on Nov 12. Main
+  track gates Nov 25 / Nov 29 / Dec 2.
+
+- [observed] TODO MIRROR VERIFIED
+  (06:54): nightly sweep's admitted gap
+  closed - remote todo.phext at
+  exo-plan@exo 09dc173d sha256 5ee34554...
+  byte-identical to local. Mirror current.
+  R4 state clarified the same flush:
+  report delivered ~01:50, film itself
+  NOT uploaded, blocked pending Will.
+
+- [observed] THIRST DAY 6 - PAPER 013
+  COMPLETE: arXiv:2611.14463, "A Theory
+  of Cross-Validation Variance"; blind
+  prediction sealed first. Measured 8 new
+  concepts (1.2.131-1.2.138), NI 0.0580,
+  Oracle 70% (60-80) - foretold point AND
+  range exact, first exact Oracle landing.
+  research.phext 452 scrolls, sha256
+  3ddbc5c3...; Lean re-proof clean on
+  aletheia-core; author check CLEAN.
+  Mastery entry 6 published agi@exo
+  f84db9ce, remote bytes verified.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
