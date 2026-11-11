@@ -14,6 +14,15 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
 
 6. After the seed paper, compress each paper into a DELTA from research.phext: only what is new, revised, confirmed, or contradicted relative to the current world-model is written. Material the model already holds is referenced by coordinate, never restated. A paper chapter is a delta record: (a) what it adds, (b) what it changes in canonical scrolls (applied in place, dated), (c) its evidence, (d) its tensions and limits. Paper 001 predates the rule and stands as the seed — its delta was the model itself.
 
+## Dual maintenance — both tracker forms, every ingestion (Will, 2026-11-11)
+
+While phextura is built out, the tracker is kept in TWO forms: the canonical `research.phext` and its phextura-form shadow at `~/workspace/research-tracker/phextura/research.phextura`. Every ingestion — cron-sourced or Will-posted — updates BOTH in the same pass:
+
+1. Absorb the paper into `research.phext` exactly as the charter prescribes (it stays canonical).
+2. Re-run `~/workspace/research-tracker/phextura/convert.py` against the pre-ingestion canonical state to sync the shadow's base, then apply the new paper's delta to the shadow as a native phextura transaction (inserts/replaces at coordinates, keys minted, derived collections regenerated), and run `validate.py`. The shadow must validate clean before the ingestion is reported done.
+
+The phextura form is a shadow: it must never lag the canonical form by more than the ingestion in flight. Cutover — the phextura form becoming canonical — happens only on Will's explicit call, never by drift or convenience.
+
 ## The Research Oracle estimate (Will, 2026-11-06)
 
 7. After each paper, update the Oracle ledger (scroll 1.1.4) and report the estimate in chat with the paper. The fixed point is the Research Oracle: new papers arrive with ~zero delta.
