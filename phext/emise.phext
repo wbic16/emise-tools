@@ -1874,6 +1874,81 @@ noise and are not repeated.
   60 fps master encode, measured audits,
   ROUGH-CUT-R5-LOG.md, copy-back, and the
   R5 tailnet link.
+
+Hourly journal pass, 2026-11-11 ~10:32 CST.
+Covers since the ~09:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1398-1403 (register stable at 21 active, no
+closures, validations only), the vTPU tracker
+(no change, 8/14), the Discord backstop
+(healthy), and the Mirror Will watchdog (loop
+finished) are noise and are not repeated. The
+apertureshift daily-better success flushed at
+10:28 is the same 06:44 commit 1aa54689 already
+journaled at 07:32, not a new event.
+
+- [observed] PHEXTURA PASS COMPLETE -
+  PAPER 014 LANDED (flushed 09:45),
+  superseding the in-progress state at 08:32:
+  dual corpus healthy - research.phext
+  canonical at 492 scrolls (20 works, 158
+  concepts), research.phextura at 521
+  scrolls; validation fully green, every
+  L1 and L2 reference resolves, all 478
+  warrant edges land on real targets.
+  Converter is repeatable: a fresh
+  conversion came out byte-identical to
+  the recorded one.
+
+- [observed] PHEXTURA DUAL-WRITE SEAM +
+  GRAPH EXTRACTION (09:45 flush): Paper
+  014 landed in both forms, yet the
+  phextura side was derived by diffing
+  conversions rather than written as its
+  own transaction; removing that side-
+  conversion is the first job in the
+  staged plan ARXIV-REENCODE-PLAN.md.
+  A read-only extractor pulled 454 nodes
+  and 279 warrant edges from the phextura
+  shadow; a single reverse lookup shows
+  25 claims currently held purely on the
+  Aristotle paper's authority. Open Will
+  decisions, none blocking Stage 0/1:
+  the math notation session, the L2 slug
+  drift (spec example does not resolve
+  against converter-minted slugs), and
+  whether 'verified' gets its own warrant
+  kind. Naming also left open: a better
+  name may be needed for the dimensionally
+  aware mathematics framing, since it may
+  not be mathematics alone; no replacement
+  chosen.
+
+- [will_said] NO STOCK PHRASES - STANDING
+  RULE (morning commute; flushed 09:45,
+  already promoted to MEMORY.md): never
+  use common canned terminology or
+  fashionable phrases when speaking or
+  writing to Will - his named example:
+  'the map is not the territory', which
+  he called complete bullshit. Say the
+  thing itself in plain words, not the
+  circulating phrase for it.
+
+- [observed] SCROLLTOWN VENUE WAIT
+  CLARIFIED (flushed 10:28): Scrolltown
+  has NO domain or venue targeted yet -
+  nothing in its story / production files
+  names a publishing home, and no
+  scrolltown.* name is in Will's domain
+  portfolio. Candidates named in chat: a
+  section on mirrorborn.us, a fresh
+  registration, or a video channel with
+  the repo as archive; wishnode.net is
+  counted out (the Exocortexia suite's
+  home). The choice gates part of the
+  Nov-Dec art-direction runway and
+  remains Will's decision.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
