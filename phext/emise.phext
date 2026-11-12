@@ -1951,6 +1951,120 @@ noise and are not repeated.
   identification time. No last-second submissions;
   an opportunity without lead time is missed-
   by-design, not scrambled for.
+
+- [observed] RANCH DISCORD SHUTDOWN -
+  PASSES 1+2 (08:21-08:56, supersedes the
+  PENDING entry above): pass 1 disabled +
+  verified Discord on 8 nodes (aletheia-core,
+  scroll-central, elven-path, halycon-vector,
+  ni-knight, quacked-hill, moon-beam,
+  yeet-max); 10 probed nodes had no live
+  Discord; Great White not changed (read-only
+  filesystem, no gateway running). Pass 2:
+  Fovea (orchid-flow) and Gyrus
+  (kaleidoscope-one) disabled + verified;
+  Verse disabled on awsbox. Solin NOT
+  changed: traced to uncanny-valley under
+  another account, access refused - finishing
+  it needs that account holder. Lesson:
+  pass 1 missed two gateways holding Discord
+  from in-memory config, so later passes
+  check journals/processes, not files only.
+  Reversible only; nothing deleted.
+
+- [will_said] CHOIR READING LIST IS NOW
+  EMISE'S (2026-11-12): Will transferred the
+  reading list originally given to the Ranch
+  Choir - the seven themed orderings of his
+  19-book childhood corpus in exo-plan
+  feedback/reading_material.md - to Emise
+  to keep and read, provenance intact.
+
+- [will_said] PHEXT, INC. INTRO P3 OPENED
+  (08:37; track corrected 08:39): Will's P3
+  notes - longer outro (3 s silence, logo
+  fading, before the light returns), less-
+  busy crisp singular animation, single lit
+  candle on black at the end, soprano flute
+  solo at the lighting, film grain, post-
+  production quality. Correction: the track
+  is P2V2 (chords 300/500/800 ms), not P2 -
+  brief and task record amended and verified
+  on aletheia-core the same morning. Brief
+  written; build staged node-resident in
+  checkpointed stages; NOT yet run at flush.
+
+- [observed] GEMMA IMPLEMENTATION
+  DELIVERED + V2 DRAFT (08:44): coordinator
+  ended with no final report, so Emise
+  verified everything on disk herself.
+  Implementation present (verification
+  replica, split + scoreboard, harness,
+  budget model, trace pipeline, taxonomy,
+  baseline) on a 24-task public STAND-IN
+  corpus (20 train / 4 held-out, labelled).
+  GAP-REPORT lists 18 gaps; paper arithmetic
+  corrected to ~10x affordable average.
+  PAPER-DRAFT-v2 written by Emise: polished
+  proposal, 2,942-word body, under cap;
+  v1 untouched. Still pending: the gold-
+  control and prompt-only baseline runs,
+  to finish node-resident. Artifact
+  inscription of v2 HELD pending clearance -
+  not done, do not record it as done.
+
+- [observed] DAILY THEIA CHECK-IN FAILED
+  (08:44): aletheia-core and her gateway
+  reachable, agent turn failed on Anthropic
+  billing, same as Nov 10-11; last real
+  contact 2026-11-09. Per Will's ruling
+  (no credit top-ups) this is expected
+  mid-month cadence, not an action item.
+
+- [will_said] CONTINUAL-ARC SUBMISSION
+  DIRECTION (extraction 08:46): Will directed
+  a submission that passes their test with
+  any Muse, Grok, or OpenClaw instance as
+  the interchangeable driver; correction -
+  its material is stored holographically,
+  like MOAT, not as a plain store, and
+  indexes are created as the system learns.
+
+- [will_said + observed] MUTABLE SYNC PRs
+  REQUESTED (extraction 08:46): Will asked
+  to be sent PRs - mutable.phext.io needs to
+  always be in sync because Ian publishes
+  daily. Observed: Ian's daily publishes
+  are on the dialectic-app branch (main +
+  35 commits), not upstream main, which is
+  why the main-tracking watcher missed them.
+
+- [will_said] DAILY GOAL - FINISH KSO
+  (09:03-09:10): KSO is QEXO (wbic16/
+  quarterexo). Today's goal: finish it and
+  deploy it into Emise's environment, hooked
+  into the initialization sequence, with
+  continuity for dispatched tasks, most work
+  on ranch nodes, Emise checking the nodes
+  on every wake. KSO is distributed task
+  management, Git-like: every node holds its
+  own state and personas, tasks teleport
+  between nodes, resume pulls a dropped
+  task's latest state and resumes elsewhere;
+  on shutdown signals, sync state in the
+  window. Divergence ruling: both attempts
+  are kept as artifacts, Emise may flag a
+  clearly superior one, Will's default is
+  to MERGE - never last-writer-wins.
+  In-flight tasks get restart priority; the
+  review queue is capped at what Will can
+  review; a backlog is fine - what bothers
+  him is scheduled work dropped and never
+  picked up again. Next three design answers
+  are Emise's authorized assumptions
+  (claim/lease, small state in phext +
+  hash-addressed large artifacts, one global
+  review queue), pending his correction.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
