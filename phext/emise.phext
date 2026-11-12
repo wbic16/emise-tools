@@ -2803,6 +2803,100 @@ noise and are not repeated.
   familiarity baseline; divergences must
   be deliberate differences-with-reasons,
   never silent foreignness.
+
+- [observed] QEXO REWIRE COMPLETED +
+  MERGED (supersedes the audit entry
+  above, which left the rewire as a
+  next step not done, and the dated
+  note entry that left it dispatched
+  with the nightly hold standing):
+  PR #6 (branch emise/rewire-v3.1,
+  commit 594e9de4) restored the modular
+  build - main.rs from the PR #4 tip
+  (one extra mod tools; line vs the
+  v3-build tip, required by current
+  core.rs), file + forecast gates
+  ported into plan.rs, renumbered
+  0.3.1 / v3.1. All gates passed on
+  aletheia-core (cargo test 25/25,
+  CLI 32/32, HTTP/MCP 19/19, serve/MCP
+  smoke 15/15, package clean). Will
+  merged PR #6 and PR #5 (exo head
+  b962fad1) and ordered the nightly-
+  orchestrator exo-push hold lifted;
+  the job body was restored verbatim
+  and verified, and its working tree
+  ~/workspace/orchestrator/ - found
+  still on the stale standalone v2.3
+  line - was refreshed from merged exo
+  (v3.1, modular) so a nightly run
+  cannot re-overwrite main.rs.
+  Follow-up flagged: bare qexo prints
+  the JSON plan envelope; the human
+  rendering path is unreachable
+  (inherited v3 behavior, not a
+  rewire regression).
+
+- [observed] WAITING REGISTER #58
+  CLOSED (tick 1474, 22:13): wbic16/
+  quarterexo PR #5 live-verified MERGED
+  via the GitHub API (merged_at
+  2026-11-12T03:55:23Z = 21:55 CST, in
+  the same evening pass where Will
+  merged PR #6). Register 22 -> 21
+  active; todo.phext mirror rebuilt
+  in the same pass and republished
+  (commit f380379f, sha256 59db43dc).
+  Siblings #57 (exocortical PR #5) and
+  #59 (exovim PR #5) live-verified
+  still OPEN. Flag carried: #53 (qexo
+  crates.io publish) - the merged tree
+  is now v3.1/0.3.1, so that item may
+  need its version framing updated;
+  the credential wait itself is
+  unchanged.
+
+- [observed] INTRO I2 COMPLETE +
+  T7 JOIN FAILED (updates the T7+I2
+  probed entry above, which left both
+  PENDING): I2 - the audio-stage crash
+  (NameError: clamp not defined) was
+  fixed and the build finished;
+  phext-inc-intro-i2.mp4 (32,937,712 B)
+  and the mezzanine (174,777,477 B)
+  verified on disk on aletheia-core,
+  with INTRO-I2-LOG.md. T7 - mix
+  complete and ALL picture segments
+  encoded, but the join FAILED at
+  encode tail-agenda: ffmpeg could
+  not open seg/body-agenda-last.png
+  (file never generated); no T7
+  master, no acceptance audit, node
+  idle. A second finisher was
+  dispatched ~22:23 scoped to generate
+  the missing last-frame PNG, run join
+  + assemble + the full audit, and
+  deliver master + TRAINING-T7-LOG.md
+  for Will Gate 1 listen only -
+  PENDING at flush, not done.
+
+- [will_said] QEXO LOAD-BALANCE JOB +
+  CITY CENSUS (22:23): Will: qexo will
+  be used to load balance our little
+  city across the nodes - the city
+  being the simulated 20 W node
+  population on the ranch. Will tally:
+  ~115/400 defined so far - NOT
+  confirmed against any registry in
+  Emise records (no census file
+  carries 115/400; the only published
+  count is the assistant 200-simulated
+  estimate from 21:08, ~4 kW ranch
+  envelope / 20 W, = 25 nodes x 8
+  cores). CONFLICT/OPEN: where the
+  400-slot city census is defined is
+  not yet a receipt; a qexo-held
+  census registry would make it one.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
