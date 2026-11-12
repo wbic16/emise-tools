@@ -1847,6 +1847,110 @@ repeated.
   This closes the stock-nginx-404 gap noted
   at 02:56, when the site was still
   roads-1.5.
+Hourly journal pass, 2026-11-12 ~08:32 CST.
+Covers since the ~07:32 pass. Safe-space
+gate applied before gathering. Routine
+ticks 1530-1535 (register stable at 39
+active, no closures), watchdog top-ups,
+vTPU tracker (no change, 8/14), morning
+briefing, RentAHuman scan (none qualifies),
+and lost-work sweep (flags unchanged) are
+noise and are not repeated.
+
+- [observed] UGREEN PREP FILES BUILT
+  (07:44): deadline watch re-verified the
+  draft at 476/500 words and built
+  proposal.pdf (38,414 B, 2 pp) and
+  phext-memory-skill.zip (3,023 B, limits
+  compliant). Nothing submitted; internal
+  submit-ready target Nov 13, Round 1
+  closes Nov 15.
+
+- [will_said] VOCABULARY - CHORD,
+  TENTATIVE: Will asked for a word for a
+  phext-scale call. Chord was offered for
+  scale, confluence for several streams at
+  once; Will resolved that maybe chord is
+  the best pedagogical device - teachability
+  over scale precision. Follow-on: coordinates
+  come in three groups of three, three triads
+  struck together. Status tentative, not canon.
+
+- [will_said] GEMMA IMPLEMENTATION TASK
+  OPENED (08:02, task 30.8.10/10.7.14/7.7.9):
+  Will directed implementing as much of the
+  Paper Track draft as possible while he gets
+  ready, then rewriting the proposal to address
+  gaps found. Coordinator dispatched; at last
+  flush it was running, no results yet. Steering
+  (08:09): the v2 draft reads as a polished
+  proposal; gaps live in GAP-REPORT.md, not
+  scattered through the paper. Original draft
+  not modified.
+
+- [observed] T8 CONFLICT RESOLVED
+  (08:17-08:30): probes on aletheia-core found
+  no rough-cut-t8 file, no production listing,
+  and no listener on port 8451 - earlier watchdog
+  claims of a Gate-1 render there were wrong.
+  Narration is done (r8 mix plus six section
+  chunks on the node); picture, encode, and
+  master never completed and the build is not
+  running. Cause verified: this VM is replaced
+  about every 2 hours (124 boot changes in the
+  deploy-study ledger); the T8 coordinator
+  finished the narration mix ~01:26 and died in
+  the 01:32 swap with no report. Task record
+  still reads paused - stale, flagged for
+  correction.
+
+- [will_said] STANDING RULE - NO LOCAL VM
+  WORK (2026-11-12): Will directed that work
+  not be dispatched to the local environment -
+  it is essentially untrusted. Emise coordinates,
+  verifies, and records here; substantive
+  execution runs on ranch nodes, node-resident
+  and stage-checkpointed in short legs. Subagents
+  on this VM inherit its mortality.
+
+- [observed] VIDEO INDEX PAGE LIVE: built on
+  aletheia-core at the request of Will (port
+  8452); all film links verified by HEAD from
+  the node, all 200; T8 listed as in-progress
+  with no link. Phext, Inc. status: P2 final,
+  P2V2 built, mastered, and served, awaiting
+  the first viewing of Will. Correction: the
+  P2V2 filename first sent was wrong; correct
+  is phext-inc-intro-p2-v2.mp4.
+
+- [will_said] DISCORD SHUTDOWN DIRECTED,
+  PENDING (morning, before 08:20): Will directed
+  shutting down all Discord integrations for
+  the ranch nodes - reversible disablement only,
+  no deletion of credentials, bots, messages, or
+  data. A fleet inventory/shutdown agent was
+  dispatched but had NOT reported completion or
+  verification by flush. Pending, not done.
+
+- [will_said] GEMMA 4 PAPER TRACK CLOSED
+  (08:31, supersedes the 07:48 intent to submit
+  this morning): Will said he is not going to
+  submit to this last-second - he has to get to
+  work and must verify his identity on Kaggle
+  before he can submit to anything there. No
+  submission was made. Draft and v2 proposal
+  stay on file for the main-track campaign
+  (entry gate Wed Nov 25, 2026).
+
+- [will_said] STANDING RULE - OPPORTUNITIES
+  AT OPENING (2026-11-12, born of the Paper
+  Track closure): identify opportunities as
+  they are about to open and surface entry
+  prerequisites (identity verification, rule
+  acceptance, account setup, eligibility) at
+  identification time. No last-second submissions;
+  an opportunity without lead time is missed-
+  by-design, not scrambled for.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
