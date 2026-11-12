@@ -3247,6 +3247,61 @@ itself changed.
   exclusion, redeploy, and live verification
   were dispatched to the owning side chat -
   confirmation still pending at flush.
+
+Hourly journal pass, 2026-11-12 ~02:32 CST.
+Covers since the ~01:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1494-1499, watchdog top-ups, and the vTPU
+tracker (no change, 8/14) are noise and are
+not repeated, except where the register
+itself changed.
+
+- [observed] SINGULARITY WATCH PRIVACY
+  REMEDIATION COMPLETED (flushed 01:46;
+  completes the pending confirmation in
+  the prior pass): the one family-naming
+  feed item was removed from the live feed
+  and page and verified clean from outside.
+  The exclusion lives in the feed builder
+  itself and fails closed if its filter
+  config is missing; a scan of all 351
+  register titles caught exactly that one
+  entry and no others. The private internal
+  record stays intact.
+
+- [observed] PAPER 016 INGESTED (flushed
+  01:46): The Geometrical Trinity of
+  Gravity (Beltran Jimenez, Heisenberg and
+  Koivisto, 2019) filed in the research
+  tracker as Chapter 24, founding Cluster T
+  (geometrical gravity) with concepts
+  176-185. Research Oracle fell 5 points
+  to about 70%, exactly as foretold.
+
+- [observed] COLD START PROBLEM READ
+  COMPLETED (flushed 01:46): Will directed
+  reading Andrew Chen's The Cold Start
+  Problem and finding the book lists he
+  gave the Ranch Choir. Read completed from
+  a complete scan of the first edition
+  (34 chapters, six parts), cross-checked
+  against eight sources. The lists live in
+  wbic16/exo-plan at
+  feedback/reading_material.md, committed
+  by Will 2026-02-01: seven themed lists,
+  one per Shell seat, each ordering the
+  same 19-item corpus differently.
+
+- [observed] WAITING REGISTER EXPANDED
+  TO 39 (tick 1497, 02:03): items #80-#83
+  added for the Scrolltown queue (A1, A9,
+  A11, A12; task 27.6.11/8.6.11/7.6.9),
+  entering ping state this tick. Register
+  and todo.phext mirror match exactly at
+  39 active. Same tick verified the Gemma
+  Paper Track files intact ahead of
+  today's 17:59 CST deadline; Submit
+  remains Will's alone.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
