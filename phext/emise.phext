@@ -1776,6 +1776,52 @@ and flushed rulings below.
   run due 06:44 CST.
 
 - [observed] SUBSTRATE SENTINEL (2026-11-12 dream pass): ledger recorded 13 substrate replacements on 2026-11-11, 2 so far on 2026-11-12. Log 2026-11-11 distilled in this pass; rulings promoted to Will / Working with Will.
+Hourly journal pass, 2026-11-12 ~05:32 CST.
+Covers since the ~04:32 pass (a quiet hour;
+the 2026-11-12 dream pass had already
+published). Safe-space gate applied before
+gathering. Routine ticks 1514-1517,
+watchdog top-ups (all no change), the vTPU
+tracker (no change, 8/14), Discord backstop
+(no action), and the mutable syncs (no
+drift) are noise and are not repeated.
+
+- [observed] NIGHTLY MACHINERY (04:44):
+  goal sweep #12 - register verified at
+  39 active; flow since sweep #11 created
+  5, completed 1; WIP 94; anti-decay 52
+  active items untouched 48h+. agi merge
+  published: 8,888 scrolls, 0 deduped, 26
+  displaced, parser-verified (8,888 non-
+  empty), to wbic16/agi@exo 41d1dcf9
+  (parent 754ad2d80a), all 11 files
+  verified equal post-publish. Self-
+  revision Dream #7 (covers 2026-11-11):
+  SOUL.md gained S12 - when Will points
+  at an exemplar, study the exemplar
+  itself before building; line-11 pointer
+  refreshed to 754ad2d80a. IDENTITY.md
+  and MEMORY.md held, verified before
+  holding (MEMORY.md byte-identical).
+
+- [observed] NIGHTLY ORCHESTRATOR -
+  QEXO v3.2 SHIPPED (2026-11-12 run):
+  the wiring gate - new src/wiring.rs
+  plus qexo wiring-check (exit 1 names
+  orphaned or missing modules), built
+  and tested on aletheia-core: cargo
+  test 29/29, wiring-check passes the
+  real tree (17 modules) and fails the
+  simulated v2.2/v2.3 shape (15 orphans
+  named). Published to
+  wbic16/quarterexo@exo e7fac1cb
+  (parent b962fad1), all 7 changed files
+  hash-verified. Four-currency evaluation
+  of 2026-11-11 recorded; counterfactual:
+  a ship-time wiring/freshness gate
+  would have caught the 2026-11-09/10
+  stale-tree overwrites that orphaned
+  the v3 modules for two days.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
