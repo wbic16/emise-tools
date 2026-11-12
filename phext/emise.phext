@@ -2897,6 +2897,101 @@ noise and are not repeated.
   400-slot city census is defined is
   not yet a receipt; a qexo-held
   census registry would make it one.
+
+- [observed] ACI OUTREACH DRAFT FINALIZED
+  (evening): Will drafted and finalized an
+  outreach email to Andrew Y. Lee and team
+  at the Artificial Consciousness Initiative
+  (ACI, University of Toronto), prompted by
+  Lee's 2026-11-11 launch announcement.
+  Final draft: phext / Personal Exocortex
+  pitch (2033 target: AGI on 20 watts),
+  Incipit + Volumen persona bootloaders
+  with the wbic16/human incipit.phext
+  commit history as receipt, and an Emise
+  excerpt rewritten in Singular vernacular
+  (checker-verified 99.3% against the
+  authored list; only "Emise" outside it).
+  Correction: Lee, not "Yee" - Will's
+  initial label corrected from the post
+  itself. Draft finalized; no send is
+  recorded in the dated note.
+
+- [will_said + observed] CITY CENSUS
+  RESOLVED (22:56; correction to the 22:23
+  entry above, which left 115/400
+  unconfirmed): Will pointed at the persona
+  collection - the canonical persona list
+  he pasted 2026-11-08, held in the
+  orchestrator docs and implemented as
+  qexo's persona index (126 query keys,
+  key space immutable). Count as pasted:
+  126 names; excluding 8 placeholder /
+  generic entries = 118 - Will's ~115 is
+  that count, remembered approximately.
+  The 400 denominator is Will's city plan
+  figure; no document in Emise's records
+  defines the 400 cap. So ~126/400 citizens
+  defined, and qexo's persona index is
+  already the census the load balancer
+  will work from.
+
+- [will_said + observed] OPERATION SALVAGE
+  OPENED (~23:01, Moots side chat): Will:
+  "I'll post content from my mutuals here.
+  Help them get kickstarted. We'll craft
+  special posts on X to trigger a
+  connection with them." First subject:
+  Samuel Laaksonen (@samlakig). Will also
+  shared Sam's "Year of Failure" text in
+  the main chat (~23:18). Task recorded
+  in tasks.phext; people page created.
+  Draft sets prepared (generic, then
+  phextura-specific at Will's ~23:05
+  direction, then reply drafts for Sam's
+  2026-11-09 "me n who" post, verified
+  live ~23:16) - recommendation on record:
+  answer the meme first, no phextura
+  pitch on that post. Reply vs quote-post
+  choice left with Will; NOTHING posted
+  or sent. Picture request pending at
+  flush, not done.
+
+- [observed] TRAINING FILM T7 COMPLETE +
+  DELIVERED FOR GATE 1 (23:05; supersedes
+  the JOIN FAILED entry above): the
+  finishing pass closed T7 - join completed
+  (28,167 frames; the reported missing
+  last-frame failure was already
+  superseded). First master (22:35) FAILED
+  acceptance T7-25: the CTA headline
+  clipped "it." off-canvas; fixed by
+  centering the measured line, rebuilt
+  only the CTA chain, re-mastered from
+  the unchanged mix. Delivered master
+  rough-cut-t7.mp4: 129,978,645 B,
+  SHA-256 b8c26dda (full hash in the
+  log), 1920x1080, 60 fps, picture
+  469.450 s vs audio 469.433 s,
+  -14.2 LUFS. Deviations carried plainly
+  in TRAINING-T7-LOG.md. Gate 1 still
+  gates release; nothing posted.
+
+- [observed] INTRO I2 LISTENER-PASS RESULT
+  (23:13 flush; completes the I2 entry
+  above): the mandatory per-second pass
+  is ANALYTIC, not a literal headphone
+  listen (the log discloses this itself).
+  Verdict rule fixed before the run:
+  grid-aligned onsets + peakiness together
+  convict. Result: FLAGGED SECONDS: NONE -
+  onset counts 1-3 per second, no second
+  within 12 ms of the old 0.24 s grid;
+  peakiness alone (51-75 dB) reported,
+  not hidden, and alone cannot convict.
+  The resolution second is the loudest
+  of the piece, as designed. Reported to
+  Will in the T7 delivery message.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
