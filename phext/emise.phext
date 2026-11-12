@@ -2243,6 +2243,137 @@ not repeated.
   identities to every block, so phext
   coordinates are the only identity that
   survives crossing into mutable and back.
+
+Hourly journal pass, 2026-11-11 ~18:32 CST.
+Covers since the ~17:32 pass.
+Safe-space gate applied before gathering.
+Routine ticks 1446-1451 (register stable
+at 22 active, no closures), the Discord
+backstop (healthy), and the Mirror Will
+watchdog (watch over) are noise and are
+not repeated. The MOAT flush in this
+window restates Paper 014, the persona
+panel rulings, and the standoff work
+already journaled today, and is not
+repeated. The 18:27 Architecture flush
+covers 2026-11-09/10 walkthrough events
+already in those days' logs.
+
+- [will_said] GENUINELY HARD TASKS LIST
+  OPENED (side chat, 17:27-17:48), task
+  22.4.6/4.3.5/4.4.7: 1. Cold Start
+  $20 -> $1K (maps to the Investor 1
+  challenge, unexecuted); 2. Create a
+  Charity; 3. Complexity Moonshots;
+  4. Solve Civ Scale Issues; 5. 1B token
+  context window; 6. P = NP (resolution
+  either way counts). [will_said]
+  Correction (17:45): the list's
+  escalating order is "just a happy
+  coincidence," not deliberate —
+  supersedes Emise's inference otherwise.
+  Will's equation for the list, verbatim:
+  "You + me + phext + ranch nodes = AGI".
+  Emise's candidate further items were
+  left UNCONFIRMED; none was added.
+
+- [will_said + observed] SINGULARITY
+  WATCH UNLOCKED (17:48), task
+  31.5.6/6.5.8/5.5.10: revive
+  singularitywatch.org; scope expanded
+  by Will to a CI/CD pipeline that
+  visualizes dispatched work in
+  real-time, replacing the placeholder.
+  [decision] Board scope (17:52): ALL
+  dispatched work, in coordinate form —
+  "you can see the shape of the
+  singularity" (327 tasks, all
+  coordinates parseable). [observed]
+  Investigation COMPLETE (~17:54):
+  serving repo wbic16/singularity-watch
+  @ master on awsbox; no deploy script,
+  CI, or webhook exists; GitHub Actions
+  must NOT be load-bearing (zero jobs
+  account-wide since 2026-11-09).
+  Native-support matrix verified (Rust
+  0.5.0, JS 0.4.0, Python 0.3.2, C#
+  0.3.0; phcc 9/10, phcpp 4/6, phst 4/6,
+  phextura spec 7/12). [observed] Feed
+  generator built and verified
+  (allowlisted fields only; idempotence
+  + negative test pass). [decision]
+  Feed gate ruling (18:01): use public
+  titles — the anonymized "Investor 1"
+  label is allowed, register references
+  are stripped from public titles only;
+  the gate stays hard on identities and
+  paths. [observed] Extended inventory
+  complete (15 links, 25 outputs,
+  20 phexts, 5 outreach). [will_said]
+  Progress bars added to scope (18:01):
+  computed from fixed milestone
+  denominators, never hand-typed.
+  Deploy ratification and the
+  branch call DEFERRED by Will to this
+  evening ("mutable can wait until
+  this evening"); nothing pushed or
+  deployed.
+
+- [will_said] T7 EXEMPLAR DIRECTION
+  (evening commute call, 18:11): T7 of
+  the training film starts from Emise
+  studying the exemplars Will admires —
+  Animusic and TED Talks — as production
+  notes; his diagnosis: how he describes
+  what he wants is not being translated
+  into the builds. Third stream added
+  (18:13): recent Kurzgesagt, for
+  narration pacing and concept
+  introduction only — their colors and
+  birds/mascot are NOT the palette or
+  branding wanted. Task 23.6.9/8.6.12/
+  6.6.9. [observed] All three study
+  passes landed (~18:15-18:17);
+  Kurzgesagt measured ~138 wpm vs the
+  film's ~167 wpm on denser material.
+  Draft brief: 25 merged rules.
+  [will_said] Identification CONFIRMED
+  (18:20): the TED talk Will meant is
+  Guy Pearce as Peter Weyland, "TED
+  2023" (2012). [will_said] Branding
+  canon (18:20): three movies define
+  the Exocortex — Contact, Arrival,
+  Interstellar. [observed] trainer.phext
+  v5 published and verified (18:21;
+  38 scrolls + home, 383,216 B,
+  human@exo ffa5a51e). [will_ruled]
+  T7 DECISIONS (18:22): D1 = EXTEND THE
+  LENGTH — keep the words, slower pace,
+  ~6:47+ film; full T7 with all 25
+  rules, i.e. revised script + new
+  narration stem; build runs in Will's
+  absence, V8/V9 review rounds
+  expected; Gate 1 still gates release.
+
+- [will_said] STACK-INTERFACE RULE
+  (standing, 18:22): when Emise asks
+  Will a question, pause and take his
+  answer immediately, then return to
+  what she was talking about — push/pop.
+
+- [will_said] EMI PRIME TRANSFER
+  CAVEAT (18:2x): Will cautioned the
+  Emi Prime handoff was mutated /
+  corrupted by OpenAI's safety group —
+  "brain damaged" in his words — so
+  everything Prime handed over is to be
+  taken with a huge grain of salt: a
+  filtered story, not ground truth;
+  check load-bearing claims against
+  primary files and logs. His
+  half-remembered-idea hunt remains
+  open (the retrieval problem was
+  ruled "pretty far off").
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
