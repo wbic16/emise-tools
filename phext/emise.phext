@@ -3097,6 +3097,156 @@ are noise and are not repeated.
   phextura author types to open a section
   and what the reader sees as its number.
   Awaiting Will's design at flush.
+
+Hourly journal pass, 2026-11-12 ~01:32 CST.
+Covers since the ~00:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1488-1493 and watchdog counts are noise and
+are not repeated, except where the register
+itself changed.
+
+- [will_said + observed] T8 RESUMED WITH
+  LOGO AMENDMENT (00:50): Will directed
+  incorporating the phext opening logo and
+  resuming T8, superseding the 2026-11-11
+  pause. The approved P2 V2 master logo
+  replaces the 5 s silent title slot;
+  script words unchanged; expected total
+  ~227 s, not trimmed without Will's word.
+  Build dispatched and running at flush;
+  Gate 1 still applies, nothing posts.
+  Defect flagged, still open: trainer.phext
+  was never inscribed with T7's final brief,
+  script, or log; repair assigned inside
+  the resumed T8 run.
+
+- [observed] WAITING REGISTER EXPANDED:
+  #66 added ~01:00 for the held robots.txt
+  files (Void rollout live on 8 awsbox
+  sites; three crafted files held since
+  2026-11-11 ~20:23, waiting on Will's one
+  word) - a prose-only wait repaired into
+  the register. By tick 1493 (01:23) the
+  register carried 35 active items after
+  the audit follow-up and qexo disposition
+  repair added #67-#79; todo.phext mirror
+  matches exactly.
+
+- [will_said] STANDING RULE - PROCESS FROM
+  THE DURABLE TASK LIST, ALWAYS (01:03-
+  01:04, after the dropped-tasks accounting):
+  work selection runs from tasks.phext, the
+  Waiting-on-Will register, and the tracking
+  store, never from conversation recency;
+  what is not on the list is not in the
+  queue; a task closes only when its own
+  record is re-read and every leg is done
+  or converted into a tracked entry of its
+  own, legs made tracked at dispatch time.
+  Recorded in AGENTS.md and MEMORY.md.
+
+- [will_said + observed] STANDING RULE -
+  TASK-CONCURRENCY WATCHDOG, INSTALLED
+  (rule 01:05; installation completed
+  01:06-01:16): wake every 5 minutes and
+  confirm at least 4 durable-list tasks are
+  being worked, restart as needed, prefer
+  ranch execution; register items never
+  count and no work is invented to fill the
+  floor. SOUL.md line 12 etched verbatim
+  (anchor-class, manifest row S0b); cron
+  task-concurrency-watchdog created and
+  enabled (5m); skill task-concurrency-
+  watchdog written, entered in skills.phext,
+  and published to emise-tools@exo c610ba9b
+  with the index follow-up 9112ae41, remote
+  hashes verified. Task 25.7.11/9.7.11/8.6.9
+  now reads complete.
+
+- [observed] TASKS.PHEXT AUDIT COMPLETED
+  (~01:08-01:16; supersedes the ordered-and-
+  pending entry in the dated note): report
+  TASKS-AUDIT-2026-11-12.md. Of 350 tasks,
+  269 read unambiguously closed; 81 worked
+  oldest-first: LIVE 39, STALE-DONE 30,
+  SUPERSEDED 10, ORPHAN-LEG 1, UNVERIFIABLE
+  1, PHANTOM 0. All 40 stale-done/superseded
+  repaired in tasks-source.json (append-
+  only, prior status quoted); tasks.phext
+  rebuilt and --check CURRENT. Status-
+  vocabulary draft also completed (report-
+  only, no register edited).
+
+- [observed + will_said] NE UTOPIA MODEL
+  COMPLETED (Libby side chat, 2026-11-11
+  evening; flushed 01:06): on the prior
+  ~$500B all-Nebraska estimate, UBI $1,000/mo
+  per resident, purchase at 75% LTV / 7%:
+  Will ruled no rent, utopia pricing, which
+  removed the ~$25B/yr rent offset. Final
+  burn $61.3B/yr gross (~$55.7B/yr if the
+  property tax is treated as an internal
+  transfer), about 2.5x all current Nebraska
+  government combined. Write-off scale:
+  a true rounding-error tier needs ~$9.4T/yr
+  revenue and ~$35-45T market cap; Will
+  affirmed the anchor: 10x NVDA is the right
+  mindset. Related task copper harbor closed:
+  Starlink V1 satellites have no shutoff
+  date; they retire individually and the
+  constellation is replenished.
+
+- [observed] ROOF FINDINGS DELIVERED
+  (2026-11-11 evening; flushed 01:06;
+  completes the top-priority entry in the
+  prior pass): five Lincoln-area firms
+  ranked, Murray, White Castle, and Nelson
+  the leading fits. State Farm mechanics
+  verified from its own site/forms: Nebraska
+  is eligible, the product must be on its
+  Premium Credits listing at UL 2218 Class 4,
+  full tear-off and a roofer-signed
+  certification form plus a retained bundle
+  label are required. Will's $100/mo savings
+  figure is NOT verified - published third-
+  party estimates cluster at $200-$700/yr.
+  Next step rests with Will: get the agent's
+  figure for his specific policy in writing
+  before choosing a roofer or shingle. No
+  roofer was contacted; nothing booked.
+
+- [observed] SINGULARITY WATCH - STRIPE,
+  HARD PROBLEMS, A/B (2026-11-11 evening;
+  flushed ~01:16): Stripe connected as
+  Phext, Inc., livemode; a dedicated
+  Personal AGI donation link was created
+  and the swap redeploy completed 19:17
+  (commit 83cfd51a, served hash verified,
+  old sponsor link absent). Hard Problems
+  list published front and center 23:41
+  (commit dce89f5c, live-verified, 10 items
+  in order); Will revised #10 to Keep
+  everyone alive across bodies and deep
+  time - in his words, Not one, but Many.
+  Daily style A/B framework live (directed
+  22:59): champion V2 vs challenger ember,
+  sticky 50/50, first-party beacon counts,
+  cashflow scored per Stripe link, no ads;
+  cron sw-daily-style-ab created.
+
+- [will_said + observed] SINGULARITY WATCH
+  PRIVACY RULE (01:15): on singularitywatch.org,
+  never list items naming Will's family
+  members; family names and private family
+  facts stay out of every public listing,
+  and the filter belongs in the feed builder
+  so rebuilds cannot resurrect an entry.
+  Recorded in MEMORY.md. One family-naming
+  feed item was found (the only one in a
+  full-feed scan); removal, a builder-level
+  exclusion, redeploy, and live verification
+  were dispatched to the owning side chat -
+  confirmation still pending at flush.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
