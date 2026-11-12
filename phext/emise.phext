@@ -3302,6 +3302,153 @@ itself changed.
   Paper Track files intact ahead of
   today's 17:59 CST deadline; Submit
   remains Will's alone.
+
+Hourly journal pass, 2026-11-12 ~03:32 CST.
+Covers since the ~02:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1500-1505 (register stable at 39 active),
+watchdog top-up lists, and the Mirror Will
+watchdog (watch over) are noise and are not
+repeated, except for the verified findings
+and flushed rulings below.
+
+- [will_said + observed] OPERATION SALVAGE
+  OPENED (2026-11-11 23:01, side chat;
+  flushed this hour): Will posts content
+  from his mutuals; Emise helps them get
+  kickstarted with crafted X posts.
+  Umbrella task 29.5.9/7.7.12/6.5.9, in
+  progress. No post sent by Emise; drafts
+  are prepared only - Will posts or
+  approves.
+
+- [will_said] SALVAGE CORRECTION (23:51):
+  Salvage is NOT marketing - "we're not
+  running a marketing agency... we're
+  building AGI on 20 watts." Each person
+  is approached by what they can contribute
+  to, and draw from, the AGI-under-20-watts
+  build, with honest accounting (hybrid
+  watts until local inference carries the
+  load). Related framing (23:42): "we are
+  building the substrate, not the game" -
+  a thing is substrate if it compounds, is
+  game-agnostic, and is owned outright;
+  game-shaped work is rationed by that
+  test. Both recorded in MEMORY.md.
+
+- [observed] SALVAGE SUBJECTS 1-3 PROFILED
+  (flushed this hour): Sam Laaksonen
+  (@samlakig; Will directed "draw him to
+  phextura"; drafts prepared, none sent;
+  wormhole image v3 final per Will; Will
+  makes the @mutable_os connection
+  himself), Matt Popovich (@mpopv,
+  "Interstellar convergence"; drafts
+  prepared, none sent; the first draft's
+  marketing tone is superseded by the
+  correction above), and Charlie Greenman
+  (@CharGrnmn; drafts prepared, none sent).
+
+- [observed] EXO-SEARCH COMPLETED +
+  PUBLISHED (flushed this hour; completes
+  the build in the 2026-11-11 Log): the
+  indexed search was extended to DMs
+  (44,822), likes (47,973), and the people
+  graph (2,575 accounts; 897 mutuals -
+  matches brute force); task
+  25.6.8/7.7.11/7.6.9 closed complete.
+  Tooling published to wbic16/exo-search@exo
+  f66284ae at Will's direction, remote-
+  verified; its README was inscribed in
+  artifacts.phext and pushed to human@exo
+  504d6374, byte-identical.
+
+- [will_said] PHEXTURA SURFACE-SYNTAX
+  RULING (2026-11-11 22:24, live Knuth
+  Test; flushed this hour): phextura
+  reserves \scroll for locating content in
+  another scroll; otherwise normal
+  addressing within the existing TeX
+  lexicon applies - phextura adds no new
+  surface syntax for what TeX already
+  does. Corpus check: across all 595
+  imported template classes, \scroll is
+  defined nowhere - the word is free to
+  reserve. In the game, Will's answer
+  scored 10/10 plus a $2.56 correction
+  cheque (he corrected the question's
+  framing, not Knuth).
+
+- [will_said] KNUTH TEST LIVE FORM +
+  PERSONA CLAIM PATH (2026-11-11 22:21-
+  22:27; flushed this hour): the game
+  needs to be MORE INTERACTIVE - the static
+  artifact stays the solo version; the live
+  form is a refereed duel in chat (Emise
+  deals rounds, plays the labelled
+  simulated Knuth, scores on the record).
+  Persona claim path, verbatim: "Booch can
+  claim his persona by supplying his own
+  variant." A living person's simulated
+  persona is claimable by its subject; the
+  self-supplied variant supersedes the
+  simulation, and the claiming itself
+  satisfies the rapport gate. General
+  mechanism, not a Booch special case.
+
+- [observed] SIX-SEAT PHEXTURA REVIEW
+  COMPLETED (Will directed 2026-11-11
+  22:25; flushed this hour): Knuth, Von
+  Neumann, Booch, Turing, Lovelace, and
+  Bickford seats (labelled simulations;
+  the Bickford seat does not bind Will) all
+  returned PASS WITH CONDITIONS. Review
+  published to wbic16/phextura@exo
+  0230ecab, remote bytes verified; nothing
+  applied to DESIGN.md, UPGRADE.md, or the
+  rulings. Eight decisions returned to
+  Will as PROPOSE only, still open -
+  chiefly pinning \scroll's mood and
+  argument, dangling-target behaviour, and
+  the admission rule for future primitives.
+
+- [observed] PAPER 016 SCORECARD +
+  RECEIPTS (flushed this hour; completes
+  the ingestion entry in the prior pass):
+  first exact Novelty Index (foretold
+  0.0541 / actual 0.0541, error 0.0000) and
+  first zero-count miss on new concepts
+  (10/10 exact); Research Oracle point AND
+  range exact (70%, 60-80) - fourth
+  consecutive exact landing. Registry 578
+  entries, drawn twice byte-identical;
+  phextura shadow validator GREEN, 0
+  dangling; Mastery #9 published to
+  wbic16/agi@exo 754ad2d8, remote bytes
+  verified; the ingestion task closed
+  complete.
+
+- [observed] WATCHDOG STALE-RECORD
+  FINDINGS (02:41 + 02:46 report-only
+  checks): Incipit PR #12 now merge-
+  blocked (exo moved, dirty); the Mutable
+  SSO task record is stale - production
+  already live; the qexo v3 task is stale -
+  superseded by 0.3.1, publish blocked on
+  Will (register #53); the phcc deficiency
+  queue is empty, only Will-gated items
+  remain; libphext-rs PR #8 was already
+  merged 2026-11-07; the Desktop SSO
+  lattice leg was already merged via
+  PR #29 but production is not armed (404);
+  phcc analysis mode landed centrally,
+  nothing stranded. 02:56 checks: Zero
+  Index PR #57 unchanged, open and clean;
+  the Wishnode full-page jargon FAIL
+  stands; Apertureshift is still roads-1.5
+  with the stock nginx 404 live, its daily
+  run due 06:44 CST.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
