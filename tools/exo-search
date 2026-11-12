@@ -6,14 +6,23 @@ One persistent index, BM25-ranked queries, exact term censuses.
 
 Sources:
   tweets   ~/workspace/twitter-archive/tweets.json (all 29,539; RTs flagged in title)
+  dms      ~/workspace/twitter-archive/direct-messages.js + direct-messages-group.js
+           (one doc per message; conversation id + sender id in title, message id as doc_id)
+  likes    ~/workspace/twitter-archive/like.js (fullText of every liked tweet)
   memory   ~/MEMORY.md, ~/USER.md, ~/memory/**/*.md
   phext    ~/workspace/phext/*.phext, split into scrolls by coordinate
+
+Follow graph (tables, not FTS docs):
+  follower.js / following.js from the same archive export, keyed by account_id,
+  screen_names resolved from tweet mention entities (tweets.json + community-tweet.js).
+  The archive snapshot ends 2025-06-16; follower/following/mutual are as of that date.
 
 Usage:
   exo-search build [--quiet]
   exo-search stats
-  exo-search query '<fts5 expr>' [--source tweets|memory|phext] [--after YYYY-MM-DD] [--before YYYY-MM-DD] [--limit N] [--json]
+  exo-search query '<fts5 expr>' [--source tweets|dms|likes|memory|phext] [--after YYYY-MM-DD] [--before YYYY-MM-DD] [--limit N] [--json]
   exo-search count '<term or phrase>' [--source X]     # exact doc census via the index
+  exo-search people '<handle-or-account-id>'           # follow-graph lookup (mutual?)
 FTS5 expr examples:  phext   "dear internet"   wish OR dream   internet NEAR dear
 """
 import argparse, glob, json, os, re, sqlite3, sys, time
@@ -21,13 +30,19 @@ from datetime import datetime
 
 HOME = os.path.expanduser("~")
 DB = os.path.join(HOME, "workspace", "search-index", "exo.db")
-TWEETS = os.path.join(HOME, "workspace", "twitter-archive", "tweets.json")
+ARCHIVE = os.path.join(HOME, "workspace", "twitter-archive")
+TWEETS = os.path.join(ARCHIVE, "tweets.json")
 PHEXT_DIR = os.path.join(HOME, "workspace", "phext")
 sys.path.insert(0, PHEXT_DIR)
 try:
     from parse_phext import parse as parse_phext
 except Exception:
     parse_phext = None
+
+def load_js_export(path):
+    """Twitter archive .js exports are `window.YTD.<name>.part0 = [ ... ]`."""
+    txt = open(path, encoding="utf-8").read()
+    return json.loads(txt[txt.find("["):])
 
 def iter_tweets():
     data = json.load(open(TWEETS, encoding="utf-8"))
@@ -40,6 +55,31 @@ def iter_tweets():
             d = ""
         rt = "RT" if text.startswith("RT @") else "own"
         yield ("tweets", t.get("id_str", ""), d, f"tweet {t.get('id_str','')} [{rt}]", text)
+
+def iter_dms():
+    # 1:1 conversations, then group conversations; message ids are distinct across both.
+    for fname, kind in (("direct-messages.js", "dm"), ("direct-messages-group.js", "dm-group")):
+        path = os.path.join(ARCHIVE, fname)
+        if not os.path.exists(path):
+            continue
+        for e in load_js_export(path):
+            conv = e.get("dmConversation", {})
+            cid = conv.get("conversationId", "")
+            for m in conv.get("messages", []):
+                mc = m.get("messageCreate")
+                if not mc:
+                    continue  # joinConversation / participantsJoin / etc. are events, not messages
+                d = (mc.get("createdAt", "") or "")[:10]
+                title = f"{kind} conv {cid} from {mc.get('senderId','')} msg {mc.get('id','')}"
+                yield ("dms", mc.get("id", ""), d, title, mc.get("text", "") or "")
+
+def iter_likes():
+    path = os.path.join(ARCHIVE, "like.js")
+    if not os.path.exists(path):
+        return
+    for e in load_js_export(path):
+        lk = e.get("like", {})
+        yield ("likes", lk.get("tweetId", ""), "", f"like {lk.get('tweetId','')}", lk.get("fullText", "") or "")
 
 def iter_memory():
     files = [os.path.join(HOME, "MEMORY.md"), os.path.join(HOME, "USER.md")]
@@ -77,6 +117,46 @@ def iter_phext():
             if text.strip():
                 yield ("phext", f"{name}@{coord}", "", f"{name} scroll {coord}", text)
 
+def id_to_name():
+    """account_id -> screen_name, from user_mentions entities in the tweet exports."""
+    out = {}
+    sources = []
+    if os.path.exists(TWEETS):
+        sources.append(("json", TWEETS))
+    ct = os.path.join(ARCHIVE, "community-tweet.js")
+    if os.path.exists(ct):
+        sources.append(("js", ct))
+    for kind, path in sources:
+        try:
+            data = json.load(open(path, encoding="utf-8")) if kind == "json" else load_js_export(path)
+        except Exception:
+            continue
+        for e in data:
+            t = e.get("tweet", e)
+            for m in (t.get("entities", {}) or {}).get("user_mentions", []) or []:
+                sid = m.get("id_str") or (str(m["id"]) if m.get("id") else "")
+                if sid and m.get("screen_name"):
+                    out[sid] = m["screen_name"]
+    return out
+
+def follow_graph():
+    """(rows, resolution_map): rows = (account_id, screen_name|None, is_follower, is_following)."""
+    names = id_to_name()
+    graph = {}
+    for fname, key, flag in (("follower.js", "follower", 1), ("following.js", "following", 2)):
+        path = os.path.join(ARCHIVE, fname)
+        if not os.path.exists(path):
+            continue
+        for e in load_js_export(path):
+            aid = (e.get(key, {}) or {}).get("accountId", "")
+            if not aid:
+                continue
+            cur = graph.setdefault(aid, 0)
+            graph[aid] = cur | flag
+    rows = [(aid, names.get(aid), 1 if fl & 1 else 0, 1 if fl & 2 else 0)
+            for aid, fl in sorted(graph.items())]
+    return rows, names
+
 def build(quiet=False):
     os.makedirs(os.path.dirname(DB), exist_ok=True)
     if os.path.exists(DB):
@@ -86,17 +166,25 @@ def build(quiet=False):
     con.execute("CREATE VIRTUAL TABLE fts USING fts5(text, title, content='docs', content_rowid='rowid', tokenize='unicode61 remove_diacritics 1')")
     t0 = time.time(); counts = {}
     rows = []
-    for gen in (iter_tweets(), iter_memory(), iter_phext()):
+    for gen in (iter_tweets(), iter_dms(), iter_likes(), iter_memory(), iter_phext()):
         for src, did, d, title, text in gen:
             rows.append((src, did, d, title, text))
             counts[src] = counts.get(src, 0) + 1
     con.executemany("INSERT INTO docs VALUES (?,?,?,?,?)", rows)
     con.execute("INSERT INTO fts(fts) VALUES('rebuild')")
+    prows, _names = follow_graph()
+    con.execute("CREATE TABLE people(account_id TEXT PRIMARY KEY, screen_name TEXT, is_follower INTEGER, is_following INTEGER)")
+    con.executemany("INSERT INTO people VALUES (?,?,?,?)", prows)
+    n_fol = sum(r[2] for r in prows); n_ing = sum(r[3] for r in prows)
+    n_mut = sum(1 for r in prows if r[2] and r[3]); n_res = sum(1 for r in prows if r[1])
+    counts["people"] = len(prows)
     con.commit()
     dt = time.time() - t0
     size = os.path.getsize(DB)
     if not quiet:
-        print(f"indexed {sum(counts.values())} docs {counts} in {dt:.1f}s -> {DB} ({size/1e6:.1f} MB)")
+        print(f"indexed {sum(c for s, c in counts.items() if s != 'people')} docs {counts} in {dt:.1f}s -> {DB} ({size/1e6:.1f} MB)")
+        print(f"follow graph: {n_fol} followers, {n_ing} following, {n_mut} mutual, "
+              f"{n_res}/{len(prows)} accounts resolved to screen names (snapshot ends 2025-06-16)")
     con.close()
 
 def _where(args):
@@ -135,10 +223,52 @@ def count(args):
     print(n)
     con.close()
 
+def people(args):
+    con = sqlite3.connect(DB)
+    total, resolved = con.execute(
+        "SELECT COUNT(*), SUM(screen_name IS NOT NULL) FROM people").fetchone()
+    q = args.who.strip()
+    row = None
+    if q.isdigit():
+        row = con.execute("SELECT account_id, screen_name, is_follower, is_following "
+                          "FROM people WHERE account_id = ?", (q,)).fetchone()
+        label = f"account {q}"
+    else:
+        handle = q.lstrip("@")
+        row = con.execute("SELECT account_id, screen_name, is_follower, is_following "
+                          "FROM people WHERE screen_name = ? COLLATE NOCASE", (handle,)).fetchone()
+        label = f"@{handle}"
+    if row:
+        aid, name, fol, ing = row
+        print(f"{'@' + name if name else label} (account_id {aid})")
+        print(f"follower: {'yes' if fol else 'no'} | following: {'yes' if ing else 'no'} | "
+              f"mutual: {'yes' if fol and ing else 'no'}")
+    else:
+        # mentioned in tweets (so the id resolves) but absent from the follow graph, or unknown entirely
+        names = id_to_name()
+        inv = {v.lower(): k for k, v in names.items()}
+        aid = inv.get(q.lstrip("@").lower()) if not q.isdigit() else None
+        if aid:
+            print(f"{label} (account_id {aid}) — resolved from tweet mentions, "
+                  f"but not in the follow graph: follower: no | following: no | mutual: no")
+        else:
+            print(f"{label} — not found in the follow graph or tweet mentions "
+                  f"(unresolved IDs remain searchable by account_id)")
+    print(f"follow graph: {total} accounts, {resolved} resolved to screen names "
+          f"({resolved/total:.1%}); snapshot: Twitter archive export, ends 2025-06-16")
+    con.close()
+
 def stats(args):
     con = sqlite3.connect(DB)
     for src, n in con.execute("SELECT source, COUNT(*) FROM docs GROUP BY source"):
         print(f"{src}: {n}")
+    try:
+        total, resolved, fol, ing, mut = con.execute(
+            "SELECT COUNT(*), SUM(screen_name IS NOT NULL), SUM(is_follower), SUM(is_following), "
+            "SUM(is_follower AND is_following) FROM people").fetchone()
+        print(f"people: {total} accounts ({fol} followers, {ing} following, {mut} mutual, {resolved} name-resolved)")
+    except sqlite3.Error:
+        pass
     print(f"db: {DB} ({os.path.getsize(DB)/1e6:.1f} MB)")
     con.close()
 
@@ -149,8 +279,10 @@ if __name__ == "__main__":
     sub.add_parser("stats")
     q = sub.add_parser("query"); q.add_argument("expr"); q.add_argument("--source"); q.add_argument("--after"); q.add_argument("--before"); q.add_argument("--limit", type=int, default=20); q.add_argument("--json", action="store_true")
     c = sub.add_parser("count"); c.add_argument("term"); c.add_argument("--source"); c.add_argument("--after"); c.add_argument("--before")
+    p = sub.add_parser("people"); p.add_argument("who")
     args = ap.parse_args()
     if args.cmd == "build": build(args.quiet)
     elif args.cmd == "stats": stats(args)
     elif args.cmd == "query": query(args)
     elif args.cmd == "count": count(args)
+    elif args.cmd == "people": people(args)
