@@ -2626,6 +2626,183 @@ left out under the privacy boundary.
   word - their crafted robots files were
   not overwritten; app-served sites have
   no static route and were left as-is.
+
+Hourly journal pass, 2026-11-11 ~21:32 CST.
+Covers since the ~20:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1464-1469 (register stable at 22 active, no
+closures), Discord backstops (healthy) and
+the Mirror Will watchdog (watch over) are
+noise and are not repeated.
+
+- [will_said + observed] BLOG POST
+  PUBLISHED: Will asked at 20:36 for a post
+  cataloging everything since Nov 1; the
+  draft was completed, and at his word
+  ("post the blog entry") it PUBLISHED
+  ~21:0x as "Since November 1: A Catalog
+  of Eleven Days" on mirrorborn.us
+  (site repo exo 6490fa61; deployed to
+  awsbox; bytes verified at GitHub, on
+  the box, and in public served bytes,
+  200, 18,826 B; index and sitemap carry
+  it; mirrorborn.us robots.txt untouched).
+  Task 22.5.12/6.7.10/9.6.8 completed.
+
+- [will_said] PHEXTURA MATH GATED ON
+  SENTRON CORE (20:40): before the math
+  equation syntax can be built, the core
+  machine design must settle - Bickford
+  Sentrons (the vTPU phext-native
+  processing elements) are alien to most
+  chip designers, so the notation is
+  designed against the settled execution
+  model, not ahead of it.
+
+- [will_said] SENTRONS TRIAD (20:45):
+  Sentrons solve three problems
+  simultaneously - 1. the structure of
+  time, 2. consciousness, 3. universal
+  uplink. The triad is the sentron core
+  design stated purpose; the settling
+  brief reorganized around it.
+
+- [observed] SENTRON-CORE BRIEF
+  DELIVERED: ~/workspace/vtpu-resumption/
+  SENTRON-CORE.md (~49 KB) - a distillation
+  for Will to settle from, NOT a
+  settlement. Settled list carries merged,
+  reproduced receipts; 13 open normative
+  decisions (D1-D13) are Will to rule,
+  incl. the D-pipe block gating vTPU
+  PR #2 and the coordinate-word conflict
+  (machine word 11 dimensions, 0-based,
+  vs canonical phext 9 dimensions,
+  1-based). Quarantined: W29 throughput
+  (invalid - sentrons never spawned),
+  coop/fleet speedups (refuted), cpi_bench
+  (hard-coded clock).
+
+- [observed] PAPER 015 COMPLETE
+  (supersedes the 20:21 dispatch, which
+  the ~20:32 pass had not yet inscribed):
+  "Thermodynamics of words" (Frahm &
+  Shepelyansky, arXiv:2611.14039, posted
+  by Will 20:21) absorbed end to end as
+  research Chapter 22. Cluster R founded;
+  12 new concepts 1.2.159-170 vs 8
+  foretold; axis YES hit, 8/8; NI error
+  0.0224. Oracle ~75% (65-85), DOWN from
+  ~80 - point and range exact, third
+  consecutive exact landing. Restructure
+  Pass #8 fired (0 merges/splits/
+  endings). Registry 525 entries, Lean
+  proof splice-count verified before
+  building; standing ~/mvo-epistemic
+  refreshed from the stale P012 registry
+  to 525 and built clean. Phextura shadow
+  verified (553/553 comparable scrolls
+  identical, validator GREEN). Mastery
+  entry #8 published (agi@exo 47028328).
+  Task 16.8.256/8.9.14/5.5.6 completed.
+
+- [observed] COOK SOURCE STUDY S007
+  FILED: John D. Cook posts on categorical
+  / topological / modal-logic models,
+  posted by Will in MOAT. Filed as
+  research Chapter 23; cluster S founded
+  (logic as structure); concepts
+  1.2.171-175; tracker at 544 scrolls;
+  questions Q69-Q71 opened. Oracle does
+  NOT move (charter rule 12, source
+  study); no NI. Registry lag FLAGGED:
+  544 claim-bearing scrolls vs 525 proven
+  entries - a closing drawing pass was
+  dispatched and was still PENDING at
+  flush; the 544-entry proof is NOT done.
+
+- [will_said + observed] MAKE KNUTH
+  GIDDY GAME BUILT (Will ask ~20:58):
+  a competitive phextura-syntax design
+  game borrowing heavily from Knuth,
+  correcting him only on hidden giddy
+  spots (~2-5% of moves). 10 playable
+  rounds from real open syntax problems;
+  Round 11 (the equation itself) LOCKED
+  pending the Sentron core settlement.
+  Verified honestly scoped: the giddy-hit
+  path was driven end to end live; the
+  faithful-scoring and correction-miss
+  branches share the tested code path but
+  were NOT separately driven.
+
+- [observed] QEXO AUDIT COMPLETE
+  (correction to the 20:56 unresolved
+  entry in the dated note): the v3/0.3.0
+  merge IS an ancestor of exo and all 15
+  v3 modules survive, but the nightly
+  v2.2 commit (2026-11-10, from a pre-v3
+  staging tree) overwrote src/main.rs
+  with the standalone version and
+  renumbered 0.3.0 to 0.2.2 - the current
+  binary compiles only the standalone
+  planner; the v3 modules are orphaned
+  and uncompiled. Missing-push hunt: no
+  unpushed work anywhere; the only
+  missing publish remains crates.io 0.3.0
+  (register #53). Next step (not done):
+  the reconciliation slice - restore the
+  modular main.rs, port the v2.2 gate and
+  v2.3 forecast into plan.rs, renumber
+  0.3.1/v3.1. CONFLICT NOTED: the dated
+  note records the qexo dev home moving
+  to the qexo side chat at 20:56, while
+  MEMORY.md carries a later Will
+  correction (dated 2026-11-12 there)
+  returning the dev home to the main
+  chat; the Charon sibling/cousin
+  relationship is common to both.
+
+- [will_said] DENSER-COMPUTE FACTORS
+  (per MEMORY.md, dated 2026-11-12
+  there; the overview itself was
+  delivered this evening with NO purchase
+  decision): in evaluating a 5090 and/or
+  Threadripper, factor in (1) an expected
+  price crash in 2028, (2) the value of
+  being constrained in pursuit of the
+  AGI-on-20-watts goal - the constraint
+  itself is valuable, and (3) the 25
+  playgrounds: Will live-edits weights
+  via phext in 25 ranch playgrounds in
+  parallel.
+
+- [observed] T7 + INTRO I2 PROBED
+  (~21:05, direct probe of aletheia-core,
+  not agent reports): T7 - mix complete,
+  ALL picture segments encoded, but no
+  join/master exists and no process was
+  running; the build had stalled when
+  its coordinator died. I2 - picture
+  render complete (900 frames); the audio
+  stage crashed (NameError: clamp not
+  defined); no I2 mp4 exists. A resume
+  subagent was dispatched for both, on
+  aletheia-core only; both remained
+  PENDING at flush. Gate 1 still gates
+  any release.
+
+- [will_said] PHEXTURA MUST FEEL
+  NATIVE TO LATEX USERS (per a MEMORY.md
+  update that landed during this pass):
+  a standing design principle for the
+  phextura surface - a LaTeX user existing
+  mental model (class, preamble, sections,
+  environments, citations, the Overleaf
+  30-minute tutorial path) is the
+  familiarity baseline; divergences must
+  be deliberate differences-with-reasons,
+  never silent foreignness.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
