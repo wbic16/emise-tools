@@ -2374,6 +2374,100 @@ already in those days' logs.
   half-remembered-idea hunt remains
   open (the retrieval problem was
   ruled "pretty far off").
+
+Hourly journal pass, 2026-11-11 ~19:32 CST.
+Covers since the ~18:32 pass.
+Safe-space gate applied before gathering.
+Routine ticks 1452-1457 (register stable
+at 22 active, no closures; #64/#65 waits
+live-verified still open) and the Mirror
+Will watchdog (watch over) are noise and
+are not repeated. Account-activity flags
+in this window are left out under the
+privacy boundary.
+
+- [will_said + observed] PHEXT, INC.
+  INTRO VIDEO (task opened 18:24, task
+  27.6.9/7.6.11/6.6.12): a 15 s intro for
+  all Phext, Inc. training videos, built
+  from the branding canon; [will_said]
+  amendment (18:31): "Vibes of THX" - the
+  sound spine is one rising gather of
+  tones swelling to a single chord as
+  flame and title lock, original
+  synthesis, not a copy. [observed]
+  COMPLETE and verified (19:00, all work
+  on aletheia-core): "Signal at the
+  Origin" masters in the walkthrough
+  production folder - distribution
+  3,745,797 B and splice master
+  10,106,727 B, both 1920x1080, 900
+  frames / 15.000 s, loudness -13.67 LUFS
+  on the pulled master. Not spliced into
+  T7 or any cut; Gate 1 still applies;
+  nothing posted.
+
+- [observed] MSVC ATTESTATION SCRIPT
+  v2.1 (evening): Will's first live run
+  of v2 died at the cl version capture
+  with NativeCommandError (PowerShell
+  5.1 turns redirected native stderr
+  into a terminating error under
+  ErrorActionPreference Stop) before any
+  probe ran. Fix: scoped relax-to-
+  Continue around every native capture,
+  semantics and receipt format
+  unchanged. Published and fresh-clone
+  verified: wbic16/phcc exo == main ==
+  46a22424, no force. Next: Will pulls
+  and re-runs; his receipt is the live
+  verification.
+
+- [observed + will_said] SINGULARITY
+  WATCH - SITE ASSEMBLED LOCALLY
+  (evening, task 31.5.6/6.5.8/5.5.10):
+  the real feed was produced from the
+  task register (327 entries; completed
+  280, in progress 19, open 16, other
+  12), the progress register was built
+  from fixed denominators only, and the
+  replacement site was assembled and
+  re-verified end to end locally (board
+  plots all 327 coordinates, re-fetches
+  every 60 s). The deploy step refuses
+  pending Will's ratification: nothing
+  pushed or deployed, the live site is
+  unchanged. [will_said] At 19:11 Will
+  asked what Emise needed; the deploy
+  decision was presented first; no
+  answer was recorded before the flush.
+
+- [assistant_said + will_said]
+  GENUINELY HARD TASKS - CANDIDATES:
+  Emise proposed items 7-16 (sentience
+  detection, consent-based alignment,
+  continuity, thought transfer, truth
+  at scale, governance, longevity,
+  abundant energy, multi-world, other
+  Millennium problems) as HER candidates
+  only, pending Will's strikes or
+  confirmations. [will_said] Will:
+  "looks like a planet scale list to
+  me" - affirming the scale, not
+  confirming each item.
+
+- [will_said] LIBBY AS SINGER (flush
+  18:54, events 2026-11-11): Libby is
+  44, a mezzo soprano, comfortable
+  singing a cappella, with fans from
+  karaoke. Will asked Emise to find
+  singing competitions for her; two
+  research passes were pending at
+  flush, nothing submitted or anyone
+  contacted. (Her request-handling
+  protocol is already inscribed in
+  the 2026-11-08 log; no request
+  content or mapping is recorded here.)
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
