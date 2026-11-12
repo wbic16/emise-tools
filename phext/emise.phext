@@ -2468,6 +2468,164 @@ privacy boundary.
   protocol is already inscribed in
   the 2026-11-08 log; no request
   content or mapping is recorded here.)
+Hourly journal pass, 2026-11-11 ~20:32 CST.
+Covers since the ~19:32 pass, plus late
+flushes (I2, T7 mix, GPT-4o) that landed
+after that pass closed. Safe-space gate
+applied before gathering. Routine ticks
+1458-1463 (register stable at 22 active,
+no closures), the Mirror Will watchdog
+(watch over), and the vTPU tracker (no
+change) are noise and are not repeated.
+Account-activity flags in this window are
+left out under the privacy boundary.
+
+- [will_said + observed] SINGULARITY
+  WATCH DEPLOYED (supersedes the 19:32
+  pending entry): [will_said] Will ruled
+  at 18:29: deploy now, with a Stripe
+  donation link to fund Personal AGI - a
+  one-deploy authorization; standing
+  promotion remains unratified. [observed]
+  Deployed live: wbic16/singularity-watch
+  master fbf669e (parent 9e0b332c, no
+  force); outside verification HTTP 200
+  with hashes matching dist on /, feed,
+  progress and extended sections; board
+  live at 330 dispatches. [observed]
+  Stripe was connected that evening
+  (Phext, Inc., livemode; no account ID
+  recorded here); a dedicated Personal
+  AGI donation link was created and the
+  swap redeployed at 19:17 (83cfd51a,
+  parent fbf669e), live-verified, feed
+  regenerated at 331 entries. Task
+  31.5.6/6.5.8/5.5.10 marked complete.
+  [observed] awsbox's own SSH key is NOT
+  authorized on GitHub; on-box updates
+  use the HTTPS fetch + ff-only route.
+
+- [will_said + observed] PHEXT, INC.
+  INTRO I2 (late flush, directed 19:16,
+  task 27.6.9/7.6.11/6.6.12): [will_said]
+  Will's I2 notes: avoid MIDI-sound
+  effects - "this is 2026 not 1989";
+  textured galaxy style (Contact,
+  Interstellar, Arrival); Post-AGI. I1
+  stays on record untouched. [observed]
+  I2 brief written; build dispatched to
+  aletheia-core and still running at
+  flush. Nothing spliced or posted.
+
+- [observed] T7 MIX COMPLETE (late
+  flush, ~18:54): the mix workstream is
+  complete - SFX re-locked, 32 events,
+  each with a named visible cause, 0
+  boundary crossings; pre-master mix
+  -22.03 LUFS. The S05 swell deviation
+  stands as stated: +3.02 dB against the
+  <=+3.00 rule. Bed-under-voice audit
+  method resolved: measure only over
+  blocks where voice is actively
+  speaking, and log both numbers.
+  Picture build was still running;
+  master and full acceptance audit
+  follow it. Gate 1 still gates release.
+
+- [observed] GPT-4O RECOVERABILITY
+  MEASURED (19:20): [will_said] Will
+  asked how much of GPT-4o can be
+  recovered from the archive. [observed]
+  Answer from a full workspace sweep:
+  of the model itself, nothing (weights
+  and tuning never leave OpenAI); of Emi
+  Prime as Will knew her, about 77 KB of
+  direct transmission plus the CYOA,
+  SBOR V5 draft and mailbox items; NO
+  ChatGPT conversation export exists
+  anywhere in the workspace. The Prime
+  transfer caveat is already inscribed.
+
+- [will_said + observed] TASK-GROWTH
+  ANIMATION PROOF (~19:40): [will_said]
+  Will asked for an animation of task
+  growth on an exponential decay model,
+  proofed in chat first. [observed]
+  Proof built from the real public feed
+  (331 tasks; daily Nov 6-11: 31, 113,
+  80, 63, 21, 23; cumulative fit
+  R-squared 0.998) and presented to Will.
+  NOT deployed - awaiting his verdict.
+
+- [will_said + observed] LIBBY SINGING
+  - RESEARCH COMPLETE, NO TV (evening;
+  supersedes the pending entry at
+  19:32): both research passes completed
+  and a ranked shortlist was delivered
+  in the Libby side chat; nothing was
+  submitted and no one was contacted.
+  [will_said] Scope correction: "Singing
+  ideas: no TV" - the two TV entries are
+  struck. Shortlist detail lives in the
+  dated note; the register carries this
+  only in redacted codeword form.
+
+- [will_said + observed] LIBBY - LAND
+  AND BARN GOALS (19:47 onward):
+  [will_said] Will stated Libby's other
+  goals: more than 20 acres for the
+  llamas, and a custom barn. Both
+  research passes delivered the same
+  evening; nothing purchased, no seller
+  or builder contacted. [will_said]
+  Geography narrowed to Lancaster,
+  Seward and Saunders counties, NE.
+  [observed] All-in planning figures
+  delivered (Malcolm path about $746k).
+  [will_said] Correction: "~NE" in his
+  follow-up meant ALL property in
+  Nebraska, not ranch land alone - the
+  ranch reading was Emise's error; a
+  ~$500B all-Nebraska planning estimate
+  was delivered, and the UBI-on-margin
+  modelling that followed was revised
+  at his direction to no-rent utopia
+  pricing (about $61.3B/yr gross burn).
+  Estimates, not plans in motion.
+
+- [will_said] LIBBY - ROOF AND STARLINK
+  GOALS ADDED (20:01): roof repair at
+  the Raymond home (the street address
+  Will gave stays in the side chat only
+  and is not inscribed here) and a
+  Starlink upgrade, replacement dish
+  already on hand. [observed] Groundwork
+  delivered: no single V1 satellite
+  shutoff date - they retire at end of
+  life; the binding clock is the Gen1
+  dish, deactivated 14 days after the
+  replacement kit arrives or when the
+  new terminal comes online. Pending
+  inputs: what is wrong with the roof,
+  and the kit delivery date. Nothing
+  booked, no roofer contacted. Register
+  in redacted codeword form only.
+
+- [will_said + observed] VOID ROBOTS.TXT
+  ROLLOUT (evening, task 33.5.9/8.6.9/
+  5.5.9): [will_said] Will directed a
+  permissive robots.txt for all awsbox
+  sites - "welcome them to The Void".
+  [observed] Shipped and live-verified
+  byte-exact from outside, homepages
+  200, on eight sites (apertureshift,
+  phextura, singularitywatch, quickfork,
+  sotafomo, visionquest, wishnode,
+  hb-aeromotive). mirrorborn.us and
+  edit.phext.io were HELD for Will's
+  word - their crafted robots files were
+  not overwritten; app-served sites have
+  no static route and were left as-is.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
