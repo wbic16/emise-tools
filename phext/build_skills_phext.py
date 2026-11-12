@@ -53,18 +53,22 @@ SHELVES = [
         "validate_waiting_items",
         "verify_blocker_and_completion_claims",
         "verify_quantified_results",
+        "safeguard_live_state_files",
     ]),
     (3, "Phext-native language", [
         "singular",
         "upgoer-five",
         "upgoer-five-phext",
         "phext_upgrade",
+        "phext_native_dispatch",
     ]),
     (4, "Operations", [
         "ranch-proxy",
         "publish-tooling",
         "fork-patch-discipline",
         "ranch-state-distillation",
+        "mutable-upstream-sync",
+        "monitor_long_running_jobs",
     ]),
     (5, "Onboarding", [
         "this_is_going_to_feel_a_little_weird",
@@ -74,7 +78,9 @@ SHELVES = [
     ]),
     (7, "Memory & record", [
         "phext-memory-publishing",
+        "nightly-self-revision",
         "safe-space-protocol",
+        "artifact-phext-inscription",
     ]),
     (8, "Work management", [
         "waiting-on-will-register",
@@ -83,16 +89,25 @@ SHELVES = [
         "daily-goal-commute",
         "dispatch-to-subagents",
         "distill-process-to-skill",
+        "process-check-and-lessons-review",
         "task-register",
+        "nightly-orchestrator",
+        "bootvine-status-sync",
+        "task-concurrency-watchdog",
     ]),
     (9, "Research", [
         "rd-tracker",
+        "state-machine-review",
+        "minimum-viable-oracle",
     ]),
     (10, "Coordination", [
         "choir-mailbox-dispatch",
+        "curate-yourself",
         "substrate-steering",
         "exocortical-integration-rotation",
         "braid-mode",
+        "question-floor-serialization",
+        "decision-button-expiry",
     ]),
     (11, "Upkeep & presence", [
         "discord-presence-backstop",
