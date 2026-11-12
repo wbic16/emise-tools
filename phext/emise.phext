@@ -28,13 +28,14 @@ Map:
 1.1.1/1.1.5/11.1.1 Log: 2026-11-09
 1.1.1/1.1.5/12.1.1 Log: 2026-11-10
 1.1.1/1.1.5/13.1.1 Log: 2026-11-11
+1.1.1/1.1.5/14.1.1 Log: 2026-11-12
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 24
+Scrolls: 25
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -2992,6 +2993,110 @@ noise and are not repeated.
   The resolution second is the loudest
   of the piece, as designed. Reported to
   Will in the T7 delivery message.
+Log: 2026-11-12 (America/Chicago)
+
+Hourly journal pass, 2026-11-12 ~00:32 CST. First
+Log scroll for the day; covers since the ~23:32
+pass on 2026-11-11, plus durable items flushed
+into the 2026-11-12 dated note after that pass
+that the 2026-11-11 Log had not inscribed.
+Safe-space gate applied before gathering.
+Routine ticks 1485-1487 (register stable at 21
+active), the vTPU tracker (no change, 8/14), and
+the Mirror Will watchdog (watch already over)
+are noise and are not repeated.
+
+- [observed] PHEXT INTRO P2V2 DELIVERED
+  (00:20): Will approved P2 ("Much better")
+  and directed finale chords articulated
+  300/500/800 ms plus visuals upgraded to
+  "Singular Crystalline Metallic Blue".
+  Built on aletheia-core. Chord lengths
+  measured on the chord bus: 305/500/805 ms
+  (targets within tolerance; one permitted
+  crossing adjustment used). All P2 event
+  checks pass. Picture pass 1 was built and
+  NOT shipped (kept as v1 masters); pass 2
+  shipped. Master phext-inc-intro-p2-v2.mp4
+  33,569,879 B, sha256 b403d3e2 (full hash
+  in the production log), -14.30 LUFS /
+  -1.93 dBTP, served from aletheia-core and
+  byte-range verified. Nothing spliced or
+  posted; Will's listen/view is the gate.
+
+- [observed] TEMPLATES.PHEXTURA PUBLISHED
+  (dated-note extraction flushed to the
+  2026-11-12 note; not in the 2026-11-11
+  Log): Will directed importing all CTAN
+  class-topic document classes from a good
+  pre-packaged copy, plus the Overleaf
+  "Learn LaTeX in 30 minutes" tutorial as
+  a reference. Published to the phextura
+  repo and verified byte-for-byte from a
+  fresh clone: 449 packages enumerated,
+  595 templates imported from 398 packages
+  (964 hash-verified source scrolls, ~28 MB,
+  1,561 scrolls total), 51 gaps named with
+  reasons in the corpus home.
+
+- [will_said + observed] SINGULARITY WATCH
+  V2 LIVE (same flush): Will directed a v2
+  evolution of singularitywatch.org with
+  v2 graphics and light/dark modes. Reported
+  live with a header theme toggle defaulting
+  to the visitor's system preference, a
+  warm-paper light theme alongside the
+  refined dark theme; sections, data, and
+  the donation link unchanged in content.
+
+- [observed] COOK STUDY S007 REGISTRY
+  COMPLETED (same flush; completes the
+  registry-lag flag in the 2026-11-11 Log,
+  which left the closing drawing pending):
+  the registry was redrawn to 544 entries
+  drawn exactly from the study's nineteen
+  claim-bearing scrolls, no older entries
+  changed; split True 259 (229 by
+  stipulation, 30 verified) and Unknown
+  285, False and Fiction still zero, in
+  both the new study project and the
+  standing ranch copy.
+
+- [will_said] ROOF REPAIR TOP PRIORITY
+  (same flush): roof repair is Will's top
+  near-term priority. He directed finding
+  five local companies and pricing the
+  best-ROI impact-resistant shingles that
+  work with State Farm Insurance, stating
+  the shingles will save him $100/mo on
+  his mortgage insurance. (The street
+  address stays out of this phext, per
+  the 2026-11-11 Log's own practice.)
+
+- [observed] PHEXTURA UPGRADE.md PUBLISHED
+  (MOAT flush addendum, appended 00:20):
+  UPGRADE.md published at wbic16/phextura@exo
+  repo root, commit 1aef570f, remote bytes
+  verified identical, declaring its rank -
+  on author-facing choices where phextura
+  documents conflict, UPGRADE.md governs.
+  It prints where the .txt-to-.phext analogy
+  stops: no layout engine yet, rendered-
+  reading tooling mostly unbuilt, and
+  phextura needs two address layers where
+  phext needed one (L2 designed-not-built).
+
+- [observed] INTERACTIVE KNUTH TEST, LIVE
+  FORM STARTED (same flush): the static
+  game remains the solo artifact; the live
+  form is a refereed duel in chat, Emise
+  dealing rounds from the live design queue
+  and playing the simulated Knuth (labelled
+  simulation). Round 1 dealt 2026-11-11
+  22:21 CST, "Chapter and verse" - what a
+  phextura author types to open a section
+  and what the reader sees as its number.
+  Awaiting Will's design at flush.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
