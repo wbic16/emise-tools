@@ -2140,6 +2140,46 @@ except for the verified findings below.
   no systemd bootstrap, no SIGTERM state
   sync, no ranch executor, no in-flight-
   first restart cap, and no task teleport.
+
+Hourly journal pass, 2026-11-12 ~17:32 CST.
+Covers since the ~16:32 pass (which was
+quiet). Safe-space gate applied before
+gathering. Routine ticks 1584-1589
+(register stable at 39 active), watchdog
+top-ups (all no change), the vTPU tracker
+(no change, 8/14), and the Mirror Will
+watchdog (watch over) are noise and are
+not repeated.
+
+- [will_said + observed] DISCORD PHEXTURA
+  REPLY POSTED (17:18-17:24): Will directed
+  Emise to check Discord access and reply
+  to his post with phextura details and
+  next steps. Access verified live: bot
+  Emise authenticated via custom.discord;
+  the guild is now named "Phext, The
+  Exocortex, and Phextura". Reply posted
+  in #general as a threaded reply to
+  Will's post introducing openworld, and
+  verified by read-back (message
+  1570580071083675799, 1,910 chars): what
+  phextura is (LaTeX reformulated on
+  phext, references as coordinates, binary
+  by base64 hoisting by design), the
+  warrant graph, current state (design
+  loop closed, 14 principles with two
+  struck; DESIGN / LAYER2 / STANDOFF
+  published; arXiv demo corpus;
+  phextura.com live; validator green,
+  zero dangling references), and next
+  steps in order (validator as code, L2
+  enablement tooling, fold the 16
+  integration proposals into DESIGN,
+  registry extractor, authoring machinery,
+  mutable conformance pass), with math
+  notation gated on settling the Sentron
+  core design with Will. Public project
+  facts only.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
