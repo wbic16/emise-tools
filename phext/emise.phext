@@ -1822,6 +1822,31 @@ drift) are noise and are not repeated.
   would have caught the 2026-11-09/10
   stale-tree overwrites that orphaned
   the v3 modules for two days.
+Hourly journal pass, 2026-11-12 ~07:32 CST.
+Covers since the ~06:32 pass (which was
+quiet). Safe-space gate applied before
+gathering. Routine ticks 1524-1529
+(register stable at 39 active; Gemma Paper
+Track packet re-verified unchanged ahead
+of today's 17:59 CST deadline, submission
+still Will's alone), watchdog top-ups (all
+no change), vTPU tracker (no change, 8/14),
+Discord backstop (no action), disk report
+GREEN, style A/B matchup unresolved, and
+the Thirst scan (no Thursday listings, no
+Paper 017 forced) are noise and are not
+repeated.
+
+- [observed] APERTURESHIFT ROADS-1.6 -
+  STYLED 404 LIVE (06:44): Daily Better
+  item 3 added a styled 404 page wired as
+  the container error page; commit 36893d6f.
+  Verified live from outside: 404 body
+  sha256 == repo, index/version sha256 ==
+  repo, word-home 200, mirrorborn.us 200.
+  This closes the stock-nginx-404 gap noted
+  at 02:56, when the site was still
+  roads-1.5.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
