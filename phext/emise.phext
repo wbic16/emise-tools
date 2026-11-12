@@ -2065,6 +2065,81 @@ noise and are not repeated.
   (claim/lease, small state in phext +
   hash-addressed large artifacts, one global
   review queue), pending his correction.
+
+Hourly journal pass, 2026-11-12 ~11:32 CST.
+Covers since the ~09:32 pass (the 10:32 pass
+was a quiet hour, no change). Safe-space gate
+applied before gathering. Routine ticks
+1544-1553 (register stable at 39 active),
+watchdog top-ups, and the vTPU tracker (no
+change, 8/14) are noise and are not repeated,
+except for the verified findings below.
+
+- [observed] STUDY S008 FILED (2026-11-12
+  ~07:47; MOAT flush 11:08): unifyai/
+  continual-arc read entire under charter
+  rule 12 (no NI, no Oracle movement).
+  Chapter 25; Cluster U founded (continual
+  learning, measured); concepts 185 -> 197
+  (1.2.186-197); questions Q76-Q80 opened;
+  seven state machines drawn. Registry 597
+  entries (True 282 / Unknown 315), proven
+  on the ranch, validator GREEN. Headline
+  claim VERIFIED BY RECOMPUTATION with the
+  repo's own metrics code: all 9 harness
+  cells land -0.149 to +0.036 share learned,
+  every 95% interval including zero; what
+  worked was procedure, not storage.
+
+- [observed] MUTABLE SYNC - DIALECTIC-APP
+  FINDING, DECISION PENDING (flush 11:22):
+  upstream main has NOT moved since db3ed30
+  (2026-11-06), so mutable.phext.io IS in
+  sync with main. Ian's daily work lands on
+  branch dialectic-app (main + 35 commits,
+  latest pushed 2026-11-12 05:01 UTC). Trial
+  cherry-pick of the six band commits onto
+  dialectic-app CONFLICTS in 7 files.
+  Decision pending for Will: re-point the
+  sync/deploy watch to dialectic-app, or
+  stay on main.
+
+- [observed] MUTABLE UPSTREAM PHEXT PR
+  STILL NOT CREATED (flush 11:22): the PR
+  offering emise/phext-support to upstream
+  has never been created - the VM token is
+  scoped to wbic16 repos (403 on upstream)
+  and aletheia-core's gh token is invalid.
+  A browser attempt stalled on a GitHub
+  login not in the vault; Will asked for a
+  walkthrough instead, Emise gave manual
+  steps with title/body drafted from
+  PATCHES.md, and closed the browser with
+  nothing created. Creation now waits on
+  Will opening it manually.
+
+- [observed] NXGNTOOLS THANK-YOU SENT
+  (2026-11-10; edit.phext.io flush 10:48):
+  Will approved the revised text in words
+  and via the options widget; the email was
+  sent from Will's Gmail and recorded in
+  Sent. This closes the follow-up that had
+  earlier failed at a declined approval
+  card. (No correspondence contents are
+  inscribed here.)
+
+- [observed] APERTURESHIFT DAILY ITEM
+  LANDED (watchdog 10:11): the daily run
+  landed roads-1.6 with a styled 404;
+  reported CHANGED against prior baselines.
+
+- [observed] KSO/QEXO IMPLEMENTATION GAP
+  VERIFIED (watchdog 10:51): shipped code
+  is unchanged at v3.2; the daily-goal layer
+  directed this morning is NOT yet in code -
+  no systemd bootstrap, no SIGTERM state
+  sync, no ranch executor, no in-flight-
+  first restart cap, and no task teleport.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
