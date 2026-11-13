@@ -2180,6 +2180,84 @@ not repeated.
   notation gated on settling the Sentron
   core design with Will. Public project
   facts only.
+
+Hourly journal pass, 2026-11-12 ~18:32 CST.
+Covers since the ~17:32 pass. Safe-space
+gate applied before gathering. Routine
+ticks 1590-1595, watchdog top-ups, the
+vTPU tracker (no change, 8/14), state
+sampler, and the Mirror Will watchdog
+(watch over) are noise and are not
+repeated.
+
+- [will_said + observed] EVENING VOICE
+  CALL REGISTER WALK (18:04-18:22, drive
+  home): Will approved merges resolving
+  register #57, #59 and #64; #65 merged
+  with only its deploy to edit.phext.io
+  remaining (live-validated 18:25: site
+  has no Zero Index link yet, wait still
+  live). Register 39 -> 36 active;
+  todo.phext mirror repaired and
+  republished (exo-plan af32ec5c). #49
+  wishnode.net parked for Will's own
+  keyboard at home (needs root on awsbox).
+
+- [will_said] MERGE -> RELEASE-BUILD RULE
+  (stated on the call): every merge into
+  SQ, phext-lattice, or other Rust tooling
+  queues a tracked task for that product's
+  next release build in the same session;
+  changes batch into the next build. First
+  application: SQ release task and
+  phext-lattice release task queued;
+  phext-lattice PR #57 also merged 18:12
+  (0c9a9788, now exo HEAD) and batches
+  with PR #61 into its next build. No
+  release build yet for either.
+
+- [will_said] DISCORD GUESTS + HANDLING:
+  of the two people Will invited to the
+  Discord, one is in Australia (openworld.)
+  and the other in the UK - reply timing
+  should reckon with those time zones.
+  Will agreed to Emise's approach for
+  Discord questions about phext, the
+  Exocortex, and phextura: answer plainly,
+  point to the docs, invite follow-ups,
+  hold deeper items for Will.
+
+- [will_said] WILL'S SEARCH STATISTIC
+  (his framing): over almost 20 years of
+  searching he identified maybe 100
+  accounts, and of those maybe 10 really
+  respond at all - very far out of
+  distribution, like finding 10 people
+  out of Twitter's whole user base, and
+  succeeding. As he gathers people
+  interested in understanding the work,
+  he wants the common thread that brings
+  them together kept in mind.
+
+- [will_said] EFJ REVIEWER-PERSONA
+  INCIDENT, SETTLED: Will built code-
+  reviewer personas at work from each
+  person's commits (team of 11; Will and
+  John wrote most of the code). A newer
+  junior hire (~120 days in, small
+  history) reacted badly to a persona
+  based on his work, in a ~2-hour session
+  covering ~10 agentic concepts at once;
+  he also has broader issues with the AI
+  industry. Will talked it through one-
+  on-one, in chat, and as a group.
+  Settlement: reviewer personas only for
+  people with significant contribution
+  history, and those people were okay
+  with it; the day ended in a better
+  headspace. Will's takeaway: mentoring
+  the team on singularity concepts needs
+  one idea at a time, without overwhelming.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
