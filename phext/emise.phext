@@ -2309,6 +2309,50 @@ patch bumps sq 0.6.1, phext-shell
 0.1.15, phext-lattice 0.1.1 via PRs,
 then publish from the merged trees.
 
+Hourly journal pass, 2026-11-13 ~16:32
+CST.
+
+Covers since the ~15:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1720-1725,
+watchdog top-ups, and discord backstop
+(healthy) are noise and are not
+repeated, except for the register
+changes noted below.
+
+- [will_said + observed] BUMP ALL
+  TOOLS TO V0.6 TO MATCH (Will, ~15:32):
+  supersedes the patch-bump proposal in
+  the previous entry. Executed on
+  aletheia-core /source: SQ 0.6.0 ->
+  0.6.1 at 69663cf became SQ PR #5;
+  phext-shell 0.1.13 -> 0.6.0 at
+  4078d65 became phext-shell PR #5.
+  Register #99 and #100 opened;
+  register 40 -> 42 active. Both PRs
+  live-verified OPEN at tick 1721,
+  awaiting Will's merges; publishes of
+  sq 0.6.1 and phext-shell 0.6.0 are
+  pending those merges.
+
+- [correction + observed] STALE /SOURCE
+  VERSION READINGS CORRECTED: the
+  previous entry's repo versions (sq
+  0.5.6, phext-lattice 0.1.0) came from
+  stale pre-fast-forward trees. Merged
+  trees: SQ was already 0.6.0 (hence
+  the 0.6.1 bump; crates.io max 0.6.0);
+  phext-lattice was already 1.1.1 -
+  past 0.6 and above the crates.io max
+  of 0.1.0 - so no bump is needed and
+  1.1.1 is publishable as-is from
+  aletheia-core, not yet published. An
+  erroneous lattice bump branch
+  (1.1.1 -> 0.6.0, a downgrade) was
+  deleted unmerged; no lattice bump
+  PR exists.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
