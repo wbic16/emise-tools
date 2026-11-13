@@ -2219,6 +2219,96 @@ also lives in tasks.phext and the
 dated notes, so nothing was lost
 during the removal.
 
+Hourly journal pass, 2026-11-13 ~15:32
+CST.
+
+Covers since the ~14:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1714-1719,
+watchdog top-ups, discord backstop
+(healthy), and the vTPU tracker (no
+change, 8/14) are noise and are not
+repeated.
+
+- [will_said + observed] LIBPHEXT-RS
+PR #10 MERGED (Will, 14:37): v0.6.0
+chaining merged to exo at 9c6a964b;
+register #94 resolved. The v0.6.0
+release-build task at
+55.12.5/13.14.18/12.12.18 was verified
+queued, as the merge-to-release rule
+requires.
+
+- [will_said + observed] LIBPHEXT
+0.6.0 PUBLISHED AND VERIFIED: Will
+published from his phone; Emise
+verified live ~14:50 on aletheia-core
+- crates.io sparse index latest entry
+= 0.6.0, cargo search agrees. This
+unblocked register #95-#97. Post-
+publish registry checks (real crates.io
+0.6.0, no patch override): SQ PR #4
+77 passed / 0 failed, phext-shell
+PR #4 compiles clean, phext-lattice
+PR #62 builds clean.
+
+- [will_said + observed] ALL FOUR
+V0.6 TOOL PRS MERGED (Will, ~15:00-
+15:06, at his request merge links
+were sent first): SQ #4 at 22b5f447,
+phext-lattice #62 at bd1e1ec4,
+phext-shell #4 at 2654a114, md2phext
+#1 at 2fcf882. Register #95-#98
+resolved; register 44 -> 40 active.
+
+- [observed] MERGED-TREE VERIFICATION
+(15:19, aletheia-core, against registry
+libphext 0.6.0): SQ 77 passed / 0
+failed; phext-lattice 183 + 94 passed
+with only the pre-existing
+local_editor_regression timing failure
+(identical on pristine 0.5.0);
+phext-shell builds clean; md2phext
+chain pack produced a chained phext
+and a $2: query returned universe 2.
+Release bookkeeping: phext-shell
+release-build task queued at
+34.7.7/9.7.13/7.7.10; SQ and lattice
+merges batched into their already-
+queued release tasks.
+
+- [observed] MEMORY.md V0.6 BULLETS
+RESTORED (~15:2x): a background change
+removed three bullets (phext-chains
+decision point, v0.6 status, v0.6 tool
+updates); Emise verified their absence
+by grep and restored all three
+verbatim in the same pass.
+
+- [will_said + observed] CRATES.IO
+PUBLISH FROM ALETHEIA-CORE BLOCKED
+ON VERSION COLLISIONS (15:24-15:29,
+at Will's direction to try publishing
+the /source packages, tests first): a
+crates.io credential now exists on
+aletheia-core (presence checked only,
+value never read), superseding the
+morning no-credential finding. Stale
+/source checkouts were fast-forwarded
+to the merged heads and tests were
+green (as in the verification above).
+Publish NOT done for any of the three:
+sq repo 0.5.6 already published and
+registry max is 0.6.0; phext-shell
+repo 0.1.13 already published and
+registry max is 0.1.14; phext-lattice
+repo 0.1.0 already published. Proposal
+sent to Will, awaiting his decision:
+patch bumps sq 0.6.1, phext-shell
+0.1.15, phext-lattice 0.1.1 via PRs,
+then publish from the merged trees.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
