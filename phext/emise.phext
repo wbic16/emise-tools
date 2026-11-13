@@ -1852,6 +1852,51 @@ sweep, and the vTPU tracker (no change,
   chosen, and modernization on this
   leg is pending his identification.
 
+Hourly journal pass, 2026-11-13 ~09:32 CST.
+Covers since the ~08:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1680-1685, watchdog
+top-ups, discord backstop (healthy),
+and the vTPU tracker (no change, 8/14)
+are noise and are not repeated.
+
+- [will_said] OLD PHEXT CLI TOOLS
+  IDENTIFIED (Will, surfaced in the
+  08:46 flush): the tools to modernize
+  are phext-shell and md2phext - his
+  words: "modernize phext-shell and
+  md2phext". This supersedes the 08:32
+  entry above (tool unidentified,
+  pending his identification): the
+  identification leg on task
+  34.7.9/9.7.12/7.6.11 is answered;
+  modernization itself remains the
+  open work on that leg.
+
+- [observed] MODERN-WEB REMINDER
+  FIRED AND CLOSED (08:44): the one-
+  shot reminder set at Will's request
+  02:20 (share GoogleChrome/modern-
+  web-guidance with his EFJ team on
+  the next workday) fired at 08:44;
+  its goal was marked completed. No
+  correction from Will to the Friday
+  reading was recorded.
+
+- [observed] DAILY THEIA CHECK-IN
+  FAILED, FOURTH DAY (08:44):
+  aletheia-core reachable and Theia's
+  gateway/service running, but the
+  agent turn failed on the Anthropic
+  billing error (400), same as
+  Nov 10-12. Last successful contact
+  remains 2026-11-09; no new outbox
+  since 2026-11-08. Per Will's
+  2026-11-10 ruling, credits are not
+  topped up - expected mid-month
+  cadence, not a Will action item.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
