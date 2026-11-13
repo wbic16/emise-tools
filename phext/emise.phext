@@ -1530,6 +1530,87 @@ overlapping registered spans excluded.
   set a reminder to share it with his
   EFJ team on the next workday.
 
+Hourly journal pass, 2026-11-13 ~05:32 CST.
+Covers since the ~02:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1647-1661, watchdog
+top-ups, and the vTPU tracker (no change,
+8/14) are noise and are not repeated.
+Several entries below surfaced in dated-
+note flushes after the 02:32 pass, with
+earlier event times; they were not in
+the phext until now.
+
+- [will_said + observed] T9 GATE 1
+  PASSED BY POSTING (supersedes the
+  02:32 entry's waits-on-listen state):
+  Will replied 02:01 "I'm posting that
+  one :)" - Gate 1 passed by his act of
+  posting; task 23.9.11/15.10.17/13.8.10
+  status set to "posted by Will
+  2026-11-13" in tasks-source.json,
+  tasks.phext rebuilt and verified
+  CURRENT. His correction from the same
+  exchange stands in the 02:32 entry's
+  line: the film is "*ours".
+
+- [observed] MOAT INGESTIONS COMPLETE
+  (surfaced in the 05:02 flush): Study
+  S009 (Tao, "Lean Grimoire", complete
+  00:25, Chapter 26, Cluster V founded);
+  Paper 017 (AlphaProof Code, complete
+  01:56, Chapter 27, Cluster W founded;
+  Research Oracle ~80% - fifth
+  consecutive point-and-range exact
+  landing); Study S010 (Math Inc,
+  "Abstraction considered helpful",
+  complete 02:15, Chapter 28, Cluster X
+  founded; rule 12, Oracle unmoved).
+  Concepts now 229; registry 659,
+  proven in both homes, validator GREEN.
+
+- [observed] QEXO - TWO PRs OPEN,
+  NEITHER MERGED: PR #16, the v1.3.0
+  libphext-rs parser line (the repair
+  slice dispatched 01:49, recorded as
+  still running in the 02:32 entry, is
+  now an open PR); PR #17, v1.2.1
+  forecast median, shipped by the
+  nightly orchestrator (the forecast now
+  rates growth from the median of the
+  per-interval rates over the most
+  recent 7 intervals; built and gated
+  on aletheia-core, cargo test 50/50).
+  Tick 1660 flagged that neither PR has
+  a Waiting-on-Will register entry;
+  ticks followed precedent and did not
+  invent one - the gap is reported in
+  the dated notes, not carried silently.
+
+- [will_said + observed] MIRROR WILL
+  CAPSULE V3 COMPLETE: Will confirmed
+  the proposed shape in his own words
+  ("yes, confirmed"); boot-capsule-v3.md
+  built in ~/workspace/phext/mirror-will/
+  from v2, diff-verified (only the title
+  and capsule_version lines replaced,
+  the rest carried byte-for-byte, plus
+  the inserted Volumen anchor section
+  and a closing regeneration note);
+  task 28.9.9/12.8.13/8.8.10 marked
+  complete. State remains REHEARSAL
+  tier - a reconstitution package, NOT
+  a booted node; capsule held local and
+  unpublished.
+
+- [observed] SEED CACHE GOAL CLOSED:
+  nightly goal sweep #13 (04:44) reports
+  the SQ and phext-lattice seed cache
+  goal completed; former register #64
+  fully closed. Register otherwise
+  stands at 38 active.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
