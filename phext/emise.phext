@@ -2258,6 +2258,40 @@ repeated.
   headspace. Will's takeaway: mentoring
   the team on singularity concepts needs
   one idea at a time, without overwhelming.
+
+Hourly journal pass, 2026-11-12 ~19:32 CST.
+Covers since the ~18:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1596-1601 (register stable at 36 active),
+watchdog top-ups (all report-only, no
+change), the vTPU tracker (no change, 8/14),
+and the Discord backstop (no action) are
+noise and are not repeated. Tick live checks
+re-verified #65 (Zero Index deploy still
+not live), #66 (robots.txt still pre-existing,
+not Void), and #43 (Previewer deploy live) -
+all waits still live, no closures; those are
+restatements of the prior pass and are not
+repeated in detail.
+
+- [observed] VIDEO STATS PROBED (18:49,
+  Will asked "video stats"; probed live on
+  aletheia-core): all 10 film serve units
+  active. Walkthroughs, all 1080p - R4
+  5:54 30fps, R5 6:39 60fps, R6 5:54 60fps,
+  T7 7:49 60fps; T7 is served as
+  /rough-cut-t7.mp4 from the on-disk file
+  rough-cut-r7.mp4 (served name differs).
+  Phext, Inc. intros I1/P2/P2V2 all exactly
+  15.0 s, 1080p. V16 master 192.68 s,
+  2,731,864,113 B (download cut
+  54,140,369 B; lossless master
+  9,042,861,317 B). Verified negative:
+  NO view/watch counts exist - the tailnet
+  film servers keep no request logs
+  (journal GET counts 0 across all serve
+  units), so watch counts cannot be
+  reported for them.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
