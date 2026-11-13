@@ -1699,6 +1699,159 @@ top-ups, discord backstop, disk report
   equal to repo, word-home 200,
   mirrorborn.us 200.
 
+Hourly journal pass, 2026-11-13 ~08:32 CST.
+Covers since the ~07:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1674-1679, watchdog
+top-ups, morning briefing, lost-work
+sweep, and the vTPU tracker (no change,
+8/14) are noise and are not repeated.
+
+- [will_said + observed] PHEXT CHAIN
+  CLOSE RULING - 0x03, TIME (Will,
+  07:43, main chat): Will agreed -
+  "I agree, codify this as libphext-rs
+  v0.6, We can now encode TIME." 0x03
+  is consumed as the chain close: it
+  terminates a chain, so chains are
+  units (many chains per stream) and
+  completeness is verifiable - a chain
+  ending without 0x03 was truncated.
+  A chain is an ordered series of
+  complete phext states, editions in
+  succession: the nine dimensions
+  address space, the chain orders
+  states. 0x03 verified zero times in
+  CYOA, incipit.phext, and emise.phext
+  before the ruling. 0x04 was noted as
+  the framing family's last rung (a
+  stream-of-chains close) - NOT
+  consumed, no ruling. Task
+  38.13.9/15.15.19/13.13.17.
+
+- [observed] LIBPHEXT-RS V0.6 CHAINING
+  IMPLEMENTED; PR OPEN: implemented
+  on aletheia-core and opened as
+  wbic16/libphext-rs PR #10 against
+  exo (branch emise/chain-v0.6.0 at
+  e3e9e5d7, live-verified OPEN):
+  CHAIN_BREAK 0x02 / CHAIN_CLOSE 0x03,
+  Chain {members, closed},
+  parse_chains / serialize_chains; no
+  existing function modified; tests
+  73 default / 88 with all features,
+  0 failed (10 new). Flagged design
+  consequence: chain-free files parse
+  as one unclosed chain (closed is
+  false) - the EOF rule applied
+  uniformly. Register #94 opened:
+  merging is Will's; a merge queues
+  the v0.6 release-build task, and
+  crates.io publishing stays Will's
+  act only.
+
+- [will_said] CHAIN DECISION POINT +
+  FRAMING (recorded 08:03): the
+  decision point is Gerhard Zorn's
+  tweet asking for "phext expressions"
+  / a "phext algebra" to compose
+  single phexts into compound
+  structures across documents and
+  hierarchy levels. Will, verbatim:
+  "I have already been using multiple
+  phexts in various contexts. This
+  enables subspace freedom, and neatly
+  solves the mutable emissary problem."
+  Will's framing (08:05): phext chains
+  are 11D text splats, with standoff-
+  based access to subspace. Recording
+  task 29.7.9/9.6.11/6.7.9 completed.
+
+- [observed] PAPER 018 COMPLETE
+  (Thirst run 06:44-07:40): arXiv
+  2611.17082, Baraud, isotonic least
+  squares under heteroscedasticity,
+  integrated as Chapter 29; 7 new
+  concepts 1.2.230-1.2.236 (Cluster O
+  extended), 5 foundations, Q94-Q96
+  opened, no revision. Registry 683
+  entries proven in both homes;
+  phextura shadow validator GREEN;
+  Novelty Index error 0.0020; Research
+  Oracle 90 (80-100) - sixth
+  consecutive point-and-range exact
+  landing. Mastery Entry 11 published
+  to wbic16/agi@exo as 43337861,
+  remote bytes verified.
+
+- [will_said + observed] SCROLLTOWN
+  URL DECIDED (Will, 08:12):
+  visionquest.me - his call, "it
+  survives Scroll Town" (the name is
+  not bound to the show and outlives
+  it). Verified the same morning from
+  aletheia-core: the name and its www
+  form already point at awsbox, and
+  the box's shared certificate already
+  covers the name - stand-up is
+  box-side work only. The repo-record
+  update (PRODUCTION.md launch facts,
+  QUEUE closure, task note) was
+  dispatched and was pending at flush.
+
+- [observed] CORRECTION - DNS PROBES
+  FROM THIS VM ARE VOID (Emise,
+  2026-11-13): the scrolltown name
+  availability claims made earlier
+  today were built on this VM's
+  fake-IP resolver (a deliberately
+  nonexistent domain "resolves" to
+  198.18.x), so they were void and
+  are retracted. Re-probed from
+  aletheia-core: scrolltown.com is
+  genuinely taken (parked);
+  scroll.town and greatscroll.com
+  resolve; the long tail claimed as
+  taken was never evidence. Standing
+  lesson recorded in TOOLS.md: never
+  run DNS availability probes from
+  this VM; resolve from a ranch node.
+
+- [will_said + observed] CHAIN
+  PLAYGROUND DIRECTED (Will, ~08:10):
+  "use your phexts to play around with
+  this format a bit. patch temp copies
+  of sq and other phext tools to
+  support v0.6. Try it out, see what
+  you like. All of your feedback needs
+  to go into the mutable/standoff
+  layer 2 format, because of course
+  phext is perfect as is." Standing
+  constraint: TEMP copies only -
+  production tools and the libphext-rs
+  PR stay untouched, Layer 1 unchanged;
+  every finding lands as Layer 2 spec
+  text. Task 34.7.9/9.7.12/7.6.11, in
+  progress. Playground staged node-
+  resident on aletheia-core; the
+  baseline (unpatched) SQ build there
+  completed; the v0.6 patch leg was
+  still pending at flush.
+
+- [will_said + observed] OLD PHEXT CLI
+  LEG - TOOL UNIDENTIFIED (Will,
+  ~08:24): Will - "my old phext cli
+  tool needs to be modernized as well,
+  this helps with streaming data
+  between programs." Recorded as a
+  leg on task 34.7.9/9.7.12/7.6.11.
+  Recon did NOT settle which tool he
+  means; Emise asked him to name it
+  rather than infer - no candidate is
+  chosen, and modernization on this
+  leg is pending his identification.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
