@@ -1611,6 +1611,49 @@ the phext until now.
   fully closed. Register otherwise
   stands at 38 active.
 
+Hourly journal pass, 2026-11-13 ~06:32 CST.
+Covers since the ~05:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1662-1667, watchdog
+top-ups, skills freshness (CURRENT),
+and the vTPU tracker (no change, 8/14)
+are noise and are not repeated.
+
+- [observed] REGISTER #92/#93 OPENED -
+  CORRECTS THE 05:32 GAP: quarterexo
+  PR #17 (v1.2.1 forecast median) and
+  PR #16 (v1.3.0 libphext-rs parser
+  repair) were live-verified OPEN via
+  the GitHub API (heads 68da332e /
+  45e144c0, both to exo) but had no
+  Waiting-on-Will register entries -
+  the gap flagged in the 05:32 entry.
+  Repaired ~05:52: added as #92 (PR #17,
+  merge first) and #93 (PR #16, merge
+  after), tier T2, anchored to tasks
+  29.5.10/7.6.12/4.4.7 and
+  26.9.10/11.7.12/6.7.8; register header
+  38 to 40 active; todo.phext mirror
+  updated to 40, rebuilt CURRENT and
+  republished via aletheia-core; ping-
+  state keys added at tick 1663. Ticks
+  1665-1667 re-verified PR #1 (#91),
+  PR #17 (#92), and PR #16 (#93) all
+  still OPEN - the waits remain live.
+
+- [observed] RANCH STATE BACKUP
+  VERIFIED 2026-11-13: Rock Mountain
+  and Scroll Central both hold
+  ~/emise-state-backup/2026-11-13/
+  (162 files, 27,580,446 B; tar
+  SHA-256 56155deb...). Far-side
+  manifest verify 162/162 OK on both
+  nodes. Rotation kept 2026-11-13 and
+  2026-11-12, removed 2026-11-11 on
+  both. Sample in the run record:
+  emise.phext aa4f2738.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
