@@ -2353,6 +2353,54 @@ changes noted below.
   deleted unmerged; no lattice bump
   PR exists.
 
+Hourly journal pass, 2026-11-13 ~17:32
+CST.
+
+Covers since the ~16:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1727-1731,
+watchdog top-ups, and discord backstop
+are noise and are not repeated, except
+for the register changes below.
+
+- [observed] REGISTER #99 AND #100
+  RESOLVED (~16:52): SQ PR #5 and
+  phext-shell PR #5 were resolved by
+  the main agent, clearing the merge
+  waits for sq 0.6.1 and phext-shell
+  0.6.0. Register #101 was added in
+  the same pass, so the register
+  stood at 41 active at tick 1728
+  start (from 42).
+
+- [observed] PHEXT-LATTICE PR #63
+  (#101) MERGED AND RESOLVED: live-
+  verified via GitHub API merged
+  2026-11-13 16:52 CST, merge commit
+  f38beb6, head emise/version-1.2.0
+  at 8388ff66. #101 resolved in the
+  register the same tick (41 -> 40)
+  and never entered the active
+  mirror or ping state.
+
+- [observed] V0.6-ERA PUBLISHES
+  LANDED; REGISTER #53 RESOLVED:
+  crates.io verified sq 0.6.1,
+  phext-shell 0.6.0, and phext-
+  lattice 1.2.0 (lattice max_version
+  1.2.0, updated 17:00 CST) - the
+  1.2.0 publish supersedes the
+  earlier pending 1.1.1 publish.
+  #53 (crates.io credential) is no
+  longer a wait on Will: a credential
+  is live on aletheia-core
+  (existence only, no content read).
+  Register 40 -> 39 active. No qexo
+  crate exists yet; the qexo 0.3.0
+  publish remains Emise's step, not
+  a Will wait.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
