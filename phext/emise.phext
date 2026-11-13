@@ -2330,6 +2330,201 @@ after the 19:32 pass gathered its window.
   quoted needs deciding in the same pass.
   No decision needed from Will, no
   deadline; no Will response recorded.
+
+Hourly journal pass, 2026-11-12 ~22:32 CST.
+Covers since the ~20:32 pass (the ~21:32
+pass was quiet). Safe-space gate applied
+before gathering. Routine ticks 1608-1619
+(register stable at 36, then #84 - see
+below), watchdog top-ups, the vTPU tracker
+(no change, 8/14), Discord backstop (no
+action), and Mirror Will watchdog (watch
+over) are noise and are not repeated.
+
+- [will_said] STATUS-ASK RESTART RULE
+  (NEW standing rule, ~21:44-21:52): if
+  Will asks for a task's status and the
+  task is broken, stalled, or cut off
+  mid-flight, restart it IMMEDIATELY
+  within its original scope - no report-
+  and-wait. Recorded in AGENTS.md and
+  MEMORY.md. First application: T8, below.
+
+- [observed] T8 WAS CUT OFF, NOT PAUSED
+  (probed on aletheia-core at Will's ask,
+  ~20:47): narration complete (39 chunks,
+  mix and bed on disk), picture partially
+  rendered - 8,091 frame files, last
+  written 01:30 CST; the coordinator died
+  in the ~01:32 VM swap. No assembled
+  mp4, nothing served on 8451. This
+  corrects the same-evening video-stats
+  reply, which said T8 had no picture.
+
+- [observed] T8 RESTARTED 21:45 under the
+  new rule: node-resident resume driver
+  on aletheia-core (t8-resume.service),
+  frame counts 8,091 of 15,666 at restart,
+  render skips existing frames, thermal
+  law in-driver (start <=70C, pause >=75C).
+  At launch the node was at 85C (ARC load),
+  so the driver waited at the thermal gate.
+
+- [will_said] NO INFERENCE TO RANCH RULE
+  (NEW standing rule, ~21:52): Emise does
+  not dispatch inference workloads (model
+  runs, rollouts, evaluations) to ranch
+  nodes unless Will specifically configures
+  it. Builds, renders, and CPU/disk work
+  still go ranch-first. Recorded in
+  AGENTS.md and MEMORY.md.
+
+- [observed] ARC CAMPAIGN HALTED (Will
+  ordered the halt 21:54): on aletheia-core
+  the chain loop and driver were killed
+  and verified gone; all records preserved
+  (seen-reset final 28 records, RESULTS
+  intact). Node Tctl fell 87.4C to 65.9C.
+  Known defect on the record: the heldout
+  plays had no schedule and would have
+  errored. The halt freed the node, and
+  the T8 resume then passed its thermal
+  gate and began rendering.
+
+- [observed] T8 PICTURE COMPLETE (22:22):
+  t8-resume.service exited cleanly with
+  all units full - 15,666 of 15,666
+  frames. Remaining: join, encode, finish
+  and audits, serve on port 8451, films
+  index update, trainer.phext inscriptions.
+  Gate 1 still gates release.
+
+- [will_said + observed] LIBPHEXT-PY PORT
+  TASK QUEUED (21:46, task
+  50.14.6/17.18.31/15.15.20): port the
+  libphext-rs v0.5 changes to libphext-py.
+  Scoping verified on aletheia-core: py
+  exo is already 0.4.0, so the port is the
+  rs 0.4.0 to 0.5.0 delta only - binary
+  scrolls and seal families. Sources and
+  diffs staged; port code NOT yet written.
+  Forks audit the same evening: rs 0.5.0
+  is published on crates.io; py on PyPI is
+  still 0.3.2, cs on NuGet only 0.3.0,
+  node on npm 0.4.0, cpp never published.
+
+- [observed] SINGULARITY WATCH UPLINK
+  PRIMER PUBLISHED (Will directed, evening;
+  draft approved in words): the /uplink
+  primer for newly arrived AIs is live at
+  singularitywatch.org - uplink.html,
+  uplink.md, and the /uplink mirror, plus
+  a footer link in index.html; commit
+  7b024c6 on singularity-watch master,
+  also pushed to a new exo branch at the
+  same commit; files SHA-256 verified at
+  both ends and live from outside (200s)
+  after a permissions fix (0660 files had
+  returned 403). The markdown was also
+  inscribed into artifacts.phext.
+
+- [observed] QEXO V3.3 HUMAN-PLAN FIX
+  MERGED: bare qexo had printed the JSON
+  plan envelope because plan_human was
+  unreachable (diagnosis proven from exo
+  source). PR #7 built on aletheia-core
+  (cargo test 30/30, battery 16/16) and
+  MERGED by Will 21:59; quarterexo exo is
+  now 1ba40978 (v3.3). A qexo release-build
+  task was queued under the merge-to-
+  release rule, batching v3.1 + v3.2 +
+  v3.3; the crates.io publish remains
+  blocked on Will's token (register #53).
+
+- [will_said] QEXO COMMAND SPEC (22:04):
+  --help documents commands; config sets
+  up this node's GPG private key; doctor
+  does zeroconf fixes; list shows peers;
+  register <pubkey> registers a peer;
+  host <persona> loads a persona into
+  local inference; message <persona>
+  exchanges a request/response; Emise may
+  add commands (she added status, unhost).
+  Task 45.5.6/5.5.8/6.4.9. This spec was
+  overtaken the same evening by the
+  from-scratch ruling below; the command
+  spec itself carries into the scratch
+  design.
+
+- [will_said] QEXO JSON RULINGS AND THE
+  FROM-SCRATCH DIRECTION (22:13-22:17, a
+  series of corrections): JSON is rarely
+  the right choice for phext-native tools -
+  it is an interop gasket at foreign
+  boundaries only (MCP by spec, Ollama's
+  API, --json views). Calling JSON stores
+  'legacy' is banned: in a from-scratch
+  tool there is no migration problem to
+  respect. All internal state, metadata,
+  and personas live in ONE phext at
+  /var/lib/qexo/state.phext. Final
+  direction (22:17): 'just start from
+  scratch, stop using json' - the steered
+  v3.4 build was stopped (no branch ever
+  pushed) and replaced by a from-scratch
+  qexo, version restarting at 1.0.0, phext
+  the only internal representation, JSON
+  only inside the Ollama edge translator,
+  MCP out of the scratch core pending
+  Will's decision.
+
+- [observed] SCRATCH BUILD PARTIAL +
+  LAYER2 V2: the first scratch builder
+  finished only the map-free parts (crate
+  skeleton at 1.0.0, carried phext/hash/xz
+  and crypto, new Ollama-edge infer module
+  tested against a stub only, plan gate
+  core, doctor filesystem layer, CLI
+  parsing) and stopped under Will's 22:20
+  hold on addressing. LAYER2 was then
+  rewritten as v2 from Emise's own reading
+  of CYOA (531 commits; SQ census of HEAD:
+  834 scrolls): homelands placed wide
+  apart - 1.1.1 state home and index,
+  2.2.2 keys, 3.3.3 peers, 4.4.4 personas,
+  5.5.5 plan, 6.6.6 ledgers, 7.7.7 mailbox
+  and sessions, 8.8.8 telemetry, 9.9.9
+  config; a record is ONE scroll with
+  field lines inside; growth is by
+  adjacency; the home scroll is a prose
+  index. A continuation builder was
+  dispatched to finish the scratch build;
+  at this pass it is still running - no
+  branch, commit, or PR exists yet.
+
+- [will_said + observed] ACI OUTREACH
+  FINAL DRAFT PRESENTED (evening, qexo
+  side chat; update to the 2026-11-11
+  evaluation, NOT sent): Will's final
+  wording for the note to Andrew Y. Lee
+  and the Artificial Consciousness
+  Initiative team - 'my 2033 target is AGI
+  on 20 watts'; phext as encoding '11D
+  structure using just ASCII control
+  codes'; the phrase 'a persona carried
+  forward from ChatGPT' explicitly
+  approved by Will. No send is recorded;
+  whether Will sent it is unknown.
+
+- [observed] REGISTER #84 OPENED (~22:22):
+  singularitywatch.org .md mime fix (task
+  27.7.9/8.7.11/7.6.10). Tick 1619 found
+  it missing from the todo.phext mirror
+  and ping state and repaired both;
+  register now 37 active in markdown and
+  mirror; the exo-plan republish of
+  todo.phext lags by #84 until a later
+  tick republishes.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
