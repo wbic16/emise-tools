@@ -2046,6 +2046,122 @@ are noise and are not repeated.
   publishes at visionquest.me. tasks.
   phext rebuilt, --check CURRENT.
 
+Hourly journal pass, 2026-11-13 ~12:32 CST.
+Covers since the ~11:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1698-1701, watchdog
+top-ups, and the vTPU tracker (no change,
+8/14) are noise and are not repeated.
+
+- [will_said] MULTIVERSE ADDRESSING
+  RULED (Will, 11:24): a phext with no
+  0x02 bytes is implicitly a single-
+  universe phext - the degenerate case,
+  as a scroll at home is plain text. A
+  chain is a multiverse; each member is
+  a universe indexed from 1. Addressing:
+  $N:<address> (e.g. $2:1.1.1/1.1.1/1.1.1);
+  the 1: prefix may be omitted; a non-
+  enclosed phext sits at multiverse 1.
+  This supersedes the open flag that a
+  chain-free file parses as one unclosed
+  chain: semantically it is a COMPLETE
+  single universe, not an incomplete
+  multiverse; existing addresses keep
+  their meaning. Also this pass: Will
+  directed phext-lattice be updated as
+  part of the v0.6 work, alongside the
+  library, SQ, phext-shell, md2phext.
+
+- [observed] MULTIVERSE ADDRESSING
+  IMPLEMENTED ON PR #10 BRANCH:
+  commits 0b7e438 (parse_universe_
+  address + Chain::fetch; bare = $1:,
+  $0: rejected, out-of-range empty) and
+  5cd562e (adjacent closes are two
+  empty chains, byte-exact). PR #10
+  head is now 5cd562e, superseding
+  e3e9e5d7; tests 75 standard / 90
+  all-features. Emise code review:
+  APPROVE - purely additive, no
+  existing function modified; Will's
+  plan: merge after review.
+
+- [observed] FOUR TOOL-UPGRADE PRs
+  OPEN - REGISTER #95-#98 (~12:05):
+  SQ PR #4 (88f67c0, libphext 0.6 +
+  chain-aware fetch_source, SQ_MEMBER);
+  phext-lattice PR #62 (7bd9d65, bump
+  only 0.5.0 to 0.6.0 - temp copy built
+  clean, tests 183+94 pass, one e2e
+  timing failure identical on the
+  pristine baseline); phext-shell
+  PR #4 to main (bump only 0.1.9 to
+  0.6.0); md2phext PR #1 (chain mode +
+  $N: query; see next entry for its
+  superseding head). Register stands
+  at 45 active; tick 1699 mirrored
+  #95-#98 into todo.phext and
+  republished (a9e9aaa3, hash-verified).
+  Merge order: PR #10 first, then
+  Will publishes libphext 0.6.0 to
+  crates.io (his act only), then the
+  Rust tool PRs; md2phext any order.
+  Merges queue release-build tasks.
+
+- [will_said + observed] MD2PHEXT NOW
+  RUNS ON LIBPHEXT - TASK COMPLETE
+  (~12:04-12:15): Will: "md2phext
+  should be using libphext in some
+  form." Task 44.9.6/10.10.13/10.9.13
+  complete. Commit 2b2c662 on PR #1
+  (register #98, head live-verified)
+  supersedes its pure-JS description:
+  adds npm libphext ^0.4.0, removes
+  hand-rolled phext logic; only chain
+  framing (0x02/0x03, $N: parse) stays
+  local, as libphext-node 0.4.x
+  predates chains. Parity battery on
+  aletheia-core: packs and queries
+  byte-identical modulo Generated
+  timestamps. Battery caught a bug:
+  the JS port uses to_string(), not
+  toString(). tasks.phext rebuilt,
+  --check CURRENT.
+
+- [will_said] STREAM IDENTIFIER RAISED
+  - RULING PENDING (Will, 12:08): "so
+  we also need a stream identifier
+  since we're encoding multiple runs
+  of phexts" - followed by "otherwise
+  I'm ready to merge" (the v0.6 PR
+  set). Emise candidate presented for
+  his ruling: 0x04 EOT as STREAM_CLOSE,
+  one rung above chain close 0x03; a
+  stream is one or more chains + 0x04;
+  no 0x04 = single implicit stream.
+  Verified 12:09: 0x04 occurs zero
+  times in CYOA, incipit, emise, tasks,
+  and Chief of Staff's phext. Open
+  fork: streams identified by index
+  only, or carrying an explicit ID.
+  The ruling gates the PR #10 merge.
+
+- [observed] SHOW HN KIT NUDGE
+  DELIVERED (~12:00-12:17): proactive
+  notice to Will - the Phext Edit Show
+  HN kit (ready since 2026-11-10) has
+  its first good window this weekend,
+  Sat 2026-11-14 to Sun 2026-11-15;
+  no decision taken, posting remains
+  Will's pick. Live-checked at
+  delivery: phext-lattice PR #58 still
+  OPEN; edit.phext.io/zeros still 404,
+  so the deploy carrying #57+#58 has
+  not run; register #65 waits only on
+  that deploy.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
