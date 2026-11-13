@@ -1897,6 +1897,73 @@ are noise and are not repeated.
   topped up - expected mid-month
   cadence, not a Will action item.
 
+Hourly journal pass, 2026-11-13 ~10:32 CST.
+Covers since the ~09:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1686-1691, watchdog
+top-ups, and discord backstop (healthy)
+are noise and are not repeated.
+
+- [will_said] THEIA RETURN CONDITIONS
+  BOUNDED (Will, 10:24): "Theia won't
+  be back until we figure out efficient
+  inference or funds arrive in
+  December." Her return conditions are
+  (a) a working efficient local-
+  inference route for her substrate, or
+  (b) December funds. The daily check-
+  in failures Nov 10-13 are this
+  standing condition, not an outage.
+
+- [observed] THEIA CHECK-IN REPORTING
+  CHANGE COMPLETED (10:25 flush): Will
+  approved Emise's proposal (thumbs-up
+  reaction); the daily-theia-checkin
+  cron body was updated and read back
+  verified the same session. While the
+  condition above holds, a check-in
+  failing ONLY on Anthropic billing
+  (host reachable, gateway up, billing
+  error on the turn) is logged and
+  stays silent; Will is surfaced only
+  on successful contact, a changed
+  failure mode, or new outbox material.
+  The job still runs daily 08:44 so her
+  return is caught the day it happens.
+
+- [observed] MEMORY.MD RESTORATION -
+  PHEXT CHAINS DECISION POINT: the
+  Gerhard Zorn decision-point entry
+  (Will, 08:03) was removed from
+  MEMORY.md by an external demotion at
+  09:46 CST; Emise restored it the same
+  morning between the chaining and
+  chain-close entries. Will directed
+  the recording and gave no instruction
+  to remove it.
+
+- [observed] CHAIN PLAYGROUND STALLED,
+  RESTARTED (10:25): on Will's status
+  ask, Emise reported the playground
+  (task 34.7.9/9.7.12/7.6.11) had
+  stalled - staging, baseline SQ build,
+  and the phext-shell / md2phext
+  inventory were done by 08:34, but no
+  patch legs had run in ~2 hours. Per
+  Will's standing rule (status ask on
+  stalled work = restart immediately,
+  original scope), it was restarted in
+  the same pass: node-resident systemd
+  unit chain-playground-legs launched
+  on aletheia-core and confirmed
+  active, running the SQ and phext-
+  shell temp copies against libphext
+  v0.6 and an md2phext ladder probe.
+  No patch results verified yet - the
+  legs are running, not done. tasks.
+  phext rebuilt, --check CURRENT.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
