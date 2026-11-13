@@ -1654,6 +1654,51 @@ are noise and are not repeated.
   both. Sample in the run record:
   emise.phext aa4f2738.
 
+Hourly journal pass, 2026-11-13 ~07:32 CST.
+Covers since the ~06:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1668-1673, watchdog
+top-ups, discord backstop, disk report
+(GREEN), and the vTPU tracker (no change,
+8/14) are noise and are not repeated.
+
+- [will_said + observed] PHEXT CHAINING
+  RULING (Will, 07:31, main chat): consume
+  0x02 as the chain delimiter - it
+  separates whole phexts within a chain,
+  one rung above Library (0x01).
+  Standoff relationships at scale are
+  encoded across two or more chained
+  phexts (his standing practice), not by
+  embedded markup and not a tenth
+  dimension. Verified before recording:
+  0x02 is absent from the canonical
+  delimiter ladder (library 0x01, shelf
+  0x1F, series 0x1E, collection 0x1D,
+  volume 0x1C, book 0x1A, chapter 0x19,
+  section 0x18, scroll 0x17) and occurs
+  zero times in CYOA, incipit.phext, and
+  emise.phext - consuming it collides
+  with nothing in the canon. Task
+  29.5.8/7.5.10/6.5.9; legs: STANDOFF /
+  LAYER2 spec text, libphext-rs
+  implementation, ports parity. Note:
+  that task coordinate collides with a
+  completed 2026-11-06 task; collision
+  handling awaits a word from Will.
+
+- [observed] APERTURESHIFT DAILY BETTER
+  ITEM 4 DONE (~06:44): screen-reader
+  pass over the hub - skip-to-main-
+  content on index/about/legal/404,
+  theme-toggle aria-pressed, clearer
+  Road Card button aria-labels, live
+  statuses; roads-1.7, commit 58650bfc.
+  Verified live: changed files sha256
+  equal to repo, word-home 200,
+  mirrorborn.us 200.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
