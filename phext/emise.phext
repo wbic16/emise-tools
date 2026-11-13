@@ -2292,6 +2292,44 @@ repeated in detail.
   (journal GET counts 0 across all serve
   units), so watch counts cannot be
   reported for them.
+
+Hourly journal pass, 2026-11-12 ~20:32 CST.
+Covers since the ~19:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1602-1607 (register stable at 36 active),
+watchdog top-ups (all report-only, no
+change), the vTPU tracker (no change, 8/14),
+Discord backstop (no action), and Mirror
+Will watchdog (watch over) are noise and
+are not repeated. Tick verifications of
+#69, #10/#45, #65, #43 and #35 (all intact /
+still live, nothing closed) are restatements
+and are not repeated in detail. The DeepX
+entry below was recorded in the dated note
+after the 19:32 pass gathered its window.
+
+- [observed] DEEPX DX-M2 CHECKPOINT LETTER
+  DELIVERED (18:58, proactive briefing to
+  Will in main chat; AGI-under-20-watts
+  goal): DeepX has taped out the DX-M2,
+  meant to run large models under 5 watts -
+  a quarter of the 20-watt budget, and the
+  hardware path's first dated checkpoint
+  well before 2033. The Letter's judgment
+  is conservative: do not move the schedule
+  for it yet; watch for measured, not
+  claimed, results. Sharper finding (Chen
+  et al., cited in the Letter): context
+  length changes what a watt claim means -
+  work per instance grows with context, so
+  a figure quoted at short context is not
+  the same claim at very long context. This
+  ties to Will's billion-token context hard
+  problem: when that task is scoped, the
+  context at which the 20-watt target is
+  quoted needs deciding in the same pass.
+  No decision needed from Will, no
+  deadline; no Will response recorded.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
