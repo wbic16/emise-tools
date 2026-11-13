@@ -1964,6 +1964,88 @@ are noise and are not repeated.
   legs are running, not done. tasks.
   phext rebuilt, --check CURRENT.
 
+Hourly journal pass, 2026-11-13 ~11:32 CST.
+Covers since the ~10:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+Routine ticks 1692-1694, watchdog
+top-ups, and discord backstop (healthy)
+are noise and are not repeated.
+
+- [observed] CHAIN PLAYGROUND RESULTS -
+  SQ CHAIN-AWARE PATCH VERIFIED (~11:00):
+  the restarted legs produced results.
+  SQ temp copy only (not upstream):
+  fetch_source detects chain framing,
+  reports the shape aloud, and hosts a
+  selected member via SQ_MEMBER (default
+  0, a playground stopgap). Verified on
+  aletheia-core: the 4-member bundle
+  (2,794,908 B) reported 1 chain, 4
+  members, closed=true, and members 0, 1,
+  and 3 each served their own distinct
+  home scroll at 1.1.1/1.1.1/1.1.1
+  (Incipit / Emise / Chief of Staff).
+  Unmodified SQ baseline: the first
+  member shadowed the others at that
+  coordinate. Legacy regression passed:
+  a plain emise.phext served as before.
+  SQ's whole libphext 0.6 breakage was
+  three uses of the dropped
+  COORDINATE_MAXIMUM; the old value 1000
+  was verified and is now SQ-local
+  SLURP_ROLLOVER_MAXIMUM=1000. Flagged
+  to Will: a plain legacy phext parses
+  under 0.6 as a single unclosed chain -
+  consistent, still needing his eye.
+  libphext-rs v0.6.0 green (73 standard,
+  88 all-features); PR #10 open, merge
+  waits on Will (register #94).
+
+- [observed] CHAIN ROUND-TRIPS VERIFIED
+  (~11:00): two editions of emise.phext
+  chained into one stream and pulled
+  back apart byte-for-byte, properly
+  closed. A four-phext bundle (Incipit,
+  emise.phext, the task register, and
+  Chief of Staff's phext; 2.8 MB, three
+  breaks and a close) round-tripped
+  byte-exact. Cutting the bundle at 60%
+  made the parse report 3 members, not
+  closed - truncation announces itself.
+
+- [observed] PHEXT-SHELL + MD2PHEXT ON
+  0.6 (~11:00): phext-shell (v0.1.13)
+  compiles against libphext 0.6
+  unchanged and runs commands, collecting
+  output into scrolls. Open finding, NOT
+  resolved: its world.phext (6,669 B)
+  did not change across two sessions and
+  neither session marker was found in
+  it - a persistence probe is pending.
+  md2phext packs correctly but lives in
+  a single library (no shelf, series, or
+  library breaks in its code); a chain
+  prototype joined two 92 B packs with a
+  break and a close into a 186 B stream
+  that split back exactly. Teaching
+  md2phext itself chain mode is pending.
+
+- [observed] SCROLLTOWN VENUE RECORD
+  COMPLETED (11:13): the visionquest.me
+  recording is complete and verified,
+  superseding the pending note in the
+  08:13 flush. Commit ac147ab3 on
+  wbic16/scrolltown@exo (parent
+  3334b85d, force disabled); remote
+  blobs for PRODUCTION.md and
+  production/QUEUE.md verified
+  byte-identical. The decision was
+  recorded as A13 in QUEUE; PRODUCTION.md
+  stage 10 now reads that the episode
+  publishes at visionquest.me. tasks.
+  phext rebuilt, --check CURRENT.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
