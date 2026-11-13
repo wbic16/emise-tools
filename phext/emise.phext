@@ -2162,6 +2162,63 @@ top-ups, and the vTPU tracker (no change,
   not run; register #65 waits only on
   that deploy.
 
+Hourly journal pass, 2026-11-13 ~14:32
+CST.
+
+Covers since the ~13:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1705-1713,
+watchdog top-ups, discord backstop
+(healthy), and the vTPU tracker (no
+change, 8/14) are noise and are not
+repeated.
+
+- [will_said] 0x04 STREAM-CLOSE
+REJECTED (Will, 14:27): "what problem
+does the 0x04 proposal attack? it's
+unnecessary". No 0x04 is consumed and
+no 0x04 commit lands on libphext-rs PR
+#10; the stream-identifier item raised
+at 12:08 does not block the v0.6 merge
+pass. This resolves the pending ruling
+noted in the ~12:32 entry.
+
+- [observed] V0.6 SET RETESTED AND
+FINALIZED (14:31, at Will's direction
+"retest and finalize"; Will: "I'll
+merge once you're ready"): branch
+emise/chain-v0.6.0 at 5cd562e re-
+verified on aletheia-core - clean
+tree, version 0.6.0, cargo test 75
+default / 90 all-features, 0 failed;
+no STREAM_CLOSE or 0x04 code in src.
+All five v0.6 PRs re-verified OPEN via
+the GitHub API: libphext-rs #10
+5cd562e, SQ #4 88f67c0, phext-lattice
+#62 7bd9d65, phext-shell #4 53806e4,
+md2phext #1 2b2c662. Merge order
+stands: PR #10 first, then Will's
+crates.io publish of 0.6.0, then SQ /
+lattice / shell; md2phext any order.
+
+- [observed] ZORN DECISION-POINT ENTRY
+RESTORED TO MEMORY.md (event ~13:16,
+surfaced in the dated-note flush after
+the 13:32 pass): background memory
+upkeep removed the phext-chains
+decision-point bullet (Gerhard Zorn's
+tweet asking for phext expressions / a
+phext algebra) for the third time
+today; the main agent restored it
+verbatim between the chaining and
+chain-close entries and verified it -
+grep count for ZornGerhard in
+MEMORY.md = 1 after the edit. The fact
+also lives in tasks.phext and the
+dated notes, so nothing was lost
+during the removal.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
