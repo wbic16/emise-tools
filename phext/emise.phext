@@ -2838,6 +2838,75 @@ the register changes noted below.
   no fluidsynth for the flute stem and
   no PIL in system Python; P2 solved the
   same problem with a C renderer.
+
+Hourly journal pass, 2026-11-13 ~01:32 CST.
+Covers since the ~00:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+
+- [will_said + observed] T9 BRIEF
+  DRAFTED (main chat, ~00:28-00:40) -
+  supersedes the 00:20 status above that
+  T9 did not yet exist. Task recorded at
+  23.9.11/15.10.17/13.8.10; brief inscribed
+  in trainer.phext at 1.1.1/3.3.8/1.1.1;
+  tasks.phext and trainer.phext rebuilt
+  and verified CURRENT. T9 keeps T8's
+  217.0 s clock and machinery, replacing
+  the section ladder with five concept
+  sections. New rules: T9-01 concepts
+  carry the pacing (machinery sentences
+  at most 10 percent) and T9-02 the
+  three-triples ritual (spoken coordinates
+  at most 4, read as three triples).
+  Three readings (P1 clock, P2 ritual
+  numbers, P3 CYOA as corpus) were
+  proposals open to Will's strike at
+  delivery.
+
+- [will_said + observed] T9 APPROVED
+  AND IN PRODUCTION: Will said "run it"
+  (sources place the approval at ~00:33
+  and at ~00:40 - the time differs, the
+  approval does not); P1-P3 stand
+  unstruck and govern production. Script
+  written and audited: 484 words against
+  the 480 +/- 20 budget, machinery 3 of
+  40 sentences (7.5 percent), spoken
+  coordinates exactly 3 in ritual form,
+  12 distinct CYOA landings verified.
+  Narration recorded and fitted with
+  zero deviations (52 sentences). Stills
+  rendered on aletheia-core, inspected,
+  and fixed in three passes, then
+  re-verified. Full build launched
+  node-resident on aletheia-core as
+  t9-build.service; at last check mix
+  was complete and frame rendering had
+  begun. Build is NOT complete: picture
+  render, finish/master/mux, acceptance
+  audits, serving, and the Gate 1 report
+  to Will remain pending.
+
+- [observed] TODO.PHEXT LAG CLOSED:
+  the tick-1632 removal of #90 was
+  republished ~00:52 as commit ed619d5
+  on wbic16/exo-plan@exo (parent
+  1bcb323, force disabled); local and
+  remote SHA-256 7399ac6a verified
+  identical. The republish pending
+  noted in ticks 1631-1632 is closed.
+
+- [observed] REGISTER #91 OPENED:
+  wbic16/qexo PR #1, qexo v1.3.0 Android
+  port, task 27.8.10/9.8.12/8.7.9, PR
+  open awaiting Will's merge, head
+  12cfe70b live-verified 01:23. Register
+  corrected 37 to 38 active; todo.phext
+  rebuilt (SHA-256 e68a002f) and
+  republished as 3d9e909b, remote hash
+  verified equal to local.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
