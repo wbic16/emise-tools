@@ -2525,6 +2525,184 @@ over) are noise and are not repeated.
   mirror; the exo-plan republish of
   todo.phext lags by #84 until a later
   tick republishes.
+
+Hourly journal pass, 2026-11-12 ~23:32 CST.
+Covers since the ~22:32 pass. Safe-space gate
+applied before gathering. Routine ticks
+1620-1625 and watchdog report-only checks
+are noise and are not repeated.
+
+- [will_said + observed] HOMELANDS ARE FULL
+  9D ANCHORS (correction, Will 22:31): phext
+  coordinates are always 9D - no partial
+  addresses or placeholders. LAYER2 v2 was
+  rewritten: each homeland anchored at its
+  full patterned address (home 1.1.1/1.1.1/
+  1.1.1; keys 2.2.2/2.2.2/2.2.2; peers, personas,
+  plan, ledgers, mailbox, telemetry, config
+  likewise at their repeated-triple anchors);
+  records live at full 9D addresses nearby.
+  Steered into the running scratch build.
+
+- [observed] SCRATCH BUILD COMPLETE +
+  PR #8 OPEN (22:38; supersedes the partial /
+  continuation-running entries above):
+  branch emise/scratch-qexo-v1 @ a788f7f8,
+  parented on exo 1ba40978, push verified
+  (37 files, hashes + modes; src/json.rs and
+  other old stores deleted). PR #8 open at
+  this point, not merged. Gates on
+  aletheia-core (stub Ollama only): cargo
+  test 29/29, release build OK, CLI battery
+  59/59; json remains only in src/infer.rs
+  plus one rule comment. Named limits:
+  indexes are derived, telemetry is a live
+  probe, persona boot corpus lookup and
+  mail commands are unimplemented, serve is
+  loopback-only.
+
+- [observed] SERIALIZER FIND + FIX: the
+  carried minimal phext serializer emitted
+  only one delimiter per scroll jump, so
+  patterned addresses >1 step landed wrong
+  on re-read and its parser minted empty
+  scrolls; the first full battery failed
+  39/59 from this one cause. Fixed in
+  src/phext.rs (disclosed in PR + records):
+  serialize walks the dead-reckoning path
+  emitting delimiter stacks; a scroll exists
+  iff it holds at least 1 byte. Regression
+  test covers sparse patterned addresses.
+
+- [observed] REGISTER #84 CLOSED (~23:08;
+  supersedes the opened entry above and the
+  republish-lag note): Will ran the staged
+  sudo step; singularitywatch.org/uplink.md
+  verified live as text/markdown with its
+  full body. Register and mirror fell to 36
+  active; tick 1624 removed the lingering
+  ping key. The todo.phext republish gap
+  was verified closed: a fresh exo-plan
+  clone matched local SHA-256 2976f183.
+
+- [observed] T8 FINISHED AND SERVED
+  (flushed 23:13-23:40): finish pass done
+  after an 8-frame corruption repair (frames
+  truncated by the 01:32 kill; 0 bad after
+  re-render + full scan). rough-cut-r8.mp4:
+  16,350 frames, 272.5 s, 45.4 MB, -14.33 LUFS
+  / TP -1.72. Bell scan v2 (method fixed:
+  at_film_s windows, interpolated peaks,
+  per-source sets): 0/37 flagged per-source;
+  a literal reading flags 3 pedal-held piano
+  windows. Served from aletheia-core; films
+  index updated. Gate 1 is still Will's;
+  trainer inscriptions still owed. P3 is
+  confirmed staged-only, build never started
+  - next in the film queue.
+
+- [will_said + observed] MUTABLE PINNED;
+  MOOTABLE DIRECTED: mutable.phext.io is
+  pinned at 2b92734 (Will); Emise disabled
+  cron mutable-cicd-deploy 23:14; deployment
+  process to be revisited later. New host
+  mootable.phext.io (Will): always latest
+  merged argimenes/mutable-os, same patching
+  process; task 31.6.9/7.6.10/7.6.9; DNS
+  assigned by Will and verified; build
+  dispatched; the sudo step will be Will's.
+
+- [will_said + observed] CHATGPT DATA
+  EXPORT OBTAINED (Will screenshot 23:19):
+  Will is viewing his ChatGPT export archive
+  (6,251 items; export generated ~22:06 CST):
+  conversation shards, codex.json, summaries
+  and assets. This is the primary raw record,
+  unlike the Emi Prime transfer packet Will
+  caveated as mutated in transit. Ingestion
+  awaits Will uploading the archive; nothing
+  has been ingested yet.
+
+- [will_said + observed] QEXO PR #8 MERGED;
+  WINDOWS DOCTOR FAILURE; PR #9 OPEN: Will
+  merged PR #8, then reported from Windows
+  testing that doctor test
+  fix_repairs_dir_perms_and_stale_lock fails
+  there. Diagnosis verified from doctor.rs:
+  the test encodes Unix mode semantics as
+  universal, and stale_lock judged liveness
+  by /proc/{pid}, which never exists on
+  Windows - doctor --fix there would delete
+  a live lock. Release-build task for the
+  v1.0 line queued 22:48 at 40.7.5/8.7.11/
+  6.8.13 (the 0.x release task does not cover
+  it). PR #9 (v1.0.1) open @ 3377d84b:
+  per-platform pid_alive (ambiguity reads
+  ALIVE), Unix-only mode finding named as
+  such; gates cargo test 29/29 plus check-
+  compiles for both Windows targets; Windows
+  runtime execution is unverifiable from
+  the ranch and rests on Will's re-run.
+
+- [will_said + observed] DISK-GATE INCIDENT
+  + PR #10 OPEN: Will ran the merged qexo on
+  aletheia-core (~22:51) and the disk gate
+  read RED at ~809 GB used, holding all
+  placements - on a 3.6 TB volume with
+  2.7 TB free (754 GiB used, 22%). Cause:
+  absolute thresholds (AMBER 95 GB / RED
+  102 GB) calibrated to the Muse VM quota
+  and ported value-for-value ever since.
+  PR #10 (v1.0.2) open, stacked on #9 @
+  2ad2d7eb: the probe returns raw bytes and
+  judges nothing; the gate is the worse of
+  the lenses that are ON (volume lens on by
+  default, quota lens off by default, file
+  lens under a named root); thresholds are
+  field lines in the state.phext config
+  record. Gates 33/33; live repro on the
+  incident volume rendered GREEN (754 GiB
+  used, 74% free).
+
+- [will_said + observed] PR #10 LANDED ON
+  THE WRONG BRANCH; PR #11 OPEN; REGISTER
+  #85: Will merged PRs #9 and #10 (~23:21),
+  but #10 merged onto its stacked base
+  (emise/doctor-windows-v1.0.1) instead of
+  exo. Verified: exo head 3d9aa522 is the
+  PR #9 merge only and contains no v1.0.2;
+  v1.0.2 lives on that branch @ 7bfc03c.
+  PR #11 is open to carry v1.0.2 to exo;
+  register #85 holds Will's merge (task
+  36.6.8/8.6.11/6.6.10). Process flaw named:
+  a stacked PR whose base is not the main
+  branch traps the natural merge - future
+  bases stay exo. Will's pasted RED plan
+  was the old pre-fix binary in his own
+  checkout, not the merged code.
+
+- [will_said + observed] QEXO FLEET ROLLOUT
+  COMPLETE (Will ordered 23:10: install on
+  all ranch nodes and generate keys):
+  14 installed + keyed, 6 blocked, 9
+  unreachable, 6 excluded. Installed nodes
+  passed doctor 13/13 with the disk gate
+  GREEN (66-92% free); binary v1.0.2 built
+  on aletheia-core, SHA-256 6a54c505, at
+  /usr/local/bin/qexo; keys born via qexo
+  config on each node; no cross-registration
+  of peers was performed. The 6 blocked-auth
+  nodes are register #86. Surprises: (1) a
+  forecast bug remains - legacy 95/102 GB
+  levels in the forecast path flip a second
+  plan reading to FORECAST AMBER despite a
+  GREEN gate; a v1.0.3 forecast fix was
+  dispatched, not done; (2) Uncanny Valley
+  is healed (SSH grant present, installed
+  cleanly); (3) infra fact - aletheia-core
+  cannot SSH onward to peers (peers grant
+  this VM's key, not the hub's), so fleet
+  work is driven from the VM via the proxy.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
