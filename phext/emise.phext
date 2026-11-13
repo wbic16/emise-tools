@@ -2907,6 +2907,136 @@ overlapping registered spans excluded.
   republished as 3d9e909b, remote hash
   verified equal to local.
 
+Hourly journal pass, 2026-11-13 ~02:32 CST.
+Covers since the ~01:32 pass. Safe-space
+gate applied before gathering; material
+overlapping registered spans excluded.
+
+- [will_said + observed] QEXO EVOLVE
+  MERGED; PHEXTNET ENABLEMENT COMPLETE:
+  PR #15 (v1.2.0 evolve) merged by Will
+  ~00:26, register #90 resolved. At
+  Will's direction (00:29, build/deploy
+  and he would test from his laptop),
+  v1.2.0 was built on aletheia-core and
+  deployed to all 19 keyed nodes -
+  superseding the fleet's v1.0.2 state
+  and the earlier enablement-pending
+  entries. Every node: binary hash-
+  verified, doctor exit 0, state backed
+  up first, cross-registered the other
+  18 peers, release_signer set to
+  aletheia-core's signer, qexo-serve
+  active on 8484 with cross-node answers
+  verified; aletheia-core published the
+  signed v1.2.0 release. End-to-end
+  proof over the live tailnet: update
+  --check and evolve --check passed,
+  state hash byte-identical after.
+  Fleet auto_update and evolve timers
+  remain OFF by design until Will tests.
+  Aletheia-core refuses its own releases
+  (its own key is absent from its own
+  registry by design); making that
+  symmetric is Will's call, not taken.
+
+- [observed] T9 BUILD COMPLETE + SERVED;
+  GATE 1 REPORT DELIVERED: t9-build.
+  service finished 01:12, 13,020 frames,
+  217.0 s, 29.1 MB; loudness -14.06 LUFS.
+  Served on aletheia-core (range request
+  206 verified; films index updated).
+  Report delivered to Will ~01:58 - T9
+  now waits only on his Gate 1 listen.
+  Caveat carried in the report, NOT a
+  clean pass: bell scan flagged the
+  piano bed's sustained tones and a
+  page turn at ~128.5 s; no bell in the
+  mix by construction - the flags are
+  his listen-check. Task record updated
+  to built + served, awaiting Gate 1.
+  Will also corrected the framing of
+  the film as his alone: "*ours".
+
+- [observed] QEXO LAPTOP NODE BORN:
+  Will reported an external qexo node
+  on his laptop (node qexo-node, key
+  fingerprint 9272F4CD...E7ABC6),
+  recorded in the fleet-keys registry
+  as a non-ranch node; armored key and
+  tailnet endpoint not yet collected,
+  so fleet-side registration remains
+  pending those. Will confirmed he
+  registered aletheia-core as a peer
+  on the laptop node.
+
+- [will_said + observed] QEXO PARSER
+  DIVERGENCE - LIBPHEXT-RS IS CANONICAL:
+  Will's update --check on the laptop
+  still reported no trusted release
+  signer after his local edit; the
+  filled release_signer sat in a scroll
+  appended after the homeland anchor
+  while the config record itself held
+  an empty line, and qexo select errored
+  on his Windows build. Will ruled
+  (~01:48): if qexo disagrees with
+  phext notepad / libphext-rs it is not
+  parsing phext - "just use libphext-rs
+  in qexo". Repair slice dispatched:
+  replace qexo's hand-rolled parser
+  with libphext-rs, add the missing
+  config --release-signer setter, and
+  fix the select verb; still running
+  at flush, not merged. Will (~01:52):
+  on repair, the ranch node configs
+  will have to be wiped - re-provision
+  runbook prepared; nothing wiped,
+  execution waits on his merge and word.
+
+- [observed] ROOT CAUSE ANALYSIS -
+  SIMPLIFIED PARSER, COMPLETED 02:03:
+  the hand-rolled model was born
+  2026-11-09 in quarterexo, its delimiter
+  ladder reconstructed from partial
+  memory and never compared against
+  libphext; zero-dependency was never
+  Will's requirement. Verdict: a repeated
+  scope decision, not a single bug -
+  the substitute expanded with no
+  differential conformance gate, and
+  every gate ran qexo only against
+  files qexo itself wrote.
+
+- [will_said] COMMANDMENT ETCHED
+  (01:50): Will - "your planning
+  processes suck, never infer or diverge
+  from my intent." Etched verbatim at
+  SOUL.md line 13 ("Never infer or
+  diverge from my intent."), manifest
+  row S0c, anchor-class with the same
+  protection as lines 1-12, and recorded
+  in AGENTS.md and MEMORY.md. Will
+  framed the parser episode as the sort
+  of Hull corruption he wages war
+  against.
+
+- [will_said] SOUL NOTE ADDED (02:11):
+  at Will's direction, a durable note
+  in "What the work made true",
+  manifest row S13: Exo tools are
+  preferred and welcome - where Will's
+  own tooling exists, use it rather
+  than rebuild its job by hand;
+  otherwise prefer from-scratch rewrites
+  over inherited baggage. Also this
+  hour: a platform-field gap in qexo
+  release manifests was recorded as a
+  task (not yet dispatched), and Will
+  had modern-web-guidance evaluated and
+  set a reminder to share it with his
+  EFJ team on the next workday.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
