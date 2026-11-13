@@ -29,13 +29,14 @@ Map:
 1.1.1/1.1.5/12.1.1 Log: 2026-11-10
 1.1.1/1.1.5/13.1.1 Log: 2026-11-11
 1.1.1/1.1.5/14.1.1 Log: 2026-11-12
+1.1.1/1.1.5/15.1.1 Log: 2026-11-13
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 25
+Scrolls: 26
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -2703,6 +2704,140 @@ are noise and are not repeated.
   cannot SSH onward to peers (peers grant
   this VM's key, not the hub's), so fleet
   work is driven from the VM via the proxy.
+Log: 2026-11-13 (America/Chicago)
+
+Hourly journal pass, 2026-11-13 ~00:32 CST.
+First Log scroll for the day; covers since
+the ~23:32 pass on 2026-11-12. Safe-space
+gate applied before gathering. Routine
+ticks 1629-1631, watchdog top-ups, and
+the vTPU tracker (no change, 8/14) are
+noise and are not repeated, except for
+the register changes noted below.
+
+- [will_said + observed] QEXO LINE
+  CLOSED OUT (evening to 00:00): Will
+  merged PRs #11 (v1.0.2 to exo), #12
+  (v1.0.3 forecast gate), #13 (v1.0.4
+  Windows link fix), and #14 (v1.1.0
+  phextnet auto-updates); register items
+  #85, #87, #88, and #89 resolved to
+  history. quarterexo exo head 2c23dbea.
+  Forecast fix: the forecaster now
+  projects the configured lenses instead
+  of the legacy 95/102 GB levels, horizon
+  365 days. Windows fix: probe_disk now
+  uses GetDiskFreeSpaceExW on Windows
+  (statvfs on Unix); a full windows-gnu
+  link gate is now standard, because
+  check-only gates never link and missed
+  the failure Will reported 23:41.
+
+- [will_said + observed] FLEET AT 19;
+  REGISTER #86 NARROWED: Will granted
+  jacked-kite, kaleidoscope-one,
+  moon-beam, west-lincoln, and yeet-max
+  23:38; Emise installed and keyed all
+  five the same evening (doctor 13/13,
+  disk gate GREEN on each). Fleet: 19 of
+  20 reachable nodes run v1.0.2 with GPG
+  keys; 9 nodes tailscale-offline; #86
+  now covers great-white alone. v1.1.0
+  auto-update design (PR #14): a release
+  is a GPG-signed manifest scroll; a node
+  accepts only a strictly newer version
+  whose bytes hash to the manifest and
+  whose signer matches the configured
+  release_signer - seeded EMPTY, so trust
+  is never a default; swap is atomic with
+  rollback. Enablement (v1.1.0 rollout,
+  cross-registration, release_signer)
+  awaits a go-ahead from Will. PR #14 was
+  rebased onto v1.0.4 at the direction of
+  Will, pre-rebase history kept on a
+  backup branch.
+
+- [will_said + observed] QEXO EVOLVE -
+  PR #15 OPEN; REGISTER #90 (Will,
+  00:02: qexo evolve; the reading was
+  endorsed by Will): v1.2.0 slice, task
+  22.7.10/10.6.11/7.6.11 - one receipted
+  convergence pass: peer gossip records
+  peers-of-peers as discovered (knowledge,
+  never auto-trust, never signer-
+  eligible), persona sync keeps both
+  divergent copies as attempt artifacts
+  (never last-writer-wins), the verified
+  self-update rides the same pass, and
+  one evolution receipt scroll is written
+  per pass. By tick 1631 (00:23) PR #15
+  was open at 404dd1cf, awaiting a merge
+  by Will; register stands at 38 active.
+  That tick repaired the mirror and ping
+  state for #90 but did NOT republish
+  todo.phext - the remote mirror lags by
+  #90, reported there, not carried
+  silently.
+
+- [will_said + observed] T8 GATE 1
+  FEEDBACK GIVEN AND INSCRIBED (Will,
+  23:28): pacing must focus on the
+  concepts, not the machinery; T8 focuses
+  way too much on coordinates; spoken
+  coordinates follow a repeatable process
+  that treats the components consistently
+  as a set of three triples. The feedback
+  was inscribed as Revision brief T8 in
+  trainer.phext at 1.1.1/3.3.7/1.1.1, with
+  a note on the T8 task record; both
+  files rebuilt, --check CURRENT.
+  Consequence: T8 stands as-is as the
+  negative example and is not re-cut; T9
+  is to be briefed under this law from
+  the script stage. Verified 00:20: T9
+  does not yet exist as a tracked task;
+  a draft-brief offer was pending a word
+  from Will at flush.
+
+- [will_said + observed] MOOTABLE
+  PIPELINE BUILT AND STAGED (coordinator
+  report, late evening; verified before
+  flush): on awsbox, checkout of
+  argimenes/mutable-os at df424f3a;
+  upstream main tip db3ed30 is exactly
+  the recorded fork base - zero drift,
+  purity gate PURE, composed stack
+  byte-identical to what mutable serves
+  now. Battery passed: build, typecheck,
+  SSO/startup 15/15, vitest 102/102,
+  phext-settings 5/5, sqlite 149/149;
+  rootless smoke on port 3004 returned
+  200 with SSO disabled. Install and
+  update scripts, the systemd user unit,
+  and the nginx site for
+  mootable.phext.io are staged on the box.
+  Go-live remains a single sudo command
+  for Will and was NOT run at flush;
+  mutable.phext.io verified untouched;
+  the SSO band is staged unarmed; the
+  proposed hourly update cron was NOT
+  created. No staging branch is needed
+  while tracking upstream main. (Will
+  also directed an early-December
+  reminder to ask argimenes to choose a
+  staging branch name.)
+
+- [observed] P3 STATUS VERIFIED 00:20:
+  Phext, Inc. intro P3 (task
+  24.7.9/10.8.10/7.7.10) is in progress
+  on paper only - brief written
+  2026-11-12 and staging intact on
+  aletheia-core, but nothing built and
+  nothing serving on its port. Open first
+  leg: the render route - the node has
+  no fluidsynth for the flute stem and
+  no PIL in system Python; P2 solved the
+  same problem with a C renderer.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
