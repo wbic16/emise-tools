@@ -14,6 +14,30 @@ Will posts random arXiv links; Emise weaves each into `~/workspace/research-trac
 
 6. After the seed paper, compress each paper into a DELTA from research.phext: only what is new, revised, confirmed, or contradicted relative to the current world-model is written. Material the model already holds is referenced by coordinate, never restated. A paper chapter is a delta record: (a) what it adds, (b) what it changes in canonical scrolls (applied in place, dated), (c) its evidence, (d) its tensions and limits. Paper 001 predates the rule and stands as the seed — its delta was the model itself.
 
+## Novelty by author — the researcher's score (Will, 2026-11-14)
+
+Will, 2026-11-14: "MOAT heats up thought space so individual claims can be pulled out of papers. the process of ingesting a paper spaghettifies it into these four categories. your score as a researcher grows along those dimensions for introducing novelty to the Oracle." Ingestion is per-claim — the paper does not survive as a unit; its claims do, each binned into one of the four MVO standings. A researcher's standing in the Oracle is therefore a **four-component novelty vector** — (True, False, Unknown, Fiction) — accrued per filing. The direction and its edge are recorded at research.phext 1.1.6; the counting basis and the first drawing stand at 1.5.6.
+
+Every ingestion, from Paper 023 onward:
+
+1. **The delta scroll carries a NOVELTY BY AUTHOR line** — one line per author of the work, in the chapter's delta scroll (x.1.5), in exactly this form:
+
+   `NOVELTY BY AUTHOR — <Author Name>: True +<t>, False +<f>, Unknown +<u>, Fiction +<fi>.`
+
+   The increments are that filing's own, counted by where the filing placed its novelty:
+   - **True** — claims and concepts newly standing True or verified, including claims the filing itself verified (e.g. by recomputation).
+   - **False** — claims filed False on stated grounds (a counterexample, an internal break, a collision with a held True).
+   - **Unknown** — concepts newly standing Unknown (attributed / open / synthesis / estimate) **plus** the questions the filing opened.
+   - **Fiction** — concepts and devices newly standing Fiction.
+
+2. **The running vector lives on the researcher's entry among the researchers (1.5.6)**, as a line in exactly this form, rewritten in place at each filing:
+
+   `NOVELTY SCORE (first drawing <date>; last updated <date>): True <T>, False <F>, Unknown <U>, Fiction <Fi>.`
+
+   The whole of a work's increments is carried by **each** of its authors in full — the score is a standing, not a share, and is never split across a byline.
+
+3. **Opening balances.** The first drawing (2026-11-14) was drawn from the chapter delta scrolls as filed — the new concepts and questions opened the deltas state, concepts placed by the standing they hold in the registry — and labelled as such at 1.5.6: True opens at 0 for every researcher on that basis (the deltas state concepts and questions, not counts of claims standing True), and False opens at 0, its true historical value. Drawn at the first drawing: the authors of Paper 014 (Unknown 24 each), of Paper 017 (Unknown 21 each), and Bruce Sterling (Unknown 2, Fiction 7). Every other researcher's balance is drawn at their next ingestion, from the same delta-scroll basis, **before** that filing's increments are added — an ingestion never adds increments to an undrawn balance.
+
 ## Dual maintenance — both tracker forms, every ingestion (Will, 2026-11-11)
 
 While phextura is built out, the tracker is kept in TWO forms: the canonical `research.phext` and its phextura-form shadow at `~/workspace/research-tracker/phextura/research.phextura`. Every ingestion — cron-sourced or Will-posted — updates BOTH in the same pass:
@@ -61,7 +85,7 @@ The phextura form is a shadow: it must never lag the canonical form by more than
    - **The path (1.5.5):** every taking-in in original submission order — papers and studies interleaved by arrival — each with its date, title, chapter, and for papers its Novelty Index, axis flag, and Oracle progress after; studies marked as studies (no NI, Oracle unmoved); the restructuring passes placed where they fell.
    - **Researchers (1.5.6):** every researcher behind the ingested works — paper authors and study authors/creators — each with their work(s) here (chapter/coordinate) and their rule-15 standing, taken from the author-check scrolls where they exist. Works taken in before rule 15 stood (Papers 001–005, Studies S001–S003) are marked 'not checked — predates the author-check rule'; no verdict is fabricated for a check never run. Will is the submitter/curator, not a researcher entry.
    - **How the Oracle was built (1.5.7–1.5.8):** the plain structure scrolls — intake, the delta rule, one canonical scroll per concept, foundations at level zero, the four standings and their bases, the Lean proof of the keeping with its honesty boundary (Lean proves the bookkeeping, not worldly truth), restructuring without pruning (minimum = smallest organization, never smallest content), the Novelty Index and Oracle estimate, and where everything lives.
-   - **Maintenance duty:** every ingestion and every restructuring pass updates the areas it touches in the same pass — new machines join 1.5.2, new authors join 1.5.6, the path gains its entry at 1.5.5, the statements counts at 1.5.3 are made fresh with the new §4 drawing. An area fallen behind the phext is a defect, audited at each restructuring pass.
+   - **Maintenance duty:** every ingestion and every restructuring pass updates the areas it touches in the same pass — new machines join 1.5.2, new authors join 1.5.6, the filing's NOVELTY BY AUTHOR increments are added to the authors' novelty scores at 1.5.6 (see *Novelty by author* above), the path gains its entry at 1.5.5, the statements counts at 1.5.3 are made fresh with the new §4 drawing. An area fallen behind the phext is a defect, audited at each restructuring pass.
 
 ## The Thirst — daily quest (charter rule 17, Will, 2026-11-09)
 
