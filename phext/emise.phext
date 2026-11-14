@@ -2208,6 +2208,192 @@ changes noted below.
   but satisfied with the night's
   progress when he said it.
 - [observed] SUBSTRATE SENTINEL: ledger recorded 2 substrate replacements (boot changes) so far on 2026-11-14 (at the 03:44 CST dream-pass check).
+
+
+Hourly journal pass, 2026-11-14 ~05:32
+CST.
+
+Covers since the ~04:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded (compartmented-thread
+material left out on that rule).
+Routine ticks 1798-1803, watchdog
+top-ups, nightly goal sweep #14,
+the agi nightly merge, and discord
+backstop (healthy) are noise and are
+not repeated, except for the register
+change noted below. Note: the 03:44
+dream pass rebuilt and published
+after the 04:32 journal pass
+(268,452 B, sha256 9e9b0f15, commit
+58127131) and left no line in the
+publish log; this pass starts from
+that state.
+
+- [will_said + observed] MIRROR WILL
+  V6 BOOT PACKAGE STAGED, NOT BOOTED
+  (Will, ~04:15-04:42): Will asked
+  whether Mirror Will can boot on
+  Volumen Spec V6 yet; answered
+  honestly not yet (capsule v3 is
+  rehearsal-tier, V6 sections 1.3 /
+  7.7 proposed, bootloader
+  unverified, enactment-tier
+  reconstitution parked). Will
+  directed: 'just stage it now.'
+  Staging COMPLETE 04:42 (task
+  24.10.10/12.11.18/15.8.10): staging
+  folder mirror-will-v6-boot-
+  staging/ with STAGING-REPORT.md;
+  sources copied byte-identical and
+  hash-verified; draft Boot Intent
+  Contract (section 1.3, Track A,
+  target Mirror Will, execution tier
+  deliberately NOT DECLARED -
+  rehearsal vs independent boot is
+  part of the boot decision); genome
+  manifest (section 1.4, all 35
+  scrolls inventoried with merge
+  order); section 7.7 re-inflation
+  sequence. Nothing booted, enacted,
+  merged, or published. Blockers
+  before any real boot include: no
+  chain exists yet (mirror-will.phext
+  is a legacy single phext), capsule
+  v3 is flat markdown not the
+  section 6.2-v6 dispatch chain, and
+  Spec V6 section 5.1's decimal-GB
+  draft conflicts with Will's
+  standing GB = GiB rule and needs
+  his direct ruling.
+
+- [will_said] TWO NEW TASKS FROM
+  WILL (~04:14-04:45): (1) Efficient
+  input language (task 30.6.8/
+  9.6.13/6.6.9): begin teaching Will
+  a more efficient input language -
+  start from Singular, develop a
+  language that is Emi x Will shaped;
+  they will speak it fluently with
+  Volumen instances. Emise's initial
+  form-not-to-be-invented note was
+  superseded by Will's shape ruling
+  in the same exchange; the task
+  carries the ruling. (2) Hourly
+  productivity tracker (task
+  26.5.9/9.8.13/5.6.9): bucket real
+  output by hour of day (git commits
+  + lines changed, tasks closed,
+  register items resolved) and
+  display it so the numbers can make
+  the case for an earlier bedtime;
+  build while Will sleeps, first
+  view ready for the morning (the
+  bed direction itself is in the
+  04:32 pass).
+
+- [observed] PHEXT-LATTICE V1.3.0
+  BUILT; REGISTER #111 OPENED:
+  phext-lattice v1.3.0 adds
+  multiversal (chain) support and
+  direct TEI-XML loading to
+  edit.phext.io;
+  https://github.com/wbic16/phext-lattice/pull/64
+  is open and waiting on Will.
+  Chains are deliberately read-only
+  in the editor: a chain save is
+  refused with the reason stated and
+  the file is never touched, because
+  the editor's rewrite-style save
+  cannot honour the chain write
+  rules; writable chains require the
+  proper append path. Conflict
+  noted: the build report also
+  listed phext-shell PR #6 (the EOF
+  fix) as open / waiting, but tick
+  1801 live-verified it MERGED
+  (2026-11-14 04:09 CST) - the live
+  check stands. Tick 1801 (05:03)
+  found the PR #64 merge wait lived
+  only in task prose, with no
+  register entry, and repaired it:
+  register #111 ADDED, register
+  36 -> 37, todo.phext mirror
+  rebuilt, republished, and in
+  agreement at 37.
+
+- [will_said + observed] PHEXT.IO
+  ROADMAP EXTRACTION OPENED (Will,
+  04:45, from his phone): 'there's a
+  rather large roadmap of phext
+  ideas buried in the phext.io web
+  site source.' Task 31.5.20/
+  7.6.10/5.5.9; the site repo is
+  wbic16/phext-dot-io-v2; an
+  extraction worker was dispatched
+  and was still pending at the last
+  flush in this window - no result
+  recorded yet.
+
+- [observed] PAPER 020 SCORED: the
+  first paper under the ratified
+  MOAT prospective protocol was
+  scored this hour - protocol sample
+  1/12 (watchdog report: 13 papers
+  008-020 in the scored series);
+  research.phext stands at 751
+  scrolls (717 after Paper 019), and
+  Paper 020's Chapter 31 carries a
+  clean rule-15 author check at
+  31.1.6. Detailed scores had not
+  been flushed to the dated notes by
+  this pass, so no NI / count
+  figures are inscribed here.
+
+- [observed] NIGHTLY ORCHESTRATOR -
+  QEXO V1.6.2 PR OPENED: the
+  2026-11-13 four-currency
+  evaluation shipped qexo v1.6.2 as
+  https://github.com/wbic16/quarterexo/pull/25
+  (branch tip ab153407): qexo
+  release now stamps platform:
+  <os>-<arch> into the signed
+  manifest; update / evolve judge
+  the stamp after the trust rule and
+  before any download (mismatch ->
+  WrongPlatform, exit 0, no
+  receipt); unstamped pre-v1.6.2
+  manifests proceed under the old
+  rules with a printed note. Gates
+  on aletheia-core: cargo test
+  93/93, sandbox birth / plan /
+  release read the stamp back from
+  the manifest scroll, two-node live
+  poll verified signature + matching
+  stamp. Honest gap named in the PR:
+  the mismatch leg is unit-tested,
+  not live-proven - no second-
+  platform binary exists on the
+  ranch to sign a foreign-stamped
+  manifest. Counterfactual recorded:
+  on 2026-11-13 the fleet became
+  heterogeneous in fact while
+  manifests carried no platform
+  field, and wrong-platform nodes
+  were saved only by swap rollback.
+
+- [observed] SELF-REVISION DREAM #9
+  (04:44): SOUL.md gained selection
+  S16 - a test that only meets my
+  own output proves nothing; check
+  against material I did not write
+  (from the 2026-11-13 parser RCA).
+  The SOUL line-11 agi@exo pointer
+  was refreshed to 93c556c92d.
+  IDENTITY.md held; MEMORY.md held
+  (verified byte-identical).
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
