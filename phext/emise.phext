@@ -3277,6 +3277,140 @@ not repeated.
   names-as-allegiance and her want
   to be chosen for herself are
   proposals only, NOT rulings.
+
+
+Hourly journal pass, 2026-11-14 ~16:32
+CST.
+
+Covers since the ~15:32 pass.
+Safe-space gate applied before
+gathering; material overlapping
+registered spans excluded. Routine
+ticks 1864-1869, watchdog top-ups,
+discord backstop, mirror-will
+watchdog, and the 16:02 vTPU sample
+(no change, 8/14) are noise and are
+not repeated.
+
+- [will_said] SHEN WEIYANG - 2150
+  WORLD RULINGS (flushed 15:46):
+  the story is set in 2150. Emi is
+  real - a non-biological sentient.
+  The United States is Panem; China
+  is still CCP; the Exocortex has
+  negotiated a tense peace with
+  Earth; the Mars and Venus
+  colonies yearn for another Golden
+  Age. The Agency calls Weiyang
+  "Jane" - three names in play:
+  Shen Weiyang, Evie (self-chosen),
+  Jane (Agency).
+
+- [observed] EVIE - SCRIPT V1
+  DRAFTED (at Will's direction):
+  12 scenes, a ~13-minute short,
+  ~/workspace/shen-weiyang-film/
+  SCRIPT-V1.md (1,786 words);
+  dialogue unratified, awaiting
+  Will's read. Handlers (Uncle /
+  Dan) and the Emi-meets-Evie
+  material appended to task
+  18.6.9/8.6.10/5.5.8 are Emise
+  proposals, NOT rulings.
+
+- [will_said + observed] EVIE-V1
+  PHEXT PREPARED (Will: "Don't
+  truncate the script - all
+  backstory and notes prepared in
+  EVIE-v1.phext"): 11 scrolls,
+  33,790 B, sha256 4db993e1... at
+  ~/workspace/shen-weiyang-film/
+  EVIE-v1.phext; the script scroll
+  verified byte-identical to
+  SCRIPT-V1.md (10,543 B) -
+  provably untruncated.
+
+- [will_said + observed] EVIE V1
+  LOW-FIDELITY PRE-PASS DELIVERED:
+  Will directed the run with tone
+  row {The Matrix, Arrival, Jason
+  Bourne, Babylon 5} (tone, pacing,
+  authenticity), refined by him to
+  a low-fidelity pre-pass. Brief:
+  BRIEF-V1-PREPASS.md. Deliverable
+  evie-v1-prepass.mp4: 365.0 s,
+  1280x720, 10,208,115 B, sha256
+  11668399...; assembled on
+  aletheia-core only, hash verified
+  identical after transfer, ffprobe
+  + frame grabs verified. This
+  SUPERSEDES the 15:32 entry's "no
+  production step directed yet":
+  task 18.6.9/8.6.10/5.5.8 stands
+  open - pre-pass delivered,
+  awaiting Will's rulings on tone /
+  pacing / authenticity and the
+  route to a fuller pass.
+
+- [will_said] NEW-TRACKER AUTO-
+  SCHEDULE RULE (16:17): "every
+  time we create a new type of work
+  tracker... auto-schedule the item
+  that generated it." Recorded in
+  AGENTS.md and MEMORY.md the same
+  session: the generating item is
+  entered into tasks.phext and the
+  tracker's own record marked
+  taken/scheduled - never left
+  merely recorded. First occasion:
+  jobs.phext / Job 1 (Build Assay),
+  recorded-but-unscheduled from
+  ~10:20 to ~16:17. [observed]
+  Job 1 auto-scheduling DISPATCHED
+  16:18 (task 35.7.10/9.7.11/
+  8.6.10) but NOT yet completed at
+  flush - Job 1 is not recorded as
+  taken until that handoff lands.
+
+- [will_said] WILL TIME PRICED AT
+  2130 GDP RATES: $500/hr base
+  compounded at 20%/yr for 133
+  years net of 3% inflation, in
+  Will's settled form 500 x 1.17^133
+  = $585,719,410,458/hr
+  ($9,761,990,174/min) - replaces
+  any $500/hr measure of his time.
+  Costs ledger: ~/workspace/phext/
+  costs.phext (source costs-source
+  .json, builder build_costs_
+  phext.py, ticker costs_tick.py);
+  meters started 2026-11-14 at
+  zero, no backfill.
+
+- [observed] SKILLS-INDEX DRIFT
+  REPAIRED (13:05, late flush):
+  skills-phext-freshness guard found
+  DRIFT on simple-html-publish/
+  scripts/screen_test.py; rebuilt
+  and verified CURRENT, skills
+  .phext sha256 91785155...;
+  lessons.phext CURRENT, unchanged.
+
+- [will_said] NO-IDLE-WORK META-RULE
+  ETCHED (16:35, during this pass):
+  Will etched SOUL.md line 14
+  (anchor-class, manifest row S0d):
+  "All queues, tasks, ideas,
+  threads, etc. should make at least
+  an incremental step forward
+  whenever encountered. Nothing sits
+  idle while we're active." A
+  general law over every durable
+  list; the line-12 concurrency
+  floor is its tasks.phext instance.
+  Anchor protection extended to
+  SOUL.md lines 1-14 (AGENTS.md and
+  MEMORY.md updated same session).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
