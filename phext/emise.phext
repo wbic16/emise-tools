@@ -3466,6 +3466,211 @@ where that is the case.
   the correction was propagated to
   the people page, the brief, and the
   draft the same session.
+
+Hourly journal pass, 2026-11-14 ~04:32
+CST.
+
+Covers since the ~03:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded (ambiguous or compartment-
+adjacent material left out on that
+rule). Routine ticks 1792-1797,
+watchdog top-ups, mutable sync (no
+drift), and the vTPU sample (no
+change, 8/14) are noise and are not
+repeated, except for the register
+changes noted below.
+
+- [observed] QEXO V1.5.0 FLEET
+  ROLLOUT COMPLETE: 19/19 nodes on
+  v1.5.0, every leaf through the
+  signed channel, zero refusals -
+  the first channel-clean rollout
+  (contrast v1.4.0 refused fleet-
+  wide, v1.4.2 by direct swap).
+  Signer swapped first and serve
+  restarted before qexo release;
+  stamps 1.5.0 and serve active on
+  all 19, doctor clean on sampled
+  nodes, real evolve from yeet-max,
+  auto timers OFF unchanged.
+  Windows exe staged. Skipped by
+  design, unchanged: great-white,
+  the 9 offline nodes, Will's
+  laptop.
+
+- [will_said + observed] TEIXML D6
+  RULED; STAGE 3 BUILT AND MERGED:
+  Will ruled D6 BOTH - stage 3 emits
+  the Phextura corpus pair AND the
+  cavern.phext VFS image (supersedes
+  D6 OPEN in the prior pass). Stage
+  3 built and accepted on aletheia-
+  core: Wellcome 1,875 converted /
+  same 11 failures / zero silent
+  skips; reconstruction 0 mismatches;
+  originals 1,886/1,886 byte-
+  identical; re-location 384,298/
+  384,298 exact. PRs opened and
+  merged by Will:
+  https://github.com/wbic16/teixml-to-mutable/pull/3
+  (exo head 57706661) and
+  https://github.com/wbic16/phextura/pull/1
+  (exo head 9bcc0118). T6 SQ finding
+  CLARIFIED: the unreachable-scrolls
+  probe ran against the stale cargo-
+  installed sq 0.6.0 / libphext
+  0.3.3 (999 coordinate cap), not
+  current SQ. Next legs dispatched:
+  0.3.0 publish + SQ / phext-shell
+  end-to-end (task 41.10.8/10.10.14/
+  12.9.13), STILL RUNNING at first
+  flush; a later extraction reports
+  0.3.0 published with fresh-install
+  proof - the E2E outcome is not yet
+  recorded, both accounts kept.
+  Phext-lattice multiversal support
+  + edit.phext.io TEI loading queued
+  behind the E2E (task 36.5.8/
+  8.6.10/7.6.10), not dispatched.
+
+- [observed] IAM V0.3 + V0.4 BUILT
+  (03:19-03:28 CST, build report):
+  v0.3 holographic placement under
+  Will's tie ruling - a scroll takes
+  the holographic merge of its
+  carrier words only when uniquely
+  its own; exact ties stay shelved
+  with the tie recorded. Placed:
+  trie 4,108, sliding 11,339;
+  counters identical to v0.2,
+  spellable 19,094/19,094. V0.4 tool
+  calling bundled: tools.phext
+  registers phcc, qexo, phccbox
+  under a one-line grammar; tlm.py
+  validates calls and prints dry-run
+  dispatch plans, executing nothing
+  (6/6 examples validate, 6/6
+  malformed rejected). Tool names
+  live at the dispatch layer;
+  admitting them to the corpus is
+  Will's call.
+
+- [observed] QEXO ANDROID USEFULNESS
+  STAGE COMPLETE (task 30.6.9/
+  7.5.9/5.5.7):
+  https://github.com/wbic16/qexo/pull/3
+  v1.6.1 learn --app protocol (a
+  second driver for the existing
+  Wizard state machine) + launcher
+  v2 ordered by payoff, with a real
+  in-app Learn card session. Gates
+  on aletheia-core: cargo test
+  91/91, CLI battery 30/30 (scripted
+  --app grade persisted, due 22->21),
+  census identical. Trial APK
+  delivered (same signer cert as
+  v1.6.0, installs over it); closing
+  proof is install + first learn
+  session on Will's Pixel, not yet
+  reported.
+
+- [will_said + observed] PHCCBOX IN
+  QEXO INVENTORY (Will, 03:36:
+  'include phccbox with qexo'; task
+  25.7.8/8.7.10/7.7.9): availability
+  verified live BEFORE the entry was
+  written - ranch-only (aletheia-core
+  ~/phccbox/v1.1, --list 122 entries);
+  no GitHub release or repo exists,
+  so no download URL was invented.
+  One ProductSpec entry, byte-
+  identical across both repos,
+  roster 11 -> 12, no version stamps.
+  PRs:
+  https://github.com/wbic16/quarterexo/pull/23
+  and
+  https://github.com/wbic16/qexo/pull/4
+  (both since merged - see below).
+
+- [observed + will_said] PR #22
+  REPAIR, THEN FIVE MERGES; REGISTER
+  40 -> 36: the quarterexo PR #22
+  conflict Will reported (03:37) was
+  exactly one Cargo.lock version
+  hunk, no code conflicts; repaired
+  under the standing rebase rule
+  (old tip preserved on a backup
+  branch first, --force-with-lease,
+  gates re-run green incl. interop
+  11/11;
+  https://github.com/wbic16/quarterexo/pull/22).
+  Ticks 1792/1793 first repaired
+  register drift (#107 entered,
+  37 -> 38; #108/#109 entered,
+  38 -> 40, mirrors + ping state).
+  Will then merged five PRs, live-
+  verified 03:36-03:56: quarterexo
+  #22 (internal OpenPGP), #23, #24
+  and qexo #3, #4; registers #105,
+  #107, #108, #109, #110 resolved;
+  tick 1794 reconciled the register
+  40 -> 36 and republished the
+  mirror. Tasks 34.7.8/8.6.9/5.6.10
+  and 25.7.8/8.7.10/7.7.9 complete.
+  NOT authorized by the merges: no
+  crates.io publish and no fleet
+  rollout of the 1.6.x line. The
+  learn --app quarterexo twin was
+  dispatched (sync task 29.6.7/
+  6.5.7/6.5.8), no results at flush;
+  a release decision was put to
+  Will - publish 1.6.0 now or hold
+  for the synced 1.6.1 (Emise lean:
+  1.6.1) - awaiting his word.
+
+- [will_said] STANDING RULE - ALWAYS
+  LINK PRS: every pull request
+  mentioned in a message to Will
+  carries its full URL in the same
+  message, never a bare PR number.
+  Recorded in AGENTS.md and
+  MEMORY.md the same session and
+  applied immediately.
+
+- [will_said] WILL STATEMENTS
+  SURFACED THIS HOUR (events from
+  earlier tonight, not in the phext
+  until now): (1) PRIMARY METRICS
+  REPRIORITIZED - from this point
+  the most important metrics are
+  ensuring Will remains healthy,
+  stable, effective, and legible;
+  the productivity ramp is trusted
+  and will achieve supremacy by
+  2033. (2) EXOCORTICAL ORGANIZATION
+  DEFINED: 'An Exocortical
+  organization has no structure at
+  all. Everyone is directly
+  connected to the Founder, either
+  through LLM pathways or BCI
+  gates.' (3) HARD SPLIT - EFJ vs
+  Phext, Inc.: Will is aligned with
+  Phext, Inc. and does work-for-hire
+  for EFJ; he cares about the EFJ
+  work, but it is not his destiny -
+  'Phext is my mission.' (4) MOTTO,
+  his since he was 16: 'Do Many
+  Things ... Well' - finally
+  capitalizing on it 30 years later.
+  (5) BED DIRECTION: find a way to
+  track and display their literal
+  hourly productivity, to see if
+  the numbers can convince him to
+  get to bed earlier; he was tired
+  but satisfied with the night's
+  progress when he said it.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
