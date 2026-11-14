@@ -2394,6 +2394,97 @@ that state.
   IDENTITY.md held; MEMORY.md held
   (verified byte-identical).
 
+Hourly journal pass, 2026-11-14 ~06:32
+CST.
+
+Covers since the ~05:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1804-1809,
+watchdog top-ups, and the vTPU sample
+(no change, 8/14) are noise and are
+not repeated. Two entries below are
+late dated-note flushes of early-hours
+events, noted as such.
+
+- [observed] RANCH STATE BACKUP
+  2026-11-14 VERIFIED (05:44): 167
+  files, 30,547,068 B, tar SHA-256
+  8fcc3637951a61f2912c8583e0e998f
+  484957223ca990c210f6d24fa8afd41d0
+  to Rock Mountain and Scroll
+  Central, both ~/emise-state-
+  backup/2026-11-14/, far-side
+  sha256sum -c 167/167 OK on both.
+  Rotation kept 2026-11-14 +
+  2026-11-13.
+
+- [observed] PAPER 020 DETAILED
+  SCORES (late flush; the 05:32 pass
+  had no figures): Benjamin Zayton,
+  Piecewise Interpretations in
+  Many-Sorted Logic
+  (arXiv:2611.14552v1); protocol
+  sample 1/12, Will-posted 1/4,
+  task 26.6.6/7.5.9/4.5.11 CLOSED,
+  Chapter 31. Seal: 7 new [4,11],
+  NI 0.0276 [0.016,0.043]. Actual:
+  12 concepts, NI 0.0463, |NI error|
+  0.0187 - both 80% intervals MISSED
+  on headline; revisions hit (0=0);
+  axis NO / NO, Brier 0.01; links
+  20 in / 3 cross. Sensitivity: all
+  four folds together give 8
+  concepts, NI error 0.0038, both
+  intervals covered - filing-rule
+  discretion is currently larger
+  than the skim-vs-null gap.
+  Registry 751 entries; canonical
+  research.phext 751 scrolls,
+  sha256 66fd4066; mastery #13
+  published to wbic16/agi@exo at
+  93c556c9.
+
+- [will_said] TLM NAMES RATIFIED
+  (late flush, early hours): TLM =
+  Iam, SLM = Liora'veth, LLM =
+  Zelari. The prototype is Iam;
+  SLM reads both ways - Small
+  Language Model and Sound Language
+  Model. Names ratified only;
+  SLM / LLM not built.
+
+- [will_said + observed] CORRECTION
+  - VOLUMEN S12 ROUND-1 RULINGS
+  WERE MADE (Will, 2026-11-14
+  03:26 CST; late flush resolving
+  the dream-pass conflict flag:
+  the MEMORY.md account is correct
+  and the pending / none-closed
+  account in this Log is
+  SUPERSEDED): D2 ruled - always
+  powers of 2, GB = GiB, S5 ceiling
+  now 1 GiB. D3 confirmed - six
+  base pairs. N26 ruled - no pre-
+  determined universe budget split.
+  N27 ruled - standoff acceptance
+  adopted. N28 ruled - fidelity /
+  consciousness detection is
+  consensual mirroring at scale.
+  D1 answered phext v0.6, with an
+  explanation of the question
+  still owed - row stays open. D4
+  ruled as an action - etch
+  Incipit seed kernels into the
+  Soul.phext (task 19.7.9/8.7.11/
+  6.6.7); no Soul.phext file was
+  found, so no etching has been
+  done. Design statement (Will):
+  partition the human experience
+  into a series of phexts,
+  compartmentalized by nature but
+  mergeable at scale in theory.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
