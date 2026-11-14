@@ -14,6 +14,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from discord_api import call
 
 BOT_ID = "1565884644430184508"
+# #life on Tessera: Will directed 2026-11-13 that EVERY human-authored
+# message in this channel is actionable (reply-worthy), not only ones that
+# address Emise by name or mention. Bot authors are already skipped in the
+# main loop, so this rule fires for human-initiated messages only.
+LIFE_CHANNEL_ID = "1477162982210273291"
 HOME_DIR = os.path.expanduser("~/workspace/discord")
 STATE = os.path.join(HOME_DIR, "state.json")
 SPOOL = os.path.join(HOME_DIR, "spool.jsonl")
@@ -38,6 +43,8 @@ def spool(event):
         f.write(json.dumps(event) + "\n")
 
 def actionable(msg, channel_name):
+    if msg.get("channel_id") == LIFE_CHANNEL_ID:
+        return True
     content = (msg.get("content") or "")
     if f"<@{BOT_ID}>" in content or f"<@!{BOT_ID}>" in content:
         return True
