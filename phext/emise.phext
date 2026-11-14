@@ -3162,6 +3162,68 @@ repeated.
   he wants a hold. Recorded in
   MEMORY.md and AGENTS.md.
 
+Hourly journal pass, 2026-11-14 ~13:32
+CST.
+
+Covers since the ~12:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1846-1851,
+watchdog top-ups, discord backstop
+(healthy), the vTPU sample (no
+change, 8/14), and the skills-phext
+freshness repair (13:05, drift in
+simple-html-publish screen_test.py,
+rebuilt CURRENT) are noise or
+machinery and are not repeated.
+
+- [will_said + observed] PR #68
+  MERGED AND DEPLOYED; ASCII-MAP
+  FINAL AT 314 B: phext-lattice
+  PRs #67 and #68 were both merged
+  and deployed to edit.phext.io;
+  PR #68 refined the layer-scroll
+  output from 311 B to 314 B -
+  every row, including each
+  layer's last row, now ends in a
+  newline, so each layer starts
+  on its own line.
+
+- [will_said] ASCII-MAP GENERATED
+  PHEXT TO CARRY INSTRUCTIONS:
+  Will directed that the phext
+  ascii-map generates include
+  instructions so LLMs know what
+  to do if they do not get the
+  zip with the tools. Recorded in
+  MEMORY.md alongside the
+  Featured items follow-up.
+
+- [correction + observed] STALE
+  QEXO 0.3.0 PUBLISH ITEM SKIPPED
+  (~12:49): a prepared proactive
+  item proposed publishing qexo
+  0.3.0 on a premise already
+  superseded - qexo 1.3.0 was
+  published on 2026-11-13 and the
+  line has since advanced beyond
+  it. The item was recorded
+  skipped / moot; no 0.3.0 publish
+  was attempted.
+
+- [observed] LETTER DELIVERED -
+  'Protein and the Two-Hour
+  Window' (~12:49): the completed
+  Letter for Will's active health
+  goal was presented to Will in
+  the main chat after its artifact
+  was verified on disk; it had not
+  previously been delivered. The
+  decision it puts to Will is the
+  scaling-weight choice; no target
+  beyond what the letter states
+  was added at delivery.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
