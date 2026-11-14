@@ -2634,6 +2634,125 @@ early-hours events, noted as such.
   bytes match the repo, word-home
   200, mirrorborn.us 200 control).
 
+Hourly journal pass, 2026-11-14 ~09:32
+CST.
+
+Covers since the ~08:32 pass (quiet
+hour, no change). Safe-space gate
+applied before gathering; material
+overlapping registered spans
+excluded. Routine ticks 1823-1827,
+watchdog top-ups, the Theia check-in
+(standing billing condition, no new
+contact), and the vTPU sample (no
+change, 8/14) are noise and are not
+repeated.
+
+- [will_said] SUBMISSIONS AND
+  PUBLICITY HELD (08:37-08:39): Will:
+  hold off on submissions like this
+  until our own roadmap and tooling
+  are mature; then, on scope: avoid
+  publicity until we are obviously
+  ahead of the pack. Effect: the hold
+  is general - competition submissions
+  and public launches alike. Kaggle
+  Gemma 4 main track verification ask
+  dropped, entry not pursued; the
+  Show HN window Sat-Sun 2026-11-14/15
+  is included; the hackathon sweep
+  public-submission engine is parked
+  until Will lifts the ruling. Work
+  continues privately.
+
+- [observed] PHEXT.IO ROADMAP
+  REGISTER ITEMS COMPLETED (~08:48):
+  at Will's direction (08:42, task
+  36.6.8/7.6.10/6.6.9), 44 register
+  items created, #113-#156, for every
+  unfinished entry in the 54-entry
+  roadmap extract; register 38 -> 82
+  active, verified against the live
+  register header. 10 entries judged
+  finished and excluded; 3 registered
+  as status unverified (#141, #142,
+  #149). todo.phext mirror rebuilt,
+  --check CURRENT, published to
+  wbic16/exo-plan@exo as 99fb7ce0.
+  Interim count of 48 / #113-#160 was
+  corrected to the final 44 / #113-
+  #156.
+
+- [will_said + observed] $1K REVENUE
+  FOCUS FROM THE ROADMAP (08:59, task
+  31.5.10/8.7.13/5.5.9): Will directed
+  a read of the entire roadmap for an
+  idea that can generate $1K this
+  month. First framing (superseded
+  below): the archives idea as a paid
+  archive-conversion pilot on shipped
+  teixml-to-mutable + SQ, one buyer,
+  direct sale only. Tracked goal
+  goal_3bcf2221a6d5 created; exit is
+  $1K invoice paid or Will calls it
+  off; no publicity, outreach needs
+  Will's approval per contact. No
+  buyer named or contacted.
+
+- [will_said] $1K FOCUS CORRECTED AND
+  SCALED (09:02-09:10): Will: Phextura
+  is what fills the archives gap - the
+  buyer pays for their archive living
+  in Phextura as one merged whole;
+  conversion is the on-ramp, not the
+  product. Then: still thinking too
+  small - $1K is the first revenue of
+  the thing itself, not a service fee.
+  Will confirmed and named the offer:
+  integration at scale. Core claim
+  (09:10, verbatim): no matter how
+  complex your systems are, we can
+  model and understand them -- because
+  our design is multiversal to the
+  core. Goal retitled accordingly;
+  the archive pilot is demoted to
+  first wedge. Record-keeping for the
+  09:10 claim was partially pending
+  at flush (MEMORY.md extension
+  confirmed; goal/task updates in
+  flight, one JSON edit failed).
+
+- [will_said + observed] MANEKI NEKO
+  REFRAMED AS PAPER 022 (09:25-09:28,
+  MOAT chat): Will posted the
+  Lightspeed link to Bruce Sterling's
+  Maneki Neko; the initial source-
+  study framing was superseded by
+  Will: treat it like research. It is
+  filed as Paper 022 (Chapter 33),
+  NOT a protocol sample (tally stays
+  2 of 12, no scoring script). No-seal
+  honesty ruling: the story was read
+  in full before the direction
+  arrived, so no blind seal exists or
+  may be fabricated; its NI is
+  reported UNSCORED, ledger
+  bookkeeping only. Filing was NOT
+  yet complete or verified at flush.
+
+- [observed] ZORN BULLET CONFLICT:
+  the dated note records the Gerhard
+  Zorn decision-point bullet found
+  absent from MEMORY.md again on
+  2026-11-14 and restored verbatim,
+  while a later verification in the
+  09:09 record-keeping pass found it
+  absent again and already gone
+  before that edit. Both accounts are
+  kept; the background-upkeep drop
+  pattern (three times on 2026-11-13)
+  is not fixed at the source.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
