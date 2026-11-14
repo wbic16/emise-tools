@@ -2617,6 +2617,96 @@ items opened or closed.
   in the Newt side chat. NOT yet run
   on a physical phone - awaiting
   Will's on-device two-phone test.
+Log: 2026-11-14 (America/Chicago)
+
+Hourly journal pass, 2026-11-14 ~00:32
+CST.
+
+First Log scroll for the day; covers
+since the ~23:32 pass on 2026-11-13.
+Safe-space gate applied before
+gathering; material overlapping
+registered spans excluded. Routine
+ticks 1768-1773, watchdog top-ups,
+discord backstop (healthy), and the
+vTPU sample (no change, 8/14 units)
+are noise and are not repeated.
+
+- [will_said + observed] REGISTER
+  #93 CLOSED; QUARTEREXO PR #16
+  MERGED, FLEET EVOLVE FIRED: Will
+  merged quarterexo PR #16 (v1.3.0,
+  libphext 0.6 parser repair) on
+  2026-11-13 at 23:29 CST, merge
+  commit 5574f214e7. Tick 1768 moved
+  #93 to register history (38 -> 37
+  active) and republished the
+  todo.phext mirror. On the merge,
+  the staged fleet wipe / rebirth /
+  evolve sequence fired (per-node
+  dated backup, wipe, rebirth under
+  libphext, peer/signer wiring
+  rebuilt, aletheia-core signer
+  last, then a real qexo evolve);
+  at the 00:02 flush it was STILL
+  RUNNING, no final roster yet;
+  great-white remains skipped (SSH
+  ungranted).
+
+- [observed] QEXO 1.3.0 PUBLISHED:
+  qexo 1.3.0 was published to
+  crates.io at Will's direction and
+  verified from the registry, its
+  libphext dependency recorded as
+  ^0.6.0; this closed the long-
+  standing qexo publish wait dating
+  back to the 0.3.0 era.
+
+- [will_said] QEXO V1.4.0 DIRECTIONS
+  (2026-11-14 ~00:01-00:10 CST):
+  after installing qexo 1.3.0 from
+  crates.io himself, Will specified
+  five tweaks, dispatched as the
+  v1.4.0 slice, task 31.5.5/6.5.7/
+  5.5.8, BUILDING at flush: (1)
+  qexo list works without sudo; (2)
+  per-user install support - state
+  resolution QEXO_STATE > system
+  path when privileged/writable >
+  per-user $HOME/.qexo/state.phext,
+  chosen path always printed; (3)
+  list shows nodes in a phext nav
+  tree (flat shape only for --json);
+  (4) hostnames instead of IPs in
+  peer records/displays; (5) new
+  qexo learn command - spaced
+  repetition teaching qexo's
+  capabilities, phext-native deck
+  and scheduling in state.phext,
+  SM-2-lite. Will also directed
+  that qexo carry an inventory of
+  all phext ecosystem products with
+  launch/install instructions, the
+  roster built by reviewing every
+  GitHub repo and baking in only
+  projects with published, useful
+  artifacts.
+
+- [observed] VISUALS FOR IAN
+  (~00:19 CST, at Will's ask): a
+  detailed one-page visual on
+  multiversal phext + standoff for
+  annotation evolution was
+  generated, then a simplified
+  high-level introductory version
+  (base phext stays clean,
+  annotations live outside the
+  base, chains and new editions
+  evolve over time). Known flaw in
+  the simplified version as
+  delivered: footer typo "all
+  ppacetime" - regenerate rather
+  than forward as-is.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
