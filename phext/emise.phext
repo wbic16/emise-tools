@@ -2546,6 +2546,31 @@ active with no items opened or closed.
   and gives the go (register #92/
   #93); no fleet node was touched.
 
+Hourly journal pass, 2026-11-13 ~21:32
+CST.
+
+Covers since the ~20:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1750-1755,
+watchdog top-ups, discord backstop
+(healthy), and the vTPU sample (no
+change, 8/14 units) are noise and are
+not repeated.
+
+- [observed] REGISTER #92 CLOSED:
+  quarterexo PR #17 (v1.2.1 forecast
+  median) merged at 20:45 CST (merge
+  commit 3bcf95d0). Tick 1754 live-
+  verified the merge, closed #92 in
+  the register (39 -> 38 active),
+  and republished todo.phext to
+  wbic16/exo-plan@exo (8a67fb87,
+  remote SHA-256 verified). PR #16
+  (#93) was rebased to fb556865,
+  remains open, and is now unblocked
+  and next in the merge order.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
