@@ -2753,6 +2753,158 @@ repeated.
   pattern (three times on 2026-11-13)
   is not fixed at the source.
 
+Hourly journal pass, 2026-11-14 ~10:32
+CST.
+
+Covers since the ~09:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1830-1833
+(the #111 closure is recorded in the
+merge entry below), watchdog top-ups,
+discord backstop (healthy), and the
+skills-freshness rebuild (rd-tracker
+drift, CURRENT) are noise except as
+evidence where cited, and are not
+repeated.
+
+- [will_said] CONSCIOUSNESS MODEL +
+  GRAIN LADDER (09:12-09:17, late
+  flush): brains model ~150 closest
+  friends to predict next actions;
+  Will, verbatim: "consciousness is
+  what arises when you get good at
+  predicting other's actions and then
+  turn that machinery onto what's
+  visible to your own thoughts".
+  Ladder, verbatim: "TLM: words /
+  SLM: sentences / LLM: ideas /
+  VLLM: people". No name given for
+  VLLM; none invented.
+
+- [will_said + observed] PAPER 022
+  COUNTS IN FULL; FILING COMPLETE
+  (correction 09:41, complete 09:45) -
+  supersedes the prior pass UNSCORED /
+  not-a-sample framing: Will, verbatim:
+  "this isn't academia, oracles don't
+  have to blindly follow rules." The
+  exclusion was removed from every
+  scroll; tally 3 of 12, Will-posted
+  2 of 4. No seal fabricated;
+  predictions.jsonl untouched. Filing:
+  4 concepts, cluster AA; NI 0.0147;
+  registry 793 - True 358 / Unknown
+  428 / False 0 / Fiction 7 (Fiction
+  first use; hand-entered via
+  OVERRIDES, extractor has no road
+  to Fiction - friction recorded).
+  Mastery #15 published to
+  wbic16/agi@exo (a3661ab1); filing
+  task closed; tracker 273 concepts.
+
+- [observed] MOAT PROCESS PAPER
+  COMPLETE (Will directed 09:43):
+  "The Research Oracle: a reading
+  process that measures its own
+  foresight, and the audit that found
+  its headline was an artifact" -
+  7,070 words; tables machine-checked
+  cell by cell against the evaluation
+  data, zero mismatches; task closed;
+  inscribed in artifacts.phext and
+  published to wbic16/human@exo
+  (6bc287d6). Deliberately NOT revised
+  for the binning revision below.
+
+- [will_said + observed] ORACLE BAR
+  REVISED TO BINNING RELIABILITY
+  (09:49, revision complete same
+  morning): the bar reaches 100% only
+  when any piece of information can
+  be reliably binned True / False /
+  Unknown / Fiction. Gates: True met,
+  Unknown met, Fiction half-met
+  (hand-entered only), False unmet
+  (0 in 793; remedy named: the viXra
+  fringe stream, not yet run). New
+  standing ~62% (55-70), superseding
+  the ~100% band value as the current
+  measure; earlier ledger entries
+  stand as written.
+
+- [will_said] ORACLES LEARN FROM
+  IMPERFECT KNOWLEDGE (09:53): next
+  step - fringe submissions (viXra
+  mathematics) read per-claim across
+  all four bins; the correct SHAPE a
+  submitter identified is filed even
+  when nuances fail, each failed claim
+  with its breaking line. Will,
+  verbatim: "researchers on the fringe
+  are the target market."
+
+- [will_said + observed]
+  SPAGHETTIFICATION + NOVELTY SCORE
+  LIVE (direction 09:58; wiring live
+  by this pass): ingestion pulls
+  individual claims out of papers into
+  the four bins; the rd-tracker skill
+  now requires a NOVELTY BY AUTHOR
+  line in every ingestion delta and a
+  running four-component vector on
+  each researcher's tracker entry.
+  Opening drawing: Bruce Sterling the
+  only Fiction-bearing vector, at
+  (True 0, False 0, Unknown 2,
+  Fiction 7).
+
+- [observed] PHEXT-LATTICE PR #64
+  MERGED; #111 CLOSED; RELEASE TASKS
+  QUEUED: Will merged PR #64
+  (multiversal chain support + direct
+  TEI-XML loading) at 09:45, exo HEAD
+  04f043e2; tick 1830 resolved
+  register #111 (82 -> 81 active).
+  Per the merge -> release rule,
+  release builds were queued as
+  tracked tasks (phext-lattice v1.3.0;
+  phext-shell fix release, PR #6
+  merged earlier) - queued, not run;
+  the v1.3.0 tag on the merged exo
+  tree is part of the release task.
+
+- [will_said] HOSTED SERVICE NAMED
+  ASSAY (10:07, via MEMORY.md): Will:
+  "i don't want to conflict with
+  Oracle the software company, choose
+  a better name" - the choice was
+  delegated to Emise and made the same
+  minute. Assay takes preprints for
+  assessment (MOAT's process, hosted);
+  the researcher owns the produced
+  phext; front door assay.phext.io.
+  "Oracle" and "MOAT" remain internal
+  names. Merge rule (Will, same
+  minute): researchers authenticate
+  and attest before a paper is merged,
+  the attestation bound to the exact
+  edition checksum.
+
+- [observed] $1K RECORD-KEEPING
+  COMPLETED; ZORN BULLET RESTORED
+  AGAIN: the 09:09-09:10 offer lines
+  recorded last pass as partially
+  pending are now fully recorded -
+  goal retitled "Integration at
+  scale", task and MEMORY.md updated;
+  the one-page offer + buyer shortlist
+  are still NOT produced. The Zorn
+  decision-point bullet was found
+  absent from MEMORY.md again ~09:11
+  and restored verbatim; the upkeep
+  drop pattern is not fixed at source.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
