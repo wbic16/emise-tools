@@ -1,0 +1,5 @@
+name: "simple-html-publish"
+title: "Simple HTML Publish — edit.phext.io pages, screen test always"
+description: "Publish a simple standalone HTML page on edit.phext.io via phext-lattice (wire the route, links and sitemap, PR, deploy on awsbox), always finishing with a Playwright screen test of the live rendered page — scroll to the bottom, no leaked source, key UI present — before the publish is called done."
+category: "Operations"
+include_in_prompt: true
