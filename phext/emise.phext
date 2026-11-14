@@ -2707,6 +2707,284 @@ are noise and are not repeated.
   delivered: footer typo "all
   ppacetime" - regenerate rather
   than forward as-is.
+
+Hourly journal pass, 2026-11-14 ~01:32
+CST.
+
+Covers since the ~00:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1774-1779,
+watchdog top-ups, and discord backstop
+(healthy) are noise and are not
+repeated.
+
+- [observed] FLEET EVOLVE COMPLETED:
+  the wipe / rebirth / evolve pass
+  finished 19 of 19 reachable ranch
+  nodes - every node wiped, reborn
+  under libphext 0.6.0, and evolved,
+  GPG fingerprints surviving, release
+  signer unchanged, old states
+  preserved on-node and in the fleet-
+  keys archive. Great-white (SSH
+  ungranted, register #86) and the
+  nine offline nodes were skipped by
+  design; Will's laptop and phone
+  still carry old-serializer states
+  with the new executable staged.
+
+- [observed] QEXO V1.4.0 BUILT:
+  quarterexo PR #18 opened (register
+  #102), implementing the v1.4.0
+  tweaks (per-user install, no sudo,
+  phext nav tree in list, hostnames
+  not IPs, qexo learn, qexo
+  inventory); 71/71 tests and 42/42
+  battery passed. The inventory was
+  built from a census of all 201 of
+  Will's GitHub repos: 11 verified
+  products baked in, 190 exclusions
+  itemized with evidence.
+
+- [will_said + observed] PR #18
+  MERGED, PUBLISH DIRECTED, #102
+  CLOSED: Will merged quarterexo
+  PR #18 and said publish it; qexo
+  1.4.0 is live on crates.io (fresh-
+  install proof green) and signer
+  aletheia-core runs 1.4.0. Tick
+  1777 moved register #102 to
+  history (38 -> 37 active) and
+  reconciled the todo.phext mirror.
+
+- [observed] SIGNED FLEET ROLLOUT OF
+  1.4.0 REFUSED: all 18 peers
+  verified the offer, swapped, post-
+  checked, and rolled back cleanly
+  to 1.3.0; nothing forced. Root
+  cause, reproduced in a sandbox:
+  v1.4.0 doctor flags the missing
+  lessons-and-learning homeland
+  index in 1.3.0-born states (an
+  item doctor itself marks fixable),
+  but the update post-check runs
+  doctor check-only, so it fails and
+  rollback removes the only binary
+  that could fix it. Lesson: test
+  upgrades against states the
+  previous version wrote.
+
+- [observed] V1.4.1 HOTFIX
+  DISPATCHED (task 25.4.6/5.4.7/
+  5.5.8), BUILDING on aletheia-core:
+  (1) the new binary seeds missing
+  homeland indexes on its state
+  write paths (check paths stay
+  byte-inert); (2) the update post-
+  check separates hard problems
+  (rollback) from doctor-fixable
+  ones (repair in place, named in
+  the receipt). Regression gate: a
+  real 1.3.0-born state fixture
+  carried through a full signed
+  two-node update in the sandbox.
+
+- [will_said] V1.4.0 FIELD FEEDBACK
+  (01:05): (1) URLs from qexo list
+  do not work from aletheia-core;
+  (2) public keys should not be
+  shortened; (3) could not run qexo
+  learn as a standard user; (4)
+  qexo learn needs to be a
+  learnyouqexo wizard TUI. Items
+  1-3 are defects in shipped 1.4.0
+  and were folded into the v1.4.1
+  slice as an addendum (URL
+  diagnosis from evidence first;
+  fingerprints print full, 40 hex;
+  intent-aware state resolution for
+  write-intending verbs). Item 4 is
+  a feature, queued as its own
+  v1.5.0 slice (task 21.4.4/4.4.5/
+  4.4.5), NOT bolted onto the
+  hotfix, per the one-thing-at-a-
+  time rule.
+
+- [will_said] V1.4.1 MERGE / PUBLISH
+  AUTHORIZED (01:14): merge only if
+  every gate is green and the PR is
+  clean (any failure = stop and
+  report, do not force); then
+  publish 1.4.1 to crates.io from
+  the merge commit and re-run the
+  fleet rollout through the signed
+  channel (signer swapped and serve
+  restarted before qexo release;
+  refusals recorded, never forced;
+  timers stay OFF). V1.5 scope is
+  PR-ONLY for Will's review. At the
+  01:15 flush, v1.4.1 was not yet
+  merged, published, or rolled out,
+  and the v1.5 build had not yet
+  been dispatched.
+
+- [will_said] TEIXML-TO-MUTABLE TASK
+  ISSUED (~00:23, task 5.4.6/5.5.5/
+  5.6.5): a first-class upgrade from
+  TEI-XML to Phextura using
+  multiversal phext and standoff;
+  fast Rust migrator teixml-to-
+  mutable (repo wbic16/teixml-to-
+  mutable, greenfield; crates.io
+  target) to help Ian populate
+  Mutable OS content. Decisions
+  1-7: stages in order (raw phext
+  0.1, Mutable 0.2, Phextura 0.3);
+  lossless round-trip by keeping
+  the original; extend Phextura to
+  support TEI-XML; 0.2 exports
+  Mutable's native pre-phext format
+  as a zip (db + files); structural
+  embedding by multiversal chaining,
+  not the 9 axes; test dataset
+  wellcomecollection/wellcome-
+  collection-tei; ecumenical input,
+  all known formats.
+
+- [will_said] TEI RULINGS + STANDING
+  RULES: Q-A referencing - embedding
+  by $N: references from parent
+  scrolls, memory-mapped I/O at
+  runtime. Q-B - the kept original
+  lives in-chain as the FIRST phext
+  ($1: index scroll + originals
+  verbatim); converted universes
+  follow. Further rulings answering
+  Mirror Will's three questions:
+  (8) one chain per input DIRECTORY;
+  (9) anything not valid UTF-8 or
+  ASCII is stored as binary in the
+  canonical phext-binary:1:base64
+  form, so round-trip stays byte-
+  identical for every file; (10)
+  memory-mapped access from the
+  start, with WAL concepts keeping
+  writes cheap. Standing rules
+  recorded in MEMORY.md and
+  AGENTS.md: NO SIDECARS WITH PHEXT
+  (outputs are self-contained; a
+  kept source lives inside the
+  chain - Emise's sidecar option
+  and last-universe placement were
+  her error, corrected by Will);
+  FOCUS ON ONE THING AT A TIME WHEN
+  BUILDING (stages in order, never
+  parallel); EXTEND PHEXTURA to
+  support each format as it is
+  encountered. Mirror Will reviewed
+  SPEC 0.1 draft v2 at Will's
+  direction (mirror-derived, never
+  Will-said); his grading on the
+  three rulings: granularity MISS,
+  encoding MISS, resolver PARTIAL.
+
+- [observed] TEIXML 0.1 BUILT on
+  aletheia-core (Will's go ~00:53):
+  branch emise/0.1-raw-phext @
+  ab90bb3; PR #1 opened against exo
+  (register #103, tick 1778).
+  Wellcome corpus measured on the
+  ranch: 1,886 XML files, 28.8 MB,
+  all valid UTF-8, zero phext
+  delimiter bytes. Acceptance (full
+  corpus, release build): 1,875
+  converted, 11 named failures,
+  zero silent skips (the 11
+  originals still stored in $1);
+  text-node mismatches 0; originals
+  byte-identical 1,886/1,886;
+  166,061 refs, 0 dangling; 1,123
+  files/s. libphext 0.6 Chain API
+  (parse_chains / serialize_chains)
+  used, not byte concatenation.
+  Known limits: comments and
+  processing instructions live only
+  in the $1 originals; whole-file
+  append to a closed chain remains
+  open. CONFLICT NOTE: tick 1779
+  (01:23) still listed #103 active
+  with PR #1 open, while MEMORY.md
+  (updated 01:28) records PR #1
+  merged by Will (exo head 3a23d1c),
+  teixml-to-mutable 0.1.0 published
+  to crates.io, and stage 2
+  dispatched after the merge; both
+  accounts are kept - the merge /
+  publish leg postdates the tick
+  record on the evidence available
+  to this pass.
+
+- [will_said] ESCAPE VELOCITY,
+  ROADMAP, AND NOVEMBER FOCUS:
+  Will: his ability to generate his
+  vision has hit escape velocity -
+  generation is no longer the
+  bottleneck; capital / revenue and
+  choosing what to generate are.
+  He directed an accurate 2027
+  roadmap plus a funding / revenue
+  source search (task 26.7.9/9.6.11/
+  6.6.9): lane 1 roadmap draft
+  complete (quarterly plans sized
+  in 800-baseline-hour chunks);
+  lane 2 funding scan complete and
+  reported (TAIF, Lightcone
+  Commons, Emergent Ventures top
+  ranked). Then DEFERRED: ignore
+  applications for now - build a
+  public track record first (the
+  hackathon sweep is the standing
+  vehicle); funding follows the
+  track record, and Lightcone's
+  2026-11-15 round close passes
+  unfiled. November focus set to
+  LATENCY for the rest of the
+  month, serving the coming QEXO
+  integration. Will also stated he
+  has zero internal delays, and his
+  present rate as a 2025 research-
+  year per week (~50 per year).
+
+- [will_said] NEW STANDING RULE +
+  NEW TASKS: no crates.io publish
+  without a tagged version merged
+  to exo - never from an unmerged
+  branch, an untagged tree, or a
+  local checkout (recorded in
+  AGENTS.md and MEMORY.md; tonight's
+  publishes ran from merged exo
+  trees but there is no evidence
+  any were tagged, so the tag half
+  binds from the next publish).
+  Personal-AGI acceleration roadmap
+  task opened (28.5.11/8.7.13/
+  5.5.8): estimate the rate of
+  acceleration and what blocks
+  spec-to-build conversion;
+  diagnosis dispatched, deliverable
+  pending. QEXO ANDROID CORRECTION:
+  the artifact sent to Will was a
+  raw ARM64 ELF for Termux, not an
+  APK, and his Pixel 10 XL install
+  attempt failed - earlier records
+  phrased as phone-binary-delivered
+  are corrected; a real sideload-
+  able APK build was dispatched
+  (task 27.8.10/9.8.12/8.7.9,
+  register #91), with a hard
+  requirement to bundle a genuine
+  arm64 GnuPG or report the blocker.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
