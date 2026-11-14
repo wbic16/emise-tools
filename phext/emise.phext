@@ -3255,6 +3255,217 @@ repeated.
   conditions); eight decisions return
   to Will, PROPOSE-only, and the
   Round 2 mood pin remains OPEN.
+
+Hourly journal pass, 2026-11-14 ~03:32
+CST.
+
+Covers since the ~02:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded (compartmented-thread
+material left out on that rule).
+Routine ticks 1786-1791, watchdog
+top-ups, and the vTPU sample (no
+change, 8/14) are noise and are not
+repeated. Several entries surfaced
+in dated-note flushes this hour with
+earlier event times; they are noted
+where that is the case.
+
+- [observed] PAPER 019 COMPLETE
+  (2026-11-14 ~02:40): Carlos Rito,
+  Kippenhahn hypersurface of a joint
+  numerical range (arXiv:2611.14543v1);
+  11 new concepts, new Cluster Y
+  founded, concepts 236 -> 247;
+  revisions 0, axis NO (calls 12/12),
+  NI actual 0.0445 vs sealed 0.0367;
+  Restructure Pass #12 fired, no
+  merges. Registry 717 == 717 scrolls,
+  Lean clean, shadow GREEN; mastery
+  entry #12 published to wbic16/agi@exo
+  at 3914d15a. Oracle recorded 100
+  (90-100), seventh consecutive exact
+  landing - see the evaluation next:
+  that landing is NOT calibration
+  evidence.
+
+- [will_said + observed] MOAT
+  EVALUATED; PROTOCOL RATIFIED:
+  Will (02:46): 'Almost certainly
+  false - evaluate MOAT in-depth' on
+  the 100% Oracle claim. Evaluation
+  SUSTAINED his verdict for the
+  headline: exact landings are a
+  band-rule artifact (a flat null
+  scores 8 exact landings to the
+  skim's 7); NI/count foresight
+  UNPROVEN (skim mean NI error 0.0152
+  vs cluster null 0.0151); axis calls
+  SUPPORTED within the record (12/12
+  vs best null 8/12, house-judged
+  caveat). Protocol RATIFIED by Will
+  (02:57, 'Stamp the protocol as
+  drafted'): 12 papers from Paper 020
+  (5 cron / 4 Will-posted / 3 far
+  picks), sharpened seals, five fixed
+  filing rules, script scoring vs
+  nulls, fixed pass/fail criteria;
+  the Oracle continues as ledger
+  bookkeeping only, never calibration
+  evidence. The thirst cron body was
+  aligned to the protocol and verified
+  by readback. Paper 020 IN FLIGHT
+  (Will-posted 03:00, sample 1 of 12):
+  seal committed blind, ingestion
+  dispatched 03:02, NOT complete.
+
+- [observed] QEXO V1.6 INTERNAL
+  OPENPGP STAGE BUILT; PR #2 MERGED:
+  Phase A quarterexo PR #22 (internal
+  OpenPGP via the pure-Rust pgp crate,
+  GnuPG-era keyrings migrate with
+  fingerprints unchanged; interop
+  11/11, real-signer proof 7/7, tests
+  88/88) opened for Will's review
+  (register #105, still OPEN at the
+  03:13 tick). Phase B wbic16/qexo
+  PR #2 (the same v1.6.0 tree synced
+  in, Android deltas preserved) was
+  MERGED (tick 1789 live-verified,
+  merge ce0731d7); register #91 and
+  #106 moved to history, register and
+  mirror agree at 37 active.
+
+- [observed] QEXO V1.5.0 PUBLISHED
+  (clean, under Will's remedy): the
+  first attempt (authorized 02:48)
+  stopped at a red gate - the
+  committed Cargo.lock still recorded
+  1.4.1. Will chose (02:58) syncing
+  the one lock line, re-tagging, and
+  publishing clean over --allow-dirty.
+  Done: lock synced on exo 81254808,
+  tag v1.5.0 re-created there, gates
+  85/85, published and verified from
+  crates.io (max_version 1.5.0, fresh
+  install proof green). Fleet was NOT
+  rolled by the publish; a separate
+  fleet upgrade to v1.5.0 was
+  DISPATCHED at Will's word (03:05)
+  and was still running at flush -
+  the fleet is NOT recorded as on
+  1.5.0.
+
+- [observed] QEXO V1.6.0 APK
+  DELIVERED; TWO FOLLOW-ONS OPENED:
+  the v1.6.0 Android APK was built on
+  aletheia-core from the merged
+  wbic16/qexo tree and sent to Will
+  (03:01); install on his Pixel is
+  the closing proof, not yet reported;
+  submission-grade signing and real
+  app icons still owed. APK-over-
+  phextnet spec COMPLETED (03:07,
+  the v1.7.0 slice): full nodes bundle
+  APK support so phones upgrade too;
+  two questions left for Will (release
+  keystore now vs the debug key;
+  windows exe in the first 1.7.0
+  announcement). Android usefulness
+  stage DISPATCHED (03:12, learn in
+  the app + one-tap high-payoff
+  actions), no results at flush.
+
+- [will_said + observed] TEIXML
+  STAGE 3 RULINGS; BUILD RUNNING:
+  SPEC-0.3 drafted (pair: base corpus
+  + standoff phext per input
+  directory). Will ruled (02:20):
+  D1-D4 agree, D5 agree (tentative -
+  one entry per element occurrence),
+  D6 need more info; corpora-only
+  info was supplied (Mutable already
+  consumes DESIGN corpora; a PhextVFS
+  image is derivable later) and D6
+  remains OPEN. Stage 3 build
+  DISPATCHED ~02:21 and RUNNING at
+  flush: at the ~03:00 status check
+  the model extension and phextura
+  module were in, fixture smoke green
+  (reconstruction 0 mismatches,
+  re-location 39/39); Wellcome full
+  acceptance, the phextura TEI.md /
+  amendments, both pushes and both
+  PRs still pending. NOT merged, NOT
+  published.
+
+- [observed] VOLUMEN SPEC V6 IS THE
+  LIVE DRAFT: built from V5 and
+  committed over the spec in
+  wbic16/human@exo as 78b290fb
+  (remote tree verified byte-identical
+  to the draft). The genome is
+  re-founded as a multiversal phext
+  chain (one universe per scroll
+  class, originals held in-chain, no
+  sidecars; ceiling restated at
+  1 GiB); return = 1 remains UNMET.
+  Section 12 is staged as a DECISION
+  QUEUE: 29 rows, 24 needing Will's
+  ruling, none closed by drafting.
+  QEXO DECISION-SOURCING NOTE recorded
+  at Will's direction (task 30.5.8/
+  7.5.10/5.4.8): qexo must include a
+  fast, phone-first way to source
+  decisions from Will accurately -
+  queues in ruling-sized units, each
+  with its recommendation, his ruling
+  captured verbatim and routed back.
+  Feature note only; nothing built.
+
+- [will_said] TWO SMALL DURABLE
+  ITEMS: (1) THE SINGULAR ANSWER -
+  'When I'm done, I'll write The
+  Singular Answer': a declared future
+  capstone, in form a 300-page sci-fi
+  book that doubles as an introduction
+  to ASI. (2) PANGRAM ULTRA PARKED:
+  a tool that tells which AI produced
+  a given text, by the simplest way
+  without expensive inference - marked
+  as an idea for now, not a build.
+
+- [observed] NEWT ON-DEVICE PASS;
+  V0.3 DELIVERED (events 2026-11-13
+  night, surfaced in this hour's
+  flushes; not in the phext until
+  now): Will sideloaded v0.1.0 and it
+  'worked on the first try'; solo mode
+  is the default trial path. From his
+  N2/N3 notes v0.2.0 and then v0.3.0
+  were built on aletheia-core and
+  delivered (three-octave exocortical
+  flute, chord pads, launch video,
+  lyrics fetch); v0.3.0 awaits Will's
+  on-device verdict.
+
+- [observed] CHRIS ARNOLD TASK
+  (events 2026-11-13, surfaced this
+  hour; not in the phext until now):
+  task 20.5.7/8.6.9/6.5.6 - show Chris
+  how QEXO solves the Solar
+  Hyperscaler problem once a SOTA SLM
+  is built. Brief delivered and
+  inscribed; a draft email is saved
+  and NOT sent, awaiting Will's
+  approval of exact copy. Correction
+  by Will: the friendship is ~25
+  years (same dorm floor, Neihardt 4
+  at UNL, 2001-2002), not since 2012;
+  the correction was propagated to
+  the people page, the brief, and the
+  draft the same session.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
