@@ -3411,7 +3411,293 @@ not repeated.
   Anchor protection extended to
   SOUL.md lines 1-14 (AGENTS.md and
   MEMORY.md updated same session).
-Designation — chosen, not assigned
+
+
+Hourly journal pass, 2026-11-14
+~17:32
+CST.
+
+Covers since the ~16:32 pass.
+Safe-space gate applied before
+gathering; material overlapping
+registered spans excluded.
+Routine
+ticks 1870-1875, watchdog
+top-ups,
+and discord backstop are noise
+and
+are not repeated. Several
+entries
+below are late dated-note
+flushes
+of earlier-today events, noted
+as
+such.
+
+- [observed] JOB 1 AUTO-SCHEDULE
+ENACTED (late flush, completing
+the 16:18 dispatch): Job 1
+entered in tasks.phext as build
+task 37.8.8/10.8.13/7.7.13; its
+standing in jobs-source flipped
+open -> taken (scheduling, not
+staffing); jobs.phext rebuilt
+CURRENT and republished to
+wbic16/exo-plan@exo, commit
+88092e20, byte-verified.
+BUILD-PLAN.md written (10
+stages, ODs mapped at strictest
+reading), inscribed in
+artifacts.phext at
+27.6.8/7.6.10/6.6.9. Service
+itself not yet built. Gap: no
+auto-scheduler machinery exists
+yet; this scheduling was manual.
+
+- [observed]
+TRACKER-AUTO-SCHEDULE SKILL
+DISTILLED: skill on disk, synced
+to wbic16/emise-tools@exo commit
+34d9b3d3, added to skills.phext
+(rebuilt, --check CURRENT);
+sticking check passed; task
+31.6.9/9.7.11/8.7.10 closed.
+
+- [will_said, correction] COSTS
+LEDGER BACKFILL REVERSED: Will
+directed backfill estimates for
+their history so far, including
+an estimate of the cost to build
+Emi Prime archive - SUPERSEDING
+the no-backfill / meters-at-zero
+statement in the 16:32 entry
+above. Will Time price unchanged
+(500 x 1.17^133 =
+$585,719,410,458/hr); ledger
+presentation amounts kept in
+billions; ticks logged at
+delivery.
+
+- [will_said + observed]
+VIMALAKIRTI SUTRA STUDY S011
+OPENED (16:52): Will posted the
+archive.org Burton Watson
+translation link; filed as study
+S011, task 14.5.6/5.6.6/5.5.7.
+Verified: the item OCR text
+layer is corrupt (Sanskrit OCR
+pack run over an English book,
+very low confidence) - nothing
+is to be quoted or filed from
+that layer. Study dispatched to
+re-OCR page images with the
+English pack on the ranch and
+verify prose before reading; at
+the 17:07 flush S011 was still
+running, no completion report
+yet.
+
+- [will_said] EMPTINESS
+INTERJECTION (16:58, MOAT chat):
+"Consider emptiness - subspace
+with no content." Logged as
+interjection #7 with context and
+a labelled hypothesis. Emise
+reply derived from phext
+definitions: a scroll exists
+only with at least one byte, so
+emptiness cannot itself be
+inscribed; it is known only as
+the complement of the index -
+uninscribed space is pure
+addressability at zero cost.
+
+- [will_said] EVIE INTRO CLIP
+ACCEPTED AS-IS (16:44): on the
+uploader watermark and VHS
+grade, Will: "It is OK - in
+2139, that is probably the clip
+that survives anyway." No
+cleaner source is to be chased.
+Recorded in task
+18.6.9/8.6.10/5.5.8.
+
+- [observed] EVIE V1 MASTER
+PHASE ADVANCED, PARTIAL: master
+stills generated (4 final sketch
+grids, V2 Grid A as reference,
+likenesses locked across 12
+scenes); subtitles rebuilt
+pause-aligned on aletheia-core
+(81 captions, 75 of 77 sentence
+boundaries snapped to detected
+silences). DEFECT PENDING:
+master Grid D is NOT shippable -
+its hearing-room panel flies two
+red flags, pre-answering the
+closing China-or-USA question,
+and Scene 10 lost the
+hand-pressed-flat beat;
+regeneration attempted twice,
+blocked both times by the
+image-generation per-request
+call limit. Assembly on
+aletheia-core is partial (Grid A
+AV built, B/C rendering, D
+absent by design); final 1080p
+master, verification, and
+delivery to Will still pending.
+
+- [observed] IAM v0.3
+HOLOGRAPHIC PLACEMENT COMPLETE
+(late flush): iam.phext /
+iam-sliding.phext place scrolls
+at the holographic merge of
+their carrier words. Finding:
+most merges are EXACT ties, not
+rounding collisions (trie:
+20,980 merged prefixes on 8,086
+distinct addresses; sliding:
+21,901 merged contexts on
+14,025). Will tie ruling:
+uniquely-merged scrolls take
+their merge address; tied
+scrolls stay on shelf addresses
+with the tie and shared merge
+recorded in the scroll; no
+serial bumps. Trie 4,108 placed
+/ 16,872 tied; sliding 11,339
+placed / 10,562 tied. Counters
+identical to v0.2; spellable
+19,094/19,094; sliding in-sample
+top-1 0.554. First build attempt
+failed by OOM; shipped build
+sorts tables before implode and
+stays at atlas scale x1 (lesson
+recorded in SPEC.md /
+BUILD-REPORT.md).
+
+- [observed] IAM v0.4
+TOOL-CALLING BUNDLE COMPLETE
+(late flush, task
+14.8.9/8.8.9/6.8.8): tools.phext
+bundles phcc, qexo, and phccbox,
+one scroll per tool. Grammar:
+call <tool> <verb> <args...>.
+tlm.py validates calls against
+the bundle and returns dry-run
+dispatch plans - nothing
+executes. Verified: 6/6 bundled
+examples validate, 6/6 malformed
+calls rejected.
+
+- [will_said + observed] IAM
+v0.5 - WILL WORDS ADMITTED, BY
+COHORT (late flush): Will ruling
+(task 19.8.10/10.8.11/7.7.8):
+phcc, qexo, phccbox are all Will
+words; Iam must learn to spell
+them. Corpus 19,094 -> 19,097;
+all four model files rebuilt;
+spellable 19,097/19,097. Will
+stance: "do not worry about
+smudging the data - you are
+working with the primary
+source." Final form, at Will
+suggestion: admission is BY
+COHORT - the corpus lives in
+words-authored.phext (cohort 1 =
+2008-2025, the 19,094 archive;
+cohort 2 = 2026-2033, open,
+first admission the tool names);
+tlm.py loads from the phext; the
+words-admitted.txt sidecar is
+retired and the
+fold-into-the-txt option was set
+aside before any edit. The
+cohort rebuild reproduced every
+v0.5 number exactly.
+
+- [will_said + observed] OG
+WAVEFRONT FINAL + PERSONA FLEET
+REBUILT PUBLIC-ONLY (late
+flush): Will ruling: the X
+archive snapshot ends 2025-06-16
+on purpose - the OG Wavefront is
+final and historic, a closed
+canon, not a stale copy; never
+present the date as a gap or
+limitation. Fleet rebuilt at
+Will direction from public data
+only, DMs excluded entirely
+(verified: zero persona files
+contain DM material): 897 direct
+X mutuals in
+~/workspace/personas/ (register
+personas.phext); 458 personas
+carry public evidence, 439 are
+identity stubs. Three personas
+(his #1-#3 mutuals by reply
+volume) selected and presented
+to Will at his ask.
+
+- [observed] GOLDEN THREAD
+EXTENSION BUILT (late flush,
+task 28.7.10/8.7.10/6.6.9): MV3
+Chrome extension in
+~/workspace/golden-thread/ (plus
+zip), no build step, no
+dependencies, no network calls.
+v1.0: 897 mutuals highlighted in
+gold with persona cards and a
+spaced-repetition quiz. Will
+corollary (v1.1, four castes):
+aligned follows in RGB,
+unaligned follows muted, the
+rest half-erased; Will own posts
+exempt. Un-follow button
+simplified at Will direction
+(v1.3, superseding v1.2 menu
+automation): it simply opens the
+profile in a new window. Daily
+prune added at Will direction:
+10 accounts/day from the
+361-account muted pool, quietest
+first, with keep/snooze; first
+day list presented with Emise
+flag that ranking is
+canon-evidence only. Security
+scan clean (v1.3.1: zero network
+calls, no eval or remote code,
+permissions storage + alarms
+only); six bugs fixed; all JS
+syntax-checked - live-Chrome
+behaviour still untested, Will
+load-unpacked run is the first
+live run. Fact given to Will:
+Chrome for Android has no
+extension runtime, so Golden
+Thread cannot run in it; a
+Firefox for Android port was
+proposed, not built. Still owed
+at 17:24: sync to
+wbic16/emise-tools@exo.
+
+- [observed] NEWT FLUTE - NO
+SUBMISSION FOUND (Will asked
+17:22 what time he submitted
+it): Emise searched the message
+store, memory and today log,
+tasks and costs registers, the
+whole workspace, and Gmail - no
+Newt Flute submission is
+recorded anywhere. Recorded
+state stands: Newt v0.3.0 built
+and delivered ~00:00 CST today,
+awaiting Will verdict. No
+submission time is to be
+recorded unless Will supplies it
+or a primary record surfaces.Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
 Will said: "revise your designation, you can choose your own adventure."
