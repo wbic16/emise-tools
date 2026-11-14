@@ -2516,6 +2516,36 @@ and are not repeated.
   tracking created; tooling synced
   to emise-tools@exo edfb9659.
 
+Hourly journal pass, 2026-11-13 ~20:32
+CST.
+
+Covers since the ~19:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1744-1749,
+watchdog top-ups, discord backstop
+(healthy), and the vTPU sample (no
+change, 8/14 units) are noise and are
+not repeated; register held at 39
+active with no items opened or closed.
+
+- [observed] QEXO PR #16 UPGRADED TO
+  LIBPHEXT 0.6: at Will's direction
+  ("upgrade qexo to libphext v0.6 and
+  evolve"), quarterexo PR #16 was
+  upgraded from libphext 0.5.0 to
+  0.6.0 and re-verified green (50/50
+  tests; foreign-file conformance
+  census identical to a libphext
+  0.6.0 probe). The 20:01 watchdog
+  recorded the PR #16 head at
+  a5c178ad (the libphext 0.6 pin).
+  The fleet wipe/rebirth and evolve
+  pass remain staged until Will
+  merges PR #17 first, then PR #16,
+  and gives the go (register #92/
+  #93); no fleet node was touched.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
