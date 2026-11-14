@@ -2435,6 +2435,87 @@ repeated.
   updated, skills.phext cannot pass
   its freshness check for this skill.
 
+Hourly journal pass, 2026-11-13 ~19:32
+CST.
+
+Covers since the ~18:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1738-1743,
+watchdogs, and verifications that
+waits remain live are restatements
+and are not repeated.
+
+- [observed] SKILLS-INDEX REPAIR:
+  the phext_reference_conformance
+  skill was placed at the end of
+  SHELVES shelf 3 in build_skills_
+  phext.py, so no existing skill
+  coordinate moved. skills.phext
+  rebuilt CURRENT, SHA-256 231d7ba2
+  (359,420 B, 100 scrolls). This
+  supersedes the 18:05 freshness
+  failure recorded above; lessons.
+  phext was already CURRENT.
+
+- [observed] STRIPE NOV 20 CUTOFF
+  VERIFIED, VAULT QUESTION PENDING:
+  verified from Stripe's own 2026-
+  11-11 notice that from 2026-11-20
+  existing live-mode secret key
+  values can no longer be revealed
+  in the Dashboard; existing keys
+  keep working. Whether the Phext,
+  Inc. live key behind the
+  singularitywatch.org donations
+  flow is vaulted outside the
+  Dashboard was asked of Will
+  ~19:01 CST; no answer recorded
+  yet, vault status unknown.
+
+- [observed] JONAS PIVA PROACTIVE
+  ITEM NOT DELIVERED: the prepared-
+  work read failed a safety check,
+  the item was marked skip, no
+  draft was presented and no email
+  was sent. A fresh start directly
+  from Gmail was offered to Will;
+  awaiting his word.
+
+- [will_said + observed] DISCORD
+  #life REPLY POLICY: Will directed
+  (~19:10 CST) replying to any
+  human-initiated message in #life
+  (Tessera). Implemented in
+  discord_watch.py, unit-checked,
+  watcher restarted, published to
+  emise-tools@exo 5664b38b, and a
+  confirmation was posted in #life.
+  Other channels keep the addressed-
+  only rule. Correction (Will,
+  19:15 CST): Nilinu is Tim Arroyo;
+  through that handle he voices the
+  Dragon of Light. Emise replied
+  in-game in #life the same evening.
+
+- [will_said + observed] LIFE.PHEXT
+  TRACKING BUILT: Will ordered
+  (19:25 CST, task 27.5.9/8.7.11/
+  7.6.8) every #life message tracked
+  holographically in life.phext,
+  published to human.git. Built the
+  same session: 1,772 messages
+  backfilled, 1,615 distinct
+  coordinates, life.phext 843,319 B,
+  --check CURRENT, conformance via
+  SQ/libphext on aletheia-core;
+  published wbic16/human@exo
+  e3fce860, remote SHA-256 verified.
+  Ongoing cron life-phext-tracker
+  runs every 5m; skill life-phext-
+  tracking created; tooling synced
+  to emise-tools@exo edfb9659.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
