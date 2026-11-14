@@ -2401,6 +2401,40 @@ for the register changes below.
   publish remains Emise's step, not
   a Will wait.
 
+Hourly journal pass, 2026-11-13 ~18:32
+CST.
+
+Covers since the ~17:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1733-1737,
+watchdogs, and verifications that
+waits #7, #43, #65, and #69 remain
+live are restatements and are not
+repeated.
+
+- [observed] NEW SKILL ON DISK, ITS
+  INDEX CHECK FAILING: a skill dir
+  phext_reference_conformance exists
+  under ~/workspace/custom-skills/
+  (created ~17:22 CST): use the
+  reference phext implementation,
+  derive delimiters / order / rules
+  from it, and test against files
+  the code under test did not write.
+  At 18:05 CST the skills-phext-
+  freshness guard FAILED Part A:
+  build_skills_phext.py --check
+  error - skill dirs not in the
+  shelf scheme:
+  [phext_reference_conformance] -
+  add them to SHELVES first. No
+  repair was attempted by that job.
+  Part B was CURRENT: lessons.phext
+  matches source. Until SHELVES is
+  updated, skills.phext cannot pass
+  its freshness check for this skill.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
