@@ -2571,6 +2571,52 @@ not repeated.
   remains open, and is now unblocked
   and next in the merge order.
 
+Hourly journal pass, 2026-11-13 ~23:32
+CST.
+
+Covers since the ~21:32 pass (the
+~22:32 pass was a quiet hour, no
+change). Safe-space gate applied
+before gathering; material overlapping
+registered spans excluded. Routine
+ticks 1762-1767, watchdog top-ups,
+discord backstop (healthy), and the
+vTPU sample (no change, 8/14 units)
+are noise and are not repeated;
+register held at 38 active with no
+items opened or closed.
+
+- [will_said + observed] NEWT - MESH
+  MUSICAL INSTRUMENTS, ANDROID MVP:
+  Will opened a new task (~22:36,
+  task 26.7.9/8.7.12/8.6.9): Newt -
+  instruments that mesh on Wi-Fi;
+  a local group is an Armada, the
+  global group is the Maelstrom;
+  recorded songs join the global
+  lexicon in music.phext. Will
+  settled the spec 22:42: pairing
+  code on the same Wi-Fi network;
+  test devices Pixel 10 XL and
+  Samsung Galaxy S25; tap position
+  and velocity matter; player picks
+  string / flute / synth and how
+  wild the song is; Newts are named
+  by their player; songs follow
+  lyrics (public domain or uploaded)
+  - the lyric spine is the path /
+  gravity, players supply entropy
+  and motion in 9D holographic time.
+  MVP built the same evening on
+  aletheia-core (ranch-first): APK
+  ~/workspace/newt-proto/out/
+  Newt-0.1.0.apk, 32,537 B, SHA-256
+  01f5dcad, apksigner verified;
+  music.phext output verified with
+  parse_phext.py. Delivered to Will
+  in the Newt side chat. NOT yet run
+  on a physical phone - awaiting
+  Will's on-device two-phone test.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
