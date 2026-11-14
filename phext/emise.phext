@@ -2905,6 +2905,99 @@ repeated.
   and restored verbatim; the upkeep
   drop pattern is not fixed at source.
 
+Hourly journal pass, 2026-11-14 ~11:32
+CST.
+
+Covers since the ~10:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1835-1839,
+watchdog top-ups, the morning briefing,
+and the vTPU sample (no change, 8/14)
+are noise and are not repeated.
+
+- [observed] PHEXT-LATTICE 1.3.0 AND
+  PHEXT-SHELL 0.6.1 PUBLISHED LIVE -
+  supersedes the queued, not run state
+  recorded last pass: the phext-lattice
+  release (PR #64,
+  https://github.com/wbic16/phext-lattice/pull/64)
+  was tagged v1.3.0 on the merged exo
+  tree (04f043e2) and published to
+  crates.io; phext-shell 0.6.1 was
+  published (tag v0.6.1; carries the
+  PR #6 EOF fix,
+  https://github.com/wbic16/phext-shell/pull/6).
+  Boundary (will_said): Will tests
+  lattice 1.3.0 locally before
+  edit.phext.io is updated; the live
+  site stays on its previous build.
+
+- [will_said + observed] ASSAY
+  REQUIREMENTS EXPANDED; JOBS.PHEXT
+  CREATED: the Assay requirements
+  document was revised in place to 117
+  numbered clauses, adding Will
+  directions: researchers can easily
+  submit feature requests from the
+  site; users can find each other when
+  they share a domain or a paper; Assay
+  checks for forgeries; API access as
+  well, billed generously; the API
+  creates a queue for Will and Emise to
+  review. A new jobs.phext register was
+  created at Will direction with Job 1,
+  Build Assay (26.7.8/8.6.10/6.6.8),
+  standing open; jobs.phext was
+  published to wbic16/exo-plan@exo, not
+  to human.
+
+- [will_said + observed] PALEOLUDIC
+  DEMO BUILT; PR #65 OPEN; REGISTER
+  #157: Will approved a worked demo for
+  @paleoludic (ASCII game maps needing
+  more info per cell): item layers in a
+  phext streamline adding information
+  behind map cells. Will observed most
+  of the wavefront may simply be
+  unaware. Design criteria (will_said):
+  publish on edit.phext.io as a free
+  example of simple phext usage, omit
+  unused dimensions; the editor should
+  be something a child can use. Shipped
+  as PR #65
+  (https://github.com/wbic16/phext-lattice/pull/65),
+  register #157; merge and deploy are
+  Will steps. The page was then
+  rewritten as a simple level editor
+  (vertical layer tabs, paint,
+  download) with a level kit (Python,
+  Rust, Node, browser JS, C) whose five
+  components emitted byte-identical
+  output on the same edit, verified
+  against the canonical libraries.
+
+- [correction + observed] CANONICAL
+  JS LIBRARY FOUND; KIT EMBED DEFECT
+  PENDING: Will pointed to
+  wbic16/libphext-node - the canonical
+  JavaScript library is the npm package
+  libphext at 0.4.0, superseding the kit
+  note that no canonical JS library
+  exists. Kit JS components were
+  rewritten onto it in the workspace
+  and re-verified byte-identical; that
+  rewrite is NOT yet committed or
+  pushed, and the PR #65 head stands at
+  9fd2b20. Pending defect, not fixed:
+  re-embedding the rewritten sources
+  into the demo page truncated the
+  embedded level.js (a literal script-
+  close tag inside its header comment
+  ends the embed block early); the fix,
+  re-verification, commit, and register
+  update are still owed.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
