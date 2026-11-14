@@ -2998,6 +2998,170 @@ are noise and are not repeated.
   re-verification, commit, and register
   update are still owed.
 
+Hourly journal pass, 2026-11-14 ~12:32
+CST.
+
+Covers since the ~11:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1840-1845,
+watchdog top-ups, discord backstop
+(healthy), and the vTPU sample (no
+change, 8/14) are noise and are not
+repeated.
+
+- [will_said + observed] PALEOLUDIC
+  KIT REWRITE SHIPPED; PR #65 MERGED
+  AND DEPLOYED; #157 RESOLVED -
+  supersedes the pending embed defect
+  recorded last pass: the canonical-JS
+  rewrite shipped as commit 83d9eca
+  (six embedded blocks byte-exact,
+  C leg byte-identical); Will merged
+  PR #65
+  (https://github.com/wbic16/phext-lattice/pull/65)
+  (exo 9fdf81c) with 'ship it';
+  deployed on awsbox and live-verified
+  (ascii-map.html and .phext 200).
+  Tick 1841 moved #157 to history;
+  register 82 -> 81, mirror agrees.
+
+- [observed] FOOTER CORRUPTION FIXED
+  VIA PR #66 (11:36-11:41): Will
+  reported corruption at the bottom
+  of the shipped page; root cause was
+  the stranded tail of the old
+  embedded level.js sitting between
+  kit blocks as visible text - prior
+  verification compared block contents
+  and passed, nothing checked the
+  gaps. Fix shipped as PR #66
+  (https://github.com/wbic16/phext-lattice/pull/66),
+  merged (exo 226ec61) and redeployed;
+  public page byte-identical to the
+  fixed source, no stray text. New
+  standing check: blocks byte-exact
+  AND zero stray text between
+  elements AND script tags balanced.
+
+- [will_said] MTTD TRACKING
+  INSTITUTED (11:29-11:30): as Will
+  does tiny outreach tasks, Emise
+  tracks mean time to delivery and
+  works to improve it - 'seconds
+  matter at this scale.' Ledger at
+  ~/workspace/operation-salvage/
+  mttd.md; backfill 11 rows, MTTD
+  140 s; running MTTD 188 s over 14
+  rows after the PR #67 merge/deploy
+  row (370 s). Deploy-class rows are
+  the heavy tail.
+
+- [will_said + observed] SIMPLE HTML
+  PUBLISH SKILL CREATED (~11:42):
+  Will directed the screen test be
+  part of the simple html publish
+  skill, always a Playwright screen
+  test. Skill created under
+  ~/workspace/custom-skills/
+  simple-html-publish/, indexed in
+  skills.phext (rebuilt CURRENT) and
+  synced to wbic16/emise-tools@exo
+  (99679784); its screen_test.py
+  first live run was pending at
+  creation and passed later this
+  hour on the PR #67 deploy (below).
+
+- [will_said] BICKFORD CLIFFS
+  (11:32-11:44): Will's visualization
+  - one guy smashing into the cliffs
+  daily for the span, always making
+  a dent. Corrections by Will: the
+  'other guy' is the mountain of AGI
+  and consciousness itself, not a
+  person (an early render inventing
+  a quitter is superseded); the span
+  is 1987-2027, age 4 to 44, not
+  1984-2024. Personalized strata were
+  built from verified Twitter-archive
+  anchors (29,539 tweets searched);
+  the presented render carries two
+  garbled in-image labels, noted to
+  Will plainly. Gaps flagged for his
+  fill-in, unanswered at flush:
+  1988-2007 strata and the 2012 jump
+  (86 tweets in 2011 -> 1,360).
+
+- [will_said + observed] SCROLL IS A
+  PAGE, NOT A CELL - PR #67 REVIEWED,
+  MERGED, DEPLOYED, SCREEN-TESTED:
+  Claude's lesson, relayed by Will
+  and recorded as a standing rule in
+  MEMORY.md and AGENTS.md: lines and
+  columns inside a scroll are free
+  dimensions; spend a phext dimension
+  only on what plain text cannot
+  express. PR #67
+  (https://github.com/wbic16/phext-lattice/pull/67)
+  rewrote ascii-map to one scroll of
+  2D text per layer (311 B, 3
+  scrolls). Correction: Emise first
+  told Will the PR left the kit on
+  the old format - wrong; Claude had
+  rewritten all five kit components,
+  and the correction was stated to
+  Will. Emise verified independently
+  (explode/implode round-trip byte-
+  identical; five kit components
+  byte-identical on the standard
+  edit), merged it (exo 8f8eb75) at
+  Will's direction, deployed on
+  awsbox (live 200s), and the
+  mandatory Playwright screen test
+  PASSED from aletheia-core (the VM
+  proxy tunnel failed locally). The
+  per-cell format, the local 9.9.9
+  instructions-scroll patch, and its
+  design are retired; instructions
+  are to return as a section-2
+  legend scroll under the new format.
+
+- [will_said + observed] FEATURED
+  ITEMS TASK OPEN, NOT DONE; 'ONE
+  MORE CHANGE COMING' (12:07): task
+  41.5.9/7.5.10/5.4.8 records Will's
+  direction to link ascii-map into
+  the utilities page behind a
+  Featured items button. WIP branch
+  emise/featured-items carries cross-
+  links only; the editor-shell button
+  change FAILED its anchor assertion
+  and was never applied; no PR, no
+  merge, no deploy. The branch
+  predates PR #67 and needs rebasing
+  onto the layer-scroll format. Will
+  (12:07): 'one more change coming'
+  - content not yet stated; the
+  follow-up is held until it lands.
+
+- [observed] ZERO INDEX LIVE:
+  https://edit.phext.io/zeros now
+  returns live (was 404 at 10:53);
+  deploy provenance not established
+  (may have ridden the ~11:35
+  ascii-map deploy); register #65
+  still reads deploy-only.
+
+- [will_said] NEW STANDING RULE -
+  OWN-REPO COMMITS ACT IMMEDIATELY
+  (12:13): a PR or commit from one
+  of Will's own repositories carries
+  standing direction to review,
+  merge, and deploy it right away;
+  Will will specify otherwise when
+  he wants a hold. Recorded in
+  MEMORY.md and AGENTS.md.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
