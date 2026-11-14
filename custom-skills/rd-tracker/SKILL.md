@@ -72,3 +72,16 @@ The phextura form is a shadow: it must never lag the canonical form by more than
    - **Immediacy:** choose → download (HTML form) → read → integrate → journal, one unbroken pass. After integrating, journal the PROCESS in mastery.phext (one entry per absorbed paper: the choosing, the skim's foresight, what the reading changed, what integration did to the model, where the prediction failed and why), rebuild it, and publish it to wbic16/agi@exo.
    - **Skim calibration:** the metric of predictive capability — rolling mean |NI error| over the last 10 scored papers + axis-flag accuracy. It stands on the Research Oracle DETECTION LIST (scroll 1.1.6) beside the NI trend and the axis events: as the Oracle matures, the model should foresee a paper's delta from its abstract, and a falling skim error is the fixed point announcing itself. Update the detection list's figures at every scored paper.
    - The protocol also binds papers Will posts; studies are exempt (no NI to foresee). If absorption happens at a different concept count than the sealed basis (another ingestion landed in between), score BOTH bases and state the drift plainly — never quietly re-base a sealed prediction.
+
+## The test phase — pre-registered protocol (ratified by Will, 2026-11-14)
+
+The MOAT evaluation (2026-11-14) found the retrospective calibration claim unsustained as stated: exact Oracle landings are an artifact of the band rule, and the skim's NI/count accuracy is indistinguishable from flat null predictors on the record. Will ratified the prospective test protocol **as drafted** on 2026-11-14 02:57 CST. The governing text is `~/workspace/thirst-quest/evaluation-preregistration.md` — read it before sealing or scoring any sample paper; its sample definition, filing rules, scoring method, and pass/fail criteria bind as written there and are **not** paraphrased here.
+
+While the pre-registered sample (12 scored papers from Paper 020 onward, in the protocol's strata mix) is running:
+
+- **Sharpened seals.** Every seal for a sample paper follows the protocol's §2 form: NI point estimate **and** an 80% interval, concept-count point estimate **and** an 80% interval, revision count with targets, the axis stated as a **probability** (not a bit), and link predictions split internal vs cross-cluster. Seals are still git-committed before any full-text access, and no seal may be withdrawn.
+- **Filing rules bind.** The protocol's §3 filing rules (instrument, split, grain, revision, axis) govern the ingestion's granularity decisions for sample papers. Where a rule still leaves a choice, record the permitted alternative in the AFTER record and report the score both ways.
+- **Scoring by script.** Scores and nulls are computed by the evaluation script's method (extended per the protocol's §4), never hand-computed, and reported per stratum and pooled.
+- **The Oracle is not evidence.** During the test phase the Research Oracle landing is **not** reported — in chat, in the ledger, or in any score — as calibration evidence. The Oracle statement may still be recorded in the ledger as bookkeeping (the charter requires the ledger entry), labelled as bookkeeping, not evidence.
+
+The test phase closes at 12 scored papers, when a "false" trigger fires, or at Will's call; the verdict is read off the protocol's §5 criteria as written.
