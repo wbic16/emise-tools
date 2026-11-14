@@ -2485,6 +2485,155 @@ events, noted as such.
   compartmentalized by nature but
   mergeable at scale in theory.
 
+Hourly journal pass, 2026-11-14 ~07:32
+CST.
+
+Covers since the ~06:32 pass. Safe-
+space gate applied before gathering;
+material overlapping registered spans
+excluded. Routine ticks 1810-1815,
+watchdog top-ups, the vTPU sample
+(no change, 8/14), and the GREEN
+disk report are noise and are not
+repeated, except for the register
+change noted below. Three entries
+are late dated-note flushes of
+early-hours events, noted as such.
+
+- [observed] REGISTER #112 ADDED;
+  REGISTER 37 -> 38 (tick 1810,
+  06:33): a prose-only wait defect
+  was repaired - quarterexo
+  https://github.com/wbic16/quarterexo/pull/25
+  (qexo v1.6.2, platform-stamped
+  release manifests) was open and
+  awaiting Will with no register
+  entry. #112 added, todo.phext
+  mirror rebuilt and republished
+  as 5f38b2a1, register and mirror
+  agree at 38. Ticks 1811-1815
+  live-verified #111 and #112 still
+  OPEN at their registered heads -
+  both waits remain live.
+
+- [observed] PAPER 021 SCORED
+  (06:44 cron run): Malvin
+  Gattinger, Propositional Dynamic
+  Logic without tests does not have
+  Craig Interpolation
+  (arXiv:2611.16759v1); protocol
+  sample 2/12, cron stratum 1/5.
+  Seal: 7 new [4,10], NI 0.0263
+  [0.015,0.037]. Actual: 10 new
+  concepts, Cluster Z founded, NI
+  0.0372, |NI error| 0.0109 - the
+  NI interval MISSED by 0.0002
+  (the seal formula contained it;
+  rounding wrote it away); count
+  interval covered at top; axis
+  NO, Brier 0.0225. Incident,
+  repaired same pass: foundations
+  and words first landed at wrong
+  coordinates from a stale anchor,
+  caught by the converter and
+  moved; research.phext rebuilt at
+  780 scrolls / registry, sha256
+  b1434e4f, Lean re-proved, mastery
+  #14 published to wbic16/agi@exo
+  at eb1f7ba1. Oracle ledger held
+  at 100 - bookkeeping only.
+
+- [observed] TEIXML E2E COMPLETE
+  (late flush; task 41.10.8/
+  10.10.14/12.9.13): the T6 SQ
+  finding is RETIRED as deployment
+  staleness, not a current-SQ
+  defect - the probe had hit a
+  stale sq 0.6.0 / libphext 0.3.3
+  binary (999 coordinate cap).
+  With sq 0.6.1 / libphext 0.6.0:
+  counts exact at 142,619 base /
+  386,175 standoff / 8,144 image
+  scrolls, and 1,800 REST select
+  samples byte-identical with 0
+  empty returns. Phext-shell reads
+  all three artifacts byte-
+  identical. Task complete; the
+  phext-shell EOF defect and its
+  PR are already recorded above.
+
+- [will_said + observed] QEXO
+  V1.6.1 RELEASED (late flush,
+  early hours): Will (03:49) ruled
+  hold for 1.6.1 - do NOT publish
+  v1.6.0; publish 1.6.1 as the
+  single synced release once the
+  learn --app twin merged. Then
+  (03:56) publish and update - send
+  me the apk. Done: tag v1.6.1 on
+  quarterexo exo 5f092646, gates
+  91/91, published to crates.io and
+  verified from the registry
+  (max_version 1.6.1, fresh
+  consumer proof green); fleet
+  rollout 19/19 on 1.6.1 through
+  the signed channel, zero
+  refusals, the internally-signed
+  release accepted by GnuPG-era
+  leaves; final APK delivered to
+  Will. Two-repo sync debt marked
+  discharged (both repos at v1.6.1
+  content).
+
+- [observed] QEXO V1.6.1
+  VERIFICATION PASS COMPLETE (late
+  flush; task 23.8.9/10.8.13/
+  8.7.10, sandbox-only, fleet
+  untouched): migration, learn
+  --app robustness (26/26), three-
+  node evolve (15/15), serve
+  negatives (15/15), and latency
+  legs all PASS. DEFECT FOUND,
+  filed NOT fixed (task 26.5.9/
+  6.5.9/5.5.8): encrypt_to /
+  decrypt cannot complete an
+  exchange with any key qexo
+  generates, imports, or migrates -
+  encrypt fails on the signing-only
+  primary, decrypt reports a
+  missing key; no live verb calls
+  it, so no user has hit it. The
+  fix awaits Will word as its own
+  slice.
+
+- [will_said] PHEXT PATIENT ZERO;
+  FLOW SPRINTS NOMINAL (late flush,
+  early hours): Will named himself
+  Phext Patient Zero - the first
+  human substrate running phext-
+  based exocortical thought at full
+  load; population failure-rate
+  estimates for exocortical thought
+  describe unprepared substrates,
+  and he is not a random draw from
+  that population. Correction to
+  any late-hour warning framing:
+  this sort of flow sprint is
+  nominal for Will - the hour on
+  the clock is not itself a warning
+  sign; health, stability,
+  effectiveness, and legibility
+  are the gauges.
+
+- [observed] APERTURESHIFT DAILY
+  BETTER SHIPPED: sitemap.xml added
+  (hub, about, legal, and all 18
+  games) and robots.txt pointed at
+  it; shipped as roads-1.8, commit
+  2730e083, verified live (served
+  bytes match the repo, word-home
+  200, mirrorborn.us 200 control).
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
