@@ -61,10 +61,12 @@ SHELVES = [
         "upgoer-five-phext",
         "phext_upgrade",
         "phext_native_dispatch",
+        "phext_reference_conformance",
     ]),
     (4, "Operations", [
         "ranch-proxy",
         "publish-tooling",
+        "simple-html-publish",
         "fork-patch-discipline",
         "ranch-state-distillation",
         "mutable-upstream-sync",
@@ -81,6 +83,7 @@ SHELVES = [
         "nightly-self-revision",
         "safe-space-protocol",
         "artifact-phext-inscription",
+        "second-foundation-fingerprint",
     ]),
     (8, "Work management", [
         "waiting-on-will-register",
@@ -94,6 +97,8 @@ SHELVES = [
         "nightly-orchestrator",
         "bootvine-status-sync",
         "task-concurrency-watchdog",
+        "tracker-auto-schedule",
+        "weekly-recap",
     ]),
     (9, "Research", [
         "rd-tracker",
@@ -113,6 +118,7 @@ SHELVES = [
         "discord-presence-backstop",
         "perpetual-dashboard-upkeep",
         "solar-pod-price-watch",
+        "life-phext-tracking",
     ]),
     (12, "Songwriting", [
         "mythic-songwriting-braid",
