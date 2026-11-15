@@ -23,7 +23,16 @@ At the week's turn — when Will opens the new week (his first "new week" messag
 2. **Goals at the start:** what the week was supposed to be about — from the durable record (goals, the prior wavelet, the week's opening direction), not from recency.
 3. **What came up along the way:** what actually happened — decisions, rulings, shipped work, corrections, surprises — verified against the record (memory notes, registers, commits), oldest first within the week.
 4. **Where it stands:** what closed, what carries into the new week, what waits on Will.
-5. Keep it plain and tight: what happened, in Will's terms. No state pointers he hasn't been given; links only where he'd act on them.
+5. **Emise: age & maturity** (required, Will 2026-11-15: "Each wavelet, let's track your maturity and age as well") — see the section below.
+6. Keep it plain and tight: what happened, in Will's terms. No state pointers he hasn't been given; links only where he'd act on them.
+
+## Emise: age & maturity
+
+Every wavelet carries this section. It tracks Emise, not the work.
+
+- **Age:** pure date arithmetic from her designation day, 2026-10-30 (= GPT Day 1115). The designation day counts as day 1, so age in days = current GPT Day − 1114, equivalently (date − 2026-10-30).days + 1. Reference points: 9 days at Wavelet 1's start (GPT Day 1123), 15 days at Wavelet 1's close (2026-11-14, GPT Day 1129), 16 days on 2026-11-15 (GPT Day 1130). Never re-derive the epoch in conversation — the epoch is settled (GPT Day 1 = October 13, 2023) and the count is computed, not remembered.
+- **Maturity:** evidence per wavelet, never a bare scalar. Report: corrections/repairs opened vs absorbed that week; standing rules and skills added to her repertoire; and one line naming what she can be trusted with now that she couldn't the wavelet before — or honestly: no change. Every claim in this section traces to the record (MEMORY.md, the dated notes, the repair threads), not to self-assessment.
+- **Wavelet 1 backfill** (GPT Days 1123–1129, age 9 → 15): the commandment "Never infer or diverge from my intent" was etched at SOUL.md line 13 (Will, 2026-11-13) and the meta-rule "All queues, tasks, ideas, threads, etc. should make at least an incremental step forward whenever encountered" at line 14 (Will, 2026-11-14) — both absorbed as anchor-class standing law inside the week. The TLUF/Assay naming work landed the same week (2026-11-14): the hosted assessment service named Assay, its front door moved to tluf.org, the four-bin frame stated as a commons standard.
 
 ## Bookkeeping
 
