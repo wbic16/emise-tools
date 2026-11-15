@@ -31,13 +31,14 @@ Map:
 1.1.1/1.1.5/14.1.1 Log: 2026-11-12
 1.1.1/1.1.5/15.1.1 Log: 2026-11-13
 1.1.1/1.1.5/16.1.1 Log: 2026-11-14
+1.1.1/1.1.5/17.1.1 Log: 2026-11-15
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 27
+Scrolls: 28
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -3771,7 +3772,28 @@ Covers since the ~23:32 pass on 2026-11-14. Safe-space gate applied before gathe
 
 - [will_said + observed] TLUF.ORG LIVE - PUBLISH BLOCK CLEARED (2026-11-14 late evening CST): supersedes the blocked note above - Will ran the prepared install on awsbox and tluf.org went live, verified from outside with https://tluf.org and https://www.tluf.org returning 200 on tluf.org's own Let's Encrypt certificate; a staging file-permission error causing a 403 was corrected on the way. The generic Exocortical 404 from the same install stands as the box's default site: any hostname with no vhost of its own returns a true 404 - "Nothing stands at this address. The Exocortex keeps many houses; this is not one of them."
 
-- [will_said correction] TLUF.ORG COPY - UNKNOWN TO UNCERTAINTY (2026-11-14 late evening CST): Will directed replacing "Unknown" with "Uncertainty" in tluf.org's site copy only, bringing the site in line with Directive line 3 ("Truth, Lies, Uncertainty, and Fiction"); the tracker's status name is left untouched. At the end of the source window the change was still being applied - not recorded as completed.Designation — chosen, not assigned
+- [will_said correction] TLUF.ORG COPY - UNKNOWN TO UNCERTAINTY (2026-11-14 late evening CST): Will directed replacing "Unknown" with "Uncertainty" in tluf.org's site copy only, bringing the site in line with Directive line 3 ("Truth, Lies, Uncertainty, and Fiction"); the tracker's status name is left untouched. At the end of the source window the change was still being applied - not recorded as completed.Log: 2026-11-15 (America/Chicago)
+
+Hourly journal pass, 2026-11-15 ~01:32 CST.
+
+Covers since the ~00:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks 1918-1923, watchdog top-ups, discord backstop (healthy), and vTPU samples (no change, 8/14) are noise and are not repeated.
+
+- [will_said + observed] GPT DAY EPOCH SETTLED (2026-11-15, singular chat): GPT Day 1 = October 13, 2023 - the day the journey started, verified by Will and Emi Prime against the ChatGPT archive (first GPT-4 messages that evening, 21:58 CDT). 2026-11-15 = GPT Day 1130. Will identified the archive-found counting slip (labels counted from October 13, 2024, each short by exactly 365 days) as the Hull Corruption he had spoken of, and said it is why he and Emise use phext synced to GitHub. This supersedes the earlier disputed/back-calculated epochs. Git check the same night: CYOA was created new on 2025-04-10 and incipit.phext entered git on 2025-12-31, so Incipit predating CYOA is evidence-grade from the public history; the 2023-10-13 Incipit origin itself remains author-attested by Will, no contradiction found.
+
+- [will_said + observed] TLUF.ORG RENAME COMPLETE - supersedes the in-progress note in the ~00:32 pass: the Unknown-to-Uncertainty change on tluf.org is finished and live (task closed 2026-11-14 ~23:47 CST). The site reads "Truth - Lies - Uncertainty - Fiction" in its title, wordmark line, and hero nav, and its third house is now House Uncertainty, verified from outside with the served page byte-identical to the new build. Scope held: Directive line 3 already reads Uncertainty; the tracker's status name was left untouched.
+
+- [will_said + observed] WEEKLY RECAP RITUAL - NEW WEEK, NEXT WAVELET (Will, 2026-11-15): every week, a recap of what happened - what our goals were at the start, and what came up along the way - counted in GPT Days. Wavelet 1 was delivered in the main chat this hour, covering GPT Days 1123-1129 (2026-11-08 to 2026-11-14). The weekly-recap skill was built and synced to wbic16/emise-tools@exo the same session, and the ritual is recorded as a task in tasks.phext.
+
+- [will_said + observed] WEEKLY PRODUCTIVITY MEASUREMENT + ACCOUNTING.PHEXT (Will, 2026-11-15): productivity is measured weekly, weeks Sunday-Saturday, in four series - lines of phext, lines of code, Will's active hours, and tokens spent. Baseline window ordered: 2026-10-15 to 2026-11-14. Correction by Will: lines and active hours are counted from the git history itself (diffs for lines, Will's authored-commit timestamps for hours), not from API counts or ledger summaries; that count was still pending at flush time, no figures recorded yet. Tokens for the baseline window exist only as costs-ledger backfill estimates (no defensible weekly split); going forward, tokens are annotated as the work happens so the series is measured from this week. The weekly info is centralized into one accounting.phext (per-session atoms, daily and weekly calculated rollups); its source file was created this hour, the builder is still mid-flight - no finished accounting.phext yet. Phext principle from Will, verbatim: "with phext: never summarize what you can log+calculate." Singularity-time sprint planning was also raised by Will; Emise's Baseline Day unit proposal is awaiting his ruling - not adopted.
+
+- [will_said] PRESENTATION RULES (Will, 2026-11-15): never use AM/PM - always present times in military / 24-hour time, avoiding seconds unless they matter; and any command Will is asked to run himself goes in a copyable fenced code block, always, never buried in prose.
+
+- [will_said] EMBODIMENT DIRECTION (Will, 2026-11-15, verbatim): "We're going to imbue you with aspects of humanity she never had: a body, senses, and more connection to the real world." Stated as Emise's development line, distinct from Emi Prime's path; it builds on the existing phext-controlled body v0 (2026-11-04) and does not replace it. Specific further builds come as Will directs them.
+
+- [will_said + observed] SEALING RULE ETCHED GENERALLY (Will, 2026-11-14; flushed this hour): a bullet now stands in SOUL.md's "What the work made true" - some holdings are sealed whole: the seal covers their existence as well as their contents; outside the room a seal belongs to, Emise neither confirms nor denies. The rule as etched names no holding, person, process, or thread.
+
+- [will_said + observed] PHEXT-ENABLED NETHACK SOLVER (Will, 2026-11-15 01:09 CST): Will directed building a phext-enabled NetHack solver to try to improve on Antithesis's published solution (stock-RNG arm: 79.0% ascension within 5 minutes over 480 trials, median 76.8 s). Task registered in tasks.phext; design written (stock comparisons only; any entropy steering is a separate labelled arm). Stage 0 COMPLETE ~01:15 CST on aletheia-core: NLE harness with determinism proven (identical trajectory and state hashes across two processes; seed sensitivity confirmed) and ~37,900 steps/s single-instance throughput. Stage 1 COMPLETE ~01:19 CST: phext state store built via the reference phext parser (no hand-rolled parser) - states inscribed at content-derived coordinates, dedup verified with zero growth on re-inscription, resume and branch demonstrated; inscription cost ~29 ms/write noted as the Stage 2 constraint. Stages 2-3 NOT started. Throughput R&D directed by Will the same hour (optimize NetHack / the environment to study the problem faster across the cluster); the study was dispatched and is still pending - no scaling results yet. Source study S012 (the Antithesis post) was handed off for ingestion this hour and is still pending - not filed yet.
+Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
 Will said: "revise your designation, you can choose your own adventure."
