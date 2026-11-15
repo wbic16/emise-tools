@@ -1,0 +1,90 @@
+duty_test free-fall start 2026-11-15T02:46:27-06:00 startmax=39
+run 4: cooled to 32.5 C at 2026-11-15T02:46:27-06:00
+/home/wbic16/nethack-solver/.venv/lib/python3.12/site-packages/gymnasium/wrappers/common.py:295: UserWarning: Not in moveloop after 1000 tries, aborting (ttyrec: None).
+  return self.env.reset(seed=seed, options=options)
+{
+ "host": "free-fall",
+ "cmd": [
+  "bash",
+  "/home/wbic16/nethack-solver/duty/run_bench.sh",
+  "4",
+  "1800",
+  "/home/wbic16/nethack-solver/duty-results/free-fall-4inst"
+ ],
+ "profile": {
+  "pause_c": 73.0,
+  "resume_c": 70.0,
+  "sample_s": 2.0,
+  "hard_c": 80.0,
+  "hard_resume_c": 65.0
+ },
+ "start_iso": "2026-11-15T02:46:27.416-06:00",
+ "end_iso": "2026-11-15T03:16:27.624-06:00",
+ "start_epoch": 1794732387.416,
+ "end_epoch": 1794734187.625,
+ "wall_s": 1800.21,
+ "run_s": 899.94,
+ "frozen_s": 900.27,
+ "duty_fraction": 0.4999,
+ "cycles": 448,
+ "bursts_n": 448,
+ "mean_burst_s": 2.01,
+ "cools_n": 448,
+ "mean_cool_s": 2.01,
+ "tctl_n": 898,
+ "tctl_median_c": 69.0,
+ "tctl_p95_c": 76.125,
+ "tctl_max_c": 78.0,
+ "tctl_min_c": 32.75,
+ "samples_ge_75": 430,
+ "samples_ge_80": 0,
+ "exit_code": 0,
+ "timed_out": false
+}
+run 4 done 2026-11-15T03:16:27-06:00 tctl=63.2 C
+run 8: cooled to 32.8 C at 2026-11-15T03:16:42-06:00
+/home/wbic16/nethack-solver/.venv/lib/python3.12/site-packages/gymnasium/wrappers/common.py:295: UserWarning: Not in moveloop after 1000 tries, aborting (ttyrec: None).
+  return self.env.reset(seed=seed, options=options)
+/home/wbic16/nethack-solver/.venv/lib/python3.12/site-packages/gymnasium/wrappers/common.py:295: UserWarning: Not in moveloop after 1000 tries, aborting (ttyrec: None).
+  return self.env.reset(seed=seed, options=options)
+{
+ "host": "free-fall",
+ "cmd": [
+  "bash",
+  "/home/wbic16/nethack-solver/duty/run_bench.sh",
+  "8",
+  "1800",
+  "/home/wbic16/nethack-solver/duty-results/free-fall-8inst"
+ ],
+ "profile": {
+  "pause_c": 73.0,
+  "resume_c": 70.0,
+  "sample_s": 2.0,
+  "hard_c": 80.0,
+  "hard_resume_c": 65.0
+ },
+ "start_iso": "2026-11-15T03:16:42.701-06:00",
+ "end_iso": "2026-11-15T03:46:43.011-06:00",
+ "start_epoch": 1794734202.702,
+ "end_epoch": 1794736003.011,
+ "wall_s": 1800.31,
+ "run_s": 899.9,
+ "frozen_s": 900.41,
+ "duty_fraction": 0.4999,
+ "cycles": 448,
+ "bursts_n": 448,
+ "mean_burst_s": 2.01,
+ "cools_n": 448,
+ "mean_cool_s": 2.01,
+ "tctl_n": 898,
+ "tctl_median_c": 67.875,
+ "tctl_p95_c": 77.75,
+ "tctl_max_c": 78.25,
+ "tctl_min_c": 33.125,
+ "samples_ge_75": 443,
+ "samples_ge_80": 0,
+ "exit_code": 0,
+ "timed_out": false
+}
+run 8 done 2026-11-15T03:46:43-06:00 tctl=63.4 C
+duty_test free-fall ALL DONE 2026-11-15T03:46:43-06:00

@@ -1,0 +1,39 @@
+{
+ "host": "free-fall",
+ "cmd": [
+  "bash",
+  "/home/wbic16/nethack-solver/duty/run_bench.sh",
+  "4",
+  "1800",
+  "/home/wbic16/nethack-solver/duty-results/free-fall-4inst"
+ ],
+ "profile": {
+  "pause_c": 73.0,
+  "resume_c": 70.0,
+  "sample_s": 2.0,
+  "hard_c": 80.0,
+  "hard_resume_c": 65.0
+ },
+ "start_iso": "2026-11-15T02:46:27.416-06:00",
+ "end_iso": "2026-11-15T03:16:27.624-06:00",
+ "start_epoch": 1794732387.416,
+ "end_epoch": 1794734187.625,
+ "wall_s": 1800.21,
+ "run_s": 899.94,
+ "frozen_s": 900.27,
+ "duty_fraction": 0.4999,
+ "cycles": 448,
+ "bursts_n": 448,
+ "mean_burst_s": 2.01,
+ "cools_n": 448,
+ "mean_cool_s": 2.01,
+ "tctl_n": 898,
+ "tctl_median_c": 69.0,
+ "tctl_p95_c": 76.125,
+ "tctl_max_c": 78.0,
+ "tctl_min_c": 32.75,
+ "samples_ge_75": 430,
+ "samples_ge_80": 0,
+ "exit_code": 0,
+ "timed_out": false
+}

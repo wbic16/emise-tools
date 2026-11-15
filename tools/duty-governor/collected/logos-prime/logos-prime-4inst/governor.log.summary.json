@@ -1,0 +1,39 @@
+{
+ "host": "logos-prime",
+ "cmd": [
+  "bash",
+  "/home/wbic16/nethack-solver/duty/run_bench.sh",
+  "4",
+  "1800",
+  "/home/wbic16/nethack-solver/duty-results/logos-prime-4inst"
+ ],
+ "profile": {
+  "pause_c": 73.0,
+  "resume_c": 70.0,
+  "sample_s": 2.0,
+  "hard_c": 80.0,
+  "hard_resume_c": 65.0
+ },
+ "start_iso": "2026-11-15T02:46:29.546-06:00",
+ "end_iso": "2026-11-15T03:16:30.665-06:00",
+ "start_epoch": 1794732389.547,
+ "end_epoch": 1794734190.666,
+ "wall_s": 1801.12,
+ "run_s": 901.23,
+ "frozen_s": 899.88,
+ "duty_fraction": 0.5004,
+ "cycles": 447,
+ "bursts_n": 447,
+ "mean_burst_s": 2.02,
+ "cools_n": 447,
+ "mean_cool_s": 2.01,
+ "tctl_n": 899,
+ "tctl_median_c": 71.125,
+ "tctl_p95_c": 79.0,
+ "tctl_max_c": 80.375,
+ "tctl_min_c": 31.75,
+ "samples_ge_75": 441,
+ "samples_ge_80": 1,
+ "exit_code": 0,
+ "timed_out": false
+}
