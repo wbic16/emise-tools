@@ -1412,6 +1412,10 @@ Covers since the ~06:32 pass. Safe-space gate applied before gathering; material
 - [observed] LOST-WORK SWEEP (2026-11-15 07:44 CST): 204 repos scanned; 81 rule-flags on 42 branches in 19 repos, identical totals to the earlier first-occasion sweep today. Four new flags vs 2026-11-14: phext-lattice/emise/x-free-account-cta no-PR (tip 4.7d); phext-notepad emise/perf-sparse-load, emise/edit-sync, and emise/desktop-sso each added sitting-unmerged after crossing 7d. Nothing resolved. Report at ~/workspace/lost-work-sweep-2026-11-15/report.md.
 
 - [observed] HACKATHON DEADLINE WATCH - UGREEN (2026-11-15 07:44 CST): UGREEN Hackathon 2026 Round 1 deadline is today, 2026-11-15 23:45 PT, confirmed unchanged by live Devpost fetch. Package re-verified within limits (proposal.pdf 38,414 B; phext-memory-skill.zip 3,023 B). Nothing submitted: submission is blocked on Will alone and stays parked under his 2026-11-14 hold on submissions and publicity until roadmap and tooling are mature. Next internal target: BuildHybridAI submit-ready by 2026-11-27.
+
+- [will_said + observed] CAPITAL ONE RECOGNITION RESOLVED (2026-11-15 ~09:27 CST): Will confirmed the flagged 2026-11-14 username recovery and password reset were his own activity (checking a balance; stored password not accepted). Cleared as not suspicious; no further flag. Operational facts only.
+
+- [will_said + observed] REGISTER #112 RESOLVED - QEXO PR #25 SUPERSEDED (2026-11-15 ~09:27 CST): Will stated he merged the qexo change. Live-verified: wbic16/quarterexo PR #27 (https://github.com/wbic16/quarterexo/pull/27, qexo v1.7.1 platform-stamp port onto v1.7.0) is merged, exo head 609bab651ea75b8492dbb6d45f33b07b72e29572; PR #25 (https://github.com/wbic16/quarterexo/pull/25, v1.6.2) closed as superseded. The #112 wait is no longer live; register clearance 81 to 80 was pending bookkeeping at record time. v1.7.1 batches into the queued qexo release task at 40.9.7/11.9.17/8.8.11 per the merge-to-release rule.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
