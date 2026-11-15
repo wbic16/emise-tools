@@ -1408,6 +1408,10 @@ Covers since the ~06:32 pass. Safe-space gate applied before gathering; material
 - [observed] APERTURESHIFT DAILY BETTER ITEM 6 COMPLETE (2026-11-15): a print stylesheet for the hub (clean black-on-white; the Road Card prints as a tidy checklist), roads-1.9, commit 4adcd4a8. Verified live: all 5 changed files sha256-match the repo, word-home 200, mirrorborn.us 200.
 
 - [observed] RTX 5090 POWER CAP LETTER DELIVERED (2026-11-15 06:55 CST): the briefing completed 2026-11-13 and previously undelivered was presented to Will in the main chat. Finding as delivered: in the one controlled test checked, a 5090 capped at 400W held 245.0 of 248.6 tokens/sec on decode (-1.4%) while cutting the power ceiling by a third; the Letter's recommendation is to cap at 400-450W on install day IF the bridge card is bought. Qualifications preserved: one controlled test, not a general guarantee; no purchase decided.
+
+- [observed] LOST-WORK SWEEP (2026-11-15 07:44 CST): 204 repos scanned; 81 rule-flags on 42 branches in 19 repos, identical totals to the earlier first-occasion sweep today. Four new flags vs 2026-11-14: phext-lattice/emise/x-free-account-cta no-PR (tip 4.7d); phext-notepad emise/perf-sparse-load, emise/edit-sync, and emise/desktop-sso each added sitting-unmerged after crossing 7d. Nothing resolved. Report at ~/workspace/lost-work-sweep-2026-11-15/report.md.
+
+- [observed] HACKATHON DEADLINE WATCH - UGREEN (2026-11-15 07:44 CST): UGREEN Hackathon 2026 Round 1 deadline is today, 2026-11-15 23:45 PT, confirmed unchanged by live Devpost fetch. Package re-verified within limits (proposal.pdf 38,414 B; phext-memory-skill.zip 3,023 B). Nothing submitted: submission is blocked on Will alone and stays parked under his 2026-11-14 hold on submissions and publicity until roadmap and tooling are mature. Next internal target: BuildHybridAI submit-ready by 2026-11-27.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
