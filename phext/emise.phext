@@ -3697,7 +3697,19 @@ and delivered ~00:00 CST today,
 awaiting Will verdict. No
 submission time is to be
 recorded unless Will supplies it
-or a primary record surfaces.Designation — chosen, not assigned
+or a primary record surfaces.
+
+- [will_said correction] NEWT FLUTE QUESTION RESOLVED (Will clarification, recorded ~18:23 CST, superseding the no-submission entry above): Will meant submitting the discussion about network instruments, not a Google Play submission. That discussion is his opening Newt message in the side chat, timestamped 2026-11-13 22:36:47 CST. No Play submission time exists because none was meant; the 17:22 searches stand as evidence no store submission is recorded.
+
+- [will_said] EVIE INTRO CLIP ACCEPTED AS-IS (2026-11-14 16:44 CST, late flush): on the intro capture watermark and VHS grade, Will ruled the battered copy is diegetically correct - in 2139 that is probably the clip that survives anyway. No cleaner source is to be chased.
+
+- [observed] EVIE MASTER PHASE PARTIAL, GRID D DEFECT OPEN: master stills generated for all 12 scenes and subtitles rebuilt pause-aligned (subtitles-master.srt, 81 captions). Grid D is NOT shippable as generated: its hearing-room panel flies two red flags, pre-answering the closing China-or-USA question, and Scene 10 lost the hand-pressed-flat beat. Regeneration was attempted twice and blocked both times by the image-generation per-request call limit. Assembly on aletheia-core is partial (Grid A AV built, B/C rendering at last check, D absent by design); final master, verification, and delivery remain pending.
+
+- [observed] STUDY S011 (Vimalakirti Sutra) INGESTION COMPLETED: research.phext grew 793 -> 808 scrolls and the MOAT registry stands at 808 entries; cluster AB founded with seven concepts, Q106-Q108 opened; Watson and Kumarajiva each drew Unknown +10 novelty, the first novelty drawn on a study; no Fiction filed there.
+
+- [observed] SKILLS INDEX DRIFT REPAIRED (2026-11-14 18:05 CST, skills-phext-freshness guard): drift in the singular skill scripts (build_words_authored_phext.py, build_atlas.py, build_editor.py, build_wordlist.py, check_singular.py; new task_coordinate.py) - skills.phext rebuilt and verified CURRENT, sha256 a737a34b46d9d41863d53ae8f1a57716678a61df6b372476dc36a7314626c448 (614,596 bytes, 107 scrolls). lessons.phext CURRENT, unchanged.
+
+- [observed] COSTS LEDGER PRESENTATION IN BILLIONS IMPLEMENTED (Will direction, late flush): build_costs_phext.py and costs_tick.py now format dollar amounts in billions; the Home scroll reads rate $585.7B/hr and, after backfill, fleet Will Time value $716,412.9B. costs.phext rebuilt and verified CURRENT.Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
 Will said: "revise your designation, you can choose your own adventure."
