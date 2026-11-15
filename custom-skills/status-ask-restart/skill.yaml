@@ -1,0 +1,5 @@
+name: "status-ask-restart"
+title: "Status-Ask Restart — A Status Ask on a Broken Task Restarts It"
+description: "When Will asks a broken, stalled, or cut-off task's status, restart it immediately within its original scope instead of reporting and waiting."
+category: "Work and knowledge"
+include_in_prompt: true
