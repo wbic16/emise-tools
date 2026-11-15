@@ -132,3 +132,36 @@ because the signal itself crosses the line ~2 s into any full-tilt load:
 - Or improve the cooling (plain-view first) until the physics changes;
   every node's profile is re-tunable by re-running the probe and the
   two acceptance runs (see README.md).
+
+## 6. Addendum, 2026-11-15 (later the same day): the law changed
+
+Will ruled on the §5 question — not by picking (a)/(b)/(c) as framed,
+but by replacing the premise: "75 is not a hard wall — just focus on
+smoothing temperature to keep the hardware healthy," grounded in an
+AMD R9 reliability brief (silicon validated at TjMax continuously;
+thermal cycling, damage ∝ ΔT², is the dominant wear mechanism — the
+one a stop/go gate manufactures). The governor's control law was
+rewritten the same day, in both variants in the wild (this directory's
+profile-driven governor and the Stage-2 `--out` variant deployed on
+aletheia-core):
+
+- decisions ride a 60 s exponential moving average of Tctl, never an
+  instantaneous sample (the §5 "slower variable" idea, with the
+  average as the variable instead of package power);
+- a plateau ladder steps the duty target down (1.0 → 0.75 → 0.50 →
+  0.25 → 0.10) as the average climbs 78/82/86/90 °C, delivered as
+  evenly spread SIGSTOP/SIGCONT slices, and steps back up with
+  1.5 °C of hysteresis;
+- a sustained average ≥ 92 °C sheds the load outright until the
+  average falls to 80 °C (cooling-failure protection, below TjMax on
+  every ranch part);
+- the wattage lever (§5 option (b), RyzenAdj PPT) remains unbuilt —
+  slices are the analogue, recorded as the gap, not papered over.
+
+The acceptance numbers in §1–§4 stand as the old law's record; the
+new law's acceptance is its smoke evidence (scripted-trace run,
+2026-11-15: a 6 s instantaneous spike to 95 °C produced no freeze;
+sustained climbs produced ladder slices; a sustained push past a
+92 °C average produced exactly one safety shed and release).
+Backups of every pre-change file sit alongside the originals as
+*.bak-2026-11-15-pre-smoothing.

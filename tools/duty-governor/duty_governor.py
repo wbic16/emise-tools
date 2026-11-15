@@ -4,33 +4,54 @@
 Tonight's per-node soak sweep (~/workspace/nethack-solver/node-limits.md)
 proved there is no sustained full-tilt operating point on any ranch node:
 Tctl crosses 75 C within ~2-3 minutes at any instance count and saturates
-at 88-91 C. Sustained work therefore runs as a governed duty cycle: the
-workload runs at full speed until the die approaches the ceiling, is
-frozen (SIGSTOP) while it cools, and resumes (SIGCONT) — repeat. The
+at 88-91 C. Sustained work therefore runs as a governed duty cycle. The
 house's between-job policy (new starts pause at >=75 C, resume <=70,
 off-time to <=65 after an 80 C crossing; ranch-batchq) decides whether a
-job may START; this governor is the layer inside a running job that keeps
-it from ever reaching the line.
+job may START; this governor is the layer inside a running job.
 
-Control law (defaults; per-node values live in the profile JSON):
-  - sample Tctl every sample_s seconds (2-5 s) from k10temp, resolved BY
-    NAME under /sys/class/hwmon (the hwmon index varies per node — the
-    fleet's ~/thermal/sample.sh pattern; never hardcoded).
-  - Tctl >= pause_c (73)  -> SIGSTOP the workload's process group.
-  - Tctl <= resume_c (70) -> SIGCONT. The band sits INSIDE the 75 C
-    ceiling with margin: the governor's job is that 75 is never reached,
-    not that it is ridden.
-  - Hard rule (preserved from the 2026-11-04 ranch policy): if Tctl ever
-    crosses hard_c (80), the group stays frozen until Tctl <=
-    hard_resume_c (65) — the off-time rule.
-  - The workload is never SIGKILLed by the thermal law. On governor exit
-    (SIGTERM/SIGINT or --max-seconds), the group is SIGCONTed first —
-    nothing is ever left frozen — then SIGTERMed as a shutdown, never as
-    thermal control.
+Control law — temperature smoothing (Will's ruling, 2026-11-15,
+replacing the 73/70 instantaneous gate this file originally carried;
+grounded in the AMD R9 reliability brief of the same day). AMD
+validates Ryzen 9 silicon to live at TjMax (95 C desktop, 100 C
+HS/HX) continuously; the wear mechanism the evidence indicts is
+thermal CYCLING (fatigue damage ~ dT^2) — which a stop/go gate
+manufactures. So the governor no longer decides on instantaneous
+samples and no longer rides a line:
+
+  - Sample Tctl every sample_s seconds (2-5 s) from k10temp, resolved
+    BY NAME under /sys/class/hwmon (the hwmon index varies per node —
+    the fleet's ~/thermal/sample.sh pattern; never hardcoded), and
+    fold it into an exponential moving average with time constant
+    avg_tau_s (default 60 s). EVERY decision below uses the AVERAGE;
+    a momentary spike moves nothing.
+  - Plateau ladder: while the average sits below band_edges[0]
+    (78 C) the workload runs unthrottled. As the average climbs
+    through the edges (78/82/86/90 C) the duty target steps down
+    (0.75/0.50/0.25/0.10), and steps back up — eased by hysteresis_c
+    (1.5 C) so the level cannot flap — as the average falls. The
+    governor seeks the equilibrium duty at which the node holds its
+    plateau instead of swinging between full speed and frozen.
+  - Duty is delivered as SIGSTOP/SIGCONT slices spread evenly over
+    time (a Bresenham accumulator over sample ticks), so the
+    run/freeze grain is seconds, not minutes — the smallest thermal
+    swing this lever can make. This governor has NO wattage lever:
+    it cannot set PPT (RyzenAdj) or a frequency cap. Timed slices
+    are the closest faithful analogue of "step the watts down";
+    governing package power directly remains the recorded open
+    option in results.md section 5.
+  - Safety shed: if the sustained AVERAGE reaches safety_c (92 C —
+    below TjMax on every ranch part, yet above the 88-91 C these
+    chassis saturate at ungoverned, so it trips on cooling failure
+    rather than on work), the group is frozen outright until the
+    average falls to safety_resume_c (80 C).
+  - The workload is never SIGKILLed by the thermal law. On governor
+    exit (SIGTERM/SIGINT or --max-seconds), the group is SIGCONTed
+    first — nothing is ever left frozen — then SIGTERMed as a
+    shutdown, never as thermal control.
 
 Usage:
   duty_governor.py --profile <node>.json --log <run.log> [--max-seconds S]
-                   [--pause-c C] [--resume-c C] [--sample-s S]
+                   [--safety-c C] [--avg-tau-s S] [--sample-s S]
                    [--tctl-file PATH] -- <command...>
 
 --tctl-file reads the temperature (degrees C, plain float) from a file
@@ -45,6 +66,7 @@ Python 3, stdlib only.
 """
 import argparse
 import json
+import math
 import os
 import signal
 import socket
@@ -54,11 +76,14 @@ import time
 from datetime import datetime
 
 DEFAULTS = {
-    "pause_c": 73.0,
-    "resume_c": 70.0,
     "sample_s": 2.0,
-    "hard_c": 80.0,
-    "hard_resume_c": 65.0,
+    # Temperature-smoothing law (Will, 2026-11-15) — see module docstring.
+    "avg_tau_s": 60.0,
+    "band_edges": [78.0, 82.0, 86.0, 90.0],
+    "band_duties": [0.75, 0.50, 0.25, 0.10],
+    "hysteresis_c": 1.5,
+    "safety_c": 92.0,
+    "safety_resume_c": 80.0,
 }
 
 
@@ -97,9 +122,17 @@ class Governor:
         self.summary_path = log_path + ".summary.json"
         self.proc = None
         self.pgid = None
-        self.state = "RUNNING"  # RUNNING | FROZEN | FROZEN_HARD
+        self.state = "RUNNING"  # RUNNING | FROZEN | FROZEN_SAFETY
         self.shutdown = False
         self.samples = []
+        # smoothing-law state: the EMA is the controlled variable
+        self.avg = None
+        self.avg_max = None
+        self.level = 0           # plateau ladder level 0..len(band_edges)
+        self.slice_acc = 0.0     # Bresenham accumulator for duty slices
+        self.safety = False      # safety shed engaged
+        self.safety_events = 0
+        self.avg_samples_ge_safety = 0
         self.events = []
         self.run_s = 0.0
         self.frozen_s = 0.0
@@ -117,7 +150,8 @@ class Governor:
             f"{iso(now)} epoch={now:.3f} tctl={t} state={self.state} "
             f"event={event} {extra}\n"
         )
-        if event in ("stop", "cont", "hard_stop", "hard_cont", "start", "exit"):
+        if event in ("stop", "cont", "safety_stop", "safety_cont",
+                     "start", "exit"):
             self.events.append((now, event))
 
     # -- temperature --------------------------------------------------
@@ -146,7 +180,7 @@ class Governor:
             pass
 
     # -- state transitions --------------------------------------------
-    def _enter(self, new_state, event, tctl, now):
+    def _enter(self, new_state, event, tctl, now, extra=""):
         if self._state_since is not None:
             dur = now - self._state_since
             if self.state == "RUNNING":
@@ -155,17 +189,39 @@ class Governor:
                 self.cools.append(dur)
         self.state = new_state
         self._state_since = now
-        self.log(event, tctl)
+        self.log(event, tctl, extra)
 
-    def stop(self, tctl, now, hard=False):
-        self.group_signal(signal.SIGSTOP)
-        self.cycles += 1
-        self._enter("FROZEN_HARD" if hard else "FROZEN",
-                    "hard_stop" if hard else "stop", tctl, now)
+    # -- the smoothing law ---------------------------------------------
+    def duty_target(self):
+        """Duty fraction for the current ladder level (level 0 = 1.0)."""
+        return ([1.0] + list(self.cfg["band_duties"]))[self.level]
 
-    def cont(self, tctl, now, hard=False):
-        self.group_signal(signal.SIGCONT)
-        self._enter("RUNNING", "hard_cont" if hard else "cont", tctl, now)
+    def _update_level(self, avg):
+        edges = self.cfg["band_edges"]
+        hyst = self.cfg["hysteresis_c"]
+        # restrict further the moment the AVERAGE crosses an edge
+        while self.level < len(edges) and avg >= edges[self.level]:
+            self.level += 1
+        # ease back only once the average has clearly fallen
+        while self.level > 0 and avg < edges[self.level - 1] - hyst:
+            self.level -= 1
+
+    def _apply(self, want_running, tctl, now, safety=False, extra=""):
+        """Drive the group to the wanted run/freeze state (signal only
+        on an actual transition)."""
+        if want_running == (self.state == "RUNNING"):
+            return
+        if want_running:
+            self.group_signal(signal.SIGCONT)
+            self._enter("RUNNING",
+                        "safety_cont" if safety else "cont",
+                        tctl, now, extra)
+        else:
+            self.group_signal(signal.SIGSTOP)
+            self.cycles += 1
+            self._enter("FROZEN_SAFETY" if safety else "FROZEN",
+                        "safety_stop" if safety else "stop",
+                        tctl, now, extra)
 
     # -- main loop ------------------------------------------------------
     def run(self):
@@ -211,25 +267,61 @@ class Governor:
             tctl = self.read_tctl()
             if tctl is not None:
                 self.samples.append(tctl)
-                ev = "sample"
-                if self.state == "RUNNING" and tctl >= self.cfg["hard_c"]:
-                    self.stop(tctl, now, hard=True)
-                    ev = "hard_stop"
-                elif self.state == "RUNNING" and tctl >= self.cfg["pause_c"]:
-                    self.stop(tctl, now)
-                    ev = "stop"
-                elif self.state == "FROZEN" and tctl >= self.cfg["hard_c"]:
-                    self._enter("FROZEN_HARD", "hard_stop", tctl, now)
-                    ev = "hard_stop"
-                elif self.state == "FROZEN" and tctl <= self.cfg["resume_c"]:
-                    self.cont(tctl, now)
-                    ev = "cont"
-                elif (self.state == "FROZEN_HARD"
-                      and tctl <= self.cfg["hard_resume_c"]):
-                    self.cont(tctl, now, hard=True)
-                    ev = "hard_cont"
-                if ev == "sample":
-                    self.log("sample", tctl)
+                # fold the sample into the moving average — every
+                # decision below rides the average, never the sample
+                if self.avg is None:
+                    self.avg = tctl
+                else:
+                    alpha = 1.0 - math.exp(
+                        -self.cfg["sample_s"] / self.cfg["avg_tau_s"])
+                    self.avg += alpha * (tctl - self.avg)
+                if self.avg_max is None or self.avg > self.avg_max:
+                    self.avg_max = self.avg
+                extra = (f"avg={self.avg:.1f} level={self.level} "
+                         f"duty={self.duty_target():.2f}")
+                before = self.state
+                if self.safety:
+                    if self.avg >= self.cfg["safety_c"]:
+                        self.avg_samples_ge_safety += 1
+                    if self.avg <= self.cfg["safety_resume_c"]:
+                        self.safety = False
+                        self._update_level(self.avg)
+                        extra = (f"avg={self.avg:.1f} level={self.level} "
+                                 f"duty={self.duty_target():.2f}")
+                        self._apply(True, tctl, now, safety=True,
+                                    extra=extra)
+                elif self.avg >= self.cfg["safety_c"]:
+                    self.avg_samples_ge_safety += 1
+                    self.safety = True
+                    self.safety_events += 1
+                    if self.state == "RUNNING":
+                        self._apply(False, tctl, now, safety=True,
+                                    extra=extra)
+                    else:
+                        # already frozen in a duty slice: the shed
+                        # takes over the freeze — record the takeover
+                        # (no signal; the group is already stopped)
+                        self.log("safety_stop", tctl, extra)
+                else:
+                    self._update_level(self.avg)
+                    duty = self.duty_target()
+                    extra = (f"avg={self.avg:.1f} level={self.level} "
+                             f"duty={duty:.2f}")
+                    if duty >= 1.0:
+                        self.slice_acc = 0.0
+                        want_running = True
+                    else:
+                        # Bresenham: spread the frozen slices evenly
+                        # over time so no single freeze is long
+                        self.slice_acc += duty
+                        if self.slice_acc >= 1.0:
+                            self.slice_acc -= 1.0
+                            want_running = True
+                        else:
+                            want_running = False
+                    self._apply(want_running, tctl, now, extra=extra)
+                if self.state == before:
+                    self.log("sample", tctl, extra)
             else:
                 self.log("sample_na", None)
 
@@ -298,6 +390,10 @@ class Governor:
             "tctl_min_c": s[0] if s else None,
             "samples_ge_75": sum(1 for x in s if x >= 75.0),
             "samples_ge_80": sum(1 for x in s if x >= 80.0),
+            "tctl_avg_max_c": (round(self.avg_max, 2)
+                               if self.avg_max is not None else None),
+            "safety_events": self.safety_events,
+            "avg_samples_ge_safety": self.avg_samples_ge_safety,
             "exit_code": exit_code,
             "timed_out": timed_out,
         }
@@ -316,8 +412,8 @@ def main():
     ap.add_argument("--tctl-file", default=None,
                     help="read temperature (C, float) from this file "
                          "instead of the k10temp sensor (smoke tests)")
-    ap.add_argument("--pause-c", type=float, default=None)
-    ap.add_argument("--resume-c", type=float, default=None)
+    ap.add_argument("--safety-c", type=float, default=None)
+    ap.add_argument("--avg-tau-s", type=float, default=None)
     ap.add_argument("--sample-s", type=float, default=None)
     ap.add_argument("cmd", nargs=argparse.REMAINDER)
     args = ap.parse_args()
@@ -334,17 +430,29 @@ def main():
             prof = json.load(f)
         for k in DEFAULTS:
             if k in prof:
-                cfg[k] = float(prof[k])
-    if args.pause_c is not None:
-        cfg["pause_c"] = args.pause_c
-    if args.resume_c is not None:
-        cfg["resume_c"] = args.resume_c
+                cfg[k] = (prof[k] if isinstance(DEFAULTS[k], list)
+                          else float(prof[k]))
+    if args.safety_c is not None:
+        cfg["safety_c"] = args.safety_c
+    if args.avg_tau_s is not None:
+        cfg["avg_tau_s"] = args.avg_tau_s
     if args.sample_s is not None:
         cfg["sample_s"] = args.sample_s
     if not (1.0 <= cfg["sample_s"] <= 10.0):
         ap.error("sample_s should be in the 2-5 s band")
-    if not cfg["resume_c"] < cfg["pause_c"] < 75.0:
-        ap.error("need resume_c < pause_c < 75 (the ceiling is never ridden)")
+    edges, duties = cfg["band_edges"], cfg["band_duties"]
+    if len(edges) != len(duties) or edges != sorted(edges):
+        ap.error("band_edges must ascend and match band_duties in length")
+    if (any(not (0.0 < d <= 1.0) for d in duties)
+            or duties != sorted(duties, reverse=True)):
+        ap.error("band_duties must descend within (0, 1]")
+    if not (edges[-1] < cfg["safety_c"]
+            and cfg["safety_resume_c"] < cfg["safety_c"]):
+        ap.error("need top band edge < safety_c and "
+                 "safety_resume_c < safety_c")
+    if cfg["avg_tau_s"] < 10.0:
+        ap.error("avg_tau_s should be >= 10 s "
+                 "(decisions ride the average, not the sample)")
 
     gov = Governor(cfg, cmd, args.log,
                    max_seconds=args.max_seconds, tctl_file=args.tctl_file)

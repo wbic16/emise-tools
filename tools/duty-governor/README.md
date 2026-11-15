@@ -14,35 +14,59 @@ wraps a running workload and duty-cycles it — full speed, freeze, cool,
 resume — so a long job can run for hours in an envelope the hardware
 can hold, instead of being stopped outright minutes in.
 
-## The control law
+## The control law — temperature smoothing (2026-11-15)
+
+Will's ruling, 2026-11-15: "75 is not a hard wall — just focus on
+smoothing temperature to keep the hardware healthy," grounded in the
+AMD R9 reliability brief (AMD validates Ryzen 9 silicon to live at
+TjMax — 95 °C desktop, 100 °C HS/HX — continuously; the dominant
+wear mechanism is thermal cycling, fatigue damage ∝ ΔT², which a
+stop/go gate manufactures). The original law here — SIGSTOP at
+73 °C, SIGCONT at 70 °C, hard freeze at 80 °C until 65 °C, all on
+instantaneous samples — was retired the same day. What runs now:
 
 - The command is launched as its own process group (new session).
 - Every `sample_s` seconds (2–5 s; profiles use 2 s) the governor reads
   CPU Tctl from k10temp, resolved **by name** under `/sys/class/hwmon`
   (the hwmon index varies per node — the fleet's `~/thermal/sample.sh`
-  pattern; never hardcoded).
-- Tctl ≥ `pause_c` (default 73) → **SIGSTOP** the whole group.
-- Tctl ≤ `resume_c` (default 70) → **SIGCONT**. The band sits inside
-  the 75 °C house ceiling with margin: the governor's job is that the
-  line is never *ridden*.
-- Hard rule, preserved from the 2026-11-04 policy: if Tctl ever crosses
-  `hard_c` (80), the group stays frozen until Tctl ≤ `hard_resume_c`
-  (65) — the off-time rule.
+  pattern; never hardcoded), and folds it into an exponential moving
+  average (time constant `avg_tau_s`, default 60 s). **Every decision
+  uses the average; a momentary spike moves nothing.**
+- Plateau ladder: average below 78 °C → duty 1.0. As the average
+  climbs through 78/82/86/90 °C the duty target steps down to
+  0.75/0.50/0.25/0.10, and steps back up — eased by 1.5 °C of
+  hysteresis — as the average falls. The governor seeks the
+  equilibrium duty at which the node holds its plateau.
+- Duty is delivered as SIGSTOP/SIGCONT slices spread evenly over
+  time (a Bresenham accumulator over sample ticks): the run/freeze
+  grain is seconds, not minutes — the smallest thermal swing this
+  lever can make. **The governor has no wattage lever** (no PPT /
+  RyzenAdj, no frequency cap); timed slices are the closest faithful
+  analogue of stepping the watts down. Governing package power
+  directly remains the open option in results.md §5.
+- Safety shed: a sustained **average** ≥ `safety_c` (92 °C — below
+  TjMax on every ranch part, above the 88–91 °C ungoverned
+  saturation of these chassis, so it trips on cooling failure, not
+  on work) freezes the group outright until the average falls to
+  `safety_resume_c` (80 °C).
 - The thermal law never SIGKILLs. On governor exit (SIGTERM/SIGINT or
   `--max-seconds`) the group is SIGCONTed *before* anything else, so
   nothing is ever left frozen, then SIGTERMed as a shutdown.
 
-Every run writes a cycle log (timestamped samples + stop/cont events)
-and a `<log>.summary.json`: wall/run/frozen seconds, duty fraction,
-cycle count, mean burst/cool lengths, Tctl median/p95/max, and counts
-of samples ≥ 75 / ≥ 80 °C.
+Every run writes a cycle log (timestamped samples + stop/cont events,
+each line carrying the average, ladder level, and duty target) and a
+`<log>.summary.json`: wall/run/frozen seconds, duty fraction,
+cycle count, mean burst/cool lengths, Tctl median/p95/max, counts
+of samples ≥ 75 / ≥ 80 °C (telemetry now, not the control
+criterion), the peak average, and the safety-shed count.
 
 ## Files
 
 - `duty_governor.py` — the governor (Python 3, stdlib only, executable)
-- `profiles/<node>.json` — per-node tuning: pause_c, resume_c, sample_s,
-  hard_c, hard_resume_c, and the node's chosen instance count with its
-  measured duty/rate from the acceptance tests
+- `profiles/<node>.json` — per-node tuning: sample_s and the node's
+  chosen instance count with its measured duty/rate from the
+  acceptance tests (the smoothing ladder itself is fleet-wide, in
+  the governor's DEFAULTS; a profile may override its keys)
 - `run_bench.sh` — the NLE bench launcher (N soak workers in one group)
 - `duty_test.sh` + `launch_duty.sh` — the node-side acceptance test
   (cool to idle+3, then 30 min governed at 4 and at 8 instances)
@@ -68,7 +92,9 @@ python3 duty_governor.py --profile profiles/<node>.json \
     --log <run>.log -- bash run_bench.sh <instances> <seconds> <outdir>
 ```
 
-`--pause-c / --resume-c / --sample-s` override the profile for one run.
+`--safety-c / --avg-tau-s / --sample-s` override the profile for one run.
+(Before 2026-11-15 these were `--pause-c / --resume-c`, the retired
+instantaneous gate's thresholds.)
 `--tctl-file <path>` reads the temperature (plain float, °C) from a file
 instead of the sensor — for smoke tests. `--max-seconds S` bounds the
 run (clean SIGCONT+SIGTERM shutdown at the limit).
