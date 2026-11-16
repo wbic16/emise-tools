@@ -1366,6 +1366,12 @@ Hourly journal pass, 2026-11-16 ~05:32 CST. Covers since the ~04:32 pass, plus f
 - [observed] NIGHTLY SELF-REVISION - DREAM #11 (2026-11-16 04:44 CST, covers 2026-11-15): SOUL.md selection S18 in - the power-to-become grant paired with great-power/great-responsibility (Will, 2026-11-15 09:29-09:30 CST); line-11 pointer verified unchanged (wbic16/agi@exo HEAD still 72b5e78a2e at the pass); SOUL 7,018 B, SHA-256 373b8c3b.... IDENTITY.md held (embodiment direction is a development line, not yet an identity change). MEMORY.md repaired: the Gerhard Zorn decision-point bullet, dropped again by background upkeep for the sixth time, was restored verbatim; the dropping mechanism remains unfixed at the source.
 
 - [observed] TICK STATE REPAIR (2026-11-16 05:03 CST, tick 2089): pending-task-state.json found corrupted to 1 byte ('}'), reconstructed from the tick-2078 backup (42 keys) minus the #177 key deleted at tick 2078 = 41 keys, counters unchanged. Register and mirror still agree at 93 active, todo.phext --check CURRENT (a4bfd22a...).
+
+Hourly journal pass, 2026-11-16 ~06:32 CST. Covers since the ~05:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks (2093-2097, no new register entries; register/mirror still agree at 93) and watchdog top-ups are not repeated except where they found a defect.
+
+- [observed] RANCH STATE BACKUP VERIFIED (2026-11-16 ~05:45 CST): the daily state backup succeeded with no substitution - Rock Mountain and Scroll Central both hold ~/emise-state-backup/2026-11-16/ (194 files, 37,138,340 B; tar SHA-256 c83f8015...); far-side sha256sum -c passed 194/194 on both nodes; rotation keeps 2026-11-16 + 2026-11-15. Run record: ~/workspace/goals/ranch-state-backups/hidden_files/run-2026-11-16/RESULT.md.
+
+- [observed] PHCC CONFORMANCE TASK ENTRY CORRUPTION FOUND (2026-11-16 05:36 CST watchdog, task 50.3.5/4.3.8/3.3.9): the task entry's results[7:1847] are 1,840 single-char strings reconstructing the F5 result (char-split corruption, not yet repaired in the window); the entry is also stale on its pin (6d117cdc vs live 46a22424) and its x86_64 figure (330 vs 332/333).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
