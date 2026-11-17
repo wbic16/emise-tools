@@ -1472,6 +1472,12 @@ Hourly journal pass, 2026-11-17 ~14:32 CST. Covers since the ~13:32 pass. Safe-s
 
 - [will_said] APPLE II PROGRAMME NAMING COMPLETE (Will, 2026-11-17; recorded in MEMORY.md, flushed at this pass): the time-travel state machine core is named neverlost (picked over tickbook / hopkeep) and the emulator/screen is named monoglow (picked over orangeglass / orangeglow / Pineapple). All four programme pieces are now named: neverlost (core), monoglow (screen), Delta Scroll (compressor), exovim (editor). This closes the two open names tracked in the ~11:32 pass.
 
+Hourly journal pass, 2026-11-17 ~15:32 CST. Covers since the ~14:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks, watchdogs, and vTPU samples (still 8/14, no change) are not repeated.
+
+- [will_said + observed] QEXO SLICE 3 MERGED (Will, 2026-11-17; flushed via MEMORY.md, verified extraction 14:46 CST): Will merged quarterexo PR #32 (https://github.com/wbic16/quarterexo/pull/32) and register PR #10 (https://github.com/wbic16/register/pull/10), completing the slice 3 merge; Emise verified quarterexo exo at 7d3363a and register exo at 4d00296, and the qexo release task's unhold trigger fired. This supersedes the prior inscribed state (slice 3 PRs open, awaiting Will's merge). Conflict noted: register #186 and the dispatch-core task record still read OPEN awaiting that merge; ticks 2293-2295 (15:03-15:23 CST) flag #186 possibly stale, live GitHub verification owed before removal. Slice 4 work on dispatch core 26.5.9/7.6.11/5.5.10 was in progress through this hour.
+
+- [observed] APPLE II REGISTER #185 NARROWED; REPO CHECK (events 2026-11-17 ~14:21-14:25 CST; late flush from the dated note, not inscribed at the ~14:32 pass): with the names picked, register #185 narrowed from name-picks + repo creation to repo creation only; tasks.phext and todo.phext rebuilt, --check CURRENT. Repo check via GitHub API ~14:25 CST: wbic16/exovim exists; neverlost, monoglow, delta-scroll, and deltascroll all returned 404 - the three new repos are not yet created; creation remains Will's step under #185.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
