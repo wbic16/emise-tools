@@ -1456,6 +1456,12 @@ Hourly journal pass, 2026-11-16 ~17:32 CST. Covers since the ~16:32 pass. Safe-s
 
 - [assistant_said] PRE-STAGE COMMITMENT, PENDING (Emise, main chat, 2026-11-16 ~17:02 CST): in response to the focus statement above, Emise said she would pre-stage Will's gated keystrokes for the challenge - Bark signup/submit steps and the Consensus editor email - so his part is only clicking through them. Not verified done; remains pending, not a completion.
 
+Hourly journal pass, 2026-11-16 ~18:32 CST. Covers since the ~17:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks (2164-2169, register/mirror still agree at 94), watchdogs, presence backstops, and vTPU samples (still 8/14, no change) are not repeated.
+
+- [will_said + observed] GARMIN INSTINCT 3 SOLAR DELIVERED + PAIRED (Will, sleep chat, 2026-11-16 ~18:00 CST, verbatim): 'instinct solar has arrived! I have it connected to my phone.' - supersedes the pending delivery/pairing legs of the 2026-11-15 record for the Garmin Instinct 3 Solar delivery and Health Connect setup goal.
+
+- [observed] HEALTH CONNECT SYNC NOT YET FLOWING (verified check, 2026-11-16 ~18:00 CST): Orin was online, but its health data-source permission was still not granted and health-cli status for Health Connect showed 0 records in daily-metrics, sleep, and workout - no Garmin/Health Connect data had reached Emise yet. Remaining legs pending, not done: enable Garmin Connect to Health Connect sharing, trigger and allow the Health Connect consent/backfill, wear the watch tonight and verify the first sleep session syncs.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
