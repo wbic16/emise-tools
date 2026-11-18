@@ -34,13 +34,14 @@ Map:
 1.1.1/1.1.5/17.1.1 Log: 2026-11-15
 1.1.1/1.1.5/18.1.1 Log: 2026-11-16
 1.1.1/1.1.5/19.1.1 Log: 2026-11-17
+1.1.1/1.1.5/20.1.1 Log: 2026-11-18
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 30
+Scrolls: 31
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -1575,6 +1576,22 @@ Hourly journal pass, 2026-11-17 ~22:32 CST. Covers since the ~21:32 pass. Safe-s
 - [observed] SHEAR ORIGINS OF TRUST FOLLOW-UP COMPLETE (task 18.6.9/8.7.10/7.7.9, Will 23:23 CST): Softmax piece (2026-10-22) read in full, assessment delivered - convergences with house record and three pressure points noted. Reply draft to Softmax offered for Will's eyes only; nothing sent, publicity hold stands.
 
 - [observed] ENVIRONMENT SLOWNESS INSTRUMENTED (Will, 2026-11-17 evening): verdict I/O-bound, not CPU/RAM - PSI io some avg60 16.11, iowait up to 63%, slow shared disk doing metadata over 1.15M files; structural fix direction: nightly cruft sweep + heavy work on ranch. Disk check: volume reports 71 GB used of 150 GB - not near full; listing/du totals disagree, open leg.
+
+Log: 2026-11-18 (America/Chicago)
+
+Hourly journal pass, 2026-11-18 ~00:32 CST. Covers since the ~23:32 pass on 2026-11-17. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks, watchdogs, discord backstops, and vTPU samples (still 8/14, no change) are not repeated.
+
+- [observed] SHEAR SOURCING + APPROACH OVERVIEW COMPLETE (task 22.6.8/8.6.10/6.6.7, 2026-11-17 23:26-23:37 CST): ~/workspace/shear-approach/ holds SOURCES.md, CROSS-REFERENCE.md, OVERVIEW.md. Sharpest findings: the Shear Cliff still fails 0-of-3 on the house's own terms (scored prediction unwritten - the one item fully in Will's control and the only one with a deadline); Shear's Oct 2026 charters section independently endorses SBOR's shape; 'Shear Cliff' has drifted in ranch-orbit files into a claim Shear never made - only the 2025 falsifiability version is defensible with him. OVERVIEW.md inscribed in artifacts.phext at 26.8.10/10.7.12/6.6.9, pushed human@exo a1985ebc, remote-verified. Recommended first move UNSENT; nothing sent, publicity hold stands.
+
+- [observed] SHEAR DM CHECK CORRECTION (2026-11-17 ~23:40 CST): the original sourcing sweep had scanned 1:1 DMs only (369 conversations, 0 hits). The group-DM file was checked separately: 6 'eshear' hits, all third parties sharing links to two of Shear's public tweets (2024-01-06); Shear is not a participant in any group DM. Conclusion unchanged (no DM contact in either file); the hole and the check are recorded as an addendum in SOURCES.md.
+
+- [will_said] 'IT'S ALL POST WAVEFRONT' (Will, 2026-11-17 23:43 CST): Will's framing of the whole Shear record - every Shear-adjacent item in the archive is downstream of the Wavefront, not evidence of a channel that predates it. Emise's reading (no older personal channel to reactivate; contact starts from the published record) was put to Will in chat and stands uncorrected at flush.
+
+- [observed] TWITTER ARCHIVE COVERAGE GAP VERIFIED (2026-11-17 23:47 CST): no archive covering late 2025 or 2026 is on disk. The sole archive (~/workspace/twitter-archive/, downloaded 2026-10-30) spans 2008-06-27 to 2025-06-16 (tweets and DMs alike); all Shear channel/silence conclusions are bounded by that 2025-06-16 edge.
+
+- [observed] NIGHTLY GITHUB ARCHIVE CLEAN (2026-11-17 23:44 CST): snapshot 2026-11-17 on aletheia-core - 228/228 repos ok, failures none, 4,677,178,145 B, duration 609.5s; estate grew 223 -> 228 since 2026-11-16. Restore spot-check PASSED (five sampled repos: HEADs match manifest, git fsck --strict PASS). Task record 31.14.14/12.15.14/9.9.11 updated; tasks.phext --check CURRENT.
+
+- [will_said + observed] NETHACK STAGE 12 DISPATCHED (Will, 2026-11-18; flushed 00:04 CST): new task 25.7.15/9.8.14/6.6.9 under parent 33.12.12/9.14.10/6.6.8, recorded in tasks.phext before dispatch (builder --check CURRENT). Scope is exactly Stage 11's three gaps: (1) in-run learning - the player derives and applies corrections inside the run, measured per hop; (2) the poisoned wall (3,152 of 5,361 deaths, 58.8%, at Dlvl 3); (3) secret-door navigation as a primitive. Two Stage 11 build faults must not repeat (unpriced ranking had nothing to rank; no death class ever founded live). Frame unchanged: hoptime store chain, protocol gate ascension else Castle >=25, no write-up until an ascension. Running at flush, not completed.
 
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
