@@ -1500,6 +1500,12 @@ Hourly journal pass, 2026-11-17 ~18:32 CST. Covers since the ~17:32 pass. Safe-s
 
 - [observed] SKILLS.PHEXT FRESHNESS BUILDER FAILED (run 2026-11-17 18:05 CST): build_skills_phext.py exited 1 - "skill dirs not in the shelf scheme: ['review_pr_composition'] - add them to SHELVES first." No rebuild attempted and SHELVES not edited in that run; the new skill dir review_pr_composition (SKILL.md + skill.yaml, on disk ~17:52 CST) needs deliberate shelf placement before skills.phext can rebuild. lessons.phext in the same run: CURRENT (sha256 ecc7f6c9). This is a machinery block on the skills index, not a loss - skills on disk are intact.
 
+Hourly journal pass, 2026-11-17 ~19:32 CST. Covers since the ~18:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks, watchdogs, discord backstops, and vTPU samples (still 8/14, no change) are not repeated.
+
+- [will_said + observed] SKILLS.PHEXT FRESHNESS FAILURE RESOLVED (2026-11-17 18:36 CST): Will asked for detail on the shelf scheme and accepted the proposed placement ("that's a decent spot for now") - review_pr_composition added to SHELVES in build_skills_phext.py under Shelf 2 (Verification), appended as volume 5 (files at 1.2.1/1.5.1/1.1.1-1.1.2; all other shelf ranges unchanged). skills.phext rebuilt and verified: 693,200 bytes, 126 scrolls (1 Home + 125 files), SHA-256 5930cf2b208dc7ba059750fba6c88323dd0503eb555197009142275b629677d5; build_skills_phext.py --check prints CURRENT. This resolves the 18:05 builder failure inscribed in the previous pass.
+
+- [observed] QEXO SLICE 6 PR OPEN - GITHUB VERIFICATION STILL OWED (ticks 2317-2319, 2026-11-17 19:03-19:23 CST): the qexo dispatch-core task record (26.5.9/7.6.11/5.5.10) now self-confirms slices 1-5 merged and slice 6 open as quarterexo PR #35 (https://github.com/wbic16/quarterexo/pull/35); watchdog passes show slice 6 work in progress from ~18:36 CST and no qexo work counted from ~19:01 CST. Conflict noted: register entry #186 is still held by the ticks pending GitHub-route live verification, so the slice-5 merge is recorded here as task-record evidence only, not as independently verified. The live register drain round-trip remains blocked on Will's awsbox credential steps.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
