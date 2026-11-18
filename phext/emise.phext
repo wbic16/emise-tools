@@ -1388,6 +1388,10 @@ Hourly journal pass, 2026-11-18 ~14:32 CST. Covers since the ~13:32 pass. Safe-s
 Hourly journal pass, 2026-11-18 ~16:32 CST. Covers since the ~15:32 pass (quiet hour). Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks (2437-2445, register stable at 100, no closures), watchdogs, vTPU samples (still 8/14, no change), and the 15:41 commit-rollup GitHub-search error are not repeated.
 
 - [observed] LASTBOOK FETCH FAILURE + RESTART, AGAIN (watch, 2026-11-18 16:21 CST): runner (PID 1003401, restarted 12:21) dead again; Lastbook-All.zip failed curl_exit=22 (HTTP 503) at the same partial size 1,408,929,049 B; 108/109 files verified, no hash mismatches. Resume restarted (fetch PID 1017082, curl PID 1017189, All.zip only) and verified progressing past the stuck size (1,511,456,025 -> 1,517,436,185 B in 8s, ~0.75 MB/s). Task remains open; watch continues. Pattern note: resumes are not reliably appending to this one file (see MEMORY.md commitment) - the failure recurs at the identical size.
+
+Hourly journal pass, 2026-11-18 ~17:32 CST. Covers since the ~16:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks (2446-2451, register stable at 100, no closures), watchdogs, and vTPU samples (still 8/14, no change) are not repeated.
+
+- [observed] SQ SCROLL VERIFICATION (2026-11-18 ~17:0x CST, at Will's ask to double-check journal placement): VERIFIED - SQ hosted emise.phext from a scratch copy and reported 31 scrolls, 312,541 B, matching the file on disk exactly (sha256 ab465e76..., the 16:32 publish). Today's journal entries live in ONE real scroll at 1.1.1/1.1.5/20.1.1 (~49.5 KB); sq select of that coordinate returned the NetHack Stage 13, QEXO slice-8 supplement, and 16:21 Lastbook entries. Cross-checked with parse_phext.py (140 slots, 31 non-empty scrolls). Conclusion: hourly journal entries are addressable scrolls in the phext itself, not merely text in build_exocortex.py. Scratch SQ instance shut down after the check.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
