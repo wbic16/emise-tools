@@ -12,10 +12,17 @@
 - **Builder:** `~/workspace/phext/build_tasks_phext.py` (rebuild; `--check` prints CURRENT/DRIFT like the skills/lessons builders). Rebuild and verify after every source edit, in the same session.
 - Verify with `~/workspace/phext/parse_phext.py tasks.phext` when the register's integrity matters (scroll count = tasks + 1 home).
 
+## Record first — before any processing (Will, 2026-11-17)
+
+The durable record is written **immediately, before any processing begins** — before the first tool call, dispatch, build step, or analysis on the work. This holds for every kind of work, however it arrives: Will's direct ask, a plan formed in a side chat, a follow-on Emise originates, a pipeline that will run for days. Registration is the intake, not the summary: a task recorded after work starts has already spent its most losable hours invisible to the queue, the watchdog, and the ticks.
+
+- If work is discovered already underway with no record, registering it is the **first** act — before touching the work itself. (Exhibit: the brain-scan pipeline ran 2026-11-15/16 with no task record, living only in a folder's PIPELINE.md; found and registered 2026-11-17 only when Will asked for its ETA.)
+- A dispatch brief may carry a coordinate computed at issue, but the record itself must exist in tasks-source.json (rebuilt + CURRENT) **before** the dispatch goes out — not minutes after, not at delivery.
+
 ## The process
 
 1. **At issue:** compute the coordinate from Will's exact words with `~/workspace/custom-skills/singular/scripts/task_coordinate.py`. State the coordinate when acknowledging the task; carry it in dispatch briefs and tracked records.
-2. **Record immediately:** append the task record to tasks-source.json — request verbatim when his exact words are in hand (`verbatim: true`); from a session record or summary, mark `verbatim: false` and do not invent wording. Status starts as what is true ("in progress — …", "active", "open — …").
+2. **Record immediately — before processing (see above):** append the task record to tasks-source.json — request verbatim when his exact words are in hand (`verbatim: true`); from a session record or summary, mark `verbatim: false` and do not invent wording. Status starts as what is true ("in progress — …", "active", "open — …").
 3. **Rebuild + check** in the same step. A task that exists only in chat does not exist — same anti-drop logic as the Waiting-on-Will register.
 4. **As work proceeds:** append notes (decisions, corrections, verified facts) and results (deliverables with paths/hashes/URLs) to the task's record and rebuild. Notes are durable events only, not tool chatter — the same restraint as the phext journal.
 5. **At closure:** set the final status and the result that closed it. Completed tasks stay in the register; the index is the history.
