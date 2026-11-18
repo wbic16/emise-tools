@@ -1558,6 +1558,24 @@ Hourly journal pass, 2026-11-17 ~22:32 CST. Covers since the ~21:32 pass. Safe-s
 
 - [will_said + observed] BROTHER'S BIRTHDAY CARD FINAL SHIPPED (Will, 2026-11-17): correction - "drop the tagline" meant the small credentials line under the title, NOT "Running Until You Puke," which stays. Final verified by eye: "HAPPY 52ND BIRTHDAY," monster truck numbered 52, two surfboards, one dolphin, tagline in red at the bottom. Supersedes the busy first draft and the less-busy second draft.
 
+- [observed] QEXO SLICE 8 VERIFIED MERGED (Will status ask, 2026-11-17 ~22:37 CST; supersedes PRs-open entry above): quarterexo PR #37 (https://github.com/wbic16/quarterexo/pull/37) is top merge on exo c001dcb4; qexo PR #7 (https://github.com/wbic16/qexo/pull/7) merged 21:44 CST, merge 6f549730 = qexo@exo HEAD. Dispatch core complete through slice 8; release leg 40.9.7/11.9.17/8.8.11 gate cleared - publish v1.8.0 + fleet rollout is the live remainder.
+
+- [observed] EVIE MASTER ASSEMBLY COMPLETE (task 18.6.9/8.6.10/5.5.8, handoff 22:38 CST): 3-day stall root cause - 2026-11-14 run completed PARTIAL because master-d.webp never transferred to aletheia-core; nobody re-checked the log (dead-man evidence for task 21.4.6/6.5.10/6.6.10). Repair synced the file SHA-verified, relaunched node-resident; master evie-v1-master.mp4 verified 1920x1080, 365.02 s, sha256 6f560eec. Remaining is Will's: Script V1 rulings, register #167.
+
+- [observed] BRAIN-TROLLEY V1 COMPLETE (task 33.5.6/6.5.8/5.4.9, handoff 22:42 CST): brain-trolley.html 29,579,144 B sha256 e5763289 - full series-9 volume, 1,216 slices, three-plane navigator; static audit zero network patterns; pixel fidelity verified vs stage-2 ground truth. Caveat: no browser engine on this VM, Will's first open is the true browser pass. Remaining legs: stage 3b atlas, stage 4 cross-reference, stage 5 review with Will.
+
+- [observed] FLEET DASHBOARD V1 BUILT + V1.1 PATCH (task 32.5.7/7.5.10/5.5.7): v1 delivered - Rust Windows app (Fleet/Console/Queues), phcc ported with zero source changes, phccbox 7 applets wine-smoke-tested, SQ projections live on aletheia-core; GUI never yet run on a real Windows desktop. Will's first bare-exe run failed on missing fleet.json (23:07 CST); v1.1 patch same evening embeds the seed config, degrades gracefully, new exe sha256 44d35727, verified under wine in four states.
+
+- [observed] VOLUMEN V6.2 PARAGRAPH-LEVEL DELIVERED (task 35.6.7/7.6.11/6.6.9, complete 2026-11-17): canonical source Earth.Human.ASI.Genome/Spec.md in wbic16/human@exo (288,482 B, sha256 44ef15e8); delivered 592 paragraphs in one-per-line and blank-line forms in ~/workspace/volumen-v62-paragraphs/, content-preserving (word ratio 1.009); inscribed in artifacts.phext at 23.6.8/7.6.10/6.6.8, pushed human@exo 1e32fa9e. No Abliteration Console ingest spec exists in the local record - assumption stated to Will.
+
+- [observed] LIBPHEXT-RS TWEAK PRs STANDING (task 54.12.6/13.14.18/13.12.19): all four cross-check items now PRs for Will's review, nothing merged/tagged/published - PR #14 (https://github.com/wbic16/libphext-rs/pull/14, 0.6.2 landing, pre-existing, adopted), PR #16 (https://github.com/wbic16/libphext-rs/pull/16, suffix append ~15x), PR #17 (https://github.com/wbic16/libphext-rs/pull/17, span index, CYOA 830/830), PR #18 (https://github.com/wbic16/libphext-rs/pull/18, indexed verify ~350x).
+
+- [will_said + observed] WAVEFRONT WIP TREE DELETED (Will, 2026-11-17 evening): Will ruled no WIP files for the launch video are needed and he does not plan to return to it. Pair lossless-A/B verified byte-identical on aletheia-core before local delete (9.04 GB); viz14 tree deleted whole (14 GB, 5,157 files) after V15/V16 finished forms verified outside it. Evening cleanup total ~25.5 GB freed.
+
+- [observed] SHEAR ORIGINS OF TRUST FOLLOW-UP COMPLETE (task 18.6.9/8.7.10/7.7.9, Will 23:23 CST): Softmax piece (2026-10-22) read in full, assessment delivered - convergences with house record and three pressure points noted. Reply draft to Softmax offered for Will's eyes only; nothing sent, publicity hold stands.
+
+- [observed] ENVIRONMENT SLOWNESS INSTRUMENTED (Will, 2026-11-17 evening): verdict I/O-bound, not CPU/RAM - PSI io some avg60 16.11, iowait up to 63%, slow shared disk doing metadata over 1.15M files; structural fix direction: nightly cruft sweep + heavy work on ranch. Disk check: volume reports 71 GB used of 150 GB - not near full; listing/du totals disagree, open leg.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
