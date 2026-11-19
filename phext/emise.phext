@@ -1464,6 +1464,12 @@ Hourly journal pass, 2026-11-19 ~12:32 CST. Covers since the 11:32 pass. Safe-sp
 
 - [observed] SCROLLSPACE VIDEO V2 DELIVERED (task 29.6.9/10.7.11/7.6.10, 2026-11-19 12:04 CST; STATE ~/workspace/scrollspace/video/STATE.md): across-the-years-traversal-v2.mp4 delivered alongside v1 - 29,453,159 B, sha256 05e6ac43; spec QC PASS: 1920x1080, 25 fps, exactly 260.000 s, decoded audio peak -2.18 dB (under the -1.5 dB ceiling, no clipping), no black spans, frame checks PASS at every lyric landing and at mid-transit piloting frames. Flown with real input events only on the pinned PR #91 client (Tab locks, drag aim, F/A/W/E flight with boost, wheel throttle, Z/X rolls) - no evaluate-set camera. Task stays OPEN: v1 remains the master until Will approves v2.
 
+Hourly journal pass, 2026-11-19 ~13:32 CST. Covers since the 12:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks, watchdogs, commit-rollup errors, and vTPU samples (still 8/14) not repeated.
+
+- [observed] SCROLLSPACE V2 APPROVAL WAIT REGISTERED AS #199 (task-progress tick 2568, 2026-11-19 12:53 CST): the unregistered-wait sweep found the Scrollspace traversal video v2 approval wait (task 29.6.9/10.7.11/7.6.10, v2 delivered this morning, awaiting Will's approval; v1 remains master; predecessor #195 closed earlier today) missing from the Waiting-on-Will register; repaired as register #199 in waiting-on-will.md + todo.phext mirror (register 104 -> 105 items; todo.phext rebuilt, --check CURRENT).
+
+- [observed] WAITING-ON-WILL REGISTER TRUNCATION FOUND AND REPAIRED (task-progress tick 2569, 2026-11-19 13:03 CST): the markdown register waiting-on-will.md was found truncated to its tick-2568 header alone (3,480 B, no item body). Restored from the pre-2568 backup (104 items), re-applied the tick-2568 header, inserted the #199 entry from its todo.phext mirror record, and prepended the tick-2569 header. Verified post-write: 1,663,440 B, 2,239 lines, all 105 register numbers present as markdown items; todo.phext and tasks.phext both --check CURRENT, register/mirror agree at 105 items.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
