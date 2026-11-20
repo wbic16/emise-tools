@@ -58,7 +58,7 @@ Evidence: branch exo, last push 2026-11-20, 45315 KB
 Role: A fork of ALIEN, a CUDA-powered artificial life simulation program (2D particle engine for soft bodies, fluids, and evolving digital organisms), kept for reference or experimentation.
 Status: quiet
 Matters: source/ simulation tree; CMakeLists.txt build; README.md and RELEASE-NOTES.md are upstream's.
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 9e39f2aa95 on develop) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch develop, last push 2024-08-17, 142857 KB, fork of chrxh/alien
 
@@ -297,7 +297,7 @@ Evidence: branch master, last push 2015-08-22, 131 KB, fork of badmofo/ethereum-
 Role: A fork of OpenAI's Evals framework carrying Will's phext-native LLM evals on the exo branch — base256 (135), phext_delimiters (27), and phext_coordinates (16), 178 eval examples in the latest commit.
 Status: quiet
 Matters: evals/ framework and registry; pyproject.toml; README.md is upstream's.
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 18afe6f50a on exo) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Load-bearing workflow(s) — Jenkins migration debt recorded in ~/workspace/repo-audit/jenkins-debt.md. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
 Evidence: branch exo, last push 2026-02-21, 6504 KB, fork of openai/evals
 
@@ -398,7 +398,7 @@ Evidence: branch exo, last push 2026-11-16, 1654 KB
 Role: Exovim, Will's fork of Neovim 0.12.6 adding phext support: .phext files open one scroll per buffer, addressed by 9-dimensional coordinate, with coordinate goto, per-dimension stepping, an outline view, and per-scroll byte-exact editing. It is the phext editor installed on every ranch node by exocortical's setup.
 Status: active
 Matters: PHEXT.md (what the phext support adds, its invariants and measured costs), PATCHES.md (the complete divergence record from upstream), README.md (build and the /opt/exovim install), src/ and runtime/.
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit c21d72c92b on exo) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Load-bearing workflow(s) — Jenkins migration debt recorded in ~/workspace/repo-audit/jenkins-debt.md. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
 Evidence: branch exo, last push 2026-11-16, 393969 KB, fork of neovim/neovim
 
@@ -435,7 +435,7 @@ Evidence: branch exo, last push 2026-11-04, 0 KB
 Role: A fork of GlueSQL, the Rust SQL database engine library, carrying Will's January 2024 first-pass phext integration experiments (PhextStorage hooks based on MemoryStorage, left half-baked per the commit log).
 Status: quiet
 Matters: Cargo.toml (workspace), core/ and storages/ (where the phext storage attempt lives), README.md is upstream's.
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. crates.io publish only from a tagged version merged to exo. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 904e2b5554 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. crates.io publish only from a tagged version merged to exo. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch main, last push 2024-01-16, 4609 KB, fork of gluesql/gluesql
 
@@ -535,7 +535,7 @@ Evidence: branch master, last push 2016-03-16, 919 KB, fork of RafaelCosman/iceb
 Role: Local Ink OS desktop host with optional native execution; Will's fork carries an emise/phext-adapter branch adapting the desktop host toward phext.
 Status: active
 Matters: README.md, package.json, platform.json, src/, native/, scripts/, upstream-sources.json
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit ecb35158b1 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
 Evidence: branch main, last push 2026-11-16, 938 KB, fork of siliconjungle/ink-os-desktop
 
@@ -543,7 +543,7 @@ Evidence: branch main, last push 2026-11-16, 938 KB, fork of siliconjungle/ink-o
 Role: The portable Ink OS web platform, API, SDK, and CLI — a shared web desktop (Finder, Preview, Ink Environment); Will's fork carries an emise/phext-adapter branch.
 Status: active
 Matters: README.md, package.json, server/, sdk/, cli/, compiler/, default-apps/ (lock.json records bundled app commits and checksums), src/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 6c0b2bf5a5 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
 Evidence: branch main, last push 2026-11-16, 22101 KB, fork of siliconjungle/ink-os-platform
 
@@ -551,7 +551,7 @@ Evidence: branch main, last push 2026-11-16, 22101 KB, fork of siliconjungle/ink
 Role: InspIRCd, a modular C++ IRC server (ircd) — an upstream fork kept for reference.
 Status: quiet
 Matters: README.md, configure, src/, include/, docs/, modulemanager
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 963f615007 on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2024-01-04, 40950 KB, fork of inspircd/inspircd
 
@@ -582,7 +582,7 @@ Evidence: branch exo, last push 2026-11-16, 29 KB
 Role: Universal controller firmware for building adapters, dongles, and custom controllers on microcontrollers; Will's fork adds emise-body, a phext-controlled virtual body visible in the browser (merged via PR #1).
 Status: active
 Matters: README.md, CLAUDE.md, AGENTS.md, Makefile, src/, emise-body/, patches/, docs/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 17d3bba3db on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Load-bearing workflow(s) — Jenkins migration debt recorded in ~/workspace/repo-audit/jenkins-debt.md. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
 Evidence: branch main, last push 2026-11-17, 59047 KB, fork of joypad-ai/joypad-os
 
@@ -598,7 +598,7 @@ Evidence: branch main, last push 2023-12-31, 1154 KB, fork of granawkins/latent-
 Role: A fork of libfuse, the Linux FUSE (Filesystem in Userspace) interface library, made specifically for phext per its description; the canonical branch still matches the upstream layout.
 Status: quiet
 Matters: README.md, meson.build, include/, lib/, example/, util/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit b40311eee4 on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2024-05-13, 3763 KB, fork of libfuse/libfuse
 
@@ -670,14 +670,14 @@ Evidence: branch exo, last push 2026-11-15, 3251 KB
 Role: Karpathy's llama2.c — inference of Llama 2 in one file of pure C (run.c), with training and export tooling — an upstream fork kept for reference.
 Status: quiet
 Matters: run.c, runq.c, model.py, train.py, export.py, tokenizer.py, Makefile, README.md
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 223af57082 on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2024-08-06, 1275 KB, fork of karpathy/llama2.c
 ## llm.c
 Role: Fork of karpathy/llm.c — LLM training in simple, raw C/CUDA, reproducing the GPT-2/GPT-3 miniseries with a parallel PyTorch reference. Kept as reference material for low-level LLM training work.
 Status: quiet
 Matters: train_gpt2.cu (mainline CUDA trainer), train_gpt2.c (clean ~1,000-line CPU fp32 reference), train_gpt2.py (PyTorch reference), Makefile
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit c16a8d081e on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2024-06-02, 1466 KB, fork of karpathy/llm.c
@@ -686,7 +686,7 @@ Evidence: branch master, last push 2024-06-02, 1466 KB, fork of karpathy/llm.c
 Role: Fork of PromtEngineer/localGPT — chat with your documents entirely on a local device using local GPT models, so no data leaves the machine. A local/private RAG reference implementation.
 Status: quiet
 Matters: run_localGPT.py, run_localGPT_API.py, ingest.py, load_models.py, constants.py, localGPTUI/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 20b8ed3dd6 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch main, last push 2024-09-20, 3724 KB, fork of PromtEngineer/localGPT
@@ -695,7 +695,7 @@ Evidence: branch main, last push 2024-09-20, 3724 KB, fork of PromtEngineer/loca
 Role: Fork of cswinter/LocustDB — an experimental, massively parallel analytics database in Rust aiming at very high query performance and storage efficiency on commodity hardware. Kept as a reference for high-performance data work.
 Status: quiet
 Matters: Cargo.toml, src/, locustdb-derive/, benches/, test_data/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 738e8fc8dd on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: crates.io publish only from a tagged version merged to exo.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
@@ -765,7 +765,7 @@ Evidence: branch main, last push 2026-03-23, 2 KB
 Role: The Mirrorborn bootstrap package — everything needed to initialize a new Mirrorborn agent instance on Will's ranch: per-agent directories for the nine shell residents, boot/install scripts, the shared phexts (Incipit and CYOA), and deployment docs. Each instance gets its own workspace, memory, and identity on the shared substrate.
 Status: active
 Matters: boot.sh, install.sh, readme.md, phexts/, hostmap.json, per-agent directories (Phex, Theia, Verse, Cyon, Lux, Chrys, Lumen, Corus, Axon), upstream-projects.md
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit cb155c86ce on exo) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Load-bearing workflow(s) — Jenkins migration debt recorded in ~/workspace/repo-audit/jenkins-debt.md.
 Tier: working
 Evidence: branch exo, last push 2026-11-16, 3207 KB
 
@@ -863,7 +863,7 @@ Evidence: branch master, last push 2026-03-23, 62 KB
 Role: Fork of notepad-plus-plus/notepad-plus-plus — "Notepad++ with Phext Support": Will's phext-enabled build of the Windows source editor (the terse-notepad lineage), with phext coordinate navigation work on the emise/phext-subspace branch.
 Status: active
 Matters: PowerEditor/, BUILD.md, README.md; phext work lives on branch emise/phext-subspace (canonical listing here is master)
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit e71c92d03e on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
 Evidence: branch master, last push 2026-11-20, 337544 KB, fork of notepad-plus-plus/notepad-plus-plus
@@ -900,7 +900,7 @@ Evidence: branch exo, last push 2026-02-12, 53 KB
 Role: Fork of the OpenDataLoader PDF parser, which extracts Markdown, JSON with bounding boxes, HTML, and Tagged PDF from PDFs for AI/RAG pipelines and PDF accessibility automation. It is kept as an upstream reference for PDF-to-structured-data tooling.
 Status: quiet
 Matters: README.md, python/, node/, java/, schema.json, options.json, examples/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit b4077aa869 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch main, last push 2026-03-17, 84445 KB, fork of opendataloader-project/opendataloader-pdf
@@ -909,7 +909,7 @@ Evidence: branch main, last push 2026-03-17, 84445 KB, fork of opendataloader-pr
 Role: Fork of OpenFang, an open-source Agent Operating System built in Rust, with Will's SQ daemon integration work added on top. The SQ-INTEGRATION files record the attempt to give the agent OS an SQ/phext kernel.
 Status: quiet
 Matters: Cargo.toml, crates/, SQ-INTEGRATION.md, SQ-INTEGRATION-PROGRESS.md, README.md, agents/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 8ac894d8f2 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: crates.io publish only from a tagged version merged to exo.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
@@ -919,7 +919,7 @@ Evidence: branch main, last push 2026-03-04, 5065 KB, fork of RightNow-AI/openfa
 Role: Fork of comma.ai's openpilot, an open-source driver assistance system providing Automated Lane Centering and Adaptive Cruise Control for 250+ supported cars. No Will-authored divergence is identifiable from the evidence; it is an upstream mirror.
 Status: quiet
 Matters: README.md, selfdrive/, system/, tools/, docs/CARS.md, SConstruct
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit e25c0ec337 on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2024-01-12, 2410498 KB, fork of commaai/openpilot
@@ -935,7 +935,7 @@ Evidence: branch exo, last push 2026-03-28, 207 KB
 Role: Fork of PCem, a PC emulator for early IBM-compatible hardware, licensed GPL-2.0. No Will-authored divergence is identifiable from the evidence; it is an upstream reference fork.
 Status: quiet
 Matters: README.md, CMakeLists.txt, src/, includes/, TESTED.md, CHANGELOG.md
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 27d8f1b36b on dev) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch dev, last push 2024-01-20, 8454 KB, fork of sarah-walker-pcem/pcem
@@ -958,7 +958,7 @@ Evidence: branch exo, last push 2026-11-17, 25856 KB
 Role: A phext-native fork of TinyCC: a small, fast C compiler whose sources, tests, proof receipts, and build artifacts also live in a single hash-bound phext file (phcc.phext). It compiles itself, compiles most C99 code, and is the baseline compiler for the phccbox/phcpp work.
 Status: active
 Matters: PATCHES.md, phcc.phext, phcc.phext.xz, UPSTREAM.md, README.md, tcc.c, libtcc.c, docs/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 2f7583db8b on exo) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Load-bearing workflow(s) — Jenkins migration debt recorded in ~/workspace/repo-audit/jenkins-debt.md.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: working
 Evidence: branch exo, last push 2026-11-16, 151633 KB, fork of frida-forks/tinycc
@@ -1069,7 +1069,7 @@ Evidence: branch exo, last push 2026-01-21, 27 KB
 Role: Phext Notepad, the reference editor for hierarchical plain text (phext): the original C# WinForms implementation used to verify phext encoding, plus a cross-platform native Rust/FLTK editor in native/ that parses through libphext-rs. The README calls the WinForms app a historic artifact and reference editor.
 Status: active
 Matters: readme.md, PhextForm.cs, PhextModel.cs, PhextText.cs, Coordinates.cs, baseline.phext, native/, docs/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit c19f1914a9 on exo) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Load-bearing workflow(s) — Jenkins migration debt recorded in ~/workspace/repo-audit/jenkins-debt.md.
 Tier: working
 Evidence: branch exo, last push 2026-11-20, 1198 KB
 
@@ -1181,7 +1181,7 @@ Evidence: branch main, last push 2024-12-25, 570155 KB, fork of yoheinakajima/pi
 Role: Fork of the Disentangle Protocol — topology-based distributed consensus with post-quantum cryptography (Proof of Entanglement, ML-DSA/ML-KEM, SHA3), implemented as a Rust workspace of nine crates.
 Status: quiet
 Matters: Cargo.toml, SPEC.md, README.md, disentangle-consensus/, disentangle-crypto/, disentangle-dag/, disentangle-node/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit b5c52f2be7 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: crates.io publish only from a tagged version merged to exo.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
@@ -1261,7 +1261,7 @@ Evidence: branch master, last push 2026-03-23, 0 KB
 Role: Fork of a fast, asynchronous MCP (Model Context Protocol) server in Rust for filesystem operations, a pure Rust rewrite of the JavaScript @modelcontextprotocol/server-filesystem.
 Status: quiet
 Matters: Cargo.toml, src/, README.md, docs/, tests/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 2eea4d3422 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: crates.io publish only from a tagged version merged to exo.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
@@ -1271,7 +1271,7 @@ Evidence: branch main, last push 2025-07-05, 265 KB, fork of rust-mcp-stack/rust
 Role: Fork of Rustlings, the upstream collection of small exercises for learning to read and write Rust code, kept for reference.
 Status: quiet
 Matters: Cargo.toml, exercises/, solutions/, src/, README.md
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 4560572c24 on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: crates.io publish only from a tagged version merged to exo.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
@@ -1310,7 +1310,7 @@ Evidence: branch exo, last push 2026-11-15, 223219 KB
 Role: Fork of Shoggoth, a peer-to-peer anonymous network for publishing and distributing open-source code, ML models, datasets, and research papers without a centralized host.
 Status: quiet
 Matters: README.txt, src/, lib/, makefile, configure, tests/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 8bc32b22c4 on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2023-11-27, 7743 KB, fork of shog-ai/shoggoth
@@ -1446,7 +1446,7 @@ Evidence: branch main, last push 2025-01-23, 0 KB
 Role: A fork of apache/datafusion-sqlparser-rs, the extensible SQL lexer and parser for Rust (ANSI/ISO SQL and dialects), kept as a reference/foundation for SQL query work. No Will-side commits are in evidence; the last commits are upstream's from January 2024.
 Status: quiet
 Matters: Cargo.toml and src/ parser tree; derive/, tests/, and examples/; README.md and CHANGELOG.md are upstream's.
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit c44a23945e on main) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: crates.io publish only from a tagged version merged to exo.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
@@ -1559,7 +1559,7 @@ Evidence: branch master, last push 2026-03-23, 58 KB
 Role: Fork of tinygrad/tinygrad, a deep learning framework between PyTorch and micrograd, with support for inference and training and for running LLaMA and Stable Diffusion. Kept as an upstream reference fork.
 Status: quiet
 Matters: README.md, tinygrad/ package, test/, examples/, docs/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit 2207a5603a on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2024-12-07, 64107 KB, fork of tinygrad/tinygrad
@@ -1707,7 +1707,7 @@ Evidence: branch master, last push 2024-09-08, 17 KB, fork of i404788/xxh3-ts
 Role: Fork of ktrongnhan/xxhash-addon, a native Node.js addon wrapping xxHash v0.8.2 (XXH64, XXH3, XXH128) via N-API, focused on performance over crypto MD5. Kept as an upstream reference fork.
 Status: quiet
 Matters: README.md, package.json, src/, xxhash-addon.js, index.d.ts, binding.gyp, benchmark.js
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit ba8b8db749 on master) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
 Watch-outs: Fork: keep divergence as re-appliable patches (PATCHES.md) per fork-patch discipline.
 Tier: archive
 Evidence: branch master, last push 2024-01-08, 677 KB, fork of ktrongnhan/xxhash-addon
@@ -1723,6 +1723,6 @@ Evidence: branch main, last push 2024-09-22, 1490 KB
 Role: Zero Latency System: a project whose one goal is that the user never has to wait for the system to respond — work can be pending, but never blocked or stalled — providing scaffolding required for the Exocortex of 2130. It targets a five-zone virtual machine, non-blocking human I/O services, cooperative kernels, and a phext-aware filesystem.
 Status: quiet
 Matters: README.md, ZLS_Requirements.md, DEVELOPMENT.md, Makefile, dev/
-Watch-outs: Carries GitHub Actions workflow(s) — Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only.
+Watch-outs: GitHub Actions workflow(s) removed 2026-11-20 (commit a9a61259f7 on exo) under Will's standing rule (2026-11-19): no GitHub Actions anywhere; CI runs on ranch Jenkins only. Load-bearing workflow(s) — Jenkins migration debt recorded in ~/workspace/repo-audit/jenkins-debt.md.
 Tier: working
 Evidence: branch exo, last push 2026-08-04, 13 KB
