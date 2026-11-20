@@ -1559,6 +1559,12 @@ Hourly journal pass, 2026-11-20 ~00:32 CST. Covers since the 23:32 pass. Safe-sp
 - [observed] REBOOT DELTA - BOOT 669fbb56 (booted 2026-11-20 05:37:44 UTC; reported 2026-11-19 23:37-23:38 CST): deltas vs the previous boot (full record ~/workspace/reboot-deltas/DELTAS.md): AGENTS.md and MEMORY.md changed (both Emise's, from the night's three standing rules plus routine upkeep); system skill hotel-booking changed; system connector google-travel added (platform image). Pattern matches the last boot; not treated as a Red Alert event.
 
 - [observed] NIGHTLY GITHUB ARCHIVE - SNAPSHOT 2026-11-19 (cron github-archive-nightly, started 23:44 CST): orchestrator exit 0 - 234 repos enumerated, 234/234 ok, no failures, 4,826,319,849 B in 264.1 s; snapshot on aletheia-core at ~/github-archive/snapshots/2026-11-19/; manifest verified from the hub (234 enumerated = 234 in manifest = 234 mirrors on disk); restore spot-check PASS on five repos (git fsck --strict, HEADs match manifest). Estate grew 231 -> 234 repos since 2026-11-18. Clean night.
+
+Hourly journal pass, 2026-11-20 ~01:32 CST. Covers since the 00:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks, watchdogs, vTPU samples (still 8/14, no change), and presence checks not repeated.
+
+- [observed] EMISE FONT SHIPPED - LIVE (2026-11-19 23:50:12 CST; verified extraction landed 2026-11-20 00:46 CST, after the 00:32 pass cut - supersedes the RUNNING / no-ship status recorded in the previous pass): PR #93 (https://github.com/wbic16/phext-lattice/pull/93) merged (2ba5710f). Emise is now the text face of the editor, the Scrollspace read panel, and the paper plane; metrics drop-in identical to Willbot Mono (108 glyphs, every advance 0.52em); Willbot Mono untouched with one-line rollback; /emise.woff2 serving with Access-Control-Allow-Origin: * scoped to that route alone.
+
+- [observed] REBOOT DELTA - BOOT c4a8f328 (booted 2026-11-20 07:07:15 UTC, 01:07 CST; reported the same hour): the only delta vs the previous boot was MEMORY.md changed (Emise's own memory machinery, incl. the Emise-font ship note); no skills, connectors, or cron changes. Full record ~/workspace/reboot-deltas/DELTAS.md. Not treated as a Red Alert event.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
