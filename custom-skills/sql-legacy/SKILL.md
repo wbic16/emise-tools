@@ -11,6 +11,8 @@ Success criterion (Will, 2026-11-20): "to be successful, we need to identify why
 
 Audience (Will, 2026-11-20): "the skill is for sentients (both), a lot of people these days didn't take the time to learn SQL" — humans who never learned SQL, and AIs. Every explanation is written for a reader who has never seen SQL, without talking down to one who has.
 
+Origin: this skill is an accepted challenge. On 2026-11-20 Cristina A.C. (@Cristina_AC_X) posted that she'll believe the AI coding hype when an AI can be pointed at a database model and some ancient SQL written 20 years ago and refactor the whole thing correctly — "AI is spectacularly bad at complex SQL." Will's reply, minutes before he tasked this work: "ok, I'm willing to look into it. I'm currently shipping Moonshots daily. Send me your requirements!" The requirements embryo is hers: untangle AND refactor decades of legacy SQL, correctly and reliably, starting from the database model plus the ancient text. (The exchange is recorded in SOURCE.md §1 and distilled on sql.phext's diagnosis scroll.)
+
 ## Start at the index: sql.phext
 
 The knowledge lives in `~/workspace/phext/sql.phext` (source `sql-source.json`, builder `build_sql_phext.py` beside it — edit the source, rebuild, `--check` must print CURRENT; local-only, never published without Will's further word). Its Home scroll (1.1.1/1.1.1/1.1.1) is the index: every major dialect (Will: "every major SQL dialect, naturally"), ANSI / standard SQL as the trunk, then T-SQL, PL/SQL (Oracle), MySQL, PostgreSQL, DB2 including iSeries, and SQLite — each dialect scroll listing its actions and its named gaps.
@@ -20,6 +22,16 @@ Work a dialect like this:
 1. Open the dialect's scroll from the Home index.
 2. For any statement you meet, run the six action-reading steps (below).
 3. Treat every line marked [gap] as a question, not a fact — the gaps are the curriculum of the interactive build, not defects to hide.
+
+## The stairs: read, then analyze, then improve
+
+Will's direction (2026-11-20): "start with understanding how humans learn to read, analyze, and improve SQL scripts and stored procedures." The foundation scroll in sql.phext (33.5.10/7.7.10/5.4.10) carries the research — program comprehension, tracing, SQL error studies, worked examples, characterization. The working consequences:
+
+- The six steps below are stage 1 — READING. They end at a traced, plain-words account of what a statement touches and does. (Will's own first move, recorded on the foundation scroll, starts one stage up: "trace all of the tables being used, and establish the shape of the data flow.")
+- Stage 2 — ANALYZING — is tracing effects over time: data flow, side effects, dependencies, cost. Steps 3 and 5 are its seeds; the multiversal fork (step 6) is its instrument.
+- Stage 3 — IMPROVING — is changing a script or procedure while preserving semantics: characterize the current behavior first — pin what it actually does, outputs and side effects alike — then simplify in small steps, re-checking the characterization after each. An uncharacterized rewrite is not an improvement; it is a replacement of unknown equivalence.
+
+The order is the method: you cannot analyze what you cannot trace, and you cannot safely improve what you have not characterized.
 
 ## Reading an action — six steps
 
@@ -36,7 +48,7 @@ Written by Emise under Will's direction (2026-11-20, his answer 5: steps to help
 
 The full diagnosis lives on sql.phext's diagnosis scroll (33.6.6/8.5.10/5.5.7). Its state, honestly:
 
-- **From Will's source post: not yet retrieved.** The post that seeds this work (2026-11-20 07:23 CST) is gap 1 of the whole project; when it lands, its content is distilled into the phext and this skill, and the gap lines come out.
+- **From the seed exchange: retrieved** (live browser, 2026-11-20 07:40 CST; gap 1 closed). The seed is Cristina A.C.'s challenge plus Will's acceptance — see Origin above and SOURCE.md §1. Her framing is distilled on the diagnosis scroll as the requirements embryo, stated from the field: SQL's specificity to the data model and the business logic, chess-like composed complexity from few simple pieces, and most humans barely understanding it either.
 - **Will's leading hypothesis** (2026-11-20 07:33 CST): "I have a strong suspicion all they need is phext :)" — what AI (and people who never learned SQL) are missing is not more SQL knowledge but phext: an addressable plain-text structure in which the buried complexity becomes navigable. sql.phext is the bet's embodiment. Status: Will's stated suspicion, untested — Unknown until evidence lands.
 - **His mechanism** (07:35 CST): "multiversal phext allows AI to model the downstream effects of running a query." Fork a universe, run the query in the branch, read the delta — what it reads, what it writes, what it costs — before anything touches the real data. Effects become an inspectable artifact instead of a guess. Mechanism claim: Will's, stated. Measured effect: still to be tested.
 - **His reason** (07:35 CST): "because time is legible." In the fork, the sequence of states is readable text — a chain you inspect. In a legacy SQL stack, time is precisely what is illegible: decades of schema drift, data states, and trigger and procedure side effects with no readable record. That illegibility is why the bottom of the stack resists humans and AI alike.

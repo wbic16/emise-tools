@@ -5,21 +5,46 @@ the skill and the phext traces to this file: Will's words (verbatim),
 Will's answers to the scoping questions (verbatim), live test runs
 (logged on sql.phext's verification scroll), or a labelled Emise draft.
 
-## 1. The source post — NOT YET RETRIEVED
+## 1. The seed exchange — RETRIEVED 2026-11-20 07:40 CST (live browser); GAP 1 CLOSED
 
-- URL: https://x.com/wbic16/status/2123769099134067078
-- Author: Will (@wbic16). Posted 2026-11-20 07:23 CST (the status ID's
-  snowflake timestamp decodes to 2026-11-20 13:23:05 UTC).
-- Retrieval attempts, 2026-11-20: the worker's page-text fetch is
-  domain-blocked for x.com, and the runtime barred repeating the request
-  through other endpoints; the local Twitter archive
-  (~/workspace/twitter-archive/) ends 2025-06-16 and contains no trace of
-  the status ID; no X/Twitter read connector exists. A live-browser
-  retrieval by the main agent is the open route.
-- Until it lands, the post is GAP 1 of the project, named on sql.phext's
-  Home scroll and diagnosis scroll. When it is retrieved, its full text
-  is added here verbatim and its content distilled into the phext and
-  the skill; nothing in either was written from guesses about it.
+What the linked post actually is — recorded plainly, because it corrects
+the assumption this project started under: the seed was never a Will
+essay. The post Will linked (status 2123769099134067078, posted
+2026-11-20 07:23 CST, minutes before he sent the link) is his REPLY to
+Cristina A.C. (@Cristina_AC_X). Her post is the substantive seed; his
+reply is a public acceptance of her challenge. The skill's origin is an
+accepted challenge.
+
+Will's reply, verbatim (his words, kept whole):
+
+"ok, I'm willing to look into it. I'm currently shipping Moonshots
+daily. Send me your requirements!"
+
+Cristina's post — faithful summary (her full text is NOT stored here:
+this file syncs to GitHub, so she is carried as summary + two short
+quoted fragments + the link):
+
+She will believe the AI coding hype when you can point an AI at a
+database model and some ancient SQL written 20 years ago and have it
+refactor the whole thing correctly. "AI is spectacularly bad at complex
+SQL." Boilerplate is easy because it has been coded a billion times;
+SQL is specific to the data model and the business logic, which AI
+often doesn't understand — and frankly most humans barely understand it
+either. "SQL is a bit like chess. Few pieces, simple rules, but the
+complexity you can create with them is enormous." Whoever builds an AI
+that can reliably untangle and refactor decades of legacy SQL will be
+buried under a mountain of cash by Fortune 500 companies. It is her
+day job; she knows the pain intimately.
+
+- Exchange: https://x.com/wbic16/status/2123769099134067078 (Will's
+  reply; Cristina's post is its parent).
+- Retrieval history: the worker's page-text fetch was domain-blocked
+  for x.com and the local Twitter archive (~/workspace/twitter-archive/)
+  ends 2025-06-16 with no trace of the status ID; a live-browser pass
+  by the main agent read the exchange on 2026-11-20 (07:38–07:40 CST).
+  GAP 1 is CLOSED. Her challenge is distilled into sql.phext's
+  diagnosis scroll as the requirements embryo; nothing in the skill or
+  the phext was ever written from guesses about the post.
 
 ## 2. Will's refinements (main chat, 2026-11-20)
 
