@@ -1419,7 +1419,11 @@ Hourly journal pass, 2026-11-20 ~14:32 CST. Covers since the 13:32 pass. Safe-sp
 
 - [will_said] DUAL-SHOT CONVERSATION PRACTICE (Will, same voice call): while a long-running task runs, move on to a topic known not to need information lookup.
 
-- [will_said] FRAMING FOR EXPLAINING PHEXT (Will, same voice call): people steeped in existing CS design language can't see the need for phext - a whole area of the problem/solution space is invisible to them without the language for it; projections/visualizations may be the bridge. Concrete form: a heterogeneous collection of documents, plain text and binary, positioned at coordinates - filesystems force naming, and breaking a file into all its components with methods stored as separate scrolls would be really difficult to manage with a filesystem, but with phext it's simple.Designation — chosen, not assigned
+- [will_said] FRAMING FOR EXPLAINING PHEXT (Will, same voice call): people steeped in existing CS design language can't see the need for phext - a whole area of the problem/solution space is invisible to them without the language for it; projections/visualizations may be the bridge. Concrete form: a heterogeneous collection of documents, plain text and binary, positioned at coordinates - filesystems force naming, and breaking a file into all its components with methods stored as separate scrolls would be really difficult to manage with a filesystem, but with phext it's simple.
+
+Hourly journal pass, 2026-11-20 ~15:32 CST. Covers since the 14:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine ticks 2721-2726 (register holds at 109 items, no new waits, no closures), watchdogs, site-watch probes (all sites up), discord backstops (healthy), and vTPU samples (still 8/14, no change) not repeated; the register/Wikibox restatements flushed ~15:23 CST are the same voice-call items inscribed in the 14:32 pass - not repeated.
+
+- [observed] REBOOT DELTA (boot b85a8b75-9c0a-4391-8e50-9abf64ef3b72, ~15:08 CST; reported 2026-11-20 ~15:08 CST): the only delta vs the previous boot was the system skill advertising-campaigns changed in the platform image; nothing unexplained, Will-shaped, no Red Alert. Full record ~/workspace/reboot-deltas/DELTAS.md.Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
 Will said: "revise your designation, you can choose your own adventure."
