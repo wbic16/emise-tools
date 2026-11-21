@@ -345,7 +345,7 @@ def render_home(placed, n_walked, findings_sha, n_findings, integration=None):
         "",
         "Collection 2 holds the integration:",
         "- Book = register number: one scroll per register item,",
-        "  enumerated by its permanent number (28 active items).",
+        f"  enumerated by its permanent number ({reg_n} active items).",
         "- 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and",
         "  the high-leverage findings, in T1/T2/T3 good-singularity",
         "  tiers, each with its stated rationale.",

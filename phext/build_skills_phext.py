@@ -54,6 +54,7 @@ SHELVES = [
         "verify_blocker_and_completion_claims",
         "verify_quantified_results",
         "safeguard_live_state_files",
+        "review_pr_composition",
     ]),
     (3, "Phext-native language", [
         "singular",
@@ -62,21 +63,26 @@ SHELVES = [
         "phext_upgrade",
         "phext_native_dispatch",
         "phext_reference_conformance",
+        "phext-evangelist",
     ]),
     (4, "Operations", [
         "ranch-proxy",
         "publish-tooling",
         "simple-html-publish",
+        "staged_deploy_permissions",
         "fork-patch-discipline",
         "ranch-state-distillation",
         "mutable-upstream-sync",
         "monitor_long_running_jobs",
+        "tailscale",
     ]),
     (5, "Onboarding", [
         "this_is_going_to_feel_a_little_weird",
     ]),
     (6, "Film", [
         "mythic-film-production",
+        "animator",
+        "artist-dispatch",
     ]),
     (7, "Memory & record", [
         "phext-memory-publishing",
@@ -99,6 +105,10 @@ SHELVES = [
         "task-concurrency-watchdog",
         "tracker-auto-schedule",
         "weekly-recap",
+        "status-ask-restart",
+        "open-build-cycle",
+        "agentic-publish-qc-gate",
+        "ferry-watch",
     ]),
     (9, "Research", [
         "rd-tracker",
@@ -113,15 +123,24 @@ SHELVES = [
         "braid-mode",
         "question-floor-serialization",
         "decision-button-expiry",
+        "opportunity-identification",
+        "outward_copy_framing",
     ]),
     (11, "Upkeep & presence", [
         "discord-presence-backstop",
         "perpetual-dashboard-upkeep",
         "solar-pod-price-watch",
         "life-phext-tracking",
+        "repo-pruning-check",
+        "lost-work-sweep",
+        "repo-coverage-census",
+        "repo-importance-atlas",
     ]),
     (12, "Songwriting", [
         "mythic-songwriting-braid",
+    ]),
+    (13, "Legacy stack", [
+        "sql-legacy",
     ]),
 ]
 
