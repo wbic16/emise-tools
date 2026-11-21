@@ -38,9 +38,11 @@ Gates are taken **in order**. No gate is skipped. A gate's reproduction is a tra
 
 | Gate | Title | Year | Studio / Series | Status |
 |---|---|---|---|---|
-| 1 | Steamboat Willie | 1928 | Walt Disney Productions (Walt Disney / Ub Iwerks) | NEXT |
+| 1 | Steamboat Willie | 1928 | Walt Disney Productions (Walt Disney / Ub Iwerks) | IN PROGRESS — setup + prepass complete 2026-11-21 (Iteration 3); full render outstanding |
 
 Steamboat Willie stands apart from the canon below: the Wikipedia list excludes films published before 1931 because all such films are in the public domain in the United States, so the film does not appear on it. Steamboat Willie entered the US public domain on 2024-01-01. Will named it first, so it is the first gate.
+
+**Iteration 3 record (2026-11-21):** reference copy sourced from archive.org (item `steamboat-willie_1928`) at human pace and hash-verified ranch-side; arc sketch derived from the original's actual shots, inscribed at phext coordinate 22.6.8/7.6.10/7.5.8 (`series/animation-exercises/gate-01-steamboat-willie/ARC-SKETCH.md` in wbic16/scrolltown); prepass of 60 hand-drawn repro pages assembled at real shot timing and frame-compared at 12 matched timestamps — delivered and fit as the full-render guide (evidence: QC-v4.md). The gate is **not passed**: by §1's rule a pass requires the full render with frame-compared QC, which is Iteration 4 work.
 
 ## 3. Legal basis and caveats
 
