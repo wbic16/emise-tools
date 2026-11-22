@@ -115,28 +115,47 @@ Will's direction for that version.
 
 ## Auto-install on QC pass
 
-On a PASS verdict (and, for v3 specifically, only after Will's
-review — his 2026-11-22 hold), install the new version on the
-font-consuming sites. Each consumes the font as a **static web asset
-served with the site**; install = replace the asset through that
-surface's own repo + deploy route, then verify the served bytes by
-SHA-256 against the built file:
+On a PASS verdict (v3 additionally waited for Will's review — his
+2026-11-22 hold, lifted by his "Roll out V3" the same night),
+install the new version on the font-consuming sites. Install =
+replace the asset through that surface's own repo + deploy route,
+then verify the served bytes by SHA-256. Exact paths, confirmed from
+the live repos at the v3 roll-out (2026-11-22) — re-confirm from the
+repo at each install anyway:
 
-- **edit.phext.io / Phext Notepad** — the font ships as a web asset
-  of wbic16/phext-lattice (the Emise font first went live there,
-  PR #93, 2026-11-19; Phext Notepad made it the default, PR #9/#10).
-  Replace the served TTF/WOFF2 asset via a lattice PR on exo, deploy
-  by the lattice route, hash-verify the served file.
-- **Phextron (tron.phext.io)** — Will directed Phextron rendered in
-  the Emise font (2026-11-21); its WASM web UI carries the font as an
-  asset in wbic16/phextron. Same pattern: PR on exo, deploy, verify.
-- **Singularity Watch** — the site build carries the font asset
-  (first shipped 2026-11-20, PR #1); replace in the site source,
-  rebuild/deploy by its route, verify served bytes.
+- **edit.phext.io / Phext Notepad** — asset `web/emise.woff2` in
+  wbic16/phext-lattice, branch `exo` (the served name is
+  version-agnostic; the font first went live there PR #93,
+  2026-11-19; Phext Notepad default PR #9/#10). Route: PR on exo
+  (v3: PR #96), Will merges, deploy by the lattice route, verify the
+  served /emise.woff2 hash. The asset is a **WOFF2** — build it from
+  the new TTF by the house fontTools method (`TTFont(ttf)`,
+  flavor woff2, save; see emise-font/build_emise.py) and verify
+  against the WOFF2's own hash, with the TTF hash as the font's
+  identity.
+- **Phextron** — asset `crates/phextron-dash/web/fonts/Emise-v<N>.ttf`
+  in wbic16/phextron, branch `exo`, embedded via `include_bytes!` in
+  `crates/phextron-dash/src/main.rs` and served at
+  `/fonts/Emise-v<N>.ttf`; `crates/phextron-dash/web/shell.html`
+  carries the @font-face. Keep the previous version's file in
+  web/fonts/ as the one-step rollback. Route (v2 EE 10 and v3
+  precedent — direct, not a PR): fast-forward commit on exo, then on
+  aletheia-core pull FF in ~/phextron-serve,
+  `cargo test -p phextron-dash`, `cargo build --release -p
+  phextron-dash`, `systemctl --user restart phextron-dash.service`,
+  and verify the served TTF at 100.88.154.1:8917 hashes exactly to
+  the built TTF (v3 commit fc143104; served-bytes match confirmed).
+- **Singularity Watch** — asset `fonts/Emise.woff2` in
+  wbic16/singularity-watch, branch **`master`** (the default branch
+  and site line; the repo's `exo` branch carries no fonts and is not
+  deployed). Route: PR on master (v1: PR #1; v3: PR #2), Will
+  merges, pull on awsbox by the site's route, verify the served
+  /fonts/Emise.woff2 hash (WOFF2, as lattice above).
 
-Confirm each surface's exact asset path from its live repo at install
-time — never from this skill's memory. If a surface can't be verified
-after deploy, the install is not done; report which surface failed.
+If a surface can't be verified after deploy, the install is not
+done; report which surface failed. Where a surface's route runs
+through Will's merge, the roll-out's deliverable is the open PR —
+report it as awaiting merge, never force the deploy past him.
 
 ## Records
 
