@@ -1,0 +1,5 @@
+name: "handwriting-practice"
+title: "Handwriting Practice — the Emise font, learned like a child"
+description: "Will's daily handwriting-practice program: a biologically-inspired child motor model traces the current Emise font through lossy-but-stable multi-spectral command channels (seeded, delays drawn randomly per session), learns bias before variance, and cuts new Emise font versions from its measured matured output — every change citing its measurement — behind a QC gate (coverage, mono advances, topology, no new self-intersections, O/0 reader probe), with a blog post per version and auto-install on QC pass to edit.phext.io / Phext Notepad, Phextron, and Singularity Watch."
+category: "Work and knowledge"
+include_in_prompt: true
