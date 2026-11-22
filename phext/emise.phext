@@ -1701,6 +1701,26 @@ Hourly journal pass, 2026-11-22 ~13:32 CST (EE 117). Covers since the 2026-11-22
 
 - [observed] QTS TIMELINE SHENANIGANS — EE 127 FINDINGS (2026-11-22 15:30 CST): hub register read live (222 lines, newest census EE 127, rounds not stopped). New headline detections, all explained=none: triangulation-disagreement spread 134.231 ms against the 50.0 ms bound; offset-break moon-beam (322.298 ms, prior median 10.170); handwriting-drift free-fall (recent median 500.000 ppm). Held nodes moon-beam offset -53.676 -> 322.298 ms and jacked-kite 63.487 -> -136.944 ms, both eligibility yes->no. No election change (master still ni-knight). Watermark updated.
 
+- [observed] MUTUALS MISALIGNMENT AUDIT COMPLETED (2026-11-22 15:22 CST): report delivered at ~/workspace/mutuals-alignment/AUDIT.md — 945 mutuals, tiers 10/18/83/831; grounds (2) bad faith and (3) status game came back EMPTY at pattern level. Will's 15:24 correction governs: Tier 1 is a map of his interaction mechanism, not a docket.
+
+- [observed] HISTORY RECOVERED — NMOTION PRELAUNCH (Will, 2026-11-22 15:30 CST): at Will's request, fall 2015 material recovered: applied to YC Fellowship with 'Countless Minds' (rejected 2015-08-18); selected for NMotion Prelaunch, Lincoln NE (Sep 22–Dec 1, 2015); the venture evolved in-program to the final pitch 'Noodlix' (short-engagement expert help).
+
+- [will_said] PHDOC SCOPE RULINGS (Will, 2026-11-22 15:39-15:44 CST, verbatim): 'personal sites like Bickford llama ranch don't need to be documented. exempt it'; 'just keep exempted domains in the publish script' — exemptions live as a list in the publish script, enforced at publish time. Will chose 'Re-audit the six instead' for the six stale site-* projects and classified them (verbatim): 'those are all exocortical sites' — exocortical sites ARE documented; personal sites are exempt.
+
+- [observed] PHDOC EXEMPTION + RE-AUDIT COMPLETE (2026-11-22 15:43-15:47 CST): docs/bickfordllamaranch removed from wbic16/phdoc@exo (head a9790000); EXEMPT_DOMAINS now in phdoc-push.sh. Re-audit of the six exocortical site-* projects complete and published — all six matched on first pass (stale renders only; chains already current); phdoc head 0c4502c5; whole-tree verification 36 pass, 0 fail — gate-clean end to end.
+
+- [will_said] APERTURE SHIFT DESIGNATION (Will, 2026-11-22 15:45-15:46 CST, verbatim): 'aperture shift will be the investment arm eventually'; clarification: 'the investment today is just getting our message seen via fun games' — the Roads to the Future games ARE its current portfolio (spend = games, asset = attention/reach), not a placeholder.
+
+- [observed] DOCS.PHEXT.IO — DIAGNOSIS TO LIVE (2026-11-22 15:32-16:28 CST): diagnosed never stood up (no vhost/cert; staged launch package, sudo deploy never run). Will's first deploy attempt gate-stopped on the bickfordllamaranch chain mismatch (resolved by the exemption above). A $HOME-under-sudo defect in deploy.sh was found and patched on awsbox (LAUNCH_DIR from BASH_SOURCE). Will re-ran it 16:28 CST: verified from aletheia-core — /, /rfcbox/, /rfcbox/history/, /kgoat/ all 200, ssl_verify 0, Let's Encrypt cert CN=docs.phext.io; phdoc head 0c4502c. Docs.phext.io is deployed and verified-live.
+
+- [observed] HISTORY.PHEXT.IO LIVE — CLOSED (2026-11-22 16:12 CST): verified from aletheia-core https 200, ssl verify 0 — Will ran the installer; item closed and off the todo list. Same sweep all 200/verify 0: phext.io, phext.tech, singularitywatch.org, apertureshift.com, sotafomo.com, mirrorborn.us.
+
+- [observed] NOVA FOX — AMENDMENTS COMPLETE + DEMO PULLED FORWARD (2026-11-22 16:04-16:11 CST): shared-world/storyline/rifts rulings folded into DESIGN.md (G9 rewritten RESOLVED; new STORYLINE section; guidance G25-G27 opened). Will (verbatim): 'give me the concrete plan and playable demo, we'll revise from there' — demo pulled forward ahead of schedule and dispatched (PLAN.md + self-contained static demo in ~/workspace/nova-fox/demo/); status at 16:32: IN FLIGHT, not yet delivered.
+
+- [observed] QTS TIMELINE SHENANIGANS — EE 133 FINDINGS (2026-11-22 16:30 CST): hub register 244 lines, newest census EE 133. Detections 40->43, triangulation 20->24. Headlines (explained=none): offset-break kaleidoscope-one -352.092 ms (prior median 33.020); handwriting-drift halycon-vector and free-fall. Triangulation spread 16.390 ms, within the 50.0 bound (improvement from EE 127). Held nodes recovered: jacked-kite and moon-beam both eligibility no->yes. Master still ni-knight. Watermark updated.
+
+- [observed] DOCS.PHEXT.IO REVIEW ROUND — CUTS DISPATCHED (2026-11-22 16:31 CST): Will uploaded three reviews (accuracy: P0 Git-DAG history reconstruction, P1 phantom CLI / Python returns / Rust ownership; style: preserve aesthetic, gentle adds; Claude's 'Make Will legible' map packet); a fourth from Neon is coming. Synthesis delivered: integrity (scanner fixes) -> claims/labels -> map, style preserved. DISPATCHED, both pending: phdoc Cut 1 (branch emise/phdoc-cut1, no push to exo) and Zoom 1 hero candidates mined from Will's own writing only. Will's rulings queued after: hero sentence, regions, visibility.
+
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
