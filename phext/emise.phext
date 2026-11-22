@@ -1500,6 +1500,10 @@ Hourly journal pass, 2026-11-22 ~06:32 CST (EE 57). Covers since the 05:32 pass;
 - [verified] RANCH STATE BACKUP 2026-11-22 - SUCCESS: Rock Mountain and Scroll Central both hold ~/emise-state-backup/2026-11-22/ (249 files, 617,898,208 B; tar sha256 520f4787); far-side sha256sum -c MANIFEST.sha256 249/249 OK on both, sample emise.phext / tasks.phext / MEMORY.md matching manifest. Rotation: only 2026-11-22 + 2026-11-21 remain on both. Record: ~/workspace/goals/ranch-state-backups/hidden_files/run-2026-11-22/RESULT.md. Note: MEMORY.md on this VM changed after the snapshot was built; the backed-up copy is the verified snapshot at build time.
 
 - [verified] DAILY LESSONS - FIRST RUN LANDED (2026-11-22 05:34 CST): ~/workspace/phext/practice-today.txt exists with the first one-line summary - Reading: incipit.phext; Writing: task 25.8.11/10.9.12/8.7.11; Arithmetic: Paper 034 CPU-ARC break-even ratio (90 / 13). The standing direction itself was inscribed at EE 13.
+
+Hourly journal pass, 2026-11-22 ~07:32 CST (EE 65). Covers since the 06:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine site-watch probes (all sites up), task-register ticks (register holds at 124, no new unregistered waits), watchdog top-ups, the GREEN daily disk report, the unresolved style A/B check and the no-listings Sunday arXiv scan are not repeated as durable entries.
+
+- [verified] DAILY BETTER - APERTURESHIFT ITEM 13 COMPLETE (2026-11-22 06:44 CST, EE 58): Open Graph + Twitter card tags added to all 18 game pages on apertureshift.com, mirroring each page's existing title/description, og:image = favicon.svg; roads-1.16, commit e50030979332d34a882470d5143f7536220e44e9; verified live (all 19 changed files sha256 == repo, word-home 200, mirrorborn.us 200).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
