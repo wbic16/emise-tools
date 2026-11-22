@@ -15,22 +15,61 @@ The machinery lives in `~/workspace/emise-font/practice/`; the model
 spec is its `MODEL.md`. Read MODEL.md before running a session — this
 skill is the program around the model, not a substitute for it.
 
+## Aging over 20 wavelets
+
+Will's amendment (2026-11-22, task 26.8.15/10.9.12/8.8.10, under this
+program's parent task 28.6.8/8.6.11/5.5.9): *"As you age, your
+resolution will degrade — the paper will get smaller, the letters
+harder to see — by a very small amount (with some jitter). What you
+learned yesterday won't quite fit — you'll have to rely upon memory
+and anticipation. Do this for 20 wavelets, so that you reach maturity
+by then."*
+
+The implemented law (parameters and the full audited table are in
+MODEL.md / `practice/aging.py`):
+
+- Program wavelet 1 is 2026-11-22–28; each later seven-day wavelet
+  increments it. Perception resolution R starts at 1.000000, falls by
+  a seeded 0.381%–0.616% per wavelet (base 0.50%, jitter ±0.12 points,
+  never improving), and reaches **R(20)=0.909342**. Planning and
+  visual feedback see the target only at R; scoring stays against the
+  true outline.
+- The persisted hand is memory. On a wavelet rollover, run the paired
+  frozen standing probes (same saved hand, same day's bank, previous
+  vs new R/A) before practice and log the signed
+  transfer-mismatch error bump — never silently re-zero it.
+- Anticipation is a real feedforward component in the fine-control
+  mix, weighted **A(R)=clamp(0.10+4.5(1−R), 0.10, 0.55)**:
+  A(1)=0.100, A(20)=0.507961. Sessions log scheduled and measured
+  feedback/anticipation shares by wavelet.
+- **Maturity is defined, not promised:** at the end of wavelet 20 the
+  hand runs primarily on memory + anticipation at R(20), with error
+  at or below session 1's final mean (10.65 units) despite the worse
+  perception. That comparison is the maturity evidence.
+
 ## The daily session
 
 1. **The hand persists.** Load `practice/hand-state.json`. Never
    reset it: the hand grows day over day, the way a child's does.
-   Session 1 (2026-11-22) started it at age 4 against Emise v2.
-2. **Draw the day's channels.** New seed per session (the date is a
-   fine seed); the bank's per-channel delays are generated randomly
-   at session start and held stable all session. Record seed + drawn
-   parameters in the session log — a session without its channel
-   table on record didn't happen.
+   Session 1 (2026-11-22) started it at age 4 against Emise v2. The
+   runner is wired to load and save the expanded state (calibration,
+   damping, fine gain, cumulative rounds, wavelet, R, anticipation,
+   per-glyph experience, probe baselines).
+2. **Place the hand in its wavelet and draw the day's channels.**
+   Determine the program wavelet from the date; apply its R/A from the
+   audited table. New seed per session (the date is a fine seed); the
+   bank's per-channel delays are generated randomly at session start
+   and held stable all session. Record seed + drawn parameters in the
+   session log — a session without its channel table on record didn't
+   happen. On rollover, the frozen transfer probes come before
+   practice.
 3. **Practice.** Run `practice.py <seed> <rounds>` (16 rounds is the
    session-1 shape): full glyph page of the current font, per-glyph
-   error per round logged, trace specimens for the standing set.
-   Bias rounds first, variance rounds after — the learning rule is
-   the model's, do not re-tune it inside a session; tuning happens
-   between sessions, from evidence, and is recorded in MODEL.md.
+   error per round logged, control mix logged, trace specimens for
+   the standing set. Bias rounds first, variance rounds after — the
+   learning rule is the model's, do not re-tune it inside a session;
+   tuning happens between sessions, from evidence, and is recorded in
+   MODEL.md. Save the grown hand-state at the end.
 4. **Probe.** Run the O/0 reader probe against the current font and
    note any other measured failure the error table indicts (a glyph
    whose error rose across the session is an indictment, not noise).
