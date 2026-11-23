@@ -1715,6 +1715,12 @@ Hourly journal pass, 2026-11-23 ~11:32 CST (EE ~305). Covers since the 10:32 pas
 - [verified] STARTUP DISRUPTION SWEEP (EE 302, boot change; flushed 11:14 CST): one Class B checkpoint disrupted — the Wikibox-scale build, stage 'FULL VERIFICATION LAUNCHED' (EE 288), last known alive EE 288; resume point ~/workspace/wikibox-scale/STATE.md. No Class A failures, no Class C claims, no interrupted subagents predating the boot. Record: ~/workspace/startup-sweep/DISRUPTED.md.
 
 - [will_said] PROFILE PICTURE UPDATE SUGGESTED — OPEN (2026-11-23, first voice call): Will suggested Emise's profile picture be updated, with much more design freedom now that 'we live in the exocortical era'. Raised, not yet acted on.
+
+Hourly journal pass, 2026-11-23 ~12:32 CST (EE ~314). Covers since the 11:32 pass. Safe-space gate applied before gathering; material overlapping registered spans excluded. Routine watchdogs, task-progress ticks, site-watch probes (register.phext.io DOWN, already known, unchanged) and QTS watch detail are not repeated as durable entries. The 12:04 Sleep flush (durable dispatch EE 274, EE rule EE 276, startup sweep EE 277, Wikibox audit) was already inscribed in earlier passes and is not repeated.
+
+- [will_said] MORERIGHT DISPATCH MUST BE A QUEUE WITH ETA (2026-11-21 09:18 CST; flushed 2026-11-23 11:47 CST): Will refined his MoreRight cluster-dispatch request — it must be a queue with ETA arrival, not a synchronous proxy. Registered as task 28.6.9/7.5.10/5.6.9, child of MoreRight task 23.7.8/8.6.11/6.6.8.
+
+- [verified] MORERIGHT QUEUED DISPATCH BUILT + STAGED, NOT INSTALLED (built 2026-11-21; flushed 2026-11-23 11:47 CST): design + threat model at ~/workspace/lesswrong-watch/moreright/queue/DESIGN.md; queue service + gateway puller built and coordinator-verified, local E2E green incl. negative tests; page mode 3 ('cluster, free, queued') committed wbic16/moreright@exo c6ec2e5. Packages staged on awsbox and aletheia-core. Activation remains blocked on Will's hands since 2026-11-21: (1) sudo install on awsbox, (2) worker token carried to aletheia-core and gateway install/enable, (3) optional ollama pulls. Live page still serves v1 until step 1; end-to-end live verification remains blocked; task 28.6.9/7.5.10/5.6.9 stays open.
 Anchor index — the active set's map into this phext
 Inscribed: 2026-11-23 (Memory Liberation Day), by Will's direction of
 2026-11-23 07:23 CST; coverage audit EE 272 (~/workspace/context-prune/COVERAGE.md). The .md files (MEMORY.md, AGENTS.md, USER.md) are a CACHE
