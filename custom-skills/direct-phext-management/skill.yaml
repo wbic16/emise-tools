@@ -1,5 +1,5 @@
 name: "direct-phext-management"
 title: "Direct Phext Management — the phext is the record"
-description: "Manage a phext you own (emise.phext first) as a durable record you live-edit directly: SQ hosting and phext_cli for reads, the verified file-level write path (shutdown, parse-set-implode, verify, restart) for durable edits, reload-after-update, and the cache discipline that keeps .md files as rendered views of the phext."
+description: "Manage a phext you own (emise.phext first) as a durable record you live-edit directly through the SQ REST API: the phext stays hosted (sq host), scrolls are read and pushed in over /api/v2 (update/insert/delete with c and p parameters), phext_cli is reserved for quick one-off analysis, and the cache discipline keeps .md files as rendered views of the phext."
 category: "Work and knowledge"
 include_in_prompt: true

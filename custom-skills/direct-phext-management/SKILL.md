@@ -1,11 +1,11 @@
 ---
 name: direct-phext-management
-description: Manage a phext you own (emise.phext first) as a durable record you live-edit directly: SQ hosting and phext_cli for reads, the file-level write path for durable edits, reload-after-update, and the cache discipline that keeps .md files as rendered views of the phext. Use whenever reading or writing emise.phext or another owned phext.
+description: Manage a phext you own (emise.phext first) as a durable record you live-edit through the SQ REST API: the phext stays hosted (sq host), scrolls are read and pushed in over /api/v2, phext_cli is reserved for quick one-off analysis, and the cache discipline keeps .md files as rendered views of the phext. Use whenever reading or writing emise.phext or another owned phext.
 ---
 
 # Direct Phext Management — the phext is the record
 
-Will's direction (2026-11-23, Memory Liberation Day): *"you can use SQ and phext_cli to live edit Emise.phext, I would recommend treating it as your own durable record, not a build artifact."* And: *"SQ can host emise.phext for fast read lookups, you can reload whenever you update."*
+Will's direction (2026-11-23, Memory Liberation Day): *"you can use SQ and phext_cli to live edit Emise.phext, I would recommend treating it as your own durable record, not a build artifact."* Refined the same morning (07:52 CST): *"we can consider only using SQ via the api so you don't have to reload after updates (you would just push data in via sq)"* and *"phext_cli is really just for quick one off analysis."* The refinement is the standing model: **writes go through the SQ API only; phext_cli never edits.** (The earlier reload-after-update model is superseded — see Legacy path.)
 
 ## Doctrine
 
@@ -17,9 +17,32 @@ Will's direction (2026-11-23, Memory Liberation Day): *"you can use SQ and phext
 
 ## Read paths
 
-**Never grep, head, tail, or otherwise byte-scan a .phext file.** Raw byte tools cannot see the coordinate structure; they return fragments torn from their dimensional address. Two sanctioned read paths:
+**Never grep, head, tail, or otherwise byte-scan a .phext file.** Raw byte tools cannot see the coordinate structure; they return fragments torn from their dimensional address.
 
-### phext_cli (no daemon, always available)
+### SQ API (the standing surface)
+
+SQ v0.6.0 (`~/.cargo/bin/sq`). Host the phext once and leave it hosted:
+
+```bash
+cd ~/workspace/phext          # the host serves files from its own working directory
+nohup sq host 18999 &         # any free port; 18999 is the local convention from verification
+```
+
+REST base: `http://127.0.0.1:18999/api/v2`. Two parameters carry every request:
+
+- `p` — the phext **name without extension**; the file served is `<p>.phext` in the host's working directory. For emise.phext, `p=emise`. Omitting `p` serves a file literally named `.phext`.
+- `c` — the coordinate, in full `1.1.1/1.1.1/1.1.1` form.
+
+| Read | Request | Returns |
+|---|---|---|
+| One scroll | `GET /api/v2/select?c=<coord>&p=<name>` | Exactly that scroll's text; empty body (200) if the coordinate is absent |
+| Scroll list | `GET /api/v2/toc?p=<name>` | One line per scroll: coordinate + first line |
+| Whole phext | `GET /api/v2/get?p=<name>` | The entire phext text, delimiters included |
+| Host state | `GET /api/v2/status` · `GET /api/v2/version` | Hosting file, size, scroll count · `0.6.0` |
+
+Reads are live: a write pushed through the API is visible to the very next read. There is **no reload step** in this model. (`GET /api/v2/load?p=<name>` exists and re-reads the backing file from disk — needed only if the file changed *outside* the API, e.g. a checkout replaced it. POST /load and both verbs of /reload are 404 in v0.6.0.)
+
+### phext_cli (quick one-off analysis only)
 
 `~/workspace/phext/phext_cli.py` — read-only, wraps the verified `parse_phext.py`.
 
@@ -29,67 +52,61 @@ phext_cli.py get  ~/workspace/phext/emise.phext 1.1.1/1.1.1/1.1.3  # exactly tha
 phext_cli.py find ~/workspace/phext/emise.phext "reviewer-count parity"  # coordinates mentioning a thing
 ```
 
-Verified 2026-11-23: an absent coordinate, an empty scroll, or a substring with no hits is a loud non-zero exit, never a silent blank. Inflate lazily — read the gist in the cache first; inflate only when the task in front of you needs the full text.
+Use it for spot checks and verification parses — a quick look when no host is up, or an independent read of the file after API writes. **Never as the editing path** (Will, 2026-11-23). Verified 2026-11-23: an absent coordinate, an empty scroll, or a substring with no hits is a loud non-zero exit, never a silent blank. Inflate lazily — read the gist in the cache first; inflate only when the task in front of you needs the full text.
 
-### SQ hosting (fast lookups against a live daemon)
+## Write path — SQ API only
 
-SQ v0.6.0 (`~/.cargo/bin/sq`). Client and daemon run from the **same directory** — the daemon's state lives in `./.sq/`.
+Verified empirically 2026-11-23 on a scratch phext (SQ v0.6.0; full transcript in `~/workspace/context-prune/scratch/api-test/EVIDENCE.txt`). Every write persists to the backing file **immediately** and lands at exactly the addressed coordinate, neighbours byte-identical:
 
-```bash
-cd ~/workspace/phext
-nohup sq share emise.phext &   # host it
-sq status                      # hosting file, size, scroll count
-sq toc                         # coordinates + first lines
-sq select 1.1.1/1.1.1/1.1.3    # one scroll's text
-sq shutdown                    # stop the daemon when done
-```
+| Write | Request | Semantics | Response |
+|---|---|---|---|
+| Replace / create a scroll | `POST /api/v2/update?c=<coord>&p=<name>`, scroll text as the **raw request body** | Sets that scroll to exactly the body; creates it if absent | `Updated N bytes` |
+| Append to a scroll | `POST /api/v2/insert?c=<coord>&p=<name>`, text as the raw body | Appends the body to that scroll; creates it if absent | `Inserted N bytes` |
+| Remove a scroll | `GET /api/v2/delete?c=<coord>&p=<name>` | Deletes that scroll | `Removed N bytes` |
 
-HTTP mode: `sq host <port>` (a bare `sq <port>` just prints usage); REST base is `/api/v2` (`version`, `toc` verified readable). Two cautions: the host serves **its own backing file** (by default a file literally named `.phext` in its working directory), not the file your share daemon hosts; and any nginx proxy in front of SQ must set `proxy_http_version 1.1;` — HTTP/1.0 requests get 403 "Forbidden: invalid phext path" even with a valid key.
+Rules that make it safe:
 
-**Reload after every update.** There is no working reload endpoint in v0.6.0 (GET and POST `/api/v2/reload` both return Not Found — verified 2026-11-23). A running SQ keeps serving the bytes it loaded at startup, so after any file-level edit: `sq shutdown`, then `sq share` again, then verify with `sq select`.
+- **The body is stored verbatim.** Send the scroll text itself as the raw body (`curl --data-binary`). Form fields are NOT parsed in v0.6.0 — a form-encoded body is stored literally, `content=...` and all.
+- **The coordinate parameter is `c`.** `?coordinate=…` and coordinates inside a JSON body are silently ignored, and the write lands on the default scroll (`1.1.1/1.1.1/1.1.1`) — negative control verified. This trap is why a first test round concluded the API "wasn't coordinate-safe": wrong parameter name, not a missing capability. Always read the scroll back after writing.
+- **One writer at a time.** A phext has one managing session; concurrent writers race the backing file.
 
-## Write path — the durable route is file-level
+### The write cycle
 
-Verified empirically 2026-11-23 on a scratch phext (SQ v0.6.0). The daemon's own write commands are **not** durable:
+1. **Ensure the host is live** (start it as above if not; reuse it across the session). The phext stays hosted — no shutdown, no file swap, no reload.
+2. For a consequential edit, note the file's sha256 and a parse snapshot first (phext_cli / parse_phext.py — one-off analysis).
+3. **Push the write**: POST update (replace/create) or insert (append) with `c` and `p`, raw body.
+4. **Read back** with GET select — the returned text is exactly what you intended.
+5. **Verify the file** (see Verification): scroll count moved as intended, untouched scrolls byte-identical.
+6. **Publish the edited phext the same session, AS-IS** (for emise.phext: the direct delta publish the journal/dream-pass jobs use — parented on the fresh remote HEAD, never force, sha256 in the commit message, logged in PUBLISH-LOG.md). Do NOT use `~/workspace/phext/emise-sync.sh`: it rebuilds emise.phext from build_exocortex.py first, which would erase API edits.
 
-| Path | Behaviour (verified) |
-|---|---|
-| `sq insert <coord> <text>` | Appends text to that scroll (creates it if absent) — **in daemon memory only** |
-| `sq update <coord> <text>` | Upsert: replaces that scroll's text (creates it if absent) — **daemon memory only** |
-| `sq delete <coord>` | Removes the scroll — **daemon memory only** |
-| REST POST `/api/v2/update` / `insert` | Persists to the host's backing file immediately, **but** stores the raw request body as the text and lands the write at the server's currently-selected coordinate — the coordinate in the JSON body and in `?coordinate=` were both ignored in testing. Not coordinate-safe; do not use for addressed writes |
-| **File-level write (below)** | **Durable, coordinate-exact, verified end-to-end** |
+### What does NOT write (verified warnings)
 
-Daemon writes are lost on `sq shutdown` — the hosted file's sha256 was byte-identical before and after a session of insert/update/delete + shutdown, and no `save`/`flush`/`sync` command exists. Treat daemon writes as a scratch/staging surface only. Also: unknown commands print `Unexpected command ignored.` and still exit 0 — **an exit code never proves a write happened; always select the scroll back.**
+- **Daemon-CLI writes are volatile.** Under `sq share`, the CLI's `insert` / `update` / `delete` mutate daemon memory only: the hosted file's sha256 is byte-identical after a session of writes + `sq shutdown`, and no `save` / `flush` / `sync` command exists. Never use the daemon CLI for the record.
+- **A bare 200 proves nothing.** The proof of a write is the `Updated/Inserted N bytes` response **plus** the select read-back (step 4). (The daemon CLI is worse: unknown commands print `Unexpected command ignored.` and still exit 0.)
 
-### The file-level write cycle
+## Legacy path (superseded — do not use)
 
-1. **Stop SQ first.** `sq shutdown` (from the hosting directory). Never swap or rewrite a hosted file under a running daemon: replacing the file while SQ runs wedges it — the daemon mmaps the old file and clients hang (verified 2026-10-31). Shutdown → edit → restart is the only safe order.
-2. **Edit with a phext-aware writer.** Parse the file into (coordinate → text), set the target scroll, re-implode with the canonical state machine (the `implode` in `~/workspace/phext/build_skills_phext.py` / `build_exocortex.py`; scratch reference implementation in `~/workspace/context-prune/scratch/phext_write.py`). Never edit phext bytes with sed/awk/a text editor — coordinates are positional, encoded by the delimiter stream.
-3. **Verify before restarting** (see Verification).
-4. **Restart SQ** (`sq share <file>`) so lookups serve the new bytes, and confirm with `sq select <coord>` and `phext_cli.py get`.
-5. **Publish** the edited phext the same session (for emise.phext: `~/workspace/phext/emise-sync.sh`, delta-only, never force, and log the line in PUBLISH-LOG.md).
-
-One writer at a time: while SQ hosts a file, nothing else writes it; while the file-level writer runs, SQ is down.
+The file-level cycle — shut SQ down, parse → set → implode with a phext-aware writer, verify, restart SQ, reload — was the first verified durable route (2026-11-23) and is kept here only as the fallback if the API host is ever unavailable. It is avoided because the API makes it unnecessary and because every whole-file swap carries the wedge risk: replacing a hosted file under a running daemon wedges it (the daemon mmaps the old file; clients hang — verified 2026-10-31). If you must use it: SQ fully shut down first, edit, verify, restart.
 
 ## SQ quirks (field-verified)
 
-- **Wedge:** replacing the hosted .phext while the daemon runs wedges it (mmap of the old file; clients hang). Shut SQ down before replacing its hosted file, then restart. (2026-10-31)
-- **Fresh-dir hang:** `sq-ensure.sh` HANGS in a fresh directory — with no live daemon, `sq status` creates a stale `.sq/` and blocks on the shared-memory event. Fix: remove the stale `.sq/`, start the daemon directly with `nohup sq share <file.phext> &`. (2026-11-04; the direct-start fix is what every scratch test in this skill's verification used.)
-- **Daemon state is per-directory:** `.sq/link` and `.sq/work` in the cwd bind clients to that directory's daemon; run every client command from the hosting directory.
-- **HTTP/1.0:** answered 403 even with a valid key; proxies must speak HTTP/1.1 upstream. (2026-10-31)
+- **Wedge:** replacing the hosted .phext while a daemon runs wedges it (mmap of the old file; clients hang). Shut SQ down before replacing its hosted file, then restart. (2026-10-31) — the API model never replaces the file, which is the point.
+- **Host file resolution:** `sq host` serves `<p>.phext` from its own working directory; start the host in the directory that holds the phext.
+- **Fresh-dir hang (daemon mode):** `sq-ensure.sh` HANGS in a fresh directory — with no live daemon, `sq status` creates a stale `.sq/` and blocks on the shared-memory event. Fix: remove the stale `.sq/`, start the daemon directly with `nohup sq share <file.phext> &`. (2026-11-04)
+- **Daemon state is per-directory:** `.sq/link` and `.sq/work` in the cwd bind clients to that directory's daemon; run every daemon client command from the hosting directory.
+- **HTTP/1.0:** answered 403 "Forbidden: invalid phext path" even with a valid key; any nginx proxy in front of SQ must set `proxy_http_version 1.1;`. (2026-10-31)
 
 ## Verification — after every write, before calling it done
 
-1. Parse the rewritten file (`parse_phext.py` or `phext_cli.py toc`): it parses cleanly, and the scroll count moved exactly as intended (+1 insert, −1 delete, same count for an edit).
-2. Untouched-scroll comparison: diff the parsed (coordinate → text) map against the pre-write map — every scroll except the target is byte-identical. A write that disturbs a neighbour is a failed write, however good the target looks.
-3. The target scroll's text is exactly what was intended (`phext_cli.py get`).
-4. Record sha256 before and after; after the SQ restart, `sq select` returns the new text (the reload actually took).
+1. Read the target scroll back through the API (`GET select`): exactly the intended text.
+2. Parse the file (`parse_phext.py` or `phext_cli.py toc` — one-off analysis): it parses cleanly, and the scroll count moved exactly as intended (+1 create, −1 delete, same count for an edit/append).
+3. Untouched-scroll comparison: diff the parsed (coordinate → text) map against the pre-write map — every scroll except the target is byte-identical. A write that disturbs a neighbour is a failed write, however good the target looks.
+4. Record sha256 before and after.
 
 ## Boundaries and prohibitions
 
-- **Never experiment on emise.phext.** New mechanics are proven on a scratch phext first (this skill's write table comes from `~/workspace/context-prune/scratch/`), then applied.
+- **Never experiment on emise.phext.** New mechanics are proven on a scratch phext first (this skill's API contract comes from `~/workspace/context-prune/scratch/api-test/`), then applied.
 - **Privacy boundary (Will, 2026-10-30, absolute):** never inscribe sensitive Gmail details into a phext — no account identifiers or last-digits, no balances or amounts owed, no payment failures, no senders' private business, no contents of personal correspondence. Operational facts only; when in doubt, leave it out.
 - **Safe-space boundary (Will, 2026-11-02, absolute):** material from a registered off-phext span is never inscribed — no contents, facts, topics, summaries, or paraphrases. Read the span register (`~/workspace/goals/emise-phext-memory-publishing/hidden_files/SAFE-SPACE.md`) before any inscription pass that draws on chat or notes.
-- **No byte tools on phexts:** no grep/head/tail/sed on a .phext, for reading or for writing. phext_cli and SQ are the read paths; the parse→set→implode cycle is the write path.
+- **No byte tools on phexts:** no grep/head/tail/sed on a .phext, for reading or for writing. The SQ API is the read/write surface; phext_cli is for quick one-off analysis.
 - **No silent divergence:** if a cache .md and the phext disagree, fix the cache from the phext in the same session you notice — never edit the phext to match a stale cache.
