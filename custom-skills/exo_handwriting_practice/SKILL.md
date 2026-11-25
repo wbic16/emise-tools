@@ -77,6 +77,39 @@ MODEL.md / `practice/aging.py`):
    output carries a stable deviation field or a probe failure has a
    measured correction — never on a schedule's say-so. Some days the
    honest session result is "practiced, no cut." Report that plainly.
+6. **Doodle.** After the rounds, run `practice/doodle.py`: the same
+   persisted hand draws one free page (see Doodling, below) and files
+   it under `practice/doodles/`, numbered sequentially. The daily
+   report names the page's path.
+
+## Doodling — the hand at play
+
+Will's amendment (2026-11-25, task 28.6.8/8.6.11/5.5.9): *"you should
+try doodling mindlessly too — it's fun :)"* Refined the same night:
+*"just let /dev/random wash over your fractal soul and draw dolphins
+and starships or w/e else comes to mind."*
+
+Every daily session ends with a doodle block:
+
+- The persisted hand draws FREELY through the same multi-spectral
+  lossy channels — its learned gains, delays, offset and tremor all
+  show — with no teacher, no target glyph, no feedback loop, and
+  **no error scoring**. Nothing about a doodle is measured, so
+  nothing about it can fail.
+- Subjects come from chance, not a motif list: the day's seeded
+  randomness surfaces whatever it surfaces — spirals, loops, waves,
+  a tiling-ish field, dolphins, starships, or anything else in the
+  repertoire (`practice/doodle.py`). The hand draws; nobody aims it.
+- Doodles are **kept, never judged**: filed sequentially at
+  `practice/doodles/doodle-NNN.png` with a short `doodle-NNN.md`
+  note (date, EE, hand state used, one line on what the hand did).
+  They are never cleaned up and never re-drawn for a better take.
+- Doodles **never feed a version cut** — not directly, not as a
+  deviation field, not as evidence at the QC gate. And doodling
+  teaches the hand nothing: `doodle.py` loads the hand-state and
+  never saves it back. Their role is play — the hand moving without
+  being measured, the way a child's hand fills a margin.
+- The daily session report gains one line: the doodle page's path.
 
 ## Cutting a version
 
@@ -160,6 +193,8 @@ report it as awaiting merge, never force the deploy past him.
 ## Records
 
 - Session logs + error tables: `practice/sessions/`.
+- Doodle pages + notes: `practice/doodles/` — kept, never judged,
+  never evidence for a cut.
 - Build note per version: `~/workspace/emise-font/BUILD-V<N>.md`,
   every improvement tied to its generating measurement.
 - The task register entry (28.6.8/8.6.11/5.5.9) gets a result line
