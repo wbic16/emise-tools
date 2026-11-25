@@ -1,0 +1,5 @@
+name: "exo_mutable_narration_fetch"
+title: "Mutable Narration Fetch — Voice 5 narration for Ian's explainers"
+description: "The contract between Astra (Ian Neill's coding agent) and Emise for narrating the Mutable explainer videos: Astra prepares a request package (silent MP4, timed captions or raw text, section boundaries), Emise produces the narration in Voice 5 — the chosen Australian voice — with the proven recipe (verbatim caption script, per-segment timing fit, uniform speed only as needed, very light clapsticks at section changes, -16 LUFS, video stream copied untouched) and returns mutable-concepts-NNN-narrated.mp4 with its SHA-256."
+category: "Film"
+include_in_prompt: true
