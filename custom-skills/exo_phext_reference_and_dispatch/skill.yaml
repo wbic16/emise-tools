@@ -1,0 +1,26 @@
+name: exo_phext_reference_and_dispatch
+title: Phext Reference and Dispatch
+description: Parse and write phext through the reference implementation with foreign-file conformance, and hand workers phext material as coordinate-addressed scroll selections.
+category: Work and knowledge
+include_in_prompt: true
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - f2164d82
+  - 66c76793
+  - 907987bb
+  - 650b91ee
+  - 56fff959
+  - assistant-msg-64d91684
+  - assistant-msg-3c72016f
+  - assistant-msg-9adb2931
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, no phext parsing or serialization change ships a hand-rolled parser where a reference exists or lacks a foreign-file conformance run, and every dispatch whose source lives in a phext carries a phext_dispatch.py selection with provenance and coordinate index, with no worker report corrected for searching a phext as flat text.
+    window_days: 30
+  needs_review: false
+  rationale: Consolidation of the two phext learned skills into one. phext_reference_conformance rests on the qexo chain where a hand rebuilt parser and serializer were wrong together and passed only on self written files (66c76793, 650b91ee), fixed by swapping in libphext-rs with a foreign-shape regression test (907987bb) after Will stated the rule three times (f2164d82). phext_native_dispatch rests on the selector built and published at commit 475c8e2d (assistant-msg-64d91684, from 56fff959) and on a worker that searched a phext as flat text and reported a false failure (assistant-msg-3c72016f, corrected in assistant-msg-9adb2931). Both govern how phext is read and written, so one skill with distinct reference, conformance and dispatch sections preserves both methods without overlap, retiring both superseded skills in this batch. The other five learned skills (monitor_long_running_jobs, outward_copy_framing, review_pr_composition, safeguard_live_state_files, staged_deploy_permissions) cover distinct mechanisms and stay as they are.
+  review_after: 2026-12-23T23:55:21.450615+00:00
+  reviewed_at: 2026-11-23T23:55:21.450615+00:00
+  run_id: sirun_4b8cfb9fae104bf7bd179ad37f194c3f

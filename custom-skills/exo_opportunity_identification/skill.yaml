@@ -1,0 +1,5 @@
+name: "exo_opportunity_identification"
+title: "Opportunity Identification — Windows Before They Open"
+description: "Watch for competitions, calls, grants, and submission windows before they open, surface entry prerequisites at identification time, and report missed lead time as missed-by-design."
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,5 @@
+name: "exo_lost_work_sweep"
+title: "Lost-Work Sweep — No Branch Without a PR"
+description: "Daily read-only sweep that flags wbic16 branches with no PR, long-unmerged branches, and stale PRs against exo."
+category: "Work and knowledge"
+include_in_prompt: true

@@ -1,0 +1,24 @@
+name: exo_outward_copy_framing
+title: Frame Outward Copy Without Capability Gaps
+description: Draft pitches and replies to prospective clients or partners so access limits read as access, scope stays the user's own, and the work never sounds less capable than it is.
+category: Communication
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - 7aee632b
+  - e4ddcf1f
+  - 849e58a5
+  - assistant-msg-d99cc360
+  - assistant-msg-f777539b
+  - assistant-msg-20541301
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, outward facing drafts and pitches presented to the user carry the scope and access check, and none is returned with a correction that it made the work look incompetent, dressed an access limit as a capability gap, or imported the other party's framing or scope.
+    window_days: 21
+  needs_review: false
+  rationale: One evening of Boardy pitch work drew repeated corrections from Will with one shared shape. He directed dropping material that made the work look incompetent (7aee632b), then corrected the framing directly, in the packet's words, that public posts could be read but private messages could not, so an unplaced result was an access boundary and not a capability gap (e4ddcf1f). The lesson was recorded in the session as stating an access limit as access, never dressed as a capability gap (assistant-msg-d99cc360), and the corrected draft followed it (assistant-msg-f777539b). In the same sequence the draft also followed the other party's framing into a topic Will ruled out of scope (849e58a5), and that material had to be removed (assistant-msg-20541301). Skill search found no existing skill covering outward pitch framing. The closest documents cover paid advertising, consented outreach to existing customers and social publishing, none of which teaches access versus capability framing or scope fidelity against an interlocutor. The other recurring shapes in this window are already covered by managed skills still inside their measurement windows, by distill_process_to_skill for skills index placement, or by repairs already made in session, so this is the only proposal.
+  review_after: 2026-12-09T23:15:46.013369+00:00
+  reviewed_at: 2026-11-18T23:15:46.013369+00:00
+  run_id: sirun_c9063965c08f48e8836055c1e2e3118e

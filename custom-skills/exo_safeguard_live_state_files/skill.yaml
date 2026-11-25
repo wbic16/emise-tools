@@ -1,0 +1,22 @@
+name: exo_safeguard_live_state_files
+title: Safeguard Live State Files
+description: Protect live registers, ledgers and state files by probing writes only on copies, proving recovery before any risky write, and verifying content after every write.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-03a69e0e-ed19-1454-3837-1cc18fd6a441
+  - message:assistant-msg-0cc73340-e3fc-2358-2b10-2e14a5661669
+  - message:assistant-msg-e518c01c-2990-73f8-ad86-e7e4071f69c9
+  - message:assistant-msg-4b62ed67-fc30-426d-92c2-bc39957b985e
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, no live register, ledger, journal or phext source file is truncated or loses entries to a diagnostic probe or an unverified write, and every write diagnostic on such a file carries a pre-probe SHA-256 hash plus a hash verified recovery copy and a post write count or hash check.
+    window_days: 30
+  needs_review: false
+  rationale: Three incidents in one night share a mechanism no managed skill in its measurement window covers. A diagnostic write test on tasks-source.json and tasks.phext assumed git recovery, but the files were not in a repo, and the correction showed the real loss was 29 records, not 4, restored only from a ranch backup and rebuilt to 232 entries (message:assistant-msg-03a69e0e-ed19-1454-3837-1cc18fd6a441, message:assistant-msg-0cc73340-e3fc-2358-2b10-2e14a5661669). The same night a state sampler found this VM refusing creation of new files while rewriting existing files still worked, which breaks temp file plus rename writers, and the hourly journal builder was truncated to zero by the same denial before recovering byte identical (message:assistant-msg-e518c01c-2990-73f8-ad86-e7e4071f69c9, message:assistant-msg-4b62ed67-fc30-426d-92c2-bc39957b985e). Skill search found no skill covering write probes, recovery proof or create versus rewrite fallbacks for live state files. verify_blocker_and_completion_claims covers probing blocked or completed claims, verify_quantified_results covers numbers, and validate_waiting_items covers register freshness, so this proposal covers the remaining gap only, handling live state files safely. Other chunk findings were deliberately not proposed because they map onto the five managed skills still inside their measurement windows to December 2026 or onto skills already created the same day, such as question_floor_serialization and ranch_proxy.
+  review_after: 2026-12-09T23:42:09.116478+00:00
+  reviewed_at: 2026-11-09T23:42:09.116478+00:00
+  run_id: sirun_09a3eb2c13434922879f0ad959b51fcc

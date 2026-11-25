@@ -1,0 +1,21 @@
+name: exo_staged_deploy_permissions
+title: Staged Deploy Permissions
+description: Normalize file permissions at staging time and verify staged web content is readable by the serving user before an install or deploy is called done.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - dea4fea3
+  - 983b3405
+  - a5248757
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, every staged web deploy records a staging time mode normalization plus a serving user read or HTTP content check before it is reported installed, and no deploy fails, returns 403, or aborts later install steps because staged files carry mode 660 or another mode the serving user cannot read.
+    window_days: 30
+  needs_review: false
+  rationale: 'The same staging defect failed twice in one window after its lesson was already recorded. The TLUF install returned 403 because staged files carried mode 660, the fix set them to 644, and the recorded lesson was to normalize permissions at staging (dea4fea3). The register UI install then repeated it exactly: index.html staged at mode 660 was unreadable by nginx, and the install script exited before its certificate and HTTPS steps ran (983b3405), leaving a follow on failure where the certificate dry run died before validation (a5248757). Reading verify_blocker_and_completion_claims showed it covers probing blocker and completion claims through the user path, but it names no staging mode, no normalization step and no serving user read, so the lesson stayed in chat prose and never became a deploy procedure. This skill covers only that gap, putting normalization inside the staging script and a serving user read before later install steps.'
+  review_after: 2026-12-15T23:45:28.235174+00:00
+  reviewed_at: 2026-11-15T23:45:28.235174+00:00
+  run_id: sirun_c14a079187d04bdfa5a5a83e3f59f9e5

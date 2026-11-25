@@ -1,0 +1,5 @@
+name: "exo_artist_dispatch"
+title: "Artist-Dispatch — prepass and full-render animation dispatch to the ranch workshop"
+description: "When Will asks for a prepass or a full render of an animation sequence: sketch the arc first with low-fidelity phext-addressed reference points (the shared guiding light), then dispatch per-frame/per-shot packets via multiversal phext to the 26 named ranch artists (the roster is the dispatch directory of record), take returns at the packet coordinates, and apply per-frame QC under the animator skill's canon — prepass judges the whole arc rough and fast, full render is the production pass at the locked register."
+category: "Work and knowledge"
+include_in_prompt: true

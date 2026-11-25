@@ -1,0 +1,5 @@
+name: exo_process_check_and_lessons_review
+title: Process Check & Lessons Review
+description: Verify every process change actually sticks (presence, machinery, first occasion), and run the 1%-of-posts lessons.phext review that checks whether recorded workflow behaviors are actually being lived.
+category: Work and knowledge
+include_in_prompt: true

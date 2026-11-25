@@ -1,0 +1,20 @@
+name: exo_phext_native_dispatch
+title: Phext-Native Dispatch
+description: Hand workers phext material as parsed scroll selections with provenance instead of flat text excerpts, and read phext-backed results back by coordinate.
+category: Work and knowledge
+include_in_prompt: true
+skill_improvement:
+  managed: true
+  status: retired
+  evidence_handles:
+  - 56fff959
+  - assistant-msg-3c72016f
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, phext dispatches are handled under phext_reference_and_dispatch with selections, provenance and coordinate briefs, and no worker report is corrected for searching a phext as flat text.
+    window_days: 30
+  needs_review: false
+  rationale: Retired as superseded by phext_reference_and_dispatch in this consolidation batch, which carries this skill's selection, coordinate brief and read-back method as its Select scrolls, Build the brief and Check what comes back sections.
+  review_after: 2026-12-23T23:55:21.450615+00:00
+  reviewed_at: 2026-11-23T23:55:21.450615+00:00
+  run_id: sirun_4b8cfb9fae104bf7bd179ad37f194c3f

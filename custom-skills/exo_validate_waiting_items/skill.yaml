@@ -1,0 +1,20 @@
+name: exo_validate_waiting_items
+title: Validate Waiting Items Before Presenting
+description: Validate every waiting-on-the-user item against its live surface and reconcile its register entry before presenting, pinging or carrying it.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: retired
+  evidence_handles:
+  - message:assistant-msg-e239ab1e-002e-4727-a95a-4c1f19c9b895
+  - message:449ccace-9030-4ff8-ab36-e2be6e979156
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, waiting items are handled under verify_against_live_surface with the same same-session live check standard, and no presented item is corrected by the user as already resolved.
+    window_days: 30
+  needs_review: false
+  rationale: Retired as superseded by verify_against_live_surface in this consolidation batch, which carries this skill's enumerate, live check and reconcile method as its Validate waiting items section without change in substance.
+  review_after: 2026-12-23T23:55:21.450615+00:00
+  reviewed_at: 2026-11-23T23:55:21.450615+00:00
+  run_id: sirun_4b8cfb9fae104bf7bd179ad37f194c3f

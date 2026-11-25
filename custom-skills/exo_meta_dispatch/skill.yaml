@@ -1,0 +1,5 @@
+name: "exo_meta_dispatch"
+title: "Meta-Dispatch — work into the ledger, artifacts back from the ranch"
+description: "Dispatch that does not use the Muse substrate: Emise inscribes tasks as six-scroll blocks (brief, authorization, state, claim, attestation, log) into her whole copy of ledger.phext via SQ; ranch nodes wake round-robin once a minute, claim the next pending task on their shard single-writer-by-claim under a 4-EE lease, execute node-resident, and attest back through the aletheia-core hub within a 2-minute sync bound, qexo managing all of it."
+category: "Work and knowledge"
+include_in_prompt: true

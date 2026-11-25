@@ -1,0 +1,23 @@
+name: exo_review_pr_composition
+title: Review PR Composition
+description: Test related open pull requests as one composed tree with an explicit merge order, so PRs that pass alone but break together are caught before merge.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - assistant-msg-c21b5d80
+  - assistant-msg-ad5270ea-d540-99ef-782c-bb1c3172cd4d
+  - 5357c811-dd9f-4bd8-b1f0-5298d83f06cb
+  - assistant-msg-0b8e7e28
+  - assistant-msg-d9333b4a
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Over the window, every review of two or more related open PRs records a composed tree test result and an explicit merge order, and no set merged in that period is later reopened for a composition failure that a composed test would have caught.
+    window_days: 21
+  needs_review: false
+  rationale: 'The 2026-11-17 sweep of 18 open PRs (assistant-msg-c21b5d80) found failures no single branch review showed: register PR 9 and PR 10 do not compose, phext-lattice PR 70 and holostore PR 2 pin a libphext revision that exists only on the libphext-rs PR 14 branch so PR 14 must merge first, and phext-lattice PR 70 smuggles an extra step plus a lockfile contradiction. The follow up composition (assistant-msg-ad5270ea-d540-99ef-782c-bb1c3172cd4d) proved the mechanism: composing register PR 9 and PR 10 through stacked PR 11 produced a 500 NameError instead of the expected refusal and read side filtering hid token atoms, while 95 tests still described the parts. Will directed recurring PR review work the same day (5357c811-dd9f-4bd8-b1f0-5298d83f06cb, Mirror Will internal ledger), and skill search found no existing skill covering composed tree testing or merge order derivation, so this adds that procedure without duplicating the eight managed skills still in their measurement windows.'
+  review_after: 2026-12-08T23:38:48.485413+00:00
+  reviewed_at: 2026-11-17T23:38:48.485413+00:00
+  run_id: sirun_d550f9e850ab4720859d8482af52fb71

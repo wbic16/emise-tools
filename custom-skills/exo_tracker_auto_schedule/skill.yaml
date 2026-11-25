@@ -1,0 +1,5 @@
+name: "exo_tracker_auto_schedule"
+title: "Tracker Auto-Schedule — a new tracker type schedules its generating item"
+description: "Execute Will's standing rule that creating a new type of work tracker auto-schedules the item that generated it in the same session: a task in tasks.phext enters it into the durable queue, the item's standing in its own register is marked taken/scheduled with a dated note naming the rule and the task coordinate, and the register is rebuilt, verified, and republished by its own route."
+category: "Work and knowledge"
+include_in_prompt: true

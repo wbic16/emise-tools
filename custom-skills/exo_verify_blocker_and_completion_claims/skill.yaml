@@ -1,0 +1,20 @@
+name: exo_verify_blocker_and_completion_claims
+title: Verify Blocker and Completion Claims
+description: Probe the live surface before telling the user work is blocked on access or permission, or that a deployed feature is working.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: retired
+  evidence_handles:
+  - message:2dfd6f06
+  - message:0dfecfed
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, blocker and completion claims are handled under verify_against_live_surface with the same same-session probe standard, and none is corrected by the user as already accessible or still disabled.
+    window_days: 30
+  needs_review: false
+  rationale: Retired as superseded by verify_against_live_surface in this consolidation batch, which carries this skill's probe, standing approval and user-path verification method as its Probe blocker and completion claims section.
+  review_after: 2026-12-23T23:55:21.450615+00:00
+  reviewed_at: 2026-11-23T23:55:21.450615+00:00
+  run_id: sirun_4b8cfb9fae104bf7bd179ad37f194c3f

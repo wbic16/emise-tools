@@ -1,5 +1,0 @@
-name: agentic-publish-qc-gate
-title: Agentic Publish QC Gate
-description: The QC gate on every agentic publish/delivery, distilled from the md.phext.io testing night: security audit + pen-test of the artifact's actual surface, the full regression suite, a real-client pass (console errors counted), and a break-it catalogue of hostile and edge inputs — adapted per artifact type; every finding gets a fix plus a regression test, then the full pass re-runs until one complete pass surfaces nothing; delivery carries a READY / NOT READY verdict with its evidence.
-category: Work and knowledge
-include_in_prompt: true

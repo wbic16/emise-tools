@@ -1,0 +1,5 @@
+name: "exo_awsbox_publishing"
+title: "Awsbox Publishing — GitHub is the source, the target pulls, config is harness-tested"
+description: "Deploy Will's public sites to awsbox under the standing discipline: inputs audited by hash with one writer per file, every artifact version-controlled as one unit, GitHub as source of truth with the target deploying by git pull, server config validated in a copied-tree harness before install, gates allowed to stop the deploy, sudo legs packaged as one copyable block with rollback, and live state verified from aletheia-core."
+category: "Operations"
+include_in_prompt: true

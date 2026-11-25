@@ -1,0 +1,29 @@
+name: exo_verify_against_live_surface
+title: Verify Against the Live Surface
+description: Verify waiting items, blocker and completion claims, and quantified results against their live surface or primary artifacts before presenting them.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-e239ab1e-002e-4727-a95a-4c1f19c9b895
+  - message:449ccace-9030-4ff8-ab36-e2be6e979156
+  - message:2dfd6f06
+  - message:0dfecfed
+  - d501ca3a
+  - assistant-msg-48ff1b76
+  - assistant-msg-f123c2e9
+  - 3ecd8947
+  - assistant-msg-4cac55a5
+  - assistant-msg-b6bf1f3e
+  - assistant-msg-03260ef0
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, every waiting item presented, every blocker or completion claim, and every quantified result reported carries a same-session live-surface or primary-artifact check with its probe recorded, and none is corrected by the user as already resolved, already accessible, still disabled, measured from a wrong artifact, or narrated from a compacted summary against the dated record.
+    window_days: 30
+  needs_review: false
+  rationale: 'Consolidation is triggered with exactly 10 active learned skills. Three of them share one mechanism, probing the deciding surface before claiming status: validate_waiting_items (register prose presented SBOR as unmerged, corrected in message:449ccace-9030-4ff8-ab36-e2be6e979156), verify_blocker_and_completion_claims (a 403 wrongly claimed as a token blocker, 2dfd6f06 corrected by 0dfecfed), and verify_quantified_results (a headline figure measured from a zero byte store, d501ca3a and assistant-msg-48ff1b76). This run adds the same mechanism in a new form: phdoc was narrated as running green for weeks from a compacted summary (assistant-msg-f123c2e9, corrected by 3ecd8947, admitted in assistant-msg-4cac55a5), and rfcbox category errors and a false SQ API conclusion came from answering from summary memory (assistant-msg-b6bf1f3e, corrected in assistant-msg-03260ef0). The merged skill preserves all three original methods as sections and adds the dated-record recovery section those new cases require, retiring the three superseded skills in this same batch.'
+  review_after: 2026-12-23T23:55:21.450615+00:00
+  reviewed_at: 2026-11-23T23:55:21.450615+00:00
+  run_id: sirun_4b8cfb9fae104bf7bd179ad37f194c3f

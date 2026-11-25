@@ -1,0 +1,23 @@
+name: exo_recover_failed_job_outputs
+title: Recover Failed Job Outputs
+description: Recover usable work after a delegated or background job fails or ends without a report, by verifying first-hand what actually landed and closing only the loose ends in the original scope.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - eb247eff
+  - assistant-msg-de975766
+  - assistant-msg-2fb33d71
+  - assistant-msg-594c8409
+  - assistant-msg-a2f8e5e0
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Over the window, every delegated or background job that fails or ends without a report gets a documented recovery pass that verifies what landed first-hand, and at least half of those recoveries close or explicitly name all loose ends in the original scope with no recovered item later shown to be missing or unverified.
+    window_days: 21
+  needs_review: false
+  rationale: Evidence shows a delegated agent ended without filing its report (assistant-msg-de975766), leaving distillation, queue and mastery status unknown even though a filing had landed. The user directed a recovery pass on any job failure (eb247eff), and the recorded recovery (assistant-msg-2fb33d71, assistant-msg-594c8409) verified artifacts first-hand, published the missing mastery item, added the queue entry, and named a phantom library gap without improvising a fix. The existing managed monitor_long_running_jobs skill covers stall detection and rebalancing during a run, not post-failure verification and scope-bound closure, and it is still inside its measurement window to 2026-12-07, so this proposal adds the distinct missing step rather than layering onto it.
+  review_after: 2026-12-15T23:32:25.351707+00:00
+  reviewed_at: 2026-11-24T23:32:25.351707+00:00
+  run_id: sirun_f84555a61ba941b1a43a1e79312f5913

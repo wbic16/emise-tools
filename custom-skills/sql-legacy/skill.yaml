@@ -1,5 +1,0 @@
-name: "sql-legacy"
-title: "SQL Legacy — untangle the complexity at the bottom of the stack"
-description: "Untangle legacy SQL across every major dialect (ANSI trunk, T-SQL, PL/SQL, MySQL, PostgreSQL, DB2 including iSeries, SQLite) for sentients who never learned SQL and for AI alike: sql.phext's index, plain-language action readings, multiversal effect-modelling, and the diagnosis of why AI handles SQL poorly."
-category: "Work and knowledge"
-include_in_prompt: true

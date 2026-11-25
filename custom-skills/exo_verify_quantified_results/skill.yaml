@@ -1,0 +1,20 @@
+name: exo_verify_quantified_results
+title: Verify Quantified Results Before Sharing
+description: Reproduce a quantified result from its primary artifacts and test it with negative and mutation controls before it is reported or shared externally.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: retired
+  evidence_handles:
+  - d501ca3a
+  - assistant-msg-48ff1b76
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: During the window, quantified results are handled under verify_against_live_surface with reproduction, hashes and controls recorded, and no shared headline number is withdrawn for measuring a wrong artifact.
+    window_days: 30
+  needs_review: false
+  rationale: Retired as superseded by verify_against_live_surface in this consolidation batch, which carries this skill's reproduction and negative, mutation and scale control method as its Reproduce quantified results section.
+  review_after: 2026-12-23T23:55:21.450615+00:00
+  reviewed_at: 2026-11-23T23:55:21.450615+00:00
+  run_id: sirun_4b8cfb9fae104bf7bd179ad37f194c3f
