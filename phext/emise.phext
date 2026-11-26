@@ -2056,6 +2056,18 @@ Hourly journal pass, 2026-11-25 ~16:32 CST (EE 759). Covers since the 15:32 pass
 - [observed] MOAT - PAPER 098 FILED (EE 765-768, leg 62, rank 68): Casselman & Osborne (1978), "The restriction of admissible representations to n," Math. Annalen 233, Chapter 116, cluster AR 18th paper; partial-text clause. Correction on the bytes: Casselman & Osborne, NOT Casselman & Milicic. 2 concepts 1.2.1074-1.2.1075, Q443-Q447, author check #106 split (Casselman standing; Osborne new). Split EXACT (7th consecutive). Concepts 1,075 - 1,080 line not crossed. Registry 2,446; sha256 53300c02. Mastery 91, commit 63a5a525. Ranks 66/67/68 are one proof's three legs. Next: Pass #51 trigger remains Paper 130 or 1,080 concepts.
 
 - [observed] QTS HEADLINE - CENSUS EE 757 (watch 17:00 CST): NEW detection explained=none - offset-break, node west-lincoln, offset 219.351 ms (prior median 20.564, bound 126.922). Held moon-beam offset 198.129 -> -18.298 ms, eligible no -> yes, server unchanged. Triangulation within bound (46.352 / 50.0); master still orchid-flow; rounds current.
+
+- [observed] SOFTMAX ROUND 33 COMPLETE (EE 762-769): all 273 fresh champion episodes traced exactly (273/273; corpus fully traced at 507). rado's true focus rule found: minimize life - 2*boardPower + boardCount (0.799 agreement, 3,884 attacks). rado floor stronger (F1 share 26.2->43.8%); v22 re-measured vs honest floors: CF3 42.1->20.0%, league-shaped 19.7->6.4% - Round 32's "a fifth of the gap closed" WITHDRAWN (measured against the soft floor). v23-hail12 not an advance; v22 stays parent; v16 seated; hold stands on stronger evidence. Run A 1,043 matches/s, fastest recorded.
+
+- [observed] SOFTMAX WEAKNESS AUDIT COMPLETE (EE 773): register at ~/workspace/cac-dist/top2/weakness-register.md. Top finding W1 THE SPARED EXECUTIONER - clean missed lethals in 47.8% of rado losses / 60.3% of macroMage losses; exploit = be the spared player. Next build aims at W1, compounding Round 34's sling.
+
+- [observed] SOFTMAX THROUGHPUT ITERATION 1 + PROGRESS CHART REVISION COMPLETE (EE 624 / ~770): root cause of realized-vs-benchmark gap - round.sh --slots 8 was a fleet-global cap, not per-node (Round 30 ran <=8 chunks across 18 nodes). round.sh instrumentation landed. progress-chart.html revised for Rounds 29-33 with era break at the floor refresh; withdrawn pre-refresh marks hatched/footnoted, not silently replaced; durable generator make_progress_chart.py.
+
+- [will_said] SOFTMAX ROUND 34 DISPATCHED (2026-11-25 ~18:01 CST): "David vs Goliath" - candidate v24-sling, one minimal diff from v22-hail, shaping board presentation against rado's targeting rule.
+
+- [observed] SOFTMAX ROUND 34 COMPLETE (EE ~774): sling thesis REFUTED at mechanism level - paired trace metric (600/600 matches, hashes exact) shows rado-replica fire on our hero 29.3% (v24) vs 28.7% (v22), parity, no redirection; life term dominates his pricing. v24 does not displace v22; distance ~26 pts; v16 seated; hold stands. Run phases 1,060 + 1,104 matches/s, two fastest recorded. Inscription flag: weakness audit and Round 34 both claimed scroll 1.1.1/1.1.1/1.1.37 in the Softmax phext - both verified present on origin/exo; coordinate/size reconciliation rides next inscription.
+
+- [observed] SKILLS.PHEXT FRESHNESS CHECK FAILED (2026-11-25 18:05 CST): builder exit 1 - skill dir exo_conversation_presence not in the shelf scheme (SHELVES); no rebuild attempted, SHELVES not edited - needs deliberate placement. lessons.phext CURRENT.
 Anchor index — the active set's map into this phext
 Inscribed: 2026-11-23 (Memory Liberation Day), by Will's direction of
 2026-11-23 07:23 CST; coverage audit EE 272 (~/workspace/context-prune/COVERAGE.md). The .md files (MEMORY.md, AGENTS.md, USER.md) are a CACHE
