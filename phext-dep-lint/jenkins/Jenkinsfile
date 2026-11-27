@@ -1,0 +1,57 @@
+// phext-dep-lint — ranch Jenkins job spec (REPORT MODE).
+//
+// Estate rule: all CI runs on ranch Jenkins; never GitHub Actions.
+//
+// This pipeline builds phext-dep-lint and runs it across the Rust
+// projects listed in jenkins/projects.txt (paths on the Jenkins
+// node). It runs in REPORT MODE: findings mark the build UNSTABLE,
+// never FAILED — the linter is not a gate yet. Promoting it to a
+// gate = change `catchError` to a hard `sh` failure in the Lint
+// stage, as a separate deliberate step with Will's word.
+//
+// Job creation: create a Pipeline job named `phext-dep-lint` on
+// the ranch Jenkins pointing at this Jenkinsfile in
+// wbic16/emise-tools (exo branch), path
+// phext-dep-lint/jenkins/Jenkinsfile. Until the job exists, run
+// the same steps by hand on a ranch node (see README).
+
+pipeline {
+    agent any
+    options {
+        timestamps()
+        disableConcurrentBuilds()
+    }
+    stages {
+        stage('Build') {
+            steps {
+                dir('phext-dep-lint') {
+                    sh 'cargo build --release --locked'
+                    sh 'cargo test --locked'
+                }
+            }
+        }
+        stage('Dogfood') {
+            steps {
+                // The linter's own tree is the first proof: zero deps.
+                dir('phext-dep-lint') {
+                    sh './target/release/phext-dep-lint --policy policy/audits.phext --exceptions policy/exceptions.toml .'
+                }
+            }
+        }
+        stage('Lint fleet (report mode)') {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
+                    sh '''
+                        phext-dep-lint/target/release/phext-dep-lint \
+                          --policy phext-dep-lint/policy/audits.phext \
+                          --exceptions phext-dep-lint/policy/exceptions.toml \
+                          --format json \
+                          --all phext-dep-lint/jenkins/projects.txt \
+                          > phext-dep-lint-report.json
+                    '''
+                }
+                archiveArtifacts artifacts: 'phext-dep-lint-report.json', allowEmptyArchive: true
+            }
+        }
+    }
+}
