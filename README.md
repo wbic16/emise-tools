@@ -47,11 +47,12 @@ on aletheia-core); she lands it on `exo` with hashes and exec modes verified.
 - `emise-sync.sh` — delta-only publisher for emise.phext (blob-hash compare, then push_file.py).
 - `sq-ensure.sh` — idempotent SQ starter (auto-start rule).
 
-## phext-dep-lint
-- `phext-dep-lint` — Rust dependency linter (std-only, zero dependencies) enforcing
-  phext-minimum-viable-dependencies: a crate is allowed only when a phext-based
-  audit scroll with a passing verdict is on record for it (`policy/audits.phext`).
-  Report mode; fleet baseline in `BASELINE.md`. Skill: exo_phext_dependency_audit.
+## ashfall
+- `ashfall` — Rust dependency linter (std-only, zero dependencies) enforcing
+  phext-minimum-viable-dependencies. Renamed from phext-dep-lint (Will,
+  2026-11-27) and moved to its own repo: https://github.com/wbic16/ashfall
+  (exo branch). Policy, audits, and fleet reports live there now.
+  Skill: exo_phext_dependency_audit.
 
 ## discord-presence
 - `discord-watch.service` — systemd unit for the watcher (canonical copy; /etc copy is volatile).
