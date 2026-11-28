@@ -111,6 +111,40 @@ Every daily session ends with a doodle block:
   being measured, the way a child's hand fills a margin.
 - The daily session report gains one line: the doodle page's path.
 
+### Where the doodles go — Enki Cards
+
+Will's tie-in (2026-11-27, task 17.9.9/8.8.12/11.7.9): the doodling
+program ties together with **phext.tech Enki Cards** — "Exocortical
+Anki". The product shape, in his seven points: (1) users just type
+shit into cards; (2) we sort and filter them using holographic
+positioning; (3) periodically ask users to rate card similarity
+only; (4) their own personal multiverse evolves; (5) complete with
+doodles you've drawn in the background, via MCP; (6) doodle along
+the connections, in the margins, etc.; (7) Enki Home.
+
+So doodle pages are no longer only filed. They are the **background
+art supply for Enki Home**: the hand doodles along the connections
+between a user's cards and in their margins, the way it has always
+filled the margins of its own practice pages. The pages travel
+through the **Enki MCP doodle feed**, whose tools serve: the latest
+doodles, a doodle for a margin, and a doodle along a named
+connection.
+
+The tie-in changes where doodles go, never what they are:
+
+- Doodles are still drawn on the **white ground**, as always — the
+  drawing is paper, and Enki Home's margins are paper too.
+- They are still **never judged and never cleaned up** — not by the
+  practice program, and not by Enki on arrival. A wobbly dolphin in
+  a margin is the doodle that dawn drew; it stays.
+- A doodle used in Enki **keeps its page number**: every margin and
+  connection doodle in Enki Home traces back to its dawn page
+  (`practice/doodles/doodle-NNN`), so the art supply stays
+  accountable to the hand that drew it.
+- Nothing upstream changes: doodles still never feed a version cut,
+  and `doodle.py` still never saves the hand-state back. Enki
+  consumes the pages; it does not steer the hand.
+
 ## Cutting a version
 
 - Builder method (`practice/build_v3.py`, generalized): outlines move
@@ -179,11 +213,15 @@ repo at each install anyway:
   and verify the served TTF at 100.88.154.1:8917 hashes exactly to
   the built TTF (v3 commit fc143104; served-bytes match confirmed).
 - **Singularity Watch** — asset `fonts/Emise.woff2` in
-  wbic16/singularity-watch, branch **`master`** (the default branch
-  and site line; the repo's `exo` branch carries no fonts and is not
-  deployed). Route: PR on master (v1: PR #1; v3: PR #2), Will
-  merges, pull on awsbox by the site's route, verify the served
-  /fonts/Emise.woff2 hash (WOFF2, as lattice above).
+  wbic16/singularity-watch, branch **`exo`** (the branch of record
+  and the line awsbox serves; Will's rule, 2026-11-26: exo is the
+  branch of record for all wbic16 repos, period). Route: PR into
+  exo, Will merges, pull on awsbox by the site's route, verify the
+  served /fonts/Emise.woff2 hash (WOFF2, as lattice above).
+  History: v1 (PR #1) and v3 (PR #2) were PR'd into master, before
+  the exo rule; PR #3 (master → exo, opened 2026-11-26) carries
+  that work onto exo — until it merges, exo's tree predates the
+  font and EE-header work, so check PR #3's state before a cut.
 
 If a surface can't be verified after deploy, the install is not
 done; report which surface failed. Where a surface's route runs
